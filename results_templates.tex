@@ -1,0 +1,52 @@
+
+%
+%RESULTS Rev1: Notebook Rev1_14
+
+%Bla_N1_64_W1000_Opt Gra_N1_64_W1000_Opt ES_N1_64_W1000_Def Vir_N1_64_W1000_Opt LDF_N1_64_W1000_Def
+%template_type 					
+%C 	10.953371 	33.118651 	300.000000 	29.163331 	300.0
+%F 	0.710602 	1.041088 	112.866074 	0.551893 	300.0
+%L 	0.567620 	1.054375 	25.129921 	0.191519 	300.0
+%S 	0.634281 	0.427514 	26.836085 	0.083854 	300.0
+%
+%
+%
+%Bla_N1_64_W1000_Opt Gra_N1_64_W1000_Opt ES_N1_64_W1000_Def Vir_N1_64_W1000_Opt 	LDF_N1_64_W1000_Def
+%template 					
+%C1 	4.853528 	41.074082 	300.000000 	50.148527 	300.000000	Bla
+%C2 	17.724176 	25.320613 	300.000000 	10.052103 	300.000000	Vir
+%F1 	0.651362 	0.590807 	10.350239 	0.064754 	300.000000	Vir
+%F2 	0.769873 	1.529352 	133.287122 	4.005216 	300.000000	Bla
+%F3 	1.176846 	2.933791 	300.000000 	4.955930 	300.000000	Bla3
+%F4 	0.887820 	4.861341 	300.000000 	0.668484 	300.000000	Vir
+%F5 	0.064486 	0.060477 	2.468437 	0.019201 	6.090464	Vir
+%L1 	0.035158 	0.006558 	1.346970 	0.007135 	2.848204	Vir
+%L2 	1.650052 	2.166173 	25.129921 	0.302525 	300.000000	Vir
+%L3 	0.037243 	0.009755 	1.025530 	0.006762 	2.260012	Vir
+%L4 	0.791782 	4.210585 	51.241839 	0.370861 	300.000000	Vir
+%L5 	1.185084 	4.131350 	122.003833 	0.317177 	300.000000	Vir
+%S1 	0.046855 	0.011460 	3.790836 	0.137013 	4.298328	Gra
+%S2 	0.941007 	2.177947 	46.095154 	0.160746 	300.000000	Vir
+%S3 	1.636567 	0.445906 	26.885182 	0.069650 	300.000000 	Vir
+%S4 	0.670550 	0.411107 	81.268466 	0.084230 	300.000000	Vir
+%S5 	1.026515 	0.458653 	300.000000 	0.070567 	300.000000	Vir
+%S6 	0.206022 	0.141913 	7.889212 	3.760982 	300.000000  Gra
+%S7 	0.037128 	0.005170 	0.295254 	0.005701 	0.945705	Gra3
+%\caption{Average Runtime per query template for 5 single-node setups. \textbf{TPF1\_64} has only 5 templates which do not coincide with the timeout of 300s, for \textbf{ES1\_64\_Def} this is alread 15 templates.
+%\textbf{Vir1\_64\_Opt} is the fastest engine for 13 templates, \textbf{Gra1\_64\_Opt} for and \textbf{Bla1\_64\_Opt} for 3 templates each. Template \textbf{C3} was omitted due to query completeness issues. Blazegraph was the only engine to retrieve all results. } 
+The queries of the WatDiv benchmarks are all BGPs but have different shapes and selectivity properties. The benchmark generator has 20 templates which can be further organized into 4 template categories (shapes). 
+In Figure~\ref{fig:Fig06_WatdivTemplateTypes} we show the average runtime per template for 5 stores on WatDiv1000M.
+\begin{itemize}
+	\item \textbf{Template timeouts:} For \textbf{TPF1\_64} 15 runtime averages coincide with the benchmark timeout (300s). Successful queries are spread out over the different types: \textbf{F}:1, \textbf{S}:2, \textbf{L}:2.
+	\textbf{ES1\_64\_Def} has timeouts for the 2 \textbf{C} queries,  2 \textbf{F} queries, and 1 \textbf{S} query. The other stores have no averages close to timeout.
+	
+	\item  \textbf{Template winners:} \textbf{Vir1\_64\_Opt} is the fastest engine for 13 templates, nonetheless \textbf{Bla1\_64\_Opt} was better on batch workloads. These workloads are dominated by the runtimes of the \textbf{C}-templates, more specifically \textbf{C1} seems to explain the difference. 
+	\textbf{Gra1\_64\_Opt} performs best for 3 \textbf{S}-templates, \textbf{Bla1\_64\_Opt} wins on 1 \textbf{C}- and 2 \textbf{F}-templates. Template \textbf{C3} was omitted due to query completeness issues. Blazegraph was the only engine to retrieve all results within the timeout boundary.
+	\textbf{Vir1\_64\_Opt} wins: \textbf{C}:1, \textbf{F}:3, \textbf{S}:4, and all \textbf{L}-templates.
+\end{itemize}
+
+If we generalize further and only distinguish between 4 query template types, as can be seen in Figure~\ref{fig:Fig06_WatdivTemplateTypes}, it becomes even more apparent where the difference between Blazegraph and Virtuoso can be situated: the \textbf{C}-templates.
+\begin{itemize}
+	\item \textbf{Ranking per template type:} This pattern is very stable, \textbf{Vir1\_64\_Opt} first, followed by \textbf{Bla1\_64\_Opt} and \textbf{Gra1\_64\_Opt}. Only for \textbf{C}-templates Blazegraph has the advantage  by a factor 3: 10s vs 30s. The differences on the other templates are lower by an order of magnitude, each time in the range of 0.2 - 0.5 seconds. For the \textbf{S}-templates GraphDB performs slightly better than Blazegraph.
+	\item \textbf{Engine specialities:} For Blazegraph the \textbf{C}, \textbf{F}, and \textbf{S}-templates result in similar runtimes. GraphDB has a small preference to \textbf{S}-templates. Virtuoso is much better than the competition for \textbf{L}-queries and \textbf{S}. For the \textbf{F}-template all three engines perform similarly.
+\end{itemize}

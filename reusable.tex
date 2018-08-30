@@ -1,0 +1,164 @@
+To make the benchmarks fully \emph{reproducible}, we pay explicit attention to the hardware setup and the database configurations. 
+
+We offer a reusable infrastructure which consists of a number of well-maintained components for deployment, 
+to allow the end-user to test a triple store. 
+We also release our post-processing scripts and query event data publicly, so others can reproduce the analysis of the system performance exactly as described in this paper. 
+The Ontoforce benchmark cannot be reproduced by external parties due to the dataset being proprietary. The queries have however been released.
+
+\subsubsection{Reproducible hardware}
+The choice of hardware in benchmarks is often related to the availability of systems in a research group's datacenter.
+We opted to use instances from a cloud provider to make the choice as generic as possible. 
+We used three different types of servers on the Elastic Compute Cloud (EC2) of \mbox{Amazon Web Services\footnote{\scriptsize \url{https://aws.amazon.com/ec2/instance-types/}}} (AWS), shown in Table~\ref{instances}. 
+
+\begin{table}[ht!]
+	\centering
+	\caption{Instance types used in benchmarks and their purpose.}
+	\label{instances}
+	\scalebox{0.9}{
+	\begin{tabular}{l|rrl}
+		\hline
+		\textbf{Instance Type} & \textbf{vCPUs (no.)} & \textbf{RAM (GB)} & \textbf{Goal} \\
+		\hline
+		\texttt{r3.xlarge}              & 4 & 30    &  Original Choice\\
+		\texttt{r3.2xlarge} 			& 8 & 61    &  Current Reference \\
+		\texttt{c3.2xlarge}             & 8 & 15    &  Benchmarker\\
+		\hline
+	\end{tabular}
+	}
+\end{table}
+
+An additional advantage of this approach is that the benchmark cost can be explicitly calculated. Using cost as a metric allows the comparison of benchmarks with different setups. Also the cost of certain preprocessing steps such as bulk loading or compression can be included in the comparison.
+
+\subsubsection{Reproducible installations and configurations}
+
+A very important and often not reported factor in a store's performance, is the way it was installed and configured. 
+
+A reproducible installation strategy is obtained by using Amazon Machine Images (AMIs) offered by the system vendors on the AWS Marketplace\footnote{\scriptsize \url{https://aws.amazon.com/marketplace/}}. When no AMI is available we turned to well-maintained Docker images on Docker Hub\footnote{\scriptsize \url{https://hub.docker.com/}}.
+The used AMIs come with a \emph{Pay-As-You-Go} (PAGO) license, i.e., a license cost per hour of usage which also depends on the choice of hardware instances.
+An overview of the installation approaches followed for the different systems under test:
+\begin{itemize}
+	\item PAGO AMIs: Virtuoso\footnote{\scriptsize \url{https://aws.amazon.com/marketplace/pp/B011VMCZ8K}}, GraphDB\footnote{\scriptsize \url{https://aws.amazon.com/marketplace/pp/B00OM7VXGW?qid=1487779358935&sr=0-1&ref_=srh_res_product_title}}, ES
+	\item Docker Hub: TPF server\footnote{\scriptsize \url{https://hub.docker.com/r/linkeddatafragments/server.js/}}, Virtuoso Open Source\footnote{\scriptsize \url{https://hub.docker.com/r/tenforce/virtuoso/}}, HDT-tools\footnote{\scriptsize \url{https://hub.docker.com/r/rfdhdt/hdt-cpp/builds/}}
+	\item Self-provided Docker images: Blazegraph\footnote{\scriptsize \url{https://github.com/laurensdv/docker-blazegraph/tree/master/2.1.2}}, HDT-Fuseki\footnote{\scriptsize \url{https://github.com/drdwitte/rdfbenchmarking/tree/master/setup/endpoints/FusekiHDT}}
+	\item Manual installation: FluidOps was installed manually with FedX~\cite{saleem2016fine} 3.1.2 (provided by \mbox{FluidOps}) and Virtuoso Adapter plugin (required since \mbox{Virtuoso} no longer supports \url{ASK} queries)
+\end{itemize}
+
+Our initial results with the 4 \emph{Vendor} systems showed great differences in runtime performance~\cite{de2016big}. After consulting with the database vendors, it turned out that this can be attributed to our choice of running the systems as-is, which we coin the \emph{None} configuration. We decided to re-run these benchmarks using two strictly defined configurations: \emph{Default} and \emph{Optimized}. All configuration options are defined in Table~\ref{table:configs}. 
+
+The \emph{Optimized} configuration was obtained after sending out a  Request For Information (RFI) to the commercial vendors involved. The RFI asked them to provide us with scripts or configuration files to achieve optimal performance on the WatDiv1000M benchmark. GraphDB, Virtuoso, and Blazegraph responded positively to this request. A fourth commercial vendor, ES, did not respond to our RFI. Note that this configuration is not necessarily an optimal match for the real-world benchmark, as the data and queries were not shared with the vendors.
+
+\begin{table}[ht!]
+	\centering
+	\caption{Different configuration choices defined in this benchmark}
+	\label{table:configs}
+	\scalebox{0.9}{
+		\begin{tabular}{l|l}
+			\hline
+			\textbf{Name} & \textbf{Description} \\
+			\hline
+			\emph{None}    & Results reported in initial work were obtained \\
+			&  modifying none of the preset configurations. \\
+			\emph{Default} & Applying the recommended settings from the vendor \\
+			& documentation: mostly taking into account the available  \\
+			& server memory and the dataset size. \\
+			\emph{Optimized} & Settings provided by the vendors, in response to our RFI.  \\
+			\hline
+		\end{tabular}
+	}
+\end{table}
+
+\subsubsection{Reusable Benchmark Components}
+The SPARQL Query Benchmarker software\footnote{\scriptsize \url{https://sourceforge.net/projects/sparql-query-bm/}} is a mature SPARQL-over-HTTP benchmarking tool which is highly customizable. We ran the software in \emph{benchmark} mode where it can operate given a SPARQL endpoint URI and a list of SPARQL query files. The software was run with a timeout parameter of 300s for the WatDiv benchmarks and 1200s for the Ontoforce benchmark and with 1 single-threaded warm-up run and a multi-threaded (5 threads) stress test run where 5 clients each execute a full query mix independently and in randomized order. 
+The choice for timeout parameters is related to practical considerations: 
+\begin{itemize}
+	\item Initial tests revealed that the WatDiv timeout is sufficient for most queries to complete.
+	\item The Ontoforce benchmark timeout was instated to keep the total benchmark execution time within affordable boundaries.
+\end{itemize} 
+
+When the benchmark successfully terminates, a CSV-file is generated containing the summary results per query: median runtime, median response time,...
+In our initial benchmarks~\cite{de2016big} this CSV-file was used, but with the Ontoforce dataset several issues surfaced:
+
+\begin{enumerate}
+	\item The summary results (number of results per query and query runtimes) are not correct in benchmarks where many problems arise. 
+	For example, in the calculation of the average runtime, results where the query was unsuccessfully resolved are also taken into account for the calculation of the average. 
+	It also makes it hard to verify the number of results per query. For example, a query with 10 results which is executed twice and of which one execution fails, is reported as having 5 results .
+	\item If the benchmarker software fails the CSV-file is not generated and the results are lost.
+	\item A posteriori it is not possible to verify if a query was solved correctly.
+	\item While the CSV-file contains useful results, it is still a summarization of the results whereby much information about the flow of the benchmarking process is lost. 
+\end{enumerate}
+
+These issues are however all confined to the process of generating the summary CSV-file. We worked around them by running 
+the benchmarker software in \emph{verbose} mode where it generates a detailed log file. This raw log file contains all data before aggregation and therefore
+before any of the previous issues occur. Storing this log data allows us to run the aggregations ourselves and provides us with all available information even when the software crashes. Additional summarizations are possible since the log file is in fact much richer in information than the original CSV-file.
+
+The post-processing pipeline parses this log file and converts it into a more detailed CSV file which contains \emph{query events}. These events contain the essential information of a single query execution. Query events serve as the basis for all results in this research paper. The schema of a single query event is shown in Table~\ref{table:queryevents}. All event files and derived views are online~\footnote{\scriptsize \url{http://users.elis.ugent.be/~drdwitte/resultscsv.html}}.
+
+\begin{table}[ht!]
+	\centering
+	\caption{Content of the query events used as the starting point for all benchmark results in this work}
+	\label{table:queryevents}
+	\scalebox{0.9}{
+		\begin{tabular}{l|l}
+			\hline
+			\textbf{Field} & \textbf{Range} \\
+			\hline
+			sim\_id    & (engine, number of nodes, memory, config.) \\
+			query\_name & 400 ids for WatDiv, 1,223 for Ontoforce \\
+			thread\_id & 6 ids \\
+			thread\_type & warm-up (1 thread) or stress (5 threads)	\\
+			order\_id & the offset in the query mix for a thread	\\	
+			number\_of\_results & -1 if error, $\geq 0$ otherwise	\\
+			runtime & (seconds), error: -1, timeout: max. value  \\
+			flag & \sql{SUCCESS, ERROR, TIMEOUT} \\
+			correct & \sql{(IN)CORRECT} (if \#results $\ne$ consensus) \\
+			\hline
+		\end{tabular}
+	}
+\end{table}
+
+The query events can also be used to study query correctness since they contain the number of results per query and a flag for (un)successful query execution. For the Ontoforce benchmark however, almost half of the queries are \sql{count} queries, for which the result count doesn't provide any guarantees on correctness. 
+To verify the correctness of these queries we extended the benchmarker software enabling it to store the actual query results, which allows us to compare the results of the \sql{count} queries. 
+
+To simplify the deployment of this modified benchmarker client, we automated this process by creating a Docker container which automatically installs the software and its dependencies.
+
+Finally, we automated major parts of the post-processing of benchmark results, because (i) this saves the future benchmark user a lot of time parsing the benchmarker log files, (ii) provides the user with a large set of instant visual results, and (iii) allows knowledge-transfer to new benchmarking efforts through script re-use.
+
+Jupyter notebooks\footnote{\scriptsize \url{http://jupyter.org/}} were used for the postprocessing. All notebooks are available online~\footnote{\scriptsize \url{http://users.elis.ugent.be/~drdwitte/postprocessing.html}}. 
+
+%The query events are stored in a CSV file together with 9 additional views:
+%% (csv format):
+%\begin{enumerate}
+%	\item \textit{Sim\_queryevents.csv} is the base dataframe which is directly generated from the benchmark log files. It has an entry for \textbf{every query} in the benchmark, an \textbf{index} when it was executed, the \textbf{thread} number, whether it was run during the \textbf{warmup or stress} test run, the number of query \textbf{results}, the query \textbf{runtime} and a flag to indicate \textbf{success} or failure.
+%	
+%	\item \textit{Sim\_queryruntimes.csv} aggregates the queryevents dataframe per query and thereby summarizes the results of multiple query executions.
+%	Summarizations include the number of \textbf{successes}, \textbf{errors}, \textbf{timeouts} and the median \textbf{runtime}. Only queries executed while the endpoint was proven to be
+%	\textbf{operational} (i.e. successful queries executed later exist) are taken into account.
+%		
+%	\item \textit{Sim\_mixruntimes.csv} adds the median query runtimes together to achieve the \textbf{querymix runtime}. Since measurements
+%	for all queries are not always available, the number of \textbf{successful queries}, the \textbf{mix coverage} and the average number of query operations per hour (\textbf{ops/hr}) is given, the latter allows comparisons between incomplete benchmarks.
+%		 
+%	\item \textit{Sim\_loadtimes.csv} contains the \textbf{load time} needed to fully ingest one of the benchmark datasets.
+%	
+%	\item \textit{hourly\_cost.csv} contains the \textbf{cost/hr} for all benchmark setups, including license and hardware cost.
+%	
+%	\item  \textit{Sim\_cost.csv} contains the \textbf{load cost}, the \textbf{run cost} for 2000 queries and the total \textbf{benchmark cost} for every
+%	run.
+%
+%	\item \textit{Sim\_errorfreq.csv} counts the amount of queries which consistently \textbf{fail}, \textbf{fail sometimes}, \textbf{fail never} or are
+%		\textbf{unknown}.
+%		 
+%	\item \textit{Sim\_queryresults.csv} contains the number of \textbf{results per query} for a single simulation.
+%	
+%	\item \textit{Sim\_inconsistency.csv} compares the number of results per query between different simulations and filters the \textbf{queries which are inconsistent} between simulations at least once.
+%	
+%	\item \textit{Ontoforce\_queryfeatures.csv} gives a \textbf{feature vector} per Ontoforce query, with the features being the frequency of certain SPARQL keywords, the amount of nesting, bgps, certain triple pattern types,... similar to what was done in a study to analyze properties of real-world SPARQL queries~\cite{DBLP:journals/corr/abs-1103-5043}.
+%
+%\end{enumerate}
+
+Practice has shown that the event format leaves room for unanticipated analysis. For example: dealing with incorrect queries, taking into account server load or caching effects, studying the reason behind one of the query engines crashing,...
+
+%These views can serve as input for more in-depth analysis, for example studying the domino-effect
+%of one poorly performing query on other query runtimes as reported in the Wikidata benchmark~\cite{hernandez2016querying}.
+
+%\todo{filenames aanpassen in notebooks!}
+%\todo{round-up this section}

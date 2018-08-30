@@ -1,0 +1,11 @@
+%store preselection
+%Feature Matrix
+\begin{itemize}
+	\item \textbf{Reusable Feature Matrix:} Since RDF systems have a wide range of diverse features, one system might be preferred above another depending on the specific use case. To facilitate this decision-making step, we created a Feature Matrix. This matrix consists of 50 RDF database features for 12 systems.  The user can assign weights to each of these features which enables the creation of a ranking, useful for system architects having to make a database pre-selection.
+	\item \textbf{Reusable Benchmark Methodology:} This paper demonstrates a methodology to evaluate RDF storage solutions on a data and query-set of choice with a focus on reproducibility and reusability. To enable RDF architects to more easily run benchmarks with their own queries and data, we released a set of scripts to facilitate deployment and speedup the post-processing of the results. The pitfalls in the interpretation of the results  are highlighted and suggestions are formulated to circumvent them and draw the right conclusions. 
+	\item \textbf{Demonstration on Big Linked Data:} We demonstrate our methodology to evaluate the ability of today's triple stores in terms of scalability with big biomedical data sources and complex real-world queries. This research paper builds on the results of 51 new benchmark runs using 4 different datasets and 7 RDF storage systems. 
+	\item \textbf{Query runtime results in context:} This work tries to create a nuanced view on performance parameters, such as query runtime, by putting them in a context, thereby no longer viewing query executions as stateless. 
+	\item \textbf{Benchmark Cost:} Using cost as the \emph{dependent variable} enables the comparison of systems with different hardware, licensing costs, and architectures. This makes it possible to quantify certain trade-offs. For example, querying federated resources versus offloading everything and hosting it on a local single- or multi-node system.
+	\item \textbf{`Why' questions:} Considerable effort is spent in trying to reveal the reason for errors, differences in runtimes, incomplete query results,... by studying the relation with query features, both for WatDiv as for the Ontoforce benchmark.
+
+\end{itemize}

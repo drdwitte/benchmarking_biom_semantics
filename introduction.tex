@@ -1,0 +1,79 @@
+%put back Ruben's first version
+Semantic Web technology has a lot to offer to research disciplines which are inherently multidisciplinary. The Life Sciences are an interesting example, spanning multiple disciplines ranging from pharmacy to genetics to clinical trials.
+This necessitates the runtime integration of different datasets of significant size. 
+Being able to interact with these datasets as one virtual source requires technology capable of both managing Big Linked Data as well as successfully answering complex federated queries.
+\vfill %otherwise latex stress linespacing to fill page
+%These challenges are being addressed by:
+%\begin{itemize}
+%	\item \emph{Vertical scaling} is using an expensive high-end machine with a lot of RAM and CPU power. 
+%	No additional software development is required in this case.
+%	\item A \emph{Compression algorithm} such as HDT~\cite{DBLP:journals/ws/FernandezMGPA13} can easily compress RDF datasets by a factor of 10--20. This allows for much larger datasets to be handled 
+%	by a single server.
+%\end{itemize}
+%An alternative is to opt for a distributed architecture:
+%\begin{itemize}
+%	\item \emph{Horizontal scaling} uses multiple - often cheap, low-end - instances in a distributed system. 
+%	Most enterprise RDF stores support parallelization, but this can imply both a high availability
+%	solution (data replication), or a sharded system (data partitions) that can deal with increasingly large datasets. 
+%	\item \emph{Query federation}~\cite{DBLP:conf/semweb/SchwarteHHSS11}: All datasets are hosted by their providers and
+%	a federated query engine redirects the relevant parts of each query to the right endpoint and finally combines all the recieved information to solve the query.
+%	\item Native \emph{Big Data approaches} typically map SPARQL queries to SQL technologies available in the Hadoop stack: SparkSQL~\cite{cure2015evaluation} or Impala~\cite{DBLP:conf/semweb/SchatzlePNL14}.
+%\end{itemize}
+%Citaat SWAT4LS:The Life Sciences domain is interdisciplinary, which makes interlinking data sources interesting and crucial.
+%The Linked Open Data Cloud contains many RDF data sources related to life sciences, but this comes with a set of challenges: 
+%(i) the union of all datasets qualifies as Big Data and therefore puts a strain on the available technologies for querying and 
+%(ii) these insights contain information of multiple datasets at once, 
+%making the queries federated in nature.
+%challenges we address: more repeatable and easier to run your own benchmarks
+\subsection{Challenges}
+
+Choosing an RDF database and system architecture requires making trade-offs: 
+
+\begin{enumerate}[(i)]
+	\item Which features are essential to the system of choice, which are optional?
+	\item What hardware is required to achieve a certain performance?
+	\item What system is most suited for a specific use case?
+	\item What are the trade-offs when using research prototypes? 
+\end{enumerate}
+
+To make matters even more complicated, database vendors are continuously improving their products making it unclear when prior results become obsolete.
+
+The goal of this work is to give an up-to-date view on the RDF storage solution space.
+By releasing scripts for deployment and post-processing of results, we provide a~feasible approach to run benchmarks with own data and queries using only a limited time window of a couple of days.
+This work also offers a methodology to make benchmarks more reproducible and therefore the results more easily generalizable.
+
+%results from prior work is mainly invalid
+\subsection{Prior Results}
+In our initial research paper~\cite{de2016big} we evaluated 4 RDF databases on WatDiv~\cite{alucc2014diversified}, with 3 different dataset sizes: 10M (10 million), 100M and 1000M triples. More details on WatDiv will be given in section~\ref{subsec:dataqueries}. These \emph{Vendor} systems were run as-is, without any configuration. 
+This initial work served as an inspiration to a set of additional challenges:
+\begin{enumerate}[(i)]
+\item Will the results improve given better single-node hardware?
+\item How will these systems behave when configured optimally?
+\end{enumerate}
+Ontoforce\footnote{\scriptsize \url{http://www.ontoforce.com}} provided us with a real-world \mbox{Life Sciences} dataset used in the back-end of their \mbox{DISQOVER}\footnote{\scriptsize \url{https://www.disqover.com/}} product. This proprietary data and query-set was previously analyzed in our SWAT4LS 2016 research paper~\cite{dewitte_swat4ls_2016}, of which we provide a summary in section~\ref{subsec:dataqueries}.
+In that paper we analyzed the queries according to their SPARQL keywords and structural features~\cite{DBLP:journals/corr/abs-1103-5043}, an approach we fill further extend in this work. 
+We were also confronted with counter-intuitive results in terms of runtime. This required re-running some of the tests and extending the benchmark software to further clarify these issues. All benchmarks involving Virtuoso on the Ontoforce data have therefore been duplicated.
+Originally, the Ontoforce benchmark was used to study scalable RDF approaches, here we also evaluated the other \emph{Vendor} systems. Additionally, we evaluated 3 \emph{SemWeb} systems (research prototypes) that are implementations of compression, federation, and the Linked Data Fragments concept~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} on WatDiv and Ontoforce data.
+
+\subsection{Research Questions}
+
+The work presented here is built around 4 research questions:
+
+\begin{description}
+\item[RQ1] \emph{How to run a query performance benchmark in a reproducible and reliable way?}
+%Methods hardware, configs, wrapper, hardware, amis,... query completeness diagnostics
+\item[RQ2] \emph{What are the different options and the associated trade-offs when choosing a linked data infrastructure setup in the context of Big Linked Data? How can different setups be compared?}
+%Options: Horizontal, vertical, compression, federation big data approaches, multithreading
+\item[RQ3] \emph{What factors have an impact on the measured performance and is this impact consistent across different RDF solutions?}
+%query type, context=caching and server load, query completeness
+\item[RQ4] \emph{How do the RDF systems behave in a real-world setting? Can we extract insights that might be transferred and generate hypotheses to be verified in future benchmarks?}
+%query types, real world vs Watdiv, Watdiv sizes
+\end{description} 
+
+\textbf{RQ1} will be mostly addressed in section 3, more specifically in section \ref{subsec:bmscheme} which discusses the different (reusable) benchmark components. Reliability is the focus of sections \ref{subsec:completeness} and \ref{subsec:erroranalysis} which deal with errors and query completeness. 
+
+The impact of dataset size is analyzed in section \ref{subsec:bigdata}, different approaches to scaling are discussed in sections \ref{subsec:vscaling} - \ref{subsec:hscaling}. How all approaches can be compared, is the subject of section \ref{sec:bmcost}, providing an answer to \textbf{RQ2}. 
+
+In answering \textbf{RQ3}, we will show that focusing on `query runtime' alone is an oversimplification. We discuss multiple factors related to the query context in section \ref{sec:runtimefactors}. We also distinguish between \emph{average} and \emph{median} query runtimes in section \ref{sec:tradeoffs}, a distinction which can have a major impact on the perceived performance.
+
+The final research question \textbf{RQ4} is dealt with in section \ref{sec:realworld}, where a custom Life Sciences benchmark is run in the context of federated faceted browsing. 

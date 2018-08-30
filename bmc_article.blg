@@ -1,0 +1,70 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: bmc_article.aux
+The style file: bmc-mathphys.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bmc_article.bib
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty institution in Ferre
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 54 entries,
+            7128 wiz_defined-function locations,
+            1435 strings with 22285 characters,
+and the built_in function-call counts, 1624665 in all, are:
+= -- 302058
+> -- 2142
+< -- 1074
++ -- 188467
+- -- 765
+* -- 41987
+:= -- 280808
+add.period$ -- 71
+call.type$ -- 54
+change.case$ -- 764
+chr.to.int$ -- 2115
+cite$ -- 55
+duplicate$ -- 5765
+empty$ -- 20679
+format.name$ -- 2514
+if$ -- 416646
+int.to.chr$ -- 1
+int.to.str$ -- 140
+missing$ -- 1958
+newline$ -- 1687
+num.names$ -- 279
+pop$ -- 2793
+preamble$ -- 1
+purify$ -- 246
+quote$ -- 108
+skip$ -- 182683
+stack$ -- 0
+substring$ -- 158973
+swap$ -- 1824
+text.length$ -- 1013
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 2205
+warning$ -- 1
+while$ -- 2330
+width$ -- 0
+write$ -- 2459
+(There was 1 warning)

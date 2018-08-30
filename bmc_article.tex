@@ -1,0 +1,526 @@
+%% BioMed_Central_Tex_Template_v1.06
+%%                                      %
+%  bmc_article.tex            ver: 1.06 %
+%                                       %
+
+%%IMPORTANT: do not delete the first line of this template
+%%It must be present to enable the BMC Submission system to
+%%recognise this template!!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                     %%
+%%  LaTeX template for BioMed Central  %%
+%%     journal article submissions     %%
+%%                                     %%
+%%          <8 June 2012>              %%
+%%                                     %%
+%%                                     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% For instructions on how to fill out this Tex template           %%
+%% document please refer to Readme.html and the instructions for   %%
+%% authors page on the biomed central website                      %%
+%% http://www.biomedcentral.com/info/authors/                      %%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%% BioMed Central currently use the MikTex distribution of         %%
+%% TeX for Windows) of TeX and LaTeX.  This is available from      %%
+%% http://www.miktex.org                                           %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% additional documentclass options:
+%  [doublespacing]
+%  [linenumbers]   - put the line numbers on margins
+
+%%% loading packages, author definitions
+
+\documentclass[twocolumn]{bmcart}% uncomment this for twocolumn layout and comment line below
+%\documentclass{bmcart}
+
+%%% Load packages
+\usepackage{amsthm,amsmath}
+%\RequirePackage{natbib}
+%\RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
+%\RequirePackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                             %%
+%%  If you wish to display your graphics for   %%
+%%  your own use using includegraphic or       %%
+%%  includegraphics, then comment out the      %%
+%%  following two lines of code.               %%
+%%  NB: These line *must* be included when     %%
+%%  submitting to BMC.                         %%
+%%  All figure files must be submitted as      %%
+%%  separate graphics through the BMC          %%
+%%  submission process, not included in the    %%
+%%  submitted article.                         %%
+%%                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\def\includegraphic{}
+\def\includegraphics{}
+
+
+
+%%% Put your definitions there:
+\startlocaldefs
+\endlocaldefs
+%\usepackage[numbers]{natbib}
+
+%\usepackage{amsmath}
+\usepackage{dcolumn}
+%\usepackage{endnotes}
+%\usepackage{graphics}
+\usepackage{graphicx}
+%\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{enumerate}
+\usepackage{float}
+\usepackage{url}
+\usepackage{csquotes}
+%\usepackage[table,xcdraw]{xcolor}
+\usepackage{epstopdf}
+
+%has \checkmark
+\usepackage{amssymb}
+\usepackage{multirow}
+
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+\newcommand{\sql}[1]{\textsc{\scalebox{0.8}{#1}}}
+
+
+\usepackage{xcolor}
+\newcommand\todo[1]{\textcolor{red}{#1}}
+%\usepackage{lmodern}% http://ctan.org/pkg/lm
+%\usepackage[T1]{fontenc}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=black,      
+	urlcolor=black,
+	citecolor=black
+}
+\urlstyle{same}
+
+
+%%% Begin ...
+\begin{document}
+
+%%% Start of article front matter
+\begin{frontmatter}
+
+\begin{fmbox}
+\dochead{Research}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the title of your article here     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Reproducible Query Performance Assessment of Scalable RDF Storage Solutions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors here                   %%
+%%                                          %%
+%% Specify information, if available,       %%
+%% in the form:                             %%
+%%   <key>={<id1>,<id2>}                    %%
+%%   <key>=                                 %%
+%% Comment or delete the keys which are     %%
+%% not used. Repeat \author command as much %%
+%% as required.                             %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author[
+   addressref={A},                   % id's of addresses, e.g. {aff1,aff2}
+%   corref={A},                       % id of corresponding address, if any
+%   noteref={n1},                        % id's of article notes, if any
+   email={drdwitte@gmail.com}   % email address
+]{\inits{DDW}\fnm{Dieter} \snm{De Witte}}
+\author[
+addressref={A},                   % id's of addresses, e.g. {aff1,aff2}
+]{\inits{LDV}\fnm{Laurens} \snm{De Vocht}}
+\author[
+addressref={A},
+]{\inits{DDP}\fnm{Dieter} \snm{De Paepe}}
+\author[
+addressref={B},
+]{\inits{FP}\fnm{Filip} \snm{Pattyn}}
+\author[
+addressref={B},
+]{\inits{KK}\fnm{Kenny} \snm{Knecht}}
+\author[
+addressref={B},
+]{\inits{HC}\fnm{Hans} \snm{Constandt}}
+\author[
+addressref={A},
+]{\inits{JF}\fnm{Jan} \snm{Fostier}}
+\author[
+addressref={A},
+]{\inits{RV}\fnm{Ruben} \snm{Verborgh}}
+\author[
+addressref={A},
+]{\inits{EM}\fnm{Erik} \snm{Mannens}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the authors' addresses here        %%
+%%                                          %%
+%% Repeat \address commands as much as      %%
+%% required.                                %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\address[id=A]{%                           % unique id
+  \orgname{imec - IDLab - Ghent University}, % university, etc
+  \street{iGent Tower - Technologiepark-Zwijnaarde 15},                     %
+  \postcode{BE 9052}                                % post or zip code
+  \city{Ghent},                              % city
+  \cny{Belgium}                                    % country
+}
+\address[id=B]{%
+  \orgname{Ontoforce},
+  \street{Technologiepark-Zwijnaarde 19},                     %
+  \postcode{BE 9052}                                % post or zip code
+  \city{Ghent},                              % city
+  \cny{Belgium}                                    % country
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter short notes here                   %%
+%%                                          %%
+%% Short notes will be after addresses      %%
+%% on first page.                           %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{artnotes}
+%\note{Sample of title note}     % note to the article
+%\note[id=n1]{Equal contributor} % note, connected to author
+%\end{artnotes}
+
+%\end{fmbox}% comment this for two column layout
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Abstract begins here                 %%
+%%                                          %%
+%% Please refer to the Instructions for     %%
+%% authors on http://www.biomedcentral.com  %%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{abstractbox}
+
+\begin{abstract}
+\parttitle{Background} 
+%CONTEXT
+\todo{compare with PhD}
+Applications in the biomedical domain rely on Linked Data spanning multiple datasets for an increasing number of use cases. %\todo{DDP: only biomedical? all biomed apps?}
+Choosing a strategy for running federated queries over Big Linked Data is however a challenging task.
+%Biomedisch data, federated, big data, schaal, artificiele
+%NEED
+Given the abundance of Linked Data storage solutions and benchmarks,
+it is not straightforward to make an informed choice between platforms.
+%Hoe objectief kiezen? Snel kiezen
+%TASK
+This can be addressed by releasing an updated review of the state-of-the-art periodically and by providing tools and methods to make these more (easily) reproducible. 
+Running a custom benchmark tailored to a specific use case becomes more feasible 
+by simplifying deployment, configuration, and post-processing.
+%Automatiseren van deployment en postprocessing, objectief maken = repeatable
+\parttitle{Results}
+%OBJECT
+In this work we present in-depth results of an extensive query performance benchmark we conducted. The focus lies on comparing scalable RDF systems and to iterate over different hardware options and engine configurations. Contrary to most benchmarking efforts, comparisons are made across different approaches to Linked Data querying, conclusions can be drawn by comparing the actual benchmark costs. Both artificial tests and a real case with queries from a biomedical search application are analyzed.
+%FINDINGS
+In analyzing the performance results, we discovered that single-node triple stores benefit greatly from vertical scaling and proper configuration. Results show that horizontal scalability is still a real challenge to most systems. 
+Semantic Web storage solutions based on federation, compression, or Linked Data Fragments still lag by an order of magnitude in terms of performance.  
+Furthermore we demonstrate the need for careful analysis of contextual factors influencing query runtimes: server load, availability, caching effects, and query completeness all perturb the benchmark results.
+%Horizontale schaalbaarheid, TPF, Query correctness
+%CONCLUSION
+\parttitle{Conclusions}
+With this work we offer a reusable methodology to facilitate comparison between existing and future query performance benchmarks. We release our results in a rich event format ensuring reproducibility while also leaving room for serendipity. 
+%Objectiviteit belangrijk, TPF
+%OUTLOOK	
+%Hopelijk wordt methodologie gevolgd. Future benchmarks fixed methodology
+This methodology facilitates the integration with future benchmark results.
+\todo{iets vermelden over reusable interpretations}
+	
+\end{abstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The keywords begin here                  %%
+%%                                          %%
+%% Put each keyword in separate \kwd{}.     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{keyword}
+\kwd{Benchmarks}
+\kwd{Benchmarking Tools}
+\kwd{Big Linked Data}
+\kwd{Distributed Querying}
+\kwd{Life Sciences}
+\end{keyword}
+
+% MSC classifications codes, if any
+%\begin{keyword}[class=AMS]
+%\kwd[Primary ]{}
+%\kwd{}
+%\kwd[; secondary ]{}
+%\end{keyword}
+
+\end{abstractbox}
+%
+\end{fmbox}% uncomment this for twcolumn layout
+
+\end{frontmatter}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% The Main Body begins here                %%
+%%                                          %%
+%% Please refer to the instructions for     %%
+%% authors on:                              %%
+%% http://www.biomedcentral.com/info/authors%%
+%% and include the section headings         %%
+%% accordingly for your article type.       %%
+%%                                          %%
+%% See the Results and Discussion section   %%
+%% for details on how to create sub-sections%%
+%%                                          %%
+%% use \cite{...} to cite references        %%
+%%  \cite{koon} and                         %%
+%%  \cite{oreg,khar,zvai,xjon,schn,pond}    %%
+%%  \nocite{smith,marg,hunn,advi,koha,mouse}%%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%% start of article main body
+% <put your article body there>
+
+\section{TODOfigures}
+
+\begin{itemize}
+	\item Figures should be separate files
+	\item Figures should be numbered and uploaded in correct order
+	\item Figure and Table titles are max 15 words
+	\item Figure legends are max 300 words
+	\item Fig files should not exceed 10 MB
+	\item Table caption on top and Legend below table!
+	\item No color in tables!
+	\item Additional files should not be on department website opsturen! (max 20 MB)
+	\item Additional files should be name: Additional file 1
+\end{itemize}
+
+\section{Introduction}
+\input{introduction.tex}
+
+%\subsection{Research collaboration with Ontoforce}
+%\input{ontoforce.tex}
+
+\subsection{Our Contribution}
+\input{ourcontribution.tex}
+
+\section{Related Work}
+\input{relatedwork.tex}
+%Results S2RDF vs Virtuoso32GB an order of magnitude faster but 10 nodes versus 1.
+
+%~\footnote{\scriptsize \url{https://bitbucket.org/openrdf/alibaba/}}
+%http://www.mulgara.org/
+%https://neo4j.com/
+%https://www.postgresql.org/
+
+\section{Benchmark approach}
+\input{methods.tex}
+
+\subsection{Store Preselection: Feature matrix}
+\label{subsec:featurematrix}
+\input{featurematrix.tex}
+
+\subsection{A quick and reusable benchmarking scheme}
+\label{subsec:bmscheme}
+\input{reusable.tex}
+
+\subsection{Datasets and Queries}
+\label{subsec:dataqueries}
+\input{dataset.tex}
+
+%\subsection{Benchmark Cost}
+%\input{benchmarkcost.tex}
+
+\section{Results I: Approaches to Linked Data at Scale}
+\label{sec:tradeoffs}
+\input{resultsI.tex}
+
+\section{Results II: Query Runtime Analysis in Depth}
+\label{sec:runtimefactors}
+\input{resultsII.tex}
+
+\section{Results III: Real-world Life Sciences Benchmark Results}
+\label{sec:realworld}
+\input{resultsIII.tex}
+
+\section{Conclusion}
+\input{conclusion.tex}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Backmatter begins here                   %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{backmatter}
+
+\section*{URLS}
+\todo{GEEN URLS in de text => reference number en toevoegen aan biblio}
+Als volgt: The Mouse Tumor Biology Database. http://tumor.informatics.jax.org/mtbwi/index.do. Accessed 20 May 2013
+
+\section*{Ethics approval and consent to participate}
+Not applicable
+
+\section*{Consent for publication}
+Not applicable
+
+\section*{Availability of data and materials}
+
+\todo{onderstaande wat tunen}
+All data generated or analysed during this study are included in this published article [and its supplementary information files].
+
+The data that support the findings of this study are available from Ontoforce but restrictions apply to the availability of these data, which were used under license for the current study, and so are not publicly available. Data are however available from the authors upon reasonable request and with permission of [third party name].
+
+\section*{Competing interests}
+The authors declare that they have no competing interests.
+
+\section*{Funding}
+\todo{VLAIO project SEQUEL}
+
+\section*{Author's contributions}
+The work presented in this paper was conducted in collaboration between all authors. DDW and
+LDV conducted the experiments. DDW analyzed the data and drafted the paper. FP, KK and HC helped defining a relevant Life Sciences use case and provided datasets and queries. JF, RV and EM revised the research paper and coordinated the research process. All authors have approved the final version of the manuscript. 
+
+\section*{Acknowledgements}
+The research activities were funded by VLAIO (the Agency for Innovation and
+Entrepreneurship in Flanders) in an R\&D project with Ontoforce, Ghent University and imec (iMinds). \\
+iLab.t provided the high memory infrastructure to compress the benchmark datasets and a set of servers to run additional benchmarks.\\
+We would also like to express our gratitude for the support provided by the staff working for the 4 vendors (Blazegraph, GraphDB, Virtuoso, FluidOps) we were allowed to disclose and to Rob Vesse who provided support for the SPARQL Query Benchmarker software.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                  The Bibliography                       %%
+%%                                                         %%
+%%  Bmc_mathpys.bst  will be used to                       %%
+%%  create a .BBL file for submission.                     %%
+%%  After submission of the .TEX file,                     %%
+%%  you will be prompted to submit your .BBL file.         %%
+%%                                                         %%
+%%                                                         %%
+%%  Note that the displayed Bibliography will not          %%
+%%  necessarily be rendered by Latex exactly as specified  %%
+%%  in the online Instructions for Authors.                %%
+%%                                                         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% if your bibliography is in bibtex format, use those commands:
+\bibliographystyle{bmc-mathphys} % Style BST file (bmc-mathphys, vancouver, spbasic).
+\bibliography{bmc_article}      % Bibliography file (usually '*.bib' )
+% for author-year bibliography (bmc-mathphys or spbasic)
+% a) write to bib file (bmc-mathphys only)
+% @settings{label, options="nameyear"}
+% b) uncomment next line
+%\nocite{label}
+
+% or include bibliography directly:
+% \begin{thebibliography}
+% \bibitem{b1}
+% \end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Figures                       %%
+%%                               %%
+%% NB: this is for captions and  %%
+%% Titles. All graphics must be  %%
+%% submitted separately and NOT  %%
+%% included in the Tex document  %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% Do not use \listoffigures as most will included as separate files
+
+\section*{Figures}
+  \begin{figure}[ht!]
+  \caption{\csentence{Sample figure title.}
+      A short description of the figure content
+      should go here.}
+      \end{figure}
+
+\begin{figure}[ht!]
+  \caption{\csentence{Sample figure title.}
+      Figure legend text.}
+      \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Tables                        %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% Use of \listoftables is discouraged.
+%%
+\section*{Tables}
+\begin{table}[h!]
+\caption{Sample table title. This is where the description of the table should go.}
+      \begin{tabular}{cccc}
+        \hline
+           & B1  &B2   & B3\\ \hline
+        A1 & 0.1 & 0.2 & 0.3\\
+        A2 & ... & ..  & .\\
+        A3 & ..  & .   & .\\ \hline
+      \end{tabular}
+\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Additional Files              %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Additional Files}
+  \subsection*{Sequel Project Website}
+    The website links to all material related to this manuscript: datasets, notebooks with analysis, raw log files,\ldots can be found here: \url{http://users.elis.ugent.be/~drdwitte/index.html}
+
+  \subsection*{Feature Matrix}
+  Overview om Semantic Databases considered in this benchmark with together with a set of
+  features and links where this information was found:   \url{http://users.elis.ugent.be/~drdwitte/featurematrix.html}
+  \subsection*{Notebooks and CSV files for postprocessing}
+  All CSV files with different views on the benchmark output together with the Jupyter notebook files showing the original analysis of the data can be found here: \url{http://users.elis.ugent.be/~drdwitte/postprocessing.html}
+\end{backmatter}
+\end{document}

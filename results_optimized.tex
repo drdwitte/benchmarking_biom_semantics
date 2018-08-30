@@ -1,0 +1,36 @@
+%
+%RESULTS Rev1
+%RUNTIME
+%SUCCESS/ERROR
+
+%Convergence of results? Not with memory, with configs though...
+After contacting the vendors with our initial results one of the parties suggested to demonstrate the optimal operation of their database. 
+This was formalized by sending out a Request-For-Information (RFI), specifying the benchmarks we were planning to run.
+3 out of 4 vendors chose to participate in the RFI, which resulted in an \emph{Optimized} configuration. 
+
+In Figure~\ref{fig:Fig02_WatdivVerticalScaling} the rightmost panel corresponds to running the benchmark with the \emph{Optimized} configuration.
+
+%
+%median/mean
+%Bla_N1_64_W1000_Def     2.825023 	6.741764
+%Gra_N1_64_W1000_Def    40.375218 	59.564284
+%Vir_N1_64_W1000_Def     0.175917 	3.667321
+%
+%Bla_N1_64_W1000_Opt    0.739366 	1.945429
+%Gra_N1_64_W1000_Opt    0.652474  	6.320693
+%Vir_N1_64_W1000_Opt    0.167420 	4.054050
+%
+\begin{itemize}
+	\item \textbf{Sensitivity to configuration:} \textbf{Vir1\_64} got no benefit from the RFI settings file. For 
+	\textbf{Bla1\_64} the only improvement was to explicitly configure the timeout parameter on the server side. This avoids unnecessary overhead while the client was already disconnected and leads to a speedup of approximately 3.5 for both runtime measurements. \textbf{Gra1\_64} has the highest sensitivity to proper configurations. The provided scripts ensure a batch speedup of 9.4 and a median runtime speedup of 62.
+	\item \textbf{32\_Def to 64\_Opt:} Moving from the left panel to the right in Figure~\ref{fig:Fig02_WatdivVerticalScaling}, we clearly see results converging. \textbf{Bla1\_64} is the most efficient system for processing batch workloads with an average runtime of 1.95s per query, 4.05s and 6.32s for \textbf{Vir1\_64} and \textbf{Gra1\_64} respectively. In the query performance \textbf{Vir1\_64} has a median runtime of 0.17s where \textbf{Gra1\_64} and \textbf{Bla1\_64} have runtimes of 0.65s and 0.74s respectively.
+%Bla_N1_32_W100_Def   0.191359		0.461707	=> x5
+%Gra_N1_32_W100_Def   0.047812		0.417214 	=> x15
+%Vir_N1_32_W100_Def   0.046707		0.301350	=> x15
+	\item \textbf{Runtime vs Dataset Size:} Returning to section~\ref{subsec:bigdata} we can verify that the linear scaling behavior is largely restored, confirming our earlier hypothesis. Multiplication factors drop to 4.2 for Blazegraph, for Virtuoso and GraphDB mf $ \approx 15$.
+\item \textbf{Timeouts \& Errors:} Apart from 5\% timeouts for \textbf{Gra1\_64\_Opt}, no query errors are observed with the \emph{Optimized} configurations.
+\end{itemize}
+%Bla_N1_64_W1000_Opt:	Success: 100.	Error: 0.0	Timeout: 0.0
+%Gra_N1_64_W1000_Opt:	Success: 95.0	Error: 0.0	Timeout: 5.0
+%Vir_N1_64_W1000_Opt:	Success: 100.	Error: 0.0	Timeout: 0.0
+

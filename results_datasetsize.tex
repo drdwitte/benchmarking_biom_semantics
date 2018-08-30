@@ -1,0 +1,44 @@
+%
+%RESULTS Rev1: Notebook Rev1_13 - A Median & Average Runtime
+%RESULTS Rev1: Notebook Rev1_13 - B Errors & Timeout percentage
+%
+The previous benchmark results~\cite{de2016big} stem from the \emph{None} configuration. In this section however, we use the \emph{Default} configuration of the \emph{Vendor} systems.
+In Figure~\ref{fig:Fig01_WatdivNoSQLDataScaling} query runtime distributions are shown of the 4 \emph{Vendor} systems for three different dataset sizes of the WatDiv benchmark: 10M, 100M, and 1000M (million) triples.
+%
+%median/mean
+%Bla_N1_32_W10_Def    0.033637		0.058546
+%Gra_N1_32_W10_Def    0.007062		0.036882
+%Es_N1_32_W10_Def     0.163703		0.290875
+%Vir_N1_32_W10_Def    0.007511		0.018063
+%
+%Bla_N1_32_W100_Def   0.191359		0.461707
+%Gra_N1_32_W100_Def   0.047812		0.417214
+%Es_N1_32_W100_Def    48.305706		72.994550
+%Vir_N1_32_W100_Def   0.046707		0.301350
+%  
+%Bla_N1_32_W1000_Def  8.858862 		56.437824
+%Gra_N1_32_W1000_Def  47.932701 	74.927924
+%Es_N1_32_W1000_Def   64.217677 	121.887237
+%Vir_N1_32_W1000_Def  0.258209  	5.622635
+%speedups
+%Bla		7.8862262153 		122.2373150071
+%Gra		11.3121305786 		179.5911067222
+%Es			250.9481736141 		1.6698128422
+%Vir		16.6832752035 		18.6581549693
+
+
+\begin{itemize}
+	\item \textbf{Runtime vs Dataset Size:} Although only 3 data points are available for 10, 100 and, 1000M triples, it is interesting to investigate how the runtime scales when the dataset grows by a factor 10. If we focus on the average query runtimes (dots) two trends can be observed: \textbf{Vir1\_32} has a nearly constant multiplication factor (mf) while for the other stores this is not the case. Going from 10M to 100M the mfs are 8, 11, and 17 for \textbf{Bla1\_32}, \textbf{Gra1\_32}, and \textbf{Vir1\_32} respectively. Going from 100M the mf for \textbf{Vir1\_32} is 19, but for the other systems mf $> 120$! A possible explanation for this trend break is that memory swapping occurs. This observation motivates the choice for 64GB memory instances as the central reference setup from which to explore the benchmark space.
+%errors and timeouts
+%Bla_N1_32_W1000_Def:	Success: 88.3	Error: 0.0	Timeout: 11.6
+%Gra_N1_32_W1000_Def:	Success: 100.	Error: 0.0	Timeout: 0.0
+%Es_N1_32_W1000_Def:	Success: 67.2	Error: 0.0	Timeout: 32.7
+%Vir_N1_32_W1000_Def:	Success: 99.9	Error: 0.04	Timeout: 0.0
+\item \textbf{Timeouts \& Errors:} Most of the queries are executed successfully by all \emph{Vendor} systems. For WatDiv1000M \textbf{Bla1\_32} already has a timeout percentage of 11.6\% and for \textbf{ES1\_32} this is even 32.7\%. Note however that these results do not affect the plots as we only use query events from the \emph{benchmark survival interval}. 
+\item \textbf{GraphDB vs Virtuoso:} In terms of median runtime both \textbf{Gra1\_32} and \textbf{Vir1\_32} are tied at 0.01s and 0.05s in the two leftmost panels of Fig.~\ref{fig:Fig01_WatdivNoSQLDataScaling}. With sufficient memory these engines can remain competitive. However, in the 32GB setting only \textbf{Vir1\_32} is performant, with a median runtime of 18.6s. \textbf{Gra\_32}, more than the other stores, suffers from a slow tail which has a major effect on the mix runtimes. There Virtuoso is 1.5-2 times faster.
+
+\item \textbf{Blazegraph vs. GraphDB:} \textbf{Bla1\_32} competes with \textbf{Gra1\_32} for batch workloads but not in terms of median runtimes.
+
+\item \textbf{ES consistently last:} \textbf{ES\_32}, even on WatDiv10M, lags by a factor of at least 5 to the other systems. For WatDiv100M already the nonlinear scaling behavior sets in, making it the only engine to experience problems with the 100M dataset. 
+\end{itemize}
+%

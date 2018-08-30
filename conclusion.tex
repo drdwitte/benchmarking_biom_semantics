@@ -1,0 +1,45 @@
+%Restate the research question that the study set out to answer
+%Begin with a sentence that refers to the main subject of discussion
+In this work we offer guidelines and tools to run a \emph{reproducible} benchmark (\textbf{RQ1}). For the back-end we recommend working with hardware available via cloud providers, AMIs and Docker images for the system installation. We recommend releasing the configuration details for every store. 
+
+To enable critical reviewing benchmark output data should be released in its rawest form. The  query event data in this work turned out to be an enabler for new unanticipated research questions. One example in this work is the study of caching effects. 
+
+The methods to arrive at certain research visualizations should be made available, which also provides knowledge transfer to future benchmark efforts. 
+
+In order to learn from challenging benchmarks, the benchmark approach should anticipate the occurrence of all sorts of errors. The information in these incomplete benchmark runs is in fact very valuable. 
+
+What are the trade-offs associated with certain setups (\textbf{RQ2})? For every store we show the effect in terms of throughput and cost for vertical and horizontal scaling. 
+Overall, the low-end setup \textbf{Vir1\_32} gave the best results. For the other stores the best results are achieved with more memory and \emph{Optimized} configurations.
+Benchmark cost allows the comparison of a heterogeneous mix of RDF storage approaches. \emph{SemWeb} systems, of which \textbf{TPF*\_64} performed best in this study, still lag by an order of magnitude in terms of performance with the \emph{Vendor} systems. The research community would benefit from more realistic and challenging benchmarks, as it might stimulate the further development of current prototypes up to a level where they can compete with existing \emph{Vendor} systems.
+
+Future benchmarking efforts should consider at least locally scanning a benchmark space. This necessity was demonstrated in this work by showing the effect of dataset size and by modifying the amount of server memory. An interesting result in this aspect is that the performance of the different \emph{Vendor} systems converged as they were given better hardware and configurations.
+
+In answering \textbf{RQ3} we demonstrated that query runtimes are an oversimplified representation of performance. Many contextual factors influence the runtime comparisons: certain query types might completely dominate the mix runtimes, server load and caching effects have a different impact of the systems tested. Adding query completeness analysis, makes benchmark runtime results more trustworthy. Ignoring this aspect would have led to very different conclusions in this work.
+
+The ranking of the different systems is not consistent if we change from artificial to real-world benchmarks (\textbf{RQ4}). This support the advice to try and run use case specific benchmarks before deciding on a system architecture. Although it was difficult to extract transferable insights from the Ontoforce benchmark, the decision tree approach in fact shed some light on certain SPARQL query features which pose more problems to one system than another, giving the vendors some direction in optimizing their RDF storage solution.
+
+%future work
+As for the future work, the results in this work definitely indicate a lot of room for improvement in multi-node RDF storage solutions. While Virtuoso's offering is the most advanced, it is not yet as stable as its single-node counterpart. 
+
+%Raw event data => serendipity
+%Query Completeness affects query runtime!
+%Context is important: caching, load
+%Cost comparisons: loadcost very different
+%Median or mean runtime: both should be analyzed!
+%We show the importance of scanning a search space as the results are heavily affected. Configurations should be released and reproducible as they have a major impact => reason vendor-driven tests should always be approached carefully!
+%Horizontal scaling a lot of room for improvement!
+%Research solutions cannot compete with the SOTA, lack of appreciation by the community might be slowing down adoption
+%Benchmarking should be easy as results rarely generalize, at least go for diversified stress test, but keep in mind that this only tells a limited story
+
+%RQ1: Welke design beslissingen kunnen ervoor zorgen dat benchmark resultaten vlotter kunnen gereproduceerd en zelfs uitgebreid worden en bovendien meer betrouwbaar zijn?
+%A: Methods Section: Open Hardware, Open Configs, AMIs, Benchmark Space expliciet maken, Open Postprocessing pipeline, Structured Benchmark output which allows furth postprocessing
+%
+%RQ2: Wat is het effect van steeds grotere linked data sets en welke mogelijke oplossing en bijhorende tradeoffs komen daarbij. Hoe kunnen we alles met elkaar vergelijken?
+%A1: 4.1 dataset size
+%A2: Mogelijke oplossingen: 4.2 - 4.5
+%A3: 7 Benchmark Cost
+%RQ3: What factors influence query runtimes, is their effect different for the different solutions tested?
+%A: section 5
+%RQ4: How do the state of the art systems behave in a real-world challenging benchmark data and queryset in the context of faceted browsing. Can we gain insights that generalize to other contexts and are results transferable across benchmarks?
+
+

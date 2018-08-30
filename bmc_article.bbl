@@ -1,0 +1,1787 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{54}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem{de2016big}
+\begin{bchapter}
+\bauthor{\bsnm{De~Witte}, \binits{D.}},
+\bauthor{\bsnm{De~Vocht}, \binits{L.}},
+\bauthor{\bsnm{Verborgh}, \binits{R.}},
+\bauthor{\bsnm{Mannens}, \binits{E.}}, \betal:
+\bctitle{Big linked data etl benchmark on cloud commodity hardware}.
+In: \bbtitle{Proceedings of the International Workshop on Semantic Big Data},
+p. \bfpage{12}
+(\byear{2016}).
+\bcomment{ACM}
+\end{bchapter}
+\endbibitem
+
+%%% 2
+\bibitem{alucc2014diversified}
+\begin{bchapter}
+\bauthor{\bsnm{Alu{\c{c}}}, \binits{G.}},
+\bauthor{\bsnm{Hartig}, \binits{O.}},
+\bauthor{\bsnm{{\"O}zsu}, \binits{M.T.}},
+\bauthor{\bsnm{Daudjee}, \binits{K.}}:
+\bctitle{{Diversified stress testing of {RDF} data management systems}}.
+In: \bbtitle{The Semantic Web--ISWC 2014},
+pp. \bfpage{197}--\blpage{212}.
+\bpublisher{Springer}, \blocation{???}
+(\byear{2014})
+\end{bchapter}
+\endbibitem
+
+%%% 3
+\bibitem{dewitte_swat4ls_2016}
+\begin{bchapter}
+\bauthor{\bsnm{De~Witte}, \binits{D.}},
+\bauthor{\bsnm{De~Vocht}, \binits{L.}},
+\bauthor{\bsnm{Knecht}, \binits{K.}},
+\bauthor{\bsnm{Pattyn}, \binits{F.}},
+\bauthor{\bsnm{Constandt}, \binits{H.}},
+\bauthor{\bsnm{Mannens}, \binits{E.}},
+\bauthor{\bsnm{Verborgh}, \binits{R.}}:
+\bctitle{Scaling out federated queries for life science data in production}.
+In: \bbtitle{Proceedings of the 9th International Conference on Semantic Web
+  Applications and Tools for Life Sciences}
+(\byear{2016})
+\end{bchapter}
+\endbibitem
+
+%%% 4
+\bibitem{DBLP:journals/corr/abs-1103-5043}
+\begin{botherref}
+\oauthor{\bsnm{Arias}, \binits{M.}},
+\oauthor{\bsnm{Fern{\'{a}}ndez}, \binits{J.D.}},
+\oauthor{\bsnm{Mart{\'{\i}}nez{-}Prieto}, \binits{M.A.}},
+\oauthor{\bparticle{de~la} \bsnm{Fuente}, \binits{P.}}:
+An empirical study of real-world {SPARQL} queries.
+CoRR
+\textbf{abs/1103.5043}
+(2011)
+\end{botherref}
+\endbibitem
+
+%%% 5
+\bibitem{DBLP:conf/semweb/VerborghHMHVSCCMW14}
+\begin{bchapter}
+\bauthor{\bsnm{Verborgh}, \binits{R.}},
+\bauthor{\bsnm{Hartig}, \binits{O.}},
+\bauthor{\bsnm{De~Meester}, \binits{B.}},
+\bauthor{\bsnm{Haesendonck}, \binits{G.}},
+\bauthor{\bsnm{De~Vocht}, \binits{L.}},
+\bauthor{\bsnm{Vander~Sande}, \binits{M.}},
+\bauthor{\bsnm{Cyganiak}, \binits{R.}},
+\bauthor{\bsnm{Colpaert}, \binits{P.}},
+\bauthor{\bsnm{Mannens}, \binits{E.}},
+\bauthor{\bparticle{Van~de} \bsnm{Walle}, \binits{R.}}:
+\bctitle{Querying datasets on the {Web} with high availability}.
+In: \bbtitle{Proceedings of the 13th International Semantic Web Conference}.
+\bsertitle{Lecture Notes in Computer Science},
+vol. \bseriesno{8796},
+pp. \bfpage{180}--\blpage{196}.
+\bpublisher{Springer}, \blocation{???}
+(\byear{2014})
+\end{bchapter}
+\endbibitem
+
+%%% 6
+\bibitem{graux2016multi}
+\begin{botherref}
+\oauthor{\bsnm{Graux}, \binits{D.}},
+\oauthor{\bsnm{Jachiet}, \binits{L.}},
+\oauthor{\bsnm{Genev{\`e}s}, \binits{P.}},
+\oauthor{\bsnm{Laya{\"i}da}, \binits{N.}}:
+A multi-criteria experimental ranking of distributed {SPARQL} evaluators
+(2016)
+\end{botherref}
+\endbibitem
+
+%%% 7
+\bibitem{ladwig2011cumulusrdf}
+\begin{bchapter}
+\bauthor{\bsnm{Ladwig}, \binits{G.}},
+\bauthor{\bsnm{Harth}, \binits{A.}}:
+\bctitle{{CumulusRDF}: linked data management on nested key-value stores}.
+In: \bbtitle{The 7th International Workshop on Scalable Semantic Web Knowledge
+  Base Systems (SSWS 2011)},
+p. \bfpage{30}
+(\byear{2011})
+\end{bchapter}
+\endbibitem
+
+%%% 8
+\bibitem{Schatzle:2016:SRQ:2977797.2977806}
+\begin{barticle}
+\bauthor{\bsnm{Sch\"{a}tzle}, \binits{A.}},
+\bauthor{\bsnm{Przyjaciel-Zablocki}, \binits{M.}},
+\bauthor{\bsnm{Skilevic}, \binits{S.}},
+\bauthor{\bsnm{Lausen}, \binits{G.}}:
+\batitle{{S2RDF}: {RDF} querying with {SPARQL} on spark}.
+\bjtitle{Proc. VLDB Endow.}
+\bvolume{9}(\bissue{10}),
+\bfpage{804}--\blpage{815}
+(\byear{2016})
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem{schatzle2011pigsparql}
+\begin{bchapter}
+\bauthor{\bsnm{Sch{\"a}tzle}, \binits{A.}},
+\bauthor{\bsnm{Przyjaciel-Zablocki}, \binits{M.}},
+\bauthor{\bsnm{Lausen}, \binits{G.}}:
+\bctitle{{PigSPARQL}: Mapping {SPARQL} to pig latin}.
+In: \bbtitle{Proceedings of the International Workshop on Semantic Web
+  Information Management},
+p. \bfpage{4}
+(\byear{2011}).
+\bcomment{ACM}
+\end{bchapter}
+\endbibitem
+
+%%% 10
+\bibitem{kotsevbenchmarking}
+\begin{botherref}
+\oauthor{\bsnm{Kotsev}, \binits{V.}},
+\oauthor{\bsnm{Minadakis}, \binits{N.}},
+\oauthor{\bsnm{Papakonstantinou}, \binits{V.}},
+\oauthor{\bsnm{Erling}, \binits{O.}},
+\oauthor{\bsnm{Fundulaki}, \binits{I.}},
+\oauthor{\bsnm{Kiryakov}, \binits{A.}}:
+Benchmarking {RDF} query engines: The {LDBC} semantic publishing benchmark
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem{hernandez2016querying}
+\begin{bchapter}
+\bauthor{\bsnm{Hern{\'a}ndez}, \binits{D.}},
+\bauthor{\bsnm{Hogan}, \binits{A.}},
+\bauthor{\bsnm{Riveros}, \binits{C.}},
+\bauthor{\bsnm{Rojas}, \binits{C.}},
+\bauthor{\bsnm{Zerega}, \binits{E.}}:
+\bctitle{Querying wikidata: Comparing {SPARQL}, relational and graph
+  databases}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{88}--\blpage{103}
+(\byear{2016}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 12
+\bibitem{harris20094store}
+\begin{bchapter}
+\bauthor{\bsnm{Harris}, \binits{S.}},
+\bauthor{\bsnm{Lamb}, \binits{N.}},
+\bauthor{\bsnm{Shadbolt}, \binits{N.}}:
+\bctitle{4store: The design and implementation of a clustered {RDF} store}.
+In: \bbtitle{5th International Workshop on Scalable Semantic Web Knowledge Base
+  Systems (SSWS2009)},
+pp. \bfpage{94}--\blpage{109}
+(\byear{2009})
+\end{bchapter}
+\endbibitem
+
+%%% 13
+\bibitem{papailiou2013h}
+\begin{bchapter}
+\bauthor{\bsnm{Papailiou}, \binits{N.}},
+\bauthor{\bsnm{Konstantinou}, \binits{I.}},
+\bauthor{\bsnm{Tsoumakos}, \binits{D.}},
+\bauthor{\bsnm{Karras}, \binits{P.}},
+\bauthor{\bsnm{Koziris}, \binits{N.}}:
+\bctitle{H 2 rdf+: High-performance distributed joins over large-scale {RDF}
+  graphs}.
+In: \bbtitle{Big Data, 2013 IEEE International Conference On},
+pp. \bfpage{255}--\blpage{263}
+(\byear{2013}).
+\bcomment{IEEE}
+\end{bchapter}
+\endbibitem
+
+%%% 14
+\bibitem{schatzle2014sempala}
+\begin{bchapter}
+\bauthor{\bsnm{Sch{\"a}tzle}, \binits{A.}},
+\bauthor{\bsnm{Przyjaciel-Zablocki}, \binits{M.}},
+\bauthor{\bsnm{Neu}, \binits{A.}},
+\bauthor{\bsnm{Lausen}, \binits{G.}}:
+\bctitle{Sempala: interactive {SPARQL} query processing on hadoop}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{164}--\blpage{179}
+(\byear{2014}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 15
+\bibitem{rohloff2010high}
+\begin{bchapter}
+\bauthor{\bsnm{Rohloff}, \binits{K.}},
+\bauthor{\bsnm{Schantz}, \binits{R.E.}}:
+\bctitle{High-performance, massively scalable distributed systems using the
+  mapreduce software framework: the shard triple-store}.
+In: \bbtitle{Programming Support Innovations for Emerging Distributed
+  Applications},
+p. \bfpage{4}
+(\byear{2010}).
+\bcomment{ACM}
+\end{bchapter}
+\endbibitem
+
+%%% 16
+\bibitem{Saleem}
+\begin{botherref}
+\oauthor{\bsnm{Saleem}, \binits{M.}},
+\oauthor{\bsnm{Hasnain}, \binits{A.}},
+\oauthor{\bsnm{Ngomo}, \binits{A.-C.N.}}:
+Bigrdfbench: A billion triples benchmark for {SPARQL} endpoint federation
+\end{botherref}
+\endbibitem
+
+%%% 17
+\bibitem{DBLP:conf/semweb/SchwarteHHSS11}
+\begin{bchapter}
+\bauthor{\bsnm{Schwarte}, \binits{A.}},
+\bauthor{\bsnm{Haase}, \binits{P.}},
+\bauthor{\bsnm{Hose}, \binits{K.}},
+\bauthor{\bsnm{Schenkel}, \binits{R.}},
+\bauthor{\bsnm{Schmidt}, \binits{M.}}:
+\bctitle{{FedX: Optimization Techniques for Federated Query Processing on
+  Linked Data}}.
+In: \bbtitle{The Semantic Web - {ISWC} 2011, Proceedings, Part {I}},
+pp. \bfpage{601}--\blpage{616}
+(\byear{2011})
+\end{bchapter}
+\endbibitem
+
+%%% 18
+\bibitem{gorlitz2011splendid}
+\begin{bchapter}
+\bauthor{\bsnm{G{\"o}rlitz}, \binits{O.}},
+\bauthor{\bsnm{Staab}, \binits{S.}}:
+\bctitle{Splendid: {SPARQL} endpoint federation exploiting void descriptions}.
+In: \bbtitle{Proceedings of the Second International Conference on Consuming
+  Linked Data-Volume 782},
+pp. \bfpage{13}--\blpage{24}
+(\byear{2011}).
+\bcomment{CEUR-WS. org}
+\end{bchapter}
+\endbibitem
+
+%%% 19
+\bibitem{Acosta2011}
+\begin{bbook}
+\bauthor{\bsnm{Acosta}, \binits{M.}},
+\bauthor{\bsnm{Vidal}, \binits{M.-E.}},
+\bauthor{\bsnm{Lampo}, \binits{T.}},
+\bauthor{\bsnm{Castillo}, \binits{J.}},
+\bauthor{\bsnm{Ruckhaus}, \binits{E.}}:
+In: \beditor{\bsnm{Aroyo}, \binits{L.}},
+\beditor{\bsnm{Welty}, \binits{C.}},
+\beditor{\bsnm{Alani}, \binits{H.}},
+\beditor{\bsnm{Taylor}, \binits{J.}},
+\beditor{\bsnm{Bernstein}, \binits{A.}},
+\beditor{\bsnm{Kagal}, \binits{L.}},
+\beditor{\bsnm{Noy}, \binits{N.}},
+\beditor{\bsnm{Blomqvist}, \binits{E.}} (eds.)
+\bbtitle{ANAPSID: An Adaptive Query Processing Engine for {SPARQL} Endpoints},
+pp. \bfpage{18}--\blpage{34}.
+\bpublisher{Springer},
+\blocation{Berlin, Heidelberg}
+(\byear{2011})
+\end{bbook}
+\endbibitem
+
+%%% 20
+\bibitem{saleem2014hibiscus}
+\begin{bchapter}
+\bauthor{\bsnm{Saleem}, \binits{M.}},
+\bauthor{\bsnm{Ngomo}, \binits{A.-C.N.}}:
+\bctitle{Hibiscus: Hypergraph-based source selection for {SPARQL} endpoint
+  federation}.
+In: \bbtitle{European Semantic Web Conference},
+pp. \bfpage{176}--\blpage{191}
+(\byear{2014}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 21
+\bibitem{saleem2015feasible}
+\begin{bchapter}
+\bauthor{\bsnm{Saleem}, \binits{M.}},
+\bauthor{\bsnm{Mehmood}, \binits{Q.}},
+\bauthor{\bsnm{Ngomo}, \binits{A.-C.N.}}:
+\bctitle{Feasible: a feature-based {SPARQL} benchmark generation framework}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{52}--\blpage{69}
+(\byear{2015}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 22
+\bibitem{boncz2005monetdb}
+\begin{bchapter}
+\bauthor{\bsnm{Boncz}, \binits{P.A.}},
+\bauthor{\bsnm{Zukowski}, \binits{M.}},
+\bauthor{\bsnm{Nes}, \binits{N.}}:
+\bctitle{Monetdb/x100: Hyper-pipelining query execution.}
+In: \bbtitle{CIDR},
+vol. \bseriesno{5},
+pp. \bfpage{225}--\blpage{237}
+(\byear{2005})
+\end{bchapter}
+\endbibitem
+
+%%% 23
+\bibitem{neumann2010rdf}
+\begin{barticle}
+\bauthor{\bsnm{Neumann}, \binits{T.}},
+\bauthor{\bsnm{Weikum}, \binits{G.}}:
+\batitle{The rdf-3x engine for scalable management of {RDF} data}.
+\bjtitle{The VLDB Journal - The International Journal on Very Large Data Bases}
+\bvolume{19}(\bissue{1}),
+\bfpage{91}--\blpage{113}
+(\byear{2010})
+\end{barticle}
+\endbibitem
+
+%%% 24
+\bibitem{zou2011gstore}
+\begin{barticle}
+\bauthor{\bsnm{Zou}, \binits{L.}},
+\bauthor{\bsnm{Mo}, \binits{J.}},
+\bauthor{\bsnm{Chen}, \binits{L.}},
+\bauthor{\bsnm{{\"O}zsu}, \binits{M.T.}},
+\bauthor{\bsnm{Zhao}, \binits{D.}}:
+\batitle{gstore: answering {SPARQL} queries via subgraph matching}.
+\bjtitle{Proceedings of the VLDB Endowment}
+\bvolume{4}(\bissue{8}),
+\bfpage{482}--\blpage{493}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem{cudre2013nosql}
+\begin{bchapter}
+\bauthor{\bsnm{Cudr{\'e}-Mauroux}, \binits{P.}},
+\bauthor{\bsnm{Enchev}, \binits{I.}},
+\bauthor{\bsnm{Fundatureanu}, \binits{S.}},
+\bauthor{\bsnm{Groth}, \binits{P.}},
+\bauthor{\bsnm{Haque}, \binits{A.}},
+\bauthor{\bsnm{Harth}, \binits{A.}},
+\bauthor{\bsnm{Keppmann}, \binits{F.L.}},
+\bauthor{\bsnm{Miranker}, \binits{D.}},
+\bauthor{\bsnm{Sequeda}, \binits{J.F.}},
+\bauthor{\bsnm{Wylot}, \binits{M.}}:
+\bctitle{Nosql databases for rdf: an empirical evaluation}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{310}--\blpage{325}
+(\byear{2013}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 26
+\bibitem{khadilkar2012jena}
+\begin{bchapter}
+\bauthor{\bsnm{Khadilkar}, \binits{V.}},
+\bauthor{\bsnm{Kantarcioglu}, \binits{M.}},
+\bauthor{\bsnm{Thuraisingham}, \binits{B.}},
+\bauthor{\bsnm{Castagna}, \binits{P.}}:
+\bctitle{Jena-hbase: A distributed, scalable and efficient {RDF} triple store}.
+In: \bbtitle{Proceedings of the 2012th International Conference on Posters \&
+  Demonstrations Track-Volume 914},
+pp. \bfpage{85}--\blpage{88}
+(\byear{2012}).
+\bcomment{CEUR-WS. org}
+\end{bchapter}
+\endbibitem
+
+%%% 27
+\bibitem{wu2014biobenchmark}
+\begin{barticle}
+\bauthor{\bsnm{Wu}, \binits{H.}},
+\bauthor{\bsnm{Fujiwara}, \binits{T.}},
+\bauthor{\bsnm{Yamamoto}, \binits{Y.}},
+\bauthor{\bsnm{Bolleman}, \binits{J.}},
+\bauthor{\bsnm{Yamaguchi}, \binits{A.}}:
+\batitle{{BioBenchmark Toyama 2012: an evaluation of the performance of triple
+  stores on biological data}}.
+\bjtitle{Journal of biomedical semantics}
+\bvolume{5}(\bissue{1}),
+\bfpage{1}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 28
+\bibitem{Schmidt2011}
+\begin{barticle}
+\bauthor{\bsnm{Schmidt}, \binits{M.}},
+\bauthor{\bsnm{G{\"{o}}rlitz}, \binits{O.}},
+\bauthor{\bsnm{Haase}, \binits{P.}},
+\bauthor{\bsnm{Ladwig}, \binits{G.}},
+\bauthor{\bsnm{Schwarte}, \binits{A.}},
+\bauthor{\bsnm{Tran}, \binits{T.}}:
+\batitle{{FedBench: A benchmark suite for federated semantic data query
+  processing}}.
+\bjtitle{Lecture Notes in Computer Science (including subseries Lecture Notes
+  in Artificial Intelligence and Lecture Notes in Bioinformatics)}
+\bvolume{7031 LNCS}(\bissue{PART 1}),
+\bfpage{585}--\blpage{600}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+%%% 29
+\bibitem{guo2005lubm}
+\begin{barticle}
+\bauthor{\bsnm{Guo}, \binits{Y.}},
+\bauthor{\bsnm{Pan}, \binits{Z.}},
+\bauthor{\bsnm{Heflin}, \binits{J.}}:
+\batitle{{LUBM: A benchmark for OWL knowledge base systems}}.
+\bjtitle{Web Semantics: Science, Services and Agents on the World Wide Web}
+\bvolume{3}(\bissue{2}),
+\bfpage{158}--\blpage{182}
+(\byear{2005})
+\end{barticle}
+\endbibitem
+
+%%% 30
+\bibitem{schmidt2009sp}
+\begin{bchapter}
+\bauthor{\bsnm{Schmidt}, \binits{M.}},
+\bauthor{\bsnm{Hornung}, \binits{T.}},
+\bauthor{\bsnm{Lausen}, \binits{G.}},
+\bauthor{\bsnm{Pinkel}, \binits{C.}}:
+\bctitle{{SP\^{} 2Bench: a SPARQL performance benchmark}}.
+In: \bbtitle{Data Engineering, 2009. ICDE'09. IEEE 25th International
+  Conference On},
+pp. \bfpage{222}--\blpage{233}
+(\byear{2009}).
+\bcomment{IEEE}
+\end{bchapter}
+\endbibitem
+
+%%% 31
+\bibitem{bizer2009berlin}
+\begin{barticle}
+\bauthor{\bsnm{Bizer}, \binits{C.}},
+\bauthor{\bsnm{Schultz}, \binits{A.}}:
+\batitle{{The Berlin SPARQL Benchmark}}.
+\bjtitle{International Journal on Semantic Web and Information Systems
+  (IJSWIS)}
+\bvolume{5}(\bissue{2}),
+\bfpage{1}--\blpage{24}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 32
+\bibitem{morsey2011dbpedia}
+\begin{botherref}
+\oauthor{\bsnm{Morsey}, \binits{M.}},
+\oauthor{\bsnm{Lehmann}, \binits{J.}},
+\oauthor{\bsnm{Auer}, \binits{S.}},
+\oauthor{\bsnm{Ngonga~Ngomo}, \binits{A.-C.}}:
+{DBpedia SPARQL benchmark--performance assessment with real queries on real
+  data}.
+The Semantic Web--ISWC 2011,
+454--469
+(2011)
+\end{botherref}
+\endbibitem
+
+%%% 33
+\bibitem{DBLP:conf/sigmod/DuanKSU11}
+\begin{bchapter}
+\bauthor{\bsnm{Duan}, \binits{S.}},
+\bauthor{\bsnm{Kementsietsidis}, \binits{A.}},
+\bauthor{\bsnm{Srinivas}, \binits{K.}},
+\bauthor{\bsnm{Udrea}, \binits{O.}}:
+\bctitle{{Apples and oranges: a comparison of {RDF} benchmarks and real {RDF}}
+  datasets}.
+In: \bbtitle{Proceedings of the {ACM} {SIGMOD} International Conference on
+  Management of Data},
+pp. \bfpage{145}--\blpage{156}
+(\byear{2011})
+\end{bchapter}
+\endbibitem
+
+%%% 34
+\bibitem{antezana2009cell}
+\begin{barticle}
+\bauthor{\bsnm{Antezana}, \binits{E.}},
+\bauthor{\bsnm{Ega{\~n}a}, \binits{M.}},
+\bauthor{\bsnm{Blond{\'e}}, \binits{W.}},
+\bauthor{\bsnm{Illarramendi}, \binits{A.}},
+\bauthor{\bsnm{Bilbao}, \binits{I.}},
+\bauthor{\bsnm{De~Baets}, \binits{B.}},
+\bauthor{\bsnm{Stevens}, \binits{R.}},
+\bauthor{\bsnm{Mironov}, \binits{V.}},
+\bauthor{\bsnm{Kuiper}, \binits{M.}}:
+\batitle{The cell cycle ontology: an application ontology for the
+  representation and integrated analysis of the cell cycle process}.
+\bjtitle{Genome Biology}
+\bvolume{10}(\bissue{5}),
+\bfpage{58}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 35
+\bibitem{yamamoto2011allie}
+\begin{botherref}
+\oauthor{\bsnm{Yamamoto}, \binits{Y.}},
+\oauthor{\bsnm{Yamaguchi}, \binits{A.}},
+\oauthor{\bsnm{Bono}, \binits{H.}},
+\oauthor{\bsnm{Takagi}, \binits{T.}}:
+Allie: a database and a search service of abbreviations and long forms.
+Database
+\textbf{2011}
+(2011)
+\end{botherref}
+\endbibitem
+
+%%% 36
+\bibitem{kinjo2011protein}
+\begin{botherref}
+\oauthor{\bsnm{Kinjo}, \binits{A.R.}},
+\oauthor{\bsnm{Suzuki}, \binits{H.}},
+\oauthor{\bsnm{Yamashita}, \binits{R.}},
+\oauthor{\bsnm{Ikegawa}, \binits{Y.}},
+\oauthor{\bsnm{Kudou}, \binits{T.}},
+\oauthor{\bsnm{Igarashi}, \binits{R.}},
+\oauthor{\bsnm{Kengaku}, \binits{Y.}},
+\oauthor{\bsnm{Cho}, \binits{H.}},
+\oauthor{\bsnm{Standley}, \binits{D.M.}},
+\oauthor{\bsnm{Nakagawa}, \binits{A.}}, et al.:
+Protein data bank japan (pdbj): maintaining a structural data archive and
+  resource description framework format.
+Nucleic acids research
+(2011)
+\end{botherref}
+\endbibitem
+
+%%% 37
+\bibitem{uniprot2014uniprot}
+\begin{botherref}
+\oauthor{\bsnm{Consortium}, \binits{U.}}, et al.:
+Uniprot: a hub for protein information.
+Nucleic acids research
+(2014)
+\end{botherref}
+\endbibitem
+
+%%% 38
+\bibitem{tateno2002dna}
+\begin{barticle}
+\bauthor{\bsnm{Tateno}, \binits{Y.}},
+\bauthor{\bsnm{Imanishi}, \binits{T.}},
+\bauthor{\bsnm{Miyazaki}, \binits{S.}},
+\bauthor{\bsnm{Fukami-Kobayashi}, \binits{K.}},
+\bauthor{\bsnm{Saitou}, \binits{N.}},
+\bauthor{\bsnm{Sugawara}, \binits{H.}},
+\bauthor{\bsnm{Gojobori}, \binits{T.}}:
+\batitle{Dna data bank of japan (ddbj) for genome scale research in life
+  science}.
+\bjtitle{Nucleic acids research}
+\bvolume{30}(\bissue{1}),
+\bfpage{27}--\blpage{30}
+(\byear{2002})
+\end{barticle}
+\endbibitem
+
+%%% 39
+\bibitem{gorlitz2012splodge}
+\begin{bchapter}
+\bauthor{\bsnm{G{\"o}rlitz}, \binits{O.}},
+\bauthor{\bsnm{Thimm}, \binits{M.}},
+\bauthor{\bsnm{Staab}, \binits{S.}}:
+\bctitle{Splodge: systematic generation of {SPARQL} benchmark queries for
+  linked open data}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{116}--\blpage{132}
+(\byear{2012}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 40
+\bibitem{ghemawat2003google}
+\begin{bchapter}
+\bauthor{\bsnm{Ghemawat}, \binits{S.}},
+\bauthor{\bsnm{Gobioff}, \binits{H.}},
+\bauthor{\bsnm{Leung}, \binits{S.-T.}}:
+\bctitle{The google file system}.
+In: \bbtitle{ACM SIGOPS Operating Systems Review},
+vol. \bseriesno{37},
+pp. \bfpage{29}--\blpage{43}
+(\byear{2003}).
+\bcomment{ACM}
+\end{bchapter}
+\endbibitem
+
+%%% 41
+\bibitem{LDBC}
+\begin{barticle}
+\bauthor{\bsnm{Angles}, \binits{R.}},
+\bauthor{\bsnm{Boncz}, \binits{P.}},
+\bauthor{\bsnm{Larriba-Pey}, \binits{J.}},
+\bauthor{\bsnm{Fundulaki}, \binits{I.}},
+\bauthor{\bsnm{Neumann}, \binits{T.}},
+\bauthor{\bsnm{Erling}, \binits{O.}},
+\bauthor{\bsnm{Neubauer}, \binits{P.}}, \betal:
+\batitle{The linked data benchmark council: A graph and {RDF} industry
+  benchmarking effort}.
+\bjtitle{SIGMOD Rec.}
+\bvolume{43}(\bissue{1}),
+\bfpage{27}--\blpage{31}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 42
+\bibitem{HOBBIT}
+\begin{botherref}
+\oauthor{\bsnm{Ngomo}, \binits{A.-C.N.}},
+\oauthor{\bsnm{R{\"o}der}, \binits{M.}}:
+{HOBBIT}: Holistic benchmarking for big linked data
+\end{botherref}
+\endbibitem
+
+%%% 43
+\bibitem{Boncz:2013:LBG:2513591.2527070}
+\begin{bchapter}
+\bauthor{\bsnm{Boncz}, \binits{P.}}:
+\bctitle{{LDBC}: Benchmarks for graph and {RDF} data management}.
+In: \bbtitle{Proceedings of the 17th International Database Engineering \&
+  Applications Symposium}.
+\bsertitle{IDEAS '13},
+pp. \bfpage{1}--\blpage{2}.
+\bpublisher{ACM},
+\blocation{New York, NY, USA}
+(\byear{2013})
+\end{bchapter}
+\endbibitem
+
+%%% 44
+\bibitem{erling2015ldbc}
+\begin{bchapter}
+\bauthor{\bsnm{Erling}, \binits{O.}},
+\bauthor{\bsnm{Averbuch}, \binits{A.}},
+\bauthor{\bsnm{Larriba-Pey}, \binits{J.}},
+\bauthor{\bsnm{Chafi}, \binits{H.}},
+\bauthor{\bsnm{Gubichev}, \binits{A.}},
+\bauthor{\bsnm{Prat}, \binits{A.}},
+\bauthor{\bsnm{Pham}, \binits{M.-D.}},
+\bauthor{\bsnm{Boncz}, \binits{P.}}:
+\bctitle{The {LDBC} social network benchmark: Interactive workload}.
+In: \bbtitle{Proceedings of the 2015 ACM SIGMOD International Conference on
+  Management of Data},
+pp. \bfpage{619}--\blpage{630}
+(\byear{2015}).
+\bcomment{ACM}
+\end{bchapter}
+\endbibitem
+
+%%% 45
+\bibitem{Picalausa2011}
+\begin{botherref}
+\oauthor{\bsnm{Picalausa}, \binits{F.}},
+\oauthor{\bsnm{Vansummeren}, \binits{S.}}:
+{What are real {SPARQL} queries like?}
+Proceedings of the International Workshop on Semantic Web Information
+  Management - SWIM '11,
+1--6
+(2011)
+\end{botherref}
+\endbibitem
+
+%%% 46
+\bibitem{Stegmaier_evaluationof}
+\begin{bchapter}
+\bauthor{\bsnm{Stegmaier}, \binits{F.}},
+\bauthor{\bsnm{Gr{\"o}bner}, \binits{U.}},
+\bauthor{\bsnm{D{\"o}ller}, \binits{M.}},
+\bauthor{\bsnm{Kosch}, \binits{H.}},
+\bauthor{\bsnm{Baese}, \binits{G.}}:
+\bctitle{Evaluation of current {RDF} database solutions}.
+In: \bbtitle{Proceedings of the 10th International Workshop on Semantic
+  Multimedia Database Technologies (SeMuDaTe), 4th International Conference on
+  Semantics And Digital Media Technologies (SAMT)},
+pp. \bfpage{39}--\blpage{55}
+(\byear{2009}).
+\bcomment{Citeseer}
+\end{bchapter}
+\endbibitem
+
+%%% 47
+\bibitem{DBLP:journals/ws/FernandezMGPA13}
+\begin{barticle}
+\bauthor{\bsnm{Fern{\'{a}}ndez}, \binits{J.D.}},
+\bauthor{\bsnm{Mart{\'{\i}}nez{-}Prieto}, \binits{M.A.}},
+\bauthor{\bsnm{Guti{\'{e}}rrez}, \binits{C.}},
+\bauthor{\bsnm{Polleres}, \binits{A.}},
+\bauthor{\bsnm{Arias}, \binits{M.}}:
+\batitle{{Binary {RDF} representation for publication and exchange {(HDT)}}}.
+\bjtitle{Journal of Web Semantics}
+\bvolume{19},
+\bfpage{22}--\blpage{41}
+(\byear{2013})
+\end{barticle}
+\endbibitem
+
+%%% 48
+\bibitem{saleem2016fine}
+\begin{barticle}
+\bauthor{\bsnm{Saleem}, \binits{M.}},
+\bauthor{\bsnm{Khan}, \binits{Y.}},
+\bauthor{\bsnm{Hasnain}, \binits{A.}},
+\bauthor{\bsnm{Ermilov}, \binits{I.}},
+\bauthor{\bsnm{Ngonga~Ngomo}, \binits{A.-C.}}:
+\batitle{A fine-grained evaluation of {SPARQL} endpoint federation systems}.
+\bjtitle{Semantic Web}
+\bvolume{7}(\bissue{5}),
+\bfpage{493}--\blpage{518}
+(\byear{2016})
+\end{barticle}
+\endbibitem
+
+%%% 49
+\bibitem{Zeng}
+\begin{barticle}
+\bauthor{\bsnm{Zeng}, \binits{K.}},
+\bauthor{\bsnm{Yang}, \binits{J.}},
+\bauthor{\bsnm{Wang}, \binits{H.}},
+\bauthor{\bsnm{Shao}, \binits{B.}},
+\bauthor{\bsnm{Wang}, \binits{Z.}}:
+\batitle{A distributed graph engine for web scale {RDF} data}.
+\bjtitle{Proc. VLDB Endow.}
+\bvolume{6}(\bissue{4}),
+\bfpage{265}--\blpage{276}
+(\byear{2013})
+\end{barticle}
+\endbibitem
+
+%%% 50
+\bibitem{Harth}
+\begin{bbook}
+\bauthor{\bsnm{Harth}, \binits{A.}},
+\bauthor{\bsnm{Umbrich}, \binits{J.}},
+\bauthor{\bsnm{Hogan}, \binits{A.}},
+\bauthor{\bsnm{Decker}, \binits{S.}}:
+In: \beditor{\bsnm{Aberer}, \binits{K.}},
+\beditor{\bsnm{Choi}, \binits{K.-S.}},
+\beditor{\bsnm{Noy}, \binits{N.}},
+\beditor{\bsnm{Allemang}, \binits{D.}},
+\beditor{\bsnm{Lee}, \binits{K.-I.}},
+\beditor{\bsnm{Nixon}, \binits{L.}},
+\beditor{\bsnm{Golbeck}, \binits{J.}},
+\beditor{\bsnm{Mika}, \binits{P.}},
+\beditor{\bsnm{Maynard}, \binits{D.}},
+\beditor{\bsnm{Mizoguchi}, \binits{R.}},
+\beditor{\bsnm{Schreiber}, \binits{G.}},
+\beditor{\bsnm{Cudr{\'e}-Mauroux}, \binits{P.}} (eds.)
+\bbtitle{YARS2: A Federated Repository for Querying Graph Structured Data from
+  the Web},
+pp. \bfpage{211}--\blpage{224}.
+\bpublisher{Springer},
+\blocation{Berlin, Heidelberg}
+(\byear{2007})
+\end{bbook}
+\endbibitem
+
+%%% 51
+\bibitem{Ferre}
+\begin{botherref}
+\oauthor{\bsnm{Ferr{\'e}}, \binits{S.}},
+\oauthor{\bsnm{Hermann}, \binits{A.}},
+\oauthor{\bsnm{Ducass{\'e}}, \binits{M.}}:
+{Semantic Faceted Search: Safe and Expressive Navigation in {RDF} Graphs}.
+Research Report PI 1964
+(January 2011).
+\url{https://hal.inria.fr/inria-00554093}
+\end{botherref}
+\endbibitem
+
+%%% 52
+\bibitem{Oren}
+\begin{bbook}
+\bauthor{\bsnm{Oren}, \binits{E.}},
+\bauthor{\bsnm{Delbru}, \binits{R.}},
+\bauthor{\bsnm{Decker}, \binits{S.}}:
+In: \beditor{\bsnm{Cruz}, \binits{I.}},
+\beditor{\bsnm{Decker}, \binits{S.}},
+\beditor{\bsnm{Allemang}, \binits{D.}},
+\beditor{\bsnm{Preist}, \binits{C.}},
+\beditor{\bsnm{Schwabe}, \binits{D.}},
+\beditor{\bsnm{Mika}, \binits{P.}},
+\beditor{\bsnm{Uschold}, \binits{M.}},
+\beditor{\bsnm{Aroyo}, \binits{L.M.}} (eds.)
+\bbtitle{Extending Faceted Navigation for {RDF} Data},
+pp. \bfpage{559}--\blpage{572}.
+\bpublisher{Springer},
+\blocation{Berlin, Heidelberg}
+(\byear{2006})
+\end{bbook}
+\endbibitem
+
+%%% 53
+\bibitem{Groth}
+\begin{barticle}
+\bauthor{\bsnm{Loizou}, \binits{A.}},
+\bauthor{\bsnm{Angles}, \binits{R.}},
+\bauthor{\bsnm{Groth}, \binits{P.}}:
+\batitle{On the formulation of performant \{SPARQL\} queries}.
+\bjtitle{Web Semantics: Science, Services and Agents on the World Wide Web}
+\bvolume{31},
+\bfpage{1}--\blpage{26}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+%%% 54
+\bibitem{cure2015evaluation}
+\begin{botherref}
+\oauthor{\bsnm{Cur{\'e}}, \binits{O.}},
+\oauthor{\bsnm{Naacke}, \binits{H.}},
+\oauthor{\bsnm{Baazizi}, \binits{M.A.}},
+\oauthor{\bsnm{Amann}, \binits{B.}}:
+On the evaluation of {RDF} distribution algorithms implemented over apache
+  spark
+(2015)
+\end{botherref}
+\endbibitem
+
+\end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+  <title><p>Big linked data ETL benchmark on cloud commodity
+  hardware</p></title>
+  <aug>
+    <au><snm>De Witte</snm><fnm>D</fnm></au>
+    <au><snm>De Vocht</snm><fnm>L</fnm></au>
+    <au><snm>Verborgh</snm><fnm>R</fnm></au>
+    <au><snm>Mannens</snm><fnm>E</fnm></au>
+    <au><cnm>others</cnm></au>
+  </aug>
+  <source>Proceedings of the International Workshop on Semantic Big
+  Data</source>
+  <pubdate>2016</pubdate>
+  <fpage>12</fpage>
+</bibl>
+
+<bibl id="B2">
+  <title><p>{Diversified stress testing of {RDF} data management
+  systems}</p></title>
+  <aug>
+    <au><snm>Alu{\c{c}}</snm><fnm>G</fnm></au>
+    <au><snm>Hartig</snm><fnm>O</fnm></au>
+    <au><snm>{\"O}zsu</snm><fnm>MT</fnm></au>
+    <au><snm>Daudjee</snm><fnm>K</fnm></au>
+  </aug>
+  <source>The Semantic Web--ISWC 2014</source>
+  <publisher>Springer</publisher>
+  <pubdate>2014</pubdate>
+  <fpage>197</fpage>
+  <lpage>-212</lpage>
+</bibl>
+
+<bibl id="B3">
+  <title><p>Scaling out federated queries for life science data in
+  production</p></title>
+  <aug>
+    <au><snm>De Witte</snm><fnm>D</fnm></au>
+    <au><snm>De Vocht</snm><fnm>L</fnm></au>
+    <au><snm>Knecht</snm><fnm>K</fnm></au>
+    <au><snm>Pattyn</snm><fnm>F</fnm></au>
+    <au><snm>Constandt</snm><fnm>H</fnm></au>
+    <au><snm>Mannens</snm><fnm>E</fnm></au>
+    <au><snm>Verborgh</snm><fnm>R</fnm></au>
+  </aug>
+  <source>Proceedings of the 9th International Conference on Semantic Web
+  Applications and Tools for Life Sciences</source>
+  <pubdate>2016</pubdate>
+</bibl>
+
+<bibl id="B4">
+  <title><p>An Empirical Study of Real-World {SPARQL} Queries</p></title>
+  <aug>
+    <au><snm>Arias</snm><fnm>M</fnm></au>
+    <au><snm>Fern{\'{a}}ndez</snm><fnm>JD</fnm></au>
+    <au><snm>Mart{\'{\i}}nez{-}Prieto</snm><fnm>MA</fnm></au>
+    <au><snm>Fuente</snm><fnm>P</fnm></au>
+  </aug>
+  <source>CoRR</source>
+  <pubdate>2011</pubdate>
+  <volume>abs/1103.5043</volume>
+  <url>http://arxiv.org/abs/1103.5043</url>
+</bibl>
+
+<bibl id="B5">
+  <title><p>Querying Datasets on the {Web} with High Availability</p></title>
+  <aug>
+    <au><snm>Verborgh</snm><fnm>R</fnm></au>
+    <au><snm>Hartig</snm><fnm>O</fnm></au>
+    <au><snm>De Meester</snm><fnm>B</fnm></au>
+    <au><snm>Haesendonck</snm><fnm>G</fnm></au>
+    <au><snm>De Vocht</snm><fnm>L</fnm></au>
+    <au><snm>Vander Sande</snm><fnm>M</fnm></au>
+    <au><snm>Cyganiak</snm><fnm>R</fnm></au>
+    <au><snm>Colpaert</snm><fnm>P</fnm></au>
+    <au><snm>Mannens</snm><fnm>E</fnm></au>
+    <au><snm>Walle</snm><fnm>R</fnm></au>
+  </aug>
+  <source>Proceedings of the 13th International Semantic Web
+  Conference</source>
+  <publisher>Springer</publisher>
+  <series><title><p>Lecture Notes in Computer Science</p></title></series>
+  <pubdate>2014</pubdate>
+  <volume>8796</volume>
+  <fpage>180</fpage>
+  <lpage>-196</lpage>
+</bibl>
+
+<bibl id="B6">
+  <title><p>A Multi-Criteria Experimental Ranking of Distributed {SPARQL}
+  Evaluators</p></title>
+  <aug>
+    <au><snm>Graux</snm><fnm>D</fnm></au>
+    <au><snm>Jachiet</snm><fnm>L</fnm></au>
+    <au><snm>Genev{\`e}s</snm><fnm>P</fnm></au>
+    <au><snm>Laya{\"i}da</snm><fnm>N</fnm></au>
+  </aug>
+  <pubdate>2016</pubdate>
+</bibl>
+
+<bibl id="B7">
+  <title><p>{CumulusRDF}: linked data management on nested key-value
+  stores</p></title>
+  <aug>
+    <au><snm>Ladwig</snm><fnm>G</fnm></au>
+    <au><snm>Harth</snm><fnm>A</fnm></au>
+  </aug>
+  <source>The 7th International Workshop on Scalable Semantic Web Knowledge
+  Base Systems (SSWS 2011)</source>
+  <pubdate>2011</pubdate>
+  <fpage>30</fpage>
+</bibl>
+
+<bibl id="B8">
+  <title><p>{S2RDF}: {RDF} Querying with {SPARQL} on Spark</p></title>
+  <aug>
+    <au><snm>Sch\"{a}tzle</snm><fnm>A</fnm></au>
+    <au><snm>Przyjaciel Zablocki</snm><fnm>M</fnm></au>
+    <au><snm>Skilevic</snm><fnm>S</fnm></au>
+    <au><snm>Lausen</snm><fnm>G</fnm></au>
+  </aug>
+  <source>Proc. VLDB Endow.</source>
+  <publisher>VLDB Endowment</publisher>
+  <pubdate>2016</pubdate>
+  <volume>9</volume>
+  <issue>10</issue>
+  <fpage>804</fpage>
+  <lpage>-815</lpage>
+</bibl>
+
+<bibl id="B9">
+  <title><p>{PigSPARQL}: Mapping {SPARQL} to pig latin</p></title>
+  <aug>
+    <au><snm>Sch{\"a}tzle</snm><fnm>A</fnm></au>
+    <au><snm>Przyjaciel Zablocki</snm><fnm>M</fnm></au>
+    <au><snm>Lausen</snm><fnm>G</fnm></au>
+  </aug>
+  <source>Proceedings of the International Workshop on Semantic Web Information
+  Management</source>
+  <pubdate>2011</pubdate>
+  <fpage>4</fpage>
+</bibl>
+
+<bibl id="B10">
+  <title><p>Benchmarking {RDF} Query Engines: The {LDBC} Semantic Publishing
+  Benchmark</p></title>
+  <aug>
+    <au><snm>Kotsev</snm><fnm>V</fnm></au>
+    <au><snm>Minadakis</snm><fnm>N</fnm></au>
+    <au><snm>Papakonstantinou</snm><fnm>V</fnm></au>
+    <au><snm>Erling</snm><fnm>O</fnm></au>
+    <au><snm>Fundulaki</snm><fnm>I</fnm></au>
+    <au><snm>Kiryakov</snm><fnm>A</fnm></au>
+  </aug>
+</bibl>
+
+<bibl id="B11">
+  <title><p>Querying Wikidata: Comparing {SPARQL}, Relational and Graph
+  Databases</p></title>
+  <aug>
+    <au><snm>Hern{\'a}ndez</snm><fnm>D</fnm></au>
+    <au><snm>Hogan</snm><fnm>A</fnm></au>
+    <au><snm>Riveros</snm><fnm>C</fnm></au>
+    <au><snm>Rojas</snm><fnm>C</fnm></au>
+    <au><snm>Zerega</snm><fnm>E</fnm></au>
+  </aug>
+  <source>International Semantic Web Conference</source>
+  <pubdate>2016</pubdate>
+  <fpage>88</fpage>
+  <lpage>-103</lpage>
+</bibl>
+
+<bibl id="B12">
+  <title><p>4store: The design and implementation of a clustered {RDF}
+  store</p></title>
+  <aug>
+    <au><snm>Harris</snm><fnm>S</fnm></au>
+    <au><snm>Lamb</snm><fnm>N</fnm></au>
+    <au><snm>Shadbolt</snm><fnm>N</fnm></au>
+  </aug>
+  <source>5th International Workshop on Scalable Semantic Web Knowledge Base
+  Systems (SSWS2009)</source>
+  <pubdate>2009</pubdate>
+  <fpage>94</fpage>
+  <lpage>-109</lpage>
+</bibl>
+
+<bibl id="B13">
+  <title><p>H 2 RDF+: High-performance distributed joins over large-scale {RDF}
+  graphs</p></title>
+  <aug>
+    <au><snm>Papailiou</snm><fnm>N</fnm></au>
+    <au><snm>Konstantinou</snm><fnm>I</fnm></au>
+    <au><snm>Tsoumakos</snm><fnm>D</fnm></au>
+    <au><snm>Karras</snm><fnm>P</fnm></au>
+    <au><snm>Koziris</snm><fnm>N</fnm></au>
+  </aug>
+  <source>Big Data, 2013 IEEE International Conference on</source>
+  <pubdate>2013</pubdate>
+  <fpage>255</fpage>
+  <lpage>-263</lpage>
+</bibl>
+
+<bibl id="B14">
+  <title><p>Sempala: interactive {SPARQL} query processing on
+  hadoop</p></title>
+  <aug>
+    <au><snm>Sch{\"a}tzle</snm><fnm>A</fnm></au>
+    <au><snm>Przyjaciel Zablocki</snm><fnm>M</fnm></au>
+    <au><snm>Neu</snm><fnm>A</fnm></au>
+    <au><snm>Lausen</snm><fnm>G</fnm></au>
+  </aug>
+  <source>International Semantic Web Conference</source>
+  <pubdate>2014</pubdate>
+  <fpage>164</fpage>
+  <lpage>-179</lpage>
+</bibl>
+
+<bibl id="B15">
+  <title><p>High-performance, massively scalable distributed systems using the
+  MapReduce software framework: the SHARD triple-store</p></title>
+  <aug>
+    <au><snm>Rohloff</snm><fnm>K</fnm></au>
+    <au><snm>Schantz</snm><fnm>RE</fnm></au>
+  </aug>
+  <source>Programming Support Innovations for Emerging Distributed
+  Applications</source>
+  <pubdate>2010</pubdate>
+  <fpage>4</fpage>
+</bibl>
+
+<bibl id="B16">
+  <title><p>BigRDFBench: A Billion Triples Benchmark for {SPARQL} Endpoint
+  Federation</p></title>
+  <aug>
+    <au><snm>Saleem</snm><fnm>M</fnm></au>
+    <au><snm>Hasnain</snm><fnm>A</fnm></au>
+    <au><snm>Ngomo</snm><fnm>ACN</fnm></au>
+  </aug>
+  <publisher>Citeseer</publisher>
+</bibl>
+
+<bibl id="B17">
+  <title><p>{FedX: Optimization Techniques for Federated Query Processing on
+  Linked Data}</p></title>
+  <aug>
+    <au><snm>Schwarte</snm><fnm>A</fnm></au>
+    <au><snm>Haase</snm><fnm>P</fnm></au>
+    <au><snm>Hose</snm><fnm>K</fnm></au>
+    <au><snm>Schenkel</snm><fnm>R</fnm></au>
+    <au><snm>Schmidt</snm><fnm>M</fnm></au>
+  </aug>
+  <source>The Semantic Web - {ISWC} 2011, Proceedings, Part {I}</source>
+  <pubdate>2011</pubdate>
+  <fpage>601</fpage>
+  <lpage>-616</lpage>
+</bibl>
+
+<bibl id="B18">
+  <title><p>Splendid: {SPARQL} endpoint federation exploiting void
+  descriptions</p></title>
+  <aug>
+    <au><snm>G{\"o}rlitz</snm><fnm>O</fnm></au>
+    <au><snm>Staab</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Proceedings of the Second International Conference on Consuming
+  Linked Data-Volume 782</source>
+  <pubdate>2011</pubdate>
+  <fpage>13</fpage>
+  <lpage>-24</lpage>
+</bibl>
+
+<bibl id="B19">
+  <title><p>ANAPSID: An Adaptive Query Processing Engine for {SPARQL}
+  Endpoints</p></title>
+  <aug>
+    <au><snm>Acosta</snm><fnm>M</fnm></au>
+    <au><snm>Vidal</snm><fnm>ME</fnm></au>
+    <au><snm>Lampo</snm><fnm>T</fnm></au>
+    <au><snm>Castillo</snm><fnm>J</fnm></au>
+    <au><snm>Ruckhaus</snm><fnm>E</fnm></au>
+  </aug>
+  <source>The Semantic Web -- ISWC 2011: 10th International Semantic Web
+  Conference, Bonn, Germany, October 23-27, 2011, Proceedings, Part I</source>
+  <publisher>Berlin, Heidelberg: Springer Berlin Heidelberg</publisher>
+  <editor>Aroyo, Lora and Welty, Chris and Alani, Harith and Taylor, Jamie and
+  Bernstein, Abraham and Kagal, Lalana and Noy, Natasha and Blomqvist,
+  Eva</editor>
+  <pubdate>2011</pubdate>
+  <fpage>18</fpage>
+  <lpage>-34</lpage>
+</bibl>
+
+<bibl id="B20">
+  <title><p>Hibiscus: Hypergraph-based source selection for {SPARQL} endpoint
+  federation</p></title>
+  <aug>
+    <au><snm>Saleem</snm><fnm>M</fnm></au>
+    <au><snm>Ngomo</snm><fnm>ACN</fnm></au>
+  </aug>
+  <source>European Semantic Web Conference</source>
+  <pubdate>2014</pubdate>
+  <fpage>176</fpage>
+  <lpage>-191</lpage>
+</bibl>
+
+<bibl id="B21">
+  <title><p>FEASIBLE: a feature-based {SPARQL} benchmark generation
+  framework</p></title>
+  <aug>
+    <au><snm>Saleem</snm><fnm>M</fnm></au>
+    <au><snm>Mehmood</snm><fnm>Q</fnm></au>
+    <au><snm>Ngomo</snm><fnm>ACN</fnm></au>
+  </aug>
+  <source>International Semantic Web Conference</source>
+  <pubdate>2015</pubdate>
+  <fpage>52</fpage>
+  <lpage>-69</lpage>
+</bibl>
+
+<bibl id="B22">
+  <title><p>MonetDB/X100: Hyper-Pipelining Query Execution.</p></title>
+  <aug>
+    <au><snm>Boncz</snm><fnm>PA</fnm></au>
+    <au><snm>Zukowski</snm><fnm>M</fnm></au>
+    <au><snm>Nes</snm><fnm>N</fnm></au>
+  </aug>
+  <source>CIDR</source>
+  <pubdate>2005</pubdate>
+  <volume>5</volume>
+  <fpage>225</fpage>
+  <lpage>-237</lpage>
+</bibl>
+
+<bibl id="B23">
+  <title><p>The RDF-3X engine for scalable management of {RDF} data</p></title>
+  <aug>
+    <au><snm>Neumann</snm><fnm>T</fnm></au>
+    <au><snm>Weikum</snm><fnm>G</fnm></au>
+  </aug>
+  <source>The VLDB Journal - The International Journal on Very Large Data
+  Bases</source>
+  <publisher>Springer-Verlag New York, Inc.</publisher>
+  <pubdate>2010</pubdate>
+  <volume>19</volume>
+  <issue>1</issue>
+  <fpage>91</fpage>
+  <lpage>-113</lpage>
+</bibl>
+
+<bibl id="B24">
+  <title><p>gStore: answering {SPARQL} queries via subgraph
+  matching</p></title>
+  <aug>
+    <au><snm>Zou</snm><fnm>L</fnm></au>
+    <au><snm>Mo</snm><fnm>J</fnm></au>
+    <au><snm>Chen</snm><fnm>L</fnm></au>
+    <au><snm>{\"O}zsu</snm><fnm>MT</fnm></au>
+    <au><snm>Zhao</snm><fnm>D</fnm></au>
+  </aug>
+  <source>Proceedings of the VLDB Endowment</source>
+  <publisher>VLDB Endowment</publisher>
+  <pubdate>2011</pubdate>
+  <volume>4</volume>
+  <issue>8</issue>
+  <fpage>482</fpage>
+  <lpage>-493</lpage>
+</bibl>
+
+<bibl id="B25">
+  <title><p>NoSQL databases for RDF: an empirical evaluation</p></title>
+  <aug>
+    <au><snm>Cudr{\'e} Mauroux</snm><fnm>P</fnm></au>
+    <au><snm>Enchev</snm><fnm>I</fnm></au>
+    <au><snm>Fundatureanu</snm><fnm>S</fnm></au>
+    <au><snm>Groth</snm><fnm>P</fnm></au>
+    <au><snm>Haque</snm><fnm>A</fnm></au>
+    <au><snm>Harth</snm><fnm>A</fnm></au>
+    <au><snm>Keppmann</snm><fnm>FL</fnm></au>
+    <au><snm>Miranker</snm><fnm>D</fnm></au>
+    <au><snm>Sequeda</snm><fnm>JF</fnm></au>
+    <au><snm>Wylot</snm><fnm>M</fnm></au>
+  </aug>
+  <source>International Semantic Web Conference</source>
+  <pubdate>2013</pubdate>
+  <fpage>310</fpage>
+  <lpage>-325</lpage>
+</bibl>
+
+<bibl id="B26">
+  <title><p>Jena-HBase: A distributed, scalable and efficient {RDF} triple
+  store</p></title>
+  <aug>
+    <au><snm>Khadilkar</snm><fnm>V</fnm></au>
+    <au><snm>Kantarcioglu</snm><fnm>M</fnm></au>
+    <au><snm>Thuraisingham</snm><fnm>B</fnm></au>
+    <au><snm>Castagna</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Proceedings of the 2012th International Conference on Posters \&
+  Demonstrations Track-Volume 914</source>
+  <pubdate>2012</pubdate>
+  <fpage>85</fpage>
+  <lpage>-88</lpage>
+</bibl>
+
+<bibl id="B27">
+  <title><p>{BioBenchmark Toyama 2012: an evaluation of the performance of
+  triple stores on biological data}</p></title>
+  <aug>
+    <au><snm>Wu</snm><fnm>H</fnm></au>
+    <au><snm>Fujiwara</snm><fnm>T</fnm></au>
+    <au><snm>Yamamoto</snm><fnm>Y</fnm></au>
+    <au><snm>Bolleman</snm><fnm>J</fnm></au>
+    <au><snm>Yamaguchi</snm><fnm>A</fnm></au>
+  </aug>
+  <source>Journal of biomedical semantics</source>
+  <publisher>BioMed Central</publisher>
+  <pubdate>2014</pubdate>
+  <volume>5</volume>
+  <issue>1</issue>
+  <fpage>1</fpage>
+</bibl>
+
+<bibl id="B28">
+  <title><p>{FedBench: A benchmark suite for federated semantic data query
+  processing}</p></title>
+  <aug>
+    <au><snm>Schmidt</snm><fnm>M</fnm></au>
+    <au><snm>G{\"{o}}rlitz</snm><fnm>O</fnm></au>
+    <au><snm>Haase</snm><fnm>P</fnm></au>
+    <au><snm>Ladwig</snm><fnm>G</fnm></au>
+    <au><snm>Schwarte</snm><fnm>A</fnm></au>
+    <au><snm>Tran</snm><fnm>T</fnm></au>
+  </aug>
+  <source>Lecture Notes in Computer Science (including subseries Lecture Notes
+  in Artificial Intelligence and Lecture Notes in Bioinformatics)</source>
+  <pubdate>2011</pubdate>
+  <volume>7031 LNCS</volume>
+  <issue>PART 1</issue>
+  <fpage>585</fpage>
+  <lpage>-600</lpage>
+</bibl>
+
+<bibl id="B29">
+  <title><p>{LUBM: A benchmark for OWL knowledge base systems}</p></title>
+  <aug>
+    <au><snm>Guo</snm><fnm>Y</fnm></au>
+    <au><snm>Pan</snm><fnm>Z</fnm></au>
+    <au><snm>Heflin</snm><fnm>J</fnm></au>
+  </aug>
+  <source>Web Semantics: Science, Services and Agents on the World Wide
+  Web</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2005</pubdate>
+  <volume>3</volume>
+  <issue>2</issue>
+  <fpage>158</fpage>
+  <lpage>-182</lpage>
+</bibl>
+
+<bibl id="B30">
+  <title><p>{SP\^{} 2Bench: a SPARQL performance benchmark}</p></title>
+  <aug>
+    <au><snm>Schmidt</snm><fnm>M</fnm></au>
+    <au><snm>Hornung</snm><fnm>T</fnm></au>
+    <au><snm>Lausen</snm><fnm>G</fnm></au>
+    <au><snm>Pinkel</snm><fnm>C</fnm></au>
+  </aug>
+  <source>Data Engineering, 2009. ICDE'09. IEEE 25th International Conference
+  on</source>
+  <pubdate>2009</pubdate>
+  <fpage>222</fpage>
+  <lpage>-233</lpage>
+</bibl>
+
+<bibl id="B31">
+  <title><p>{The Berlin SPARQL Benchmark}</p></title>
+  <aug>
+    <au><snm>Bizer</snm><fnm>C</fnm></au>
+    <au><snm>Schultz</snm><fnm>A</fnm></au>
+  </aug>
+  <source>International Journal on Semantic Web and Information Systems
+  (IJSWIS)</source>
+  <publisher>IGI Global</publisher>
+  <pubdate>2009</pubdate>
+  <volume>5</volume>
+  <issue>2</issue>
+  <fpage>1</fpage>
+  <lpage>-24</lpage>
+</bibl>
+
+<bibl id="B32">
+  <title><p>{DBpedia SPARQL benchmark--performance assessment with real queries
+  on real data}</p></title>
+  <aug>
+    <au><snm>Morsey</snm><fnm>M</fnm></au>
+    <au><snm>Lehmann</snm><fnm>J</fnm></au>
+    <au><snm>Auer</snm><fnm>S</fnm></au>
+    <au><snm>Ngonga Ngomo</snm><fnm>AC</fnm></au>
+  </aug>
+  <source>The Semantic Web--ISWC 2011</source>
+  <publisher>Springer</publisher>
+  <pubdate>2011</pubdate>
+  <fpage>454</fpage>
+  <lpage>-469</lpage>
+</bibl>
+
+<bibl id="B33">
+  <title><p>{Apples and oranges: a comparison of {RDF} benchmarks and real
+  {RDF}} datasets</p></title>
+  <aug>
+    <au><snm>Duan</snm><fnm>S</fnm></au>
+    <au><snm>Kementsietsidis</snm><fnm>A</fnm></au>
+    <au><snm>Srinivas</snm><fnm>K</fnm></au>
+    <au><snm>Udrea</snm><fnm>O</fnm></au>
+  </aug>
+  <source>Proceedings of the {ACM} {SIGMOD} International Conference on
+  Management of Data</source>
+  <pubdate>2011</pubdate>
+  <fpage>145</fpage>
+  <lpage>-156</lpage>
+</bibl>
+
+<bibl id="B34">
+  <title><p>The Cell Cycle Ontology: an application ontology for the
+  representation and integrated analysis of the cell cycle process</p></title>
+  <aug>
+    <au><snm>Antezana</snm><fnm>E</fnm></au>
+    <au><snm>Ega{\~n}a</snm><fnm>M</fnm></au>
+    <au><snm>Blond{\'e}</snm><fnm>W</fnm></au>
+    <au><snm>Illarramendi</snm><fnm>A</fnm></au>
+    <au><snm>Bilbao</snm><fnm>I</fnm></au>
+    <au><snm>De Baets</snm><fnm>B</fnm></au>
+    <au><snm>Stevens</snm><fnm>R</fnm></au>
+    <au><snm>Mironov</snm><fnm>V</fnm></au>
+    <au><snm>Kuiper</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Genome Biology</source>
+  <publisher>BioMed Central</publisher>
+  <pubdate>2009</pubdate>
+  <volume>10</volume>
+  <issue>5</issue>
+  <fpage>R58</fpage>
+</bibl>
+
+<bibl id="B35">
+  <title><p>Allie: a database and a search service of abbreviations and long
+  forms</p></title>
+  <aug>
+    <au><snm>Yamamoto</snm><fnm>Y</fnm></au>
+    <au><snm>Yamaguchi</snm><fnm>A</fnm></au>
+    <au><snm>Bono</snm><fnm>H</fnm></au>
+    <au><snm>Takagi</snm><fnm>T</fnm></au>
+  </aug>
+  <source>Database</source>
+  <publisher>Oxford University Press</publisher>
+  <pubdate>2011</pubdate>
+  <volume>2011</volume>
+</bibl>
+
+<bibl id="B36">
+  <title><p>Protein Data Bank Japan (PDBj): maintaining a structural data
+  archive and resource description framework format</p></title>
+  <aug>
+    <au><snm>Kinjo</snm><fnm>AR</fnm></au>
+    <au><snm>Suzuki</snm><fnm>H</fnm></au>
+    <au><snm>Yamashita</snm><fnm>R</fnm></au>
+    <au><snm>Ikegawa</snm><fnm>Y</fnm></au>
+    <au><snm>Kudou</snm><fnm>T</fnm></au>
+    <au><snm>Igarashi</snm><fnm>R</fnm></au>
+    <au><snm>Kengaku</snm><fnm>Y</fnm></au>
+    <au><snm>Cho</snm><fnm>H</fnm></au>
+    <au><snm>Standley</snm><fnm>DM</fnm></au>
+    <au><snm>Nakagawa</snm><fnm>A</fnm></au>
+    <au><cnm>others</cnm></au>
+  </aug>
+  <source>Nucleic acids research</source>
+  <publisher>Oxford Univ Press</publisher>
+  <pubdate>2011</pubdate>
+</bibl>
+
+<bibl id="B37">
+  <title><p>UniProt: a hub for protein information</p></title>
+  <aug>
+    <au><snm>Consortium</snm><fnm>U</fnm></au>
+    <au><cnm>others</cnm></au>
+  </aug>
+  <source>Nucleic acids research</source>
+  <publisher>Oxford Univ Press</publisher>
+  <pubdate>2014</pubdate>
+</bibl>
+
+<bibl id="B38">
+  <title><p>DNA Data Bank of Japan (DDBJ) for genome scale research in life
+  science</p></title>
+  <aug>
+    <au><snm>Tateno</snm><fnm>Y</fnm></au>
+    <au><snm>Imanishi</snm><fnm>T</fnm></au>
+    <au><snm>Miyazaki</snm><fnm>S</fnm></au>
+    <au><snm>Fukami Kobayashi</snm><fnm>K</fnm></au>
+    <au><snm>Saitou</snm><fnm>N</fnm></au>
+    <au><snm>Sugawara</snm><fnm>H</fnm></au>
+    <au><snm>Gojobori</snm><fnm>T</fnm></au>
+  </aug>
+  <source>Nucleic acids research</source>
+  <publisher>Oxford Univ Press</publisher>
+  <pubdate>2002</pubdate>
+  <volume>30</volume>
+  <issue>1</issue>
+  <fpage>27</fpage>
+  <lpage>-30</lpage>
+</bibl>
+
+<bibl id="B39">
+  <title><p>SPLODGE: systematic generation of {SPARQL} benchmark queries for
+  linked open data</p></title>
+  <aug>
+    <au><snm>G{\"o}rlitz</snm><fnm>O</fnm></au>
+    <au><snm>Thimm</snm><fnm>M</fnm></au>
+    <au><snm>Staab</snm><fnm>S</fnm></au>
+  </aug>
+  <source>International Semantic Web Conference</source>
+  <pubdate>2012</pubdate>
+  <fpage>116</fpage>
+  <lpage>-132</lpage>
+</bibl>
+
+<bibl id="B40">
+  <title><p>The Google file system</p></title>
+  <aug>
+    <au><snm>Ghemawat</snm><fnm>S</fnm></au>
+    <au><snm>Gobioff</snm><fnm>H</fnm></au>
+    <au><snm>Leung</snm><fnm>ST</fnm></au>
+  </aug>
+  <source>ACM SIGOPS operating systems review</source>
+  <pubdate>2003</pubdate>
+  <volume>37</volume>
+  <issue>5</issue>
+  <fpage>29</fpage>
+  <lpage>-43</lpage>
+</bibl>
+
+<bibl id="B41">
+  <title><p>The Linked Data Benchmark Council: A Graph and {RDF} Industry
+  Benchmarking Effort</p></title>
+  <aug>
+    <au><snm>Angles</snm><fnm>R</fnm></au>
+    <au><snm>Boncz</snm><fnm>P</fnm></au>
+    <au><snm>Larriba Pey</snm><fnm>J</fnm></au>
+    <au><snm>Fundulaki</snm><fnm>I</fnm></au>
+    <au><snm>Neumann</snm><fnm>T</fnm></au>
+    <au><snm>Erling</snm><fnm>O</fnm></au>
+    <au><snm>Neubauer</snm><fnm>P</fnm></au>
+    <au><cnm>others</cnm></au>
+  </aug>
+  <source>SIGMOD Rec.</source>
+  <publisher>New York, NY, USA: ACM</publisher>
+  <pubdate>2014</pubdate>
+  <volume>43</volume>
+  <issue>1</issue>
+  <fpage>27</fpage>
+  <lpage>-31</lpage>
+</bibl>
+
+<bibl id="B42">
+  <title><p>{HOBBIT}: Holistic benchmarking for big linked data</p></title>
+  <aug>
+    <au><snm>Ngomo</snm><fnm>ACN</fnm></au>
+    <au><snm>R{\"o}der</snm><fnm>M</fnm></au>
+  </aug>
+</bibl>
+
+<bibl id="B43">
+  <title><p>{LDBC}: Benchmarks for Graph and {RDF} Data Management</p></title>
+  <aug>
+    <au><snm>Boncz</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Proceedings of the 17th International Database Engineering \&
+  Applications Symposium</source>
+  <publisher>New York, NY, USA: ACM</publisher>
+  <series><title><p>IDEAS '13</p></title></series>
+  <pubdate>2013</pubdate>
+  <fpage>1</fpage>
+  <lpage>-2</lpage>
+</bibl>
+
+<bibl id="B44">
+  <title><p>The {LDBC} social network benchmark: Interactive
+  workload</p></title>
+  <aug>
+    <au><snm>Erling</snm><fnm>O</fnm></au>
+    <au><snm>Averbuch</snm><fnm>A</fnm></au>
+    <au><snm>Larriba Pey</snm><fnm>J</fnm></au>
+    <au><snm>Chafi</snm><fnm>H</fnm></au>
+    <au><snm>Gubichev</snm><fnm>A</fnm></au>
+    <au><snm>Prat</snm><fnm>A</fnm></au>
+    <au><snm>Pham</snm><fnm>MD</fnm></au>
+    <au><snm>Boncz</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Proceedings of the 2015 ACM SIGMOD International Conference on
+  Management of Data</source>
+  <pubdate>2015</pubdate>
+  <fpage>619</fpage>
+  <lpage>-630</lpage>
+</bibl>
+
+<bibl id="B45">
+  <title><p>{What are real {SPARQL} queries like?}</p></title>
+  <aug>
+    <au><snm>Picalausa</snm><fnm>F</fnm></au>
+    <au><snm>Vansummeren</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Proceedings of the International Workshop on Semantic Web Information
+  Management - SWIM '11</source>
+  <pubdate>2011</pubdate>
+  <fpage>1</fpage>
+  <lpage>-6</lpage>
+</bibl>
+
+<bibl id="B46">
+  <title><p>Evaluation of current {RDF} database solutions</p></title>
+  <aug>
+    <au><snm>Stegmaier</snm><fnm>F</fnm></au>
+    <au><snm>Gr{\"o}bner</snm><fnm>U</fnm></au>
+    <au><snm>D{\"o}ller</snm><fnm>M</fnm></au>
+    <au><snm>Kosch</snm><fnm>H</fnm></au>
+    <au><snm>Baese</snm><fnm>G</fnm></au>
+  </aug>
+  <source>Proceedings of the 10th International Workshop on Semantic Multimedia
+  Database Technologies (SeMuDaTe), 4th International Conference on Semantics
+  And Digital Media Technologies (SAMT)</source>
+  <pubdate>2009</pubdate>
+  <fpage>39</fpage>
+  <lpage>-55</lpage>
+</bibl>
+
+<bibl id="B47">
+  <title><p>{Binary {RDF} representation for publication and exchange
+  {(HDT)}}</p></title>
+  <aug>
+    <au><snm>Fern{\'{a}}ndez</snm><fnm>JD</fnm></au>
+    <au><snm>Mart{\'{\i}}nez{-}Prieto</snm><fnm>MA</fnm></au>
+    <au><snm>Guti{\'{e}}rrez</snm><fnm>C</fnm></au>
+    <au><snm>Polleres</snm><fnm>A</fnm></au>
+    <au><snm>Arias</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Journal of Web Semantics</source>
+  <pubdate>2013</pubdate>
+  <volume>19</volume>
+  <fpage>22</fpage>
+  <lpage>-41</lpage>
+</bibl>
+
+<bibl id="B48">
+  <title><p>A fine-grained evaluation of {SPARQL} endpoint federation
+  systems</p></title>
+  <aug>
+    <au><snm>Saleem</snm><fnm>M</fnm></au>
+    <au><snm>Khan</snm><fnm>Y</fnm></au>
+    <au><snm>Hasnain</snm><fnm>A</fnm></au>
+    <au><snm>Ermilov</snm><fnm>I</fnm></au>
+    <au><snm>Ngonga Ngomo</snm><fnm>AC</fnm></au>
+  </aug>
+  <source>Semantic Web</source>
+  <publisher>IOS Press</publisher>
+  <pubdate>2016</pubdate>
+  <volume>7</volume>
+  <issue>5</issue>
+  <fpage>493</fpage>
+  <lpage>-518</lpage>
+</bibl>
+
+<bibl id="B49">
+  <title><p>A Distributed Graph Engine for Web Scale {RDF} Data</p></title>
+  <aug>
+    <au><snm>Zeng</snm><fnm>K</fnm></au>
+    <au><snm>Yang</snm><fnm>J</fnm></au>
+    <au><snm>Wang</snm><fnm>H</fnm></au>
+    <au><snm>Shao</snm><fnm>B</fnm></au>
+    <au><snm>Wang</snm><fnm>Z</fnm></au>
+  </aug>
+  <source>Proc. VLDB Endow.</source>
+  <publisher>VLDB Endowment</publisher>
+  <pubdate>2013</pubdate>
+  <volume>6</volume>
+  <issue>4</issue>
+  <fpage>265</fpage>
+  <lpage>-276</lpage>
+</bibl>
+
+<bibl id="B50">
+  <title><p>YARS2: A Federated Repository for Querying Graph Structured Data
+  from the Web</p></title>
+  <aug>
+    <au><snm>Harth</snm><fnm>A</fnm></au>
+    <au><snm>Umbrich</snm><fnm>J</fnm></au>
+    <au><snm>Hogan</snm><fnm>A</fnm></au>
+    <au><snm>Decker</snm><fnm>S</fnm></au>
+  </aug>
+  <source>The Semantic Web: 6th International Semantic Web Conference, 2nd
+  Asian Semantic Web Conference, ISWC 2007 + ASWC 2007, Busan, Korea, November
+  11-15, 2007. Proceedings</source>
+  <publisher>Berlin, Heidelberg: Springer Berlin Heidelberg</publisher>
+  <editor>Aberer, Karl and Choi, Key-Sun and Noy, Natasha and Allemang, Dean
+  and Lee, Kyung-Il and Nixon, Lyndon and Golbeck, Jennifer and Mika, Peter and
+  Maynard, Diana and Mizoguchi, Riichiro and Schreiber, Guus and
+  Cudr{\'e}-Mauroux, Philippe</editor>
+  <pubdate>2007</pubdate>
+  <fpage>211</fpage>
+  <lpage>-224</lpage>
+</bibl>
+
+<bibl id="B51">
+  <title><p>{Semantic Faceted Search: Safe and Expressive Navigation in {RDF}
+  Graphs}</p></title>
+  <aug>
+    <au><snm>Ferr{\'e}</snm><fnm>S</fnm></au>
+    <au><snm>Hermann</snm><fnm>A</fnm></au>
+    <au><snm>Ducass{\'e}</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Research Report</source>
+  <pubdate>2011</pubdate>
+  <issue>PI 1964</issue>
+  <fpage>27</fpage>
+  <url>https://hal.inria.fr/inria-00554093</url>
+</bibl>
+
+<bibl id="B52">
+  <title><p>Extending Faceted Navigation for {RDF} Data</p></title>
+  <aug>
+    <au><snm>Oren</snm><fnm>E</fnm></au>
+    <au><snm>Delbru</snm><fnm>R</fnm></au>
+    <au><snm>Decker</snm><fnm>S</fnm></au>
+  </aug>
+  <source>The Semantic Web - ISWC 2006: 5th International Semantic Web
+  Conference, ISWC 2006, Athens, GA, USA, November 5-9, 2006.
+  Proceedings</source>
+  <publisher>Berlin, Heidelberg: Springer Berlin Heidelberg</publisher>
+  <editor>Cruz, Isabel and Decker, Stefan and Allemang, Dean and Preist, Chris
+  and Schwabe, Daniel and Mika, Peter and Uschold, Mike and Aroyo, Lora
+  M.</editor>
+  <pubdate>2006</pubdate>
+  <fpage>559</fpage>
+  <lpage>-572</lpage>
+</bibl>
+
+<bibl id="B53">
+  <title><p>On the formulation of performant \{SPARQL\} queries</p></title>
+  <aug>
+    <au><snm>Loizou</snm><fnm>A</fnm></au>
+    <au><snm>Angles</snm><fnm>R</fnm></au>
+    <au><snm>Groth</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Web Semantics: Science, Services and Agents on the World Wide
+  Web</source>
+  <pubdate>2015</pubdate>
+  <volume>31</volume>
+  <fpage>1</fpage>
+  <lpage>26</lpage>
+  <url>http://www.sciencedirect.com/science/article/pii/S1570826814001061</url>
+</bibl>
+
+<bibl id="B54">
+  <title><p>On the Evaluation of {RDF} Distribution Algorithms Implemented over
+  Apache Spark</p></title>
+  <aug>
+    <au><snm>Cur{\'e}</snm><fnm>O</fnm></au>
+    <au><snm>Naacke</snm><fnm>H</fnm></au>
+    <au><snm>Baazizi</snm><fnm>MA</fnm></au>
+    <au><snm>Amann</snm><fnm>B</fnm></au>
+  </aug>
+  <source>SSWS@ISWC</source>
+  <pubdate>2015</pubdate>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment

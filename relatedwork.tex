@@ -1,0 +1,104 @@
+%interessant om tabel te maken: https://www.w3.org/wiki/RdfStoreBenchmarking en om bibliografie aan te vullen?
+\begin{table*}[t!]
+	\centering
+	\caption{Overview of recent (2011-2016) benchmarking results.}
+	\label{benchmarks}
+	\scalebox{0.85}{
+	\begin{tabular}{l|l|l|l|l|p{3cm}}
+		\hline
+		\textbf{Benchmark/Paper}                                                                                             & \textbf{Year} & \textbf{Dataset(s)}                                                  & \textbf{Triple Stores}                                                                                                                                   & \textbf{Nodes x RAM}                          & \textbf{Remarks}                                               \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Graux et al.~\cite{graux2016multi}\end{tabular} & 2016          & \begin{tabular}[c]{@{}l@{}}WatDiv1k, LUBM1k, \\ LUBM10k\end{tabular} & \begin{tabular}[c]{@{}l@{}}Standalone (CumulusRDF~\cite{ladwig2011cumulusrdf},...)\\ HDFS with prep.: S2RDF~\cite{Schatzle:2016:SRQ:2977797.2977806},...\\ HDFS no prep.: PigSPARQL~\cite{schatzle2011pigsparql},...\end{tabular} & 10 x 17GB                              &                                                               \\ \hline
+		SPB~\cite{kotsevbenchmarking}                                                                                                                  & 2016          & \begin{tabular}[c]{@{}l@{}}SPB64M, SPB256M, \\ SPB1B\end{tabular}    & Virtuoso, GraphDB                                                                                                                                        & \begin{tabular}[c]{@{}l@{}}Virt(192 GB),\\ Gra(64GB)\end{tabular}              & \begin{tabular}[c]{@{}l@{}} \end{tabular}  \\ \hline
+		Hernandez et al.~\cite{hernandez2016querying}                                                                                                 & 2016          & Wikidata                                                             & \begin{tabular}[c]{@{}l@{}}4store~\cite{harris20094store}, Blazegraph,\\ GraphDB, Jena TDB,\\ Virtuoso, Neo4J,\\ PostGreSQL\end{tabular}                                        & 1 x 32GB                               &                                         \\ \hline
+		S2RDF~\cite{Schatzle:2016:SRQ:2977797.2977806} & 2016 &\begin{tabular}[c]{@{}l@{}}WatDiv10M,\\ WatDiv100M \end{tabular} & \begin{tabular}[c]{@{}l@{}}S2RDF~\cite{Schatzle:2016:SRQ:2977797.2977806}, H2RDF+~\cite{papailiou2013h}, Sempala~\cite{schatzle2014sempala}, \\ PigSPARQL~\cite{schatzle2011pigsparql}, SHARD~\cite{rohloff2010high}, Virtuoso\end{tabular}  & \begin{tabular}[c]{@{}l@{}}10 x 32GB, \\ Virt(1 x 32GB)\end{tabular} &  \\ \hline
+		BigRDFBench~\cite{Saleem} & 2015 & 13 real datasets & \begin{tabular}[c]{@{}l@{}}FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11}, SPLENDID~\cite{gorlitz2011splendid}, ANAPSID~\cite{Acosta2011}, \\ FedX+HiBISCuS~\cite{saleem2014hibiscus}, \\ SPLENDID+HiBISCuS\end{tabular} & 1 x 8GB & \begin{tabular}[c]{@{}l@{}}FedBench \\+ 18 new queries\end{tabular} \\ \hline
+		FEASIBLE~\cite{saleem2015feasible} & 2015 & generator & \begin{tabular}[c]{@{}l@{}} Virtuoso7, Sesame, \\ Jena TDB, OWLIM-SE  \end{tabular} & 1 x 16GB &  \\ \hline
+		%title & year & dataset & stores & hardware &  \\ \hline			
+		WatDiv~\cite{alucc2014diversified}                                                                                                               & 2014          & \begin{tabular}[c]{@{}l@{}}WatDiv10M,\\ WatDiv100M \end{tabular}                                                & \begin{tabular}[c]{@{}l@{}}MonetDB~\cite{boncz2005monetdb}, RDF-3X~\cite{neumann2010rdf}, \\ Virtuoso6, Virtuoso7, \\ gStore~\cite{zou2011gstore}, 4store\end{tabular}                                                     & 1  x 16GB                              &                                                              \\ \hline
+		\begin{tabular}[c]{@{}l@{}}Cudr\'e-Mauroux et al.~\cite{cudre2013nosql} \end{tabular}                                                                                          & 2013          & \begin{tabular}[c]{@{}l@{}}BSBM (10, 100, , \\ 1000M) DBPSB \end{tabular}                                        & \begin{tabular}[c]{@{}l@{}}4store, Hive+HBase,\\ CumulusRDF, Couchbase,\\ Jena+HBase~\cite{khadilkar2012jena}\end{tabular}                                                       & \begin{tabular}[c]{@{}l@{}} $2^n$  x 8GB \\ $n=0,1,...4$ \end{tabular}  & 
+		\begin{tabular}[c]{@{}l@{}}  \end{tabular} \\ \hline
+		BioBenchmark Toyama~\cite{wu2014biobenchmark} & 2012 & \begin{tabular}[c]{@{}l@{}}5 biological datasets \\ (10M - 8000M) \\ Uniprot, DDBJ,... \end{tabular} & \begin{tabular}[c]{@{}l@{}}4store, BigData, Mulgara, \\ Virtuoso, OWLIM-SE
+		\end{tabular} & 1 x 64GB & 5-20 queries per dataset \\ \hline
+		FedBench~\cite{Schmidt2011} & 2011 & \begin{tabular}[c]{@{}l@{}}11 endpoints \\ with $\le 50$M\end{tabular}{} & SPLENDID, Alibaba, Sesame & 1 x 32GB & \begin{tabular}[c]{@{}l@{}}14 federated queries \\ (7 life sciences, \\ 7 cross-domain)\end{tabular} \\ \hline
+	\end{tabular}
+	}
+\end{table*}
+
+%EARLY BENCHMARK (generators)
+%Real data!
+%DBPedia SPARQL Benchmark 	(DBSPB)		Dataset=DBPedia, Queries extracted from DBPedia query logs, mostly lookup queries, no inference
+%
+%Artificial datasets:
+%
+%The Lehigh University Benchmark	(LUBM)		Scalable dataset generator, BGP queries, university domain ontology
+%									SP2Bench	DBLP simple bibliographic schema, well structured data, more complex patterns and some 
+	  											%SPARQL 1.0 operators, long path chains, filter, optional, bound
+%Berlin SPARQL Benchmark			BSBM		ecommerce scenario, scalable data generator, no reasoning
+%Semantic Publishing Benchmark		SPB			Arbitrarily large datasets (billions of triples), more complex query worlkload, all 1.0 operators, nesting, 
+												%high complexity
+There's an abundance of Linked Data benchmarks mainly operating on artificial datasets, the most popular ones being (chronologically) the Lehigh University Benchmark~\cite{guo2005lubm} (LUBM), the SPARQL performance benchmark~\cite{schmidt2009sp} (SP$^2$Bench), and the Berlin SPARQL benchmark~\cite{bizer2009berlin}
+(BSBM).  For real-world data and queries the most common choice was to use the DBpedia SPARQL benchmark~\cite{morsey2011dbpedia} (DBSB), which uses the DBPedia dataset and the  queries (mostly Basic Graph Patterns (BGPs)) extracted from the actual server logs.
+%WatDiv adresses shortcomings, Feasible more complex queries
+The shortcomings of these early benchmarks were addressed in recent work, which resulted in the Waterloo SPARQL Diversity Test
+Suite~\cite{alucc2014diversified} (WatDiv). This new benchmark focuses on \emph{diversity} both in terms of the query properties and data properties. The first is achieved by generating queries from 20 BGP query templates with different shapes. The latter affects the triple pattern selectivity and therefore reveals the ability of of the internal query planning algorithms in RDF systems to make the most efficient choice to resolve a query. 
+In this work we will use WatDiv to assess the current state-of-the-art or RDF storage systems.
+
+%More complex queries
+FEASIBLE~\cite{saleem2015feasible} is a benchmark generator that generates queries diverse in terms of SPARQL properties. Here, the queries are selected by first converting them to normalized feature vectors and then choosing a set of mutually distant queries. Also the Semantic Publishing Benchmark~\cite{kotsevbenchmarking} (SPB) provides more complex query workloads with nested queries and all SPARQL 1.0 operators are present.
+
+%Synthetic versus Real-World: problems
+% DuanKSU11: Apples and Oranges: A Comparison of RDF Benchmarks and Real RDF Datasets
+%In this paper, we compare data generated with existing RDF benchmarks and data found in widely used real RDF datasets. The
+%results of our comparison illustrate that existing benchmark data have little in common with real data. Therefore any conclusions
+%drawn from existing benchmark tests might not actually translate to expected behaviours in real settings. In terms of the comparison
+%itself, we show that simple primitive data metrics are inadequate to flesh out the fundamental differences between real and benchmark data.
+A recurring criticism on synthetic benchmarks is that they have very little in common with real application domains~\cite{DBLP:conf/sigmod/DuanKSU11},
+therefore it is not possible to generalize benchmark results of RDF databases on artificial data to real-world use cases.
+%real-world benchmarks then?
+%BioBenchmark Toyama 2012
+%For this evaluation, we used biological databases, Cell Cycle Ontology, Allie, PDBj, UniProt, and DDBJ con- taining as many as 8 billion triples
+%8 billion triples.
+%We evaluated the load and query costs of five popular triple stores: 4store, Bigdata, Mulgara, Virtuoso, and OWLIM-SE. To the best of our knowledge, 
+%we evaluated the largest scale of real biological data possible on a single node.
+If we look specifically to the Life Sciences domain, BioBenchmark Toyama 2012~\cite{wu2014biobenchmark} sheds light on the capabilities of typical single-node RDF storage solutions. They evaluated 5 triple stores on 5 biological datasets (Cell Cycle Ontology~\cite{antezana2009cell}, Allie~\cite{yamamoto2011allie}, PDBj~\cite{kinjo2011protein}, UniProt~\cite{uniprot2014uniprot}, and DDBJ~\cite{tateno2002dna}), ranging from 10 million to 8 billion triples.
+
+%Multi-node + Query Correctness!!
+All benchmarks mentioned so far focus on single node RDF databases. FedBench~\cite{Schmidt2011} is a system to test query federators. They evaluate 3 federated systems using 14 real-world federated queries, of which 7 from the Life Sciences domain. In more recent work, BigRDFBench~\cite{Saleem} increases the number of datasets from 11 to 13 and adds 18 new federated queries. Instead of just focusing on query runtime, other performance metrics are taken into account such as source selection and query correctness. An alternative heuristic approach for automatically generating federated queries is the SPARQL Linked Open Data Query Generator~\cite{gorlitz2012splodge} (SPLODGE).
+
+%Niet enkel native RDF stores
+%\todo{Referenties toevoegen voor elk van die systemen? }\\
+Most benchmarking efforts reported so far focus on the performance of native RDF systems. A first generalization comes by adding other graph and relational databases as in the WikiData benchmarking effort~\cite{hernandez2016querying}, where Neo4J and PostgreSQL were added. A second generalization comes by mapping SPARQL workloads on NoSQL and Hadoop-based systems. Graux~\cite{graux2016multi} compared 3 different types of systems: (i) Standalone NoSQL based approaches such as CumulusRDF~\cite{ladwig2011cumulusrdf} (translates queries to Cassandra Query Language); (ii) HDFS-based (Hadoop Distributed Filesystem~\cite{ghemawat2003google}) approaches with a data preparation phase such as S2RDF~\cite{Schatzle:2016:SRQ:2977797.2977806} ; and (iii) HDFS-based approaches which natively store RDF, such as PigSPARQL~\cite{schatzle2011pigsparql}. This work can be viewed as an update of an earlier NoSQL for RDF benchmarking effort by Cudr{\'e}-Mauroux~\cite{cudre2013nosql}. 
+In the S2RDF research paper~\cite{Schatzle:2016:SRQ:2977797.2977806}, a comparison is made with other HDFS-based approaches and a single server instance of Virtuoso.
+
+The current difficulty in selecting and evaluating RDF systems is also being addressed in two European H2020 projects: LDBC~\cite{LDBC} and 
+HOBBIT~\cite{HOBBIT}. Within LDBC a number of RDF benchmarks were developed~\cite{Boncz:2013:LBG:2513591.2527070}, one benchmark is based on social network data~\cite{erling2015ldbc} and SPB~\cite{kotsevbenchmarking} is based on a data publishing case with BBC. 
+In the HOBBIT project a platform is being built to offer industry a unified approach for running benchmarks related to their actual workloads.
+
+\subsection{Positioning this work}
+%Picalausa2011 - What are real SPARQL queries like?
+%We present statistics on real world SPARQL queries that may be of interest for building SPARQL query processing engines and benchmarks. 
+%In particular, we analyze the syntactical structure of queries in a log of about 3 million queries, harvested from the DBPedia SPARQL endpoint. 
+%Although a sizable portion of the log is shown to consist of so-called conjunctive SPARQL queries, 
+%non-conjunctive queries that use SPARQL's union or optional operators are more than substantial. 
+%It is known, however, that query evaluation quickly becomes hard for queries including the non-conjunctive operators union or optional. 
+%We therefore drill deeper into the syntactical structure of the queries that are not conjunctive and show that in 50{\%} of the cases, 
+%these queries satisfy certain structural restrictions that imply tractable evaluation in theory. 
+%We hope that the identiﬁcation of these restrictions can aid in the future development of practical heuristics for processing non-conjunctive SPARQL queries.
+
+In Table~\ref{benchmarks} we provide an overview of the most recent benchmarking results together with information on their time of release, the datasets used,
+the systems tested, and the hardware setup. Our work distinguishes itself from other effort as follows:
+
+\paragraph{Up-to-date view} Specifically for the Life Sciences domain BioBenchmark Toyama 2012 is the most recent report for single-node setups.
+\paragraph{Scalability} We both study scalability in terms of dataset sizes (WatDiv), but also in terms of the size of the distribed setup (horizontal scalability) and in terms of memory resources (vertical scalability).
+
+\paragraph{Broad set of query types} Where the WatDiv runs are diverse in the space of BGP queries, the queries of Ontoforce are complex, rich in SPARQL keywords, sub-queries are common and a large fraction consists of non-conjunctive queries, which are typically very challenging~\cite{Picalausa2011}. 
+
+\paragraph{Query Correctness} Just like BigRDFBench we explicitly verify query correctness before turning to runtime comparisons and demonstrate its necessity for challenging queries.
+
+\paragraph{Objective and exhaustive} By considering different hardware and configuration setups our work becomes more objective. As an example the S2RDF paper compares Hadoop-based systems with Virtuoso and concludes a similar performance, but does not take into account that (as will be shown later), performance does not drop when adding multiple clients, thereby increasing Virtuoso's ETL throughput by an order of magnitude.
+
+\paragraph{Multi-setup} This work compares single and multi-node setups, federated querying, and compression by using benchmark cost as a unification parameter.
+
+\paragraph{Query-mix size} Whereas many benchmarks have a limited query-set, both the WatDiv and Ontoforce benchmark used in this evaluation can be considered stress tests with respectively 400 and 1,223 queries. 
+
+\paragraph{Flexibility} Any system can be tested with our approach, the only requirement is support for the SPARQL protocol. Because of this we can for example also test the Triple Pattern Fragments (TPF) system, since the TPF client can be run as an http-server.

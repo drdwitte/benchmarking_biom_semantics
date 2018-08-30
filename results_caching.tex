@@ -1,0 +1,32 @@
+%
+%RESULTS Rev1: Notebook Rev1_08 and Rev1_09 
+%TODO study number is notebook 09
+
+%RESULTS ORIGINAL PAPER
+%NONE
+\begin{figure*}[htbp!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{imgs/Fig08_Watdiv_caching}
+	\caption{Speedup in query runtime by comparing all query runtimes in the multi-threaded run with the slowest execution in the stress test. With no caching all dots are expected on the X and Y-axis, the latter because of the noise on small query runtimes. If we focus on speedups $> 2$, especially \textbf{ES1} and \textbf{TPF*} seem to have the highest benefit.  }
+	\label{fig:Fig08_Watdiv_caching}
+\end{figure*}
+
+Some data stores cache the results of queries. Especially in a benchmark where the same query is executed multiple times, this might lead to a large variance on the query runtimes. Although the approach with query events was not designed with support for studying caching effects in mind, having the order of the queries suffices. 
+In an initial attempt we plotted the query runtimes as a function of the distance to their nearest preceding execution. For this distance we experimented with the number of intermediary queries, the total number of intermediary results, and the amount of time in between. Results were very similar but did not show any clear pattern. 
+In Figure~\ref{fig:Fig08_Watdiv_caching} however, the speedup with respect to the slowest query execution in the multi-client run is plotted as a function of the actual query runtime. This visualization allows an easy distinction between speedups which are caused by noise, mainly for very short query runtimes, and real caching effects. If no caching effects are present the plot should have all its dots on the X and Y-axis.
+%Fig. 8. Speedup in query runtime by comparing all query runtimes in the multi-threaded run with the slowest execution in the stress test. With
+%no caching all dots are expected on the X and Y-axis, the latter because of the noise on small query runtimes. If we focus on speedups > 2,
+%especially ES1 and TPF* seem to have the highest benefit.
+\begin{itemize}
+	\item \textbf{Stores with clear caching advantage:} The \textbf{TPF} server instances have NGINX\footnote{\scriptsize \url{https://www.nginx.com/}} cache enabled. The similarity in results with other stores strengthens the idea that Figure~\ref{fig:Fig08_Watdiv_caching} in fact shows caching behavior for 
+	\textbf{TPF*\_64}, \textbf{ES1\_64\_Def}, and \\ \textbf{Gra1\_64\_Opt}.
+	
+	\item \textbf{Caching differences per template type:} For \textbf{ES1\_64\_Def} and \textbf{Gra1\_64\_Opt} the \textbf{F}-templates (blue) dots correspond to the highest speedups. For \textbf{TPF*\_64} query execution is in general slower than for the other systems, therefore \textbf{L} and \textbf{S}-queries, shift to the right and their speedups become more prominent. Small speedups for \textbf{Bla1\_64} and \textbf{Vir1\_64} are mostly limited to the \textbf{C}-template queries.
+	\item \textbf{TPF1 vs TPF3:} As a result of the horizontal data partitioning scheme \textbf{S} and \textbf{F}-queries can be resolved locally for \textbf{TPF3\_64} which explain the higher prevalence in the plot.
+\end{itemize}
+
+
+
+
+
+

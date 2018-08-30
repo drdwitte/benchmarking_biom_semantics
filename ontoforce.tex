@@ -1,0 +1,28 @@
+\rv{I don't fully see the necessity of this section, and it reads to much as an ad. I'd strongly suggest removing.}
+\remove{
+This work is the result of a research collaboration of the research lab IDLab and the company Ontoforce. 
+Ontoforce's product DISQOVER is a search interface which allows exploring links and discovering relations between over 125 linked data sources in the Life Sciences domain. Actions in their search interface trigger federated queries in the backend of their product. These queries can resolved by:  (i) sending them directly to a triple store in the backend or (ii) by anticipating them using a preprocessing approach where linked data aggregates are built and indexed. In the latter approach a triple store is not involved in the live process but during the preparatory ETL phase.
+There is no lock-in with respect to the choice of triple store, which allows seamless integration with the RDF systems of their customers. 
+}
+
+\remove{
+To offer their customers guidance it is however necessary to have an up-to-date overview of the current state-of-the-art of enterprise RDF systems as well as shed light on promising newcomers originating from the research community.
+}
+
+\todo{We use real-world federated queries from Ontoforce's DISQOVER platform.}
+
+\rv{The following is already in the next subsection}
+\remove{
+We evaluated 7 different RDF solutions on 4 different datasets: 3 differently sized versions of the WatDiv benchmark and one real-world proprietary dataset of Ontoforce. 
+}
+
+\rv{I'd move this to the next subsection as well.}
+For each of the following parameters we run benchmarks with different values:
+\begin{itemize}
+	\item Single node hardware resources: this corresponds to the amount of RAM memory
+	\item The number of nodes in case of a distributed database
+	\item The configuration of the RDF database software
+	\item The size of the dataset
+	\item Whether the datasets and queries correspond to a real-world case or is artificially generated
+	\item The database load: single- versus multithreaded
+\end{itemize}
