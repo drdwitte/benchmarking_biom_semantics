@@ -23,18 +23,7 @@
 	%}
 \end{table*}
 
-\begin{figure*}[htbp!]
-	\centering
-	\includegraphics[width=0.75\linewidth]{imgs/Fig10_AllTrees}
-	\caption{Decision Tree Analysis to identify the reason for query failure, certain error types, and high/low query runtimes. Input for all trees are feature vectors, also the query engine is added as a categorical feature. Rules in the decision trees are shown in red, sample sizes are encoded as the width of the bottom bar and the value is added inside the bars in bold. For each separate part the class distribution or the average runtime is reported below the bar. 
-	\newline \hspace{\linewidth} 	
-	\underline{\smash{Top:}} Classification into query success (blue) and failure (red) and incomplete. The query engine is an important decision rule, which demonstrates that Virtuoso behaves very different from the other systems.  
-	\newline \hspace{\linewidth} 	
-	\underline{\smash{Center:}} Classification of query failures into classes incomplete (orange), server error (green), and timeout (purple). 
-	\newline \hspace{\linewidth} 	
-	\underline{\smash{Bottom:}}  Regression on query runtimes. Red corresponds to high query runtimes, white to low. }
- 	\label{fig:Fig10_AllTrees}
-\end{figure*}
+
 
 
 %

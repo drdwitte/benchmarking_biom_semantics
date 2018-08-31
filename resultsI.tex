@@ -1,10 +1,4 @@
-\begin{figure*}[htbp!]
-	\centering
-	\includegraphics[width=0.9\linewidth]{imgs/Fig01_WatdivNoSQLDataScaling}
-	\caption{Query runtime distributions of \emph{Vendor} systems for 3 different sizes of WatDiv. Dots correspond to average runtimes, while the horizontal lines in the box plots correspond to median runtimes. 
-		The difference is scaling behavior between \textbf{Vir\_32} (linear) and the other stores emphasizes the different impact of server memory on runtime behavior. \textbf{Bla1\_32} and \textbf{Gra1\_32} are very close for batch workloads, for individual queries GraphDB is superior except when scaling up to WatDiv1000M. \textbf{ES1\_32} is the only store with timeout problems starting from WatDiv100M. }
-	\label{fig:Fig01_WatdivNoSQLDataScaling}
-\end{figure*}
+
 %runtimes: median - mean - response
 In this section we will study the query runtime distributions of different approaches for dealing with Linked Data at scale. In the figures both the \emph{median} and \emph{mean query runtimes} are reported. As the runtime distributions can be skewed, performance differences between systems are most often reported using the median runtime. 
 
@@ -25,7 +19,7 @@ A major concern when comparing query runtime between different engines is \emph{
 
 \begin{table}[ht!]
 	\centering
-	\caption{Conventions for describing benchmark setups. A description consists of a 3-character prefix describing the RDF storage solution, the number of nodes, the amount of memory and the configuration.}
+	\caption{Conventions for describing benchmark setups.}
 	\label{table:namingconv}
 	\scalebox{0.9}{
 		\begin{tabular}{l|l}
@@ -42,6 +36,7 @@ A major concern when comparing query runtime between different engines is \emph{
 			\hline
 		\end{tabular}
 	}
+	 \caption*{A description consists of a 3-character prefix describing the RDF storage solution, the number of nodes, the amount of memory and the configuration.}
 \end{table}
 
 %Benchmark Survival

@@ -77,7 +77,6 @@
 \def\includegraphics{}
 
 
-
 %%% Put your definitions there:
 \startlocaldefs
 \endlocaldefs
@@ -119,6 +118,32 @@
 }
 \urlstyle{same}
 
+%added myself to deal with table captions + descriptions
+%HOWTO: https://mirror.hmc.edu/ctan/macros/latex/contrib/caption/caption-eng.pdf
+\usepackage{caption} 
+\captionsetup[table]{skip=10pt, font={footnotesize}, labelfont={bf}}
+	%textfont=footnotesize}
+\captionsetup[figure]{skip=10pt, font={footnotesize}, labelfont={bf}}
+
+
+\usepackage{array}% http://ctan.org/pkg/array
+\renewcommand{\arraystretch}{1.5}%
+
+\usepackage{titlesec}
+
+%https://tex.stackexchange.com/questions/108684/spacing-before-and-after-section-titles
+%\titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+\titlespacing*{\section}
+{0pt}{\baselineskip}{\baselineskip}
+
+\titlespacing*{\subsection}
+{0pt}{\baselineskip}{\baselineskip}
+
+\usepackage{enumitem}
+\setlist{nosep,after=\vspace{\baselineskip}, before=\vspace{\baselineskip}}
+
+
+\renewcommand\labelitemi{-}
 
 %%% Begin ...
 \begin{document}
@@ -267,7 +292,7 @@ With this work we offer a reusable methodology to facilitate comparison between 
 %OUTLOOK	
 %Hopelijk wordt methodologie gevolgd. Future benchmarks fixed methodology
 This methodology facilitates the integration with future benchmark results.
-\todo{iets vermelden over reusable interpretations}
+\todo{Decision $=$ reusable interpretations ook vermelden}
 	
 \end{abstract}
 
@@ -323,19 +348,7 @@ This methodology facilitates the integration with future benchmark results.
 %%%%%%%%%%%%%%%%%%%%%%%%% start of article main body
 % <put your article body there>
 
-\section{TODOfigures}
 
-\begin{itemize}
-	\item Figures should be separate files
-	\item Figures should be numbered and uploaded in correct order
-	\item Figure and Table titles are max 15 words
-	\item Figure legends are max 300 words
-	\item Fig files should not exceed 10 MB
-	\item Table caption on top and Legend below table!
-	\item No color in tables!
-	\item Additional files should not be on department website opsturen! (max 20 MB)
-	\item Additional files should be name: Additional file 1
-\end{itemize}
 
 \section{Introduction}
 \input{introduction.tex}
@@ -388,8 +401,6 @@ This methodology facilitates the integration with future benchmark results.
 \section{Conclusion}
 \input{conclusion.tex}
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
 %% Backmatter begins here                   %%
@@ -397,10 +408,6 @@ This methodology facilitates the integration with future benchmark results.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{backmatter}
-
-\section*{URLS}
-\todo{GEEN URLS in de text => reference number en toevoegen aan biblio}
-Als volgt: The Mouse Tumor Biology Database. http://tumor.informatics.jax.org/mtbwi/index.do. Accessed 20 May 2013
 
 \section*{Ethics approval and consent to participate}
 Not applicable
@@ -416,19 +423,18 @@ All data generated or analysed during this study are included in this published 
 The data that support the findings of this study are available from Ontoforce but restrictions apply to the availability of these data, which were used under license for the current study, and so are not publicly available. Data are however available from the authors upon reasonable request and with permission of [third party name].
 
 \section*{Competing interests}
-The authors declare that they have no competing interests.
+Some of the co-authors in this research paper have contributed to the TPF implementation. (LDV and RV) Te other authors have no competing interests.
 
 \section*{Funding}
-\todo{VLAIO project SEQUEL}
+The research activities were funded by VLAIO (the Agency for Innovation and
+Entrepreneurship in Flanders) in an R\&D project called SEQUEL with Ontoforce, Ghent University and imec (iMinds). 
 
 \section*{Author's contributions}
 The work presented in this paper was conducted in collaboration between all authors. DDW and
 LDV conducted the experiments. DDW analyzed the data and drafted the paper. FP, KK and HC helped defining a relevant Life Sciences use case and provided datasets and queries. JF, RV and EM revised the research paper and coordinated the research process. All authors have approved the final version of the manuscript. 
 
 \section*{Acknowledgements}
-The research activities were funded by VLAIO (the Agency for Innovation and
-Entrepreneurship in Flanders) in an R\&D project with Ontoforce, Ghent University and imec (iMinds). \\
-iLab.t provided the high memory infrastructure to compress the benchmark datasets and a set of servers to run additional benchmarks.\\
+We would like to acknowledge iLab.t who provided the high memory infrastructure to compress the benchmark datasets and a set of servers to run additional benchmarks.\\
 We would also like to express our gratitude for the support provided by the staff working for the 4 vendors (Blazegraph, GraphDB, Virtuoso, FluidOps) we were allowed to disclose and to Rob Vesse who provided support for the SPARQL Query Benchmarker software.
 
 
@@ -476,16 +482,123 @@ We would also like to express our gratitude for the support provided by the staf
 %% Do not use \listoffigures as most will included as separate files
 
 \section*{Figures}
-  \begin{figure}[ht!]
-  \caption{\csentence{Sample figure title.}
-      A short description of the figure content
-      should go here.}
-      \end{figure}
 
+%\begin{figure}[ht!]
+%  \caption{\csentence{Sample figure title.}
+%      A short description of the figure content
+%      should go here.}
+%      \end{figure}
+  
+%1    
 \begin{figure}[ht!]
-  \caption{\csentence{Sample figure title.}
-      Figure legend text.}
-      \end{figure}
+	\centering
+	%\includegraphics[width=0.9\linewidth]{imgs/Fig01_WatdivNoSQLDataScaling}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{ \csentence{Query runtime distributions of \emph{Vendor} systems for 3 different sizes of WatDiv.} Dots correspond to average runtimes, while the horizontal lines in the box plots correspond to median runtimes. The difference is scaling behavior between \textbf{Vir\_32} (linear) and the other stores emphasizes the different impact of server memory on runtime behavior. \textbf{Bla1\_32} and \textbf{Gra1\_32} are very close for batch workloads, for individual queries GraphDB is superior except when scaling up to WatDiv1000M. \textbf{ES1\_32} is the only store with timeout problems starting from WatDiv100M. }
+	\label{fig:Fig01_WatdivNoSQLDataScaling}
+\end{figure} 
+   
+%2     
+\begin{figure}[ht!]
+	\centering
+	%\includegraphics[width=0.9\linewidth]{imgs/Fig02_WatdivVerticalScaling}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{\csentence{Query runtime distributions for WatDiv1000M showing the effect of increasing memory from 32GB (left) to 64GB (center) and \emph{Optimized} configurations (right)}. Virtuoso hardly doesn't benefit from additional memory or better configurations. GraphDB is the most sensitive to proper configuration. In the right panel engine performance starts converging. For batch workloads \textbf{Bla1\_64\_Opt} is the fastest, in terms of median runtimes both \textbf{Vir1\_64\_*} setups perform best.}
+	\label{fig:Fig02_WatdivVerticalScaling}
+\end{figure}
+
+%3      
+\begin{figure}[ht!]
+	\centering
+	%\includegraphics[width=0.99\linewidth]{imgs/Fig03_BenchmarkSurvival_Other_Watdiv_Default}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{\csentence{Benchmark survival interval for 3 \emph{SemWeb} solutions}. For early crashes the amount of queries until system failure is reported, as well as the query template causing the failure. \textbf{Flu3\_64} crashes upon the first occurrence of a \textbf{C3} query. \textbf{Fus1\_64} survives the warm-up run for WatDiv100M but crashes upon the first occurrence of a \textbf{C2} query in the stress test, for WatDiv1000M again the first \textbf{C2} query in the warm-up run causes the crash.}
+	\label{fig:Fig03_BenchmarkSurvival_Other_Watdiv_Default}
+\end{figure}   
+
+%4
+\begin{figure}[ht!]
+	\centering
+	%\includegraphics[width=0.9\linewidth]{imgs/Fig04_WatdivHorizontalScaling}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{\csentence{Pairwise comparison of query runtime distributions for single-node versus 3-node setups}. None of the solutions achieve an average runtime speedup when adding more nodes, on the contrary overhead multipication factors of 1.9 and 1.5 are seen in left and center pane for \textbf{Vir3\_32\_Def} and \textbf{ES3\_32\_Def}. For \textbf{TPF3\_64\_Def} the overhead is negligible.}
+	\label{fig:Fig04_WatdivHorizontalScaling}
+\end{figure}
+
+%5
+\begin{figure}[ht!]
+	\centering
+	%\includegraphics[width=0.9\linewidth]{imgs/Fig05_WatdivTemplates}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{\csentence{Average Runtime per query template for 5 single-node setups.} \textbf{TPF1\_64} has only 5 templates which do not coincide with the timeout of 300s, for \textbf{ES1\_64\_Def} this is alread 15 templates.
+		\textbf{Vir1\_64\_Opt} is the fastest engine for 13 templates, \textbf{Gra1\_64\_Opt} for and \textbf{Bla1\_64\_Opt} for 3 templates each. Template \textbf{C3} was omitted due to query completeness issues. Blazegraph was the only engine to retrieve all results. } 
+	\label{fig:Fig05_WatdivTemplates}
+\end{figure}
+ 
+%6
+\begin{figure}[ht!]
+	\centering
+ 	%\includegraphics[width=0.9\linewidth]{imgs/Fig06_WatdivTemplateTypes}
+ 	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+ 	\caption{\csentence{Average Runtime per BGP type.}}
+ 	\label{fig:Fig06_WatdivTemplateTypes}
+\end{figure}
+   
+%7   
+\begin{figure}[ht!]
+	\centering
+	%\includegraphics[width=0.90\linewidth]{imgs/Fig07_Watdiv_SingleMultiClient}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{\csentence{Runtimes for single versus multi-client workloads: 1 vs. 5 threads.} 
+		5T runtime corresponds to the maximum runtime per query in the stress test, 1T is the runtime during the warm-up phase. The red line corresponds to the bisector, where the runtime for both workloads is equal. Dots are expected to be shifted up, which correspond to a multiplication factor. The closer the dots to the bisector the smaller the multi-client overhead. Dots below the bisector can be attributed to the natural variance in query runtimes. Average runtimes per store are also shown. \textbf{Bla1\_64} and \textbf{Vir1\_64} have the smallest overhead $(< 20\%)$, for \textbf{ES1\_64} has the largest $(> 300\%)$.
+	}
+	\label{fig:Fig07_Watdiv_SingleMultiClient}
+\end{figure}
+
+%8
+\begin{figure}[ht!]
+	\centering
+	%\includegraphics[width=0.9\linewidth]{imgs/Fig08_Watdiv_caching}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{\csentence{Speedup in query runtime.} We compare query runtimes in the multi-threaded run with the slowest execution in the stress test. With no caching all dots are expected on the X and Y-axis, the latter because of the noise on small query runtimes. If we focus on speedups $> 2$, especially \textbf{ES1} and \textbf{TPF*} seem to have the highest benefit.  }
+	\label{fig:Fig08_Watdiv_caching}
+\end{figure}
+
+%9
+\begin{figure}[ht!]
+	\centering
+	%\includegraphics[width=0.90\linewidth]{imgs/Fig09_FailuresOntoforceBM}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{\csentence{Overview of successes and errors per query (Y-axis) and thread (X-axis) on the Ontoforce benchmark.}
+		Queries are sorted per system in order to group error behavior and are not consistent between simulations!
+		Blazegraph has a short benchmark survival interval. \textbf{ES1}, \textbf{Gra1} and \textbf{Vir3} Cluster setups have a lot of errors but most queries execute successfully at least once, which allows runtime comparisons. \textbf{Vir3\_64\_Opt\_0} is the most successful Virtuoso cluster run as query completeness analysis revealed that \textbf{Vir3\_64\_Opt\_2} has unreported errors for 37\% of the queries.
+	}
+	\label{fig:Fig09_FailuresOntoforceBM}
+\end{figure}   
+
+%10
+\begin{figure}[ht!]
+	\centering
+	%\includegraphics[width=0.75\linewidth]{imgs/Fig10_AllTrees}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{\csentence{Decision Tree Analysis to identify the reason for query failure, certain error types, and high/low query runtimes.} Input for all trees are feature vectors, also the query engine is added as a categorical feature. Rules in the decision trees are shown in red, sample sizes are encoded as the width of the bottom bar and the value is added inside the bars in bold. For each separate part the class distribution or the average runtime is reported below the bar. 
+		\newline \hspace{\linewidth} 	
+		\underline{\smash{Top:}} Classification into query success (blue) and failure (red) and incomplete. The query engine is an important decision rule, which demonstrates that Virtuoso behaves very different from the other systems.  
+		\newline \hspace{\linewidth} 	
+		\underline{\smash{Center:}} Classification of query failures into classes incomplete (orange), server error (green), and timeout (purple). 
+		\newline \hspace{\linewidth} 	
+		\underline{\smash{Bottom:}}  Regression on query runtimes. Red corresponds to high query runtimes, white to low. }
+	\label{fig:Fig10_AllTrees}
+\end{figure}
+
+%11
+\begin{figure}[ht!]
+	\centering
+	%\includegraphics[width=0.9\linewidth]{imgs/Fig11_AllSims_Correct}
+	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
+	\caption{\csentence{Benchmark Cost in \$ to load and execute 2000 queries in a stress test for WatDiv1000M or Ontoforce datasets for different setups.} All stacked bars consists the load cost stacked on top of the runtime cost. Bar width encodes the amount of nodes. For WatDiv \textbf{Vir1\_32\_Def} is the least expensive solution, mainly because \textbf{Bla1\_64\_Opt} has a much higher load cost. Also for the Ontoforce benchmark\textbf{ Vir1\_32\_Opt} is the most cost-effective choice. The engine ranking is not conserved going from artificial to real-world benchmark.}
+	\label{fig:Fig11_AllSims_Correct}
+\end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                               %%
@@ -495,17 +608,18 @@ We would also like to express our gratitude for the support provided by the staf
 
 %% Use of \listoftables is discouraged.
 %%
-\section*{Tables}
-\begin{table}[h!]
-\caption{Sample table title. This is where the description of the table should go.}
-      \begin{tabular}{cccc}
-        \hline
-           & B1  &B2   & B3\\ \hline
-        A1 & 0.1 & 0.2 & 0.3\\
-        A2 & ... & ..  & .\\
-        A3 & ..  & .   & .\\ \hline
-      \end{tabular}
-\end{table}
+%\section*{Tables}
+%\begin{table}[h!]
+%\caption{Sample table title. This is where the description of the table should go.}
+%      \begin{tabular}{cccc}
+%        \hline
+%           & B1  &B2   & B3\\ \hline
+%        A1 & 0.1 & 0.2 & 0.3\\
+%        A2 & ... & ..  & .\\
+%        A3 & ..  & .   & .\\ \hline
+%      \end{tabular}
+%\caption*{Text below}
+%\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                               %%

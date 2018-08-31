@@ -2,23 +2,23 @@
 We created a Feature Matrix and evaluated a number of stores on a subset of those features (a similar approach as in Stegmaier~\cite{Stegmaier_evaluationof}) to make a pre-selection of RDF engines we consider for in-depth analysis.
 We combined two ideas to create a Feature Matrix, to simplify the RDF store selection process:
 \begin{itemize}
-\item We consulted the DB-Engines ranking\footnote{\scriptsize \url{http://db-engines.com/en/ranking}}, which orders database systems according to their data model and online popularity, to explore the currently common 
+\item We consulted the DB-Engines ranking~\cite{dbengines}, which orders database systems according to their data model and online popularity, to explore the currently common 
 RDF-engines.
 The latter is a non-disclosed formula that measures popularity by combining online mentions on (social) platforms such as StackOverflow, Twitter, and LinkedIn. 
 DB-Engines also supports comparing multiple features of different systems.
-\item WikiData selected the most appropriate RDF store to host their data by having experts assign weights to desired features\footnote{\scriptsize \url{https://phabricator.wikimedia.org/T90101}}.
+\item WikiData selected the most appropriate RDF store to host their data by having experts assign weights to desired features~\cite{wikidataranking}.
 These weights allowed them to calculate a score per data store and rank the different systems. 
 \end{itemize}
 We made a broad selection of suitable features specific for RDF engines to allow multi-way comparisons. Ranking the engines is made possible by assigning weights to a set of features. 
 The features are grouped into a number of categories to obtain a more in-depth insight in the scoring process. 
-The matrix is online\footnote{\scriptsize \url{http://users.elis.ugent.be/~drdwitte/featurematrix.html}}, and end-users can freely download it and/or extend it, change the weights, and update the scores when vendors upgrade their product. 
+The matrix is online \todo{(see suppl material)}), and end-users can freely download it and/or extend it, change the weights, and update the scores when vendors upgrade their product. 
 To back the scoring, we added a layer of trust to the information by always linking to the source of this information.
 
 The criteria for selection of the \emph{Vendor} systems in this work are closely related to the goal of benchmark space exploration and the requirements put forward by Ontoforce. 
 The enterprise needs are met by selecting systems that offer enterprise support and are fully SPARQL 1.1 compliant. The benchmark space exploration requires a certain flexibility: we prefer systems with a machine image, or a maintained docker image, which put no restrictions on the amount of triples that can be ingested and that can work as a multi-node system.
 % allegrograph en stardog vallen hierdoor  af
 The application of the above selection criteria led to 4 \emph{Vendor} systems. 
-Later on, we added 3 additional \emph{SemWeb} systems with unique approaches to handling RDF data: HDT~\cite{DBLP:journals/ws/FernandezMGPA13}, which is a queryable compression format, FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11} often included in benchmarks for federated querying, and Triple Pattern Fragments~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} as a first implementation of the Linked Data Fragments concept\footnote{DISCLAIMER: Some of the co-authors in this research paper have contributed to the TPF implementation.}.
+Later on, we added 3 additional \emph{SemWeb} systems with unique approaches to handling RDF data: HDT~\cite{DBLP:journals/ws/FernandezMGPA13}, which is a queryable compression format, FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11} often included in benchmarks for federated querying, and Triple Pattern Fragments~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} as a first implementation of the Linked Data Fragments concept.
 
 The comparison with these \emph{SemWeb} systems was an essential part of the research collaboration with Ontoforce as their initial goal was to build their DISQOVER search interface on top of a federated querying system. The advantage of the latter is that their interface would then provide a live view on a continuously updating Life Sciences Linked Data cloud, removing the need for an ETL process.
 
@@ -26,10 +26,10 @@ All selected stores are shown in Table~\ref{acronyms} together with their shorth
 
 \begin{table}[ht!]
 	\centering
-	\caption{List of the tested systems and their acronyms. The first four are enterprise systems. % and the last three are \textit{other} systems
-	}
+	%\processtable{Overview of the datasets used in the performance tests.\label{Tab:01}}
+	\caption{List of the tested systems and their acronyms.}
 	\label{acronyms}
-	\scalebox{0.9}{
+	\scalebox{0.99}{
 	\begin{tabular}{l|l}
 		\hline
 		\textbf{System} & \textbf{Shorthand} \\
@@ -39,10 +39,15 @@ All selected stores are shown in Table~\ref{acronyms} together with their shorth
 		GraphDB 7.0.1                 & \textbf{Gra}     \\
 		Virtuoso 7.2.42               & \textbf{Vir}     \\
 		\hline
-		FluidOps\footnote{\scriptsize \url{https://www.fluidops.com/en/downloads}} (with FedX 3.1.2~\cite{DBLP:conf/semweb/SchwarteHHSS11})    & \textbf{Flu}     \\
-		HDT-Fuseki 4.0.0\footnote{\scriptsize \url{https://github.com/rdfhdt/hdt-java/tree/master/hdt-fuseki}}: Jena Fuseki to query HDT                     & \textbf{Fus}     \\
-		Triple Pattern Fragments: Server.js 2.2\footnote{\scriptsize \url{https://github.com/LinkedDataFragments/Server.js}}, Client.js 2.0\footnote{\scriptsize \url{https://github.com/LinkedDataFragments/Client.js}}      & \textbf{TPF} \\
+		FluidOps~\cite{fluidops} (with FedX 3.1.2~\cite{DBLP:conf/semweb/SchwarteHHSS11})    & \textbf{Flu}     \\
+		HDT-Fuseki 4.0.0~\cite{hdtfuseki}: Jena Fuseki \\
+		to query HDT                     & \textbf{Fus}     \\
+		Triple Pattern Fragments: Server.js 2.2~\cite{ldfserver},      & \textbf{TPF} \\
+		Client.js 2.0~\cite{ldfclient}  & \\
+		
 		\hline
 	\end{tabular}
 	}
+	%\caption*{The first four stores are \emph{Vendor} systems, the last three are \emph{SemWeb systems}}
+
 \end{table}

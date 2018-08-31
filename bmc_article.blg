@@ -20,51 +20,71 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bmc_article.bib
+I was expecting a `,' or a `}'---line 985 of file bmc_article.bib
+ :       
+ :       author = "Rob Vesse",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--to sort, need author, organization, or key in ontoforcewebsite
+Warning--to sort, need author, organization, or key in disqover
+Warning--to sort, need author, organization, or key in dbengines
+Warning--to sort, need author, organization, or key in wikidataranking
+Warning--to sort, need author, organization, or key in fluidops
+Warning--to sort, need author, organization, or key in hdtfuseki
+Warning--to sort, need author, organization, or key in awsmarketplace
+Warning--to sort, need author, organization, or key in dockerhub
+Warning--to sort, need author, organization, or key in Virtuoso
+Warning--to sort, need author, organization, or key in graphdb
+Warning--to sort, need author, organization, or key in dockerhubldfserver
+Warning--to sort, need author, organization, or key in hdtcpp
+Warning--to sort, need author, organization, or key in virtuosoos
+Warning--to sort, need author, organization, or key in dockerblazegraph
+Warning--to sort, need author, organization, or key in sparqlquerybm
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Warning--empty institution in Ferre
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 54 entries,
+You've used 71 entries,
             7128 wiz_defined-function locations,
-            1435 strings with 22285 characters,
-and the built_in function-call counts, 1624665 in all, are:
-= -- 302058
-> -- 2142
-< -- 1074
-+ -- 188467
-- -- 765
-* -- 41987
-:= -- 280808
-add.period$ -- 71
-call.type$ -- 54
-change.case$ -- 764
-chr.to.int$ -- 2115
-cite$ -- 55
-duplicate$ -- 5765
-empty$ -- 20679
-format.name$ -- 2514
-if$ -- 416646
-int.to.chr$ -- 1
-int.to.str$ -- 140
-missing$ -- 1958
-newline$ -- 1687
-num.names$ -- 279
-pop$ -- 2793
+            1489 strings with 23963 characters,
+and the built_in function-call counts, 2273533 in all, are:
+= -- 431183
+> -- 2162
+< -- 1082
++ -- 274686
+- -- 847
+* -- 51548
+:= -- 388806
+add.period$ -- 105
+call.type$ -- 71
+change.case$ -- 966
+chr.to.int$ -- 2121
+cite$ -- 87
+duplicate$ -- 6710
+empty$ -- 22987
+format.name$ -- 2538
+if$ -- 588036
+int.to.chr$ -- 12
+int.to.str$ -- 174
+missing$ -- 2498
+newline$ -- 1950
+num.names$ -- 289
+pop$ -- 3458
 preamble$ -- 1
-purify$ -- 246
-quote$ -- 108
-skip$ -- 182683
+purify$ -- 299
+quote$ -- 142
+skip$ -- 262434
 stack$ -- 0
-substring$ -- 158973
-swap$ -- 1824
-text.length$ -- 1013
+substring$ -- 217093
+swap$ -- 1896
+text.length$ -- 1263
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2205
-warning$ -- 1
-while$ -- 2330
+type$ -- 2732
+warning$ -- 16
+while$ -- 2596
 width$ -- 0
-write$ -- 2459
-(There was 1 warning)
+write$ -- 2745
+(There was 1 error message)

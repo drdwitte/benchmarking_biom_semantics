@@ -1,9 +1,4 @@
-\begin{figure*}[htbp!]
-	\centering
-	\includegraphics[width=0.9\linewidth]{imgs/Fig06_WatdivTemplateTypes}
-	\caption{Average Runtime per BGP type.}
-	\label{fig:Fig06_WatdivTemplateTypes}
-\end{figure*}
+
 
 Only comparing query runtimes might be an oversimplification in benchmark analysis. 
 When comparing batch runtimes the slow tail of the distributions dominates the average runtimes. In section~\ref{subsec:templates} we investigate whether certain query templates dominate the batch runtimes.
@@ -23,15 +18,7 @@ In section~\ref{subsec:load} we study the effect of the server load on the query
 \label{subsec:caching}
 \input{results_caching.tex}
 
-\begin{figure*}[htbp!]
-	\centering
-	\includegraphics[width=0.90\linewidth]{imgs/Fig09_FailuresOntoforceBM}
-	\caption{Overview of successes and errors per query (Y-axis) and thread (X-axis) on the Ontoforce benchmark.
-		Queries are sorted per system in order to group error behavior and are not consistent between simulations!
-		Blazegraph has a short benchmark survival interval. \textbf{ES1}, \textbf{Gra1} and \textbf{Vir3} Cluster setups have a lot of errors but most queries execute successfully at least once, which allows runtime comparisons. \textbf{Vir3\_64\_Opt\_0} is the most successful Virtuoso cluster run as query completeness analysis revealed that \textbf{Vir3\_64\_Opt\_2} has unreported errors for 37\% of the queries.
-	}
-	\label{fig:Fig09_FailuresOntoforceBM}
-\end{figure*}
+
 
 
 

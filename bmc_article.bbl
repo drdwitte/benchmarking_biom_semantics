@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{54}
+\begin{thebibliography}{71}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -73,6 +73,24 @@ pp. \bfpage{197}--\blpage{212}.
 \endbibitem
 
 %%% 3
+\bibitem{ontoforcewebsite}
+\begin{botherref}
+Ontoforce - Powering Citizen Data Science.
+(Accessed August 31, 2018).
+\url{http://www.ontoforce.com}
+\end{botherref}
+\endbibitem
+
+%%% 4
+\bibitem{disqover}
+\begin{botherref}
+DISQOVER.
+(Accessed August 31, 2018).
+\url{https://www.disqover.com/}
+\end{botherref}
+\endbibitem
+
+%%% 5
 \bibitem{dewitte_swat4ls_2016}
 \begin{bchapter}
 \bauthor{\bsnm{De~Witte}, \binits{D.}},
@@ -89,7 +107,7 @@ In: \bbtitle{Proceedings of the 9th International Conference on Semantic Web
 \end{bchapter}
 \endbibitem
 
-%%% 4
+%%% 6
 \bibitem{DBLP:journals/corr/abs-1103-5043}
 \begin{botherref}
 \oauthor{\bsnm{Arias}, \binits{M.}},
@@ -103,7 +121,7 @@ CoRR
 \end{botherref}
 \endbibitem
 
-%%% 5
+%%% 7
 \bibitem{DBLP:conf/semweb/VerborghHMHVSCCMW14}
 \begin{bchapter}
 \bauthor{\bsnm{Verborgh}, \binits{R.}},
@@ -126,7 +144,7 @@ pp. \bfpage{180}--\blpage{196}.
 \end{bchapter}
 \endbibitem
 
-%%% 6
+%%% 8
 \bibitem{graux2016multi}
 \begin{botherref}
 \oauthor{\bsnm{Graux}, \binits{D.}},
@@ -138,7 +156,7 @@ A multi-criteria experimental ranking of distributed {SPARQL} evaluators
 \end{botherref}
 \endbibitem
 
-%%% 7
+%%% 9
 \bibitem{ladwig2011cumulusrdf}
 \begin{bchapter}
 \bauthor{\bsnm{Ladwig}, \binits{G.}},
@@ -151,7 +169,7 @@ p. \bfpage{30}
 \end{bchapter}
 \endbibitem
 
-%%% 8
+%%% 10
 \bibitem{Schatzle:2016:SRQ:2977797.2977806}
 \begin{barticle}
 \bauthor{\bsnm{Sch\"{a}tzle}, \binits{A.}},
@@ -166,7 +184,7 @@ p. \bfpage{30}
 \end{barticle}
 \endbibitem
 
-%%% 9
+%%% 11
 \bibitem{schatzle2011pigsparql}
 \begin{bchapter}
 \bauthor{\bsnm{Sch{\"a}tzle}, \binits{A.}},
@@ -181,7 +199,7 @@ p. \bfpage{4}
 \end{bchapter}
 \endbibitem
 
-%%% 10
+%%% 12
 \bibitem{kotsevbenchmarking}
 \begin{botherref}
 \oauthor{\bsnm{Kotsev}, \binits{V.}},
@@ -194,7 +212,7 @@ Benchmarking {RDF} query engines: The {LDBC} semantic publishing benchmark
 \end{botherref}
 \endbibitem
 
-%%% 11
+%%% 13
 \bibitem{hernandez2016querying}
 \begin{bchapter}
 \bauthor{\bsnm{Hern{\'a}ndez}, \binits{D.}},
@@ -211,7 +229,7 @@ pp. \bfpage{88}--\blpage{103}
 \end{bchapter}
 \endbibitem
 
-%%% 12
+%%% 14
 \bibitem{harris20094store}
 \begin{bchapter}
 \bauthor{\bsnm{Harris}, \binits{S.}},
@@ -225,7 +243,7 @@ pp. \bfpage{94}--\blpage{109}
 \end{bchapter}
 \endbibitem
 
-%%% 13
+%%% 15
 \bibitem{papailiou2013h}
 \begin{bchapter}
 \bauthor{\bsnm{Papailiou}, \binits{N.}},
@@ -242,7 +260,7 @@ pp. \bfpage{255}--\blpage{263}
 \end{bchapter}
 \endbibitem
 
-%%% 14
+%%% 16
 \bibitem{schatzle2014sempala}
 \begin{bchapter}
 \bauthor{\bsnm{Sch{\"a}tzle}, \binits{A.}},
@@ -257,7 +275,7 @@ pp. \bfpage{164}--\blpage{179}
 \end{bchapter}
 \endbibitem
 
-%%% 15
+%%% 17
 \bibitem{rohloff2010high}
 \begin{bchapter}
 \bauthor{\bsnm{Rohloff}, \binits{K.}},
@@ -272,7 +290,7 @@ p. \bfpage{4}
 \end{bchapter}
 \endbibitem
 
-%%% 16
+%%% 18
 \bibitem{Saleem}
 \begin{botherref}
 \oauthor{\bsnm{Saleem}, \binits{M.}},
@@ -282,7 +300,7 @@ Bigrdfbench: A billion triples benchmark for {SPARQL} endpoint federation
 \end{botherref}
 \endbibitem
 
-%%% 17
+%%% 19
 \bibitem{DBLP:conf/semweb/SchwarteHHSS11}
 \begin{bchapter}
 \bauthor{\bsnm{Schwarte}, \binits{A.}},
@@ -298,7 +316,7 @@ pp. \bfpage{601}--\blpage{616}
 \end{bchapter}
 \endbibitem
 
-%%% 18
+%%% 20
 \bibitem{gorlitz2011splendid}
 \begin{bchapter}
 \bauthor{\bsnm{G{\"o}rlitz}, \binits{O.}},
@@ -312,7 +330,7 @@ pp. \bfpage{13}--\blpage{24}
 \end{bchapter}
 \endbibitem
 
-%%% 19
+%%% 21
 \bibitem{Acosta2011}
 \begin{bbook}
 \bauthor{\bsnm{Acosta}, \binits{M.}},
@@ -336,7 +354,7 @@ pp. \bfpage{18}--\blpage{34}.
 \end{bbook}
 \endbibitem
 
-%%% 20
+%%% 22
 \bibitem{saleem2014hibiscus}
 \begin{bchapter}
 \bauthor{\bsnm{Saleem}, \binits{M.}},
@@ -350,7 +368,7 @@ pp. \bfpage{176}--\blpage{191}
 \end{bchapter}
 \endbibitem
 
-%%% 21
+%%% 23
 \bibitem{saleem2015feasible}
 \begin{bchapter}
 \bauthor{\bsnm{Saleem}, \binits{M.}},
@@ -364,7 +382,7 @@ pp. \bfpage{52}--\blpage{69}
 \end{bchapter}
 \endbibitem
 
-%%% 22
+%%% 24
 \bibitem{boncz2005monetdb}
 \begin{bchapter}
 \bauthor{\bsnm{Boncz}, \binits{P.A.}},
@@ -378,7 +396,7 @@ pp. \bfpage{225}--\blpage{237}
 \end{bchapter}
 \endbibitem
 
-%%% 23
+%%% 25
 \bibitem{neumann2010rdf}
 \begin{barticle}
 \bauthor{\bsnm{Neumann}, \binits{T.}},
@@ -391,7 +409,7 @@ pp. \bfpage{225}--\blpage{237}
 \end{barticle}
 \endbibitem
 
-%%% 24
+%%% 26
 \bibitem{zou2011gstore}
 \begin{barticle}
 \bauthor{\bsnm{Zou}, \binits{L.}},
@@ -407,7 +425,7 @@ pp. \bfpage{225}--\blpage{237}
 \end{barticle}
 \endbibitem
 
-%%% 25
+%%% 27
 \bibitem{cudre2013nosql}
 \begin{bchapter}
 \bauthor{\bsnm{Cudr{\'e}-Mauroux}, \binits{P.}},
@@ -428,7 +446,7 @@ pp. \bfpage{310}--\blpage{325}
 \end{bchapter}
 \endbibitem
 
-%%% 26
+%%% 28
 \bibitem{khadilkar2012jena}
 \begin{bchapter}
 \bauthor{\bsnm{Khadilkar}, \binits{V.}},
@@ -444,7 +462,7 @@ pp. \bfpage{85}--\blpage{88}
 \end{bchapter}
 \endbibitem
 
-%%% 27
+%%% 29
 \bibitem{wu2014biobenchmark}
 \begin{barticle}
 \bauthor{\bsnm{Wu}, \binits{H.}},
@@ -461,7 +479,7 @@ pp. \bfpage{85}--\blpage{88}
 \end{barticle}
 \endbibitem
 
-%%% 28
+%%% 30
 \bibitem{Schmidt2011}
 \begin{barticle}
 \bauthor{\bsnm{Schmidt}, \binits{M.}},
@@ -480,7 +498,7 @@ pp. \bfpage{85}--\blpage{88}
 \end{barticle}
 \endbibitem
 
-%%% 29
+%%% 31
 \bibitem{guo2005lubm}
 \begin{barticle}
 \bauthor{\bsnm{Guo}, \binits{Y.}},
@@ -494,7 +512,7 @@ pp. \bfpage{85}--\blpage{88}
 \end{barticle}
 \endbibitem
 
-%%% 30
+%%% 32
 \bibitem{schmidt2009sp}
 \begin{bchapter}
 \bauthor{\bsnm{Schmidt}, \binits{M.}},
@@ -510,7 +528,7 @@ pp. \bfpage{222}--\blpage{233}
 \end{bchapter}
 \endbibitem
 
-%%% 31
+%%% 33
 \bibitem{bizer2009berlin}
 \begin{barticle}
 \bauthor{\bsnm{Bizer}, \binits{C.}},
@@ -524,7 +542,7 @@ pp. \bfpage{222}--\blpage{233}
 \end{barticle}
 \endbibitem
 
-%%% 32
+%%% 34
 \bibitem{morsey2011dbpedia}
 \begin{botherref}
 \oauthor{\bsnm{Morsey}, \binits{M.}},
@@ -539,7 +557,7 @@ The Semantic Web--ISWC 2011,
 \end{botherref}
 \endbibitem
 
-%%% 33
+%%% 35
 \bibitem{DBLP:conf/sigmod/DuanKSU11}
 \begin{bchapter}
 \bauthor{\bsnm{Duan}, \binits{S.}},
@@ -555,7 +573,7 @@ pp. \bfpage{145}--\blpage{156}
 \end{bchapter}
 \endbibitem
 
-%%% 34
+%%% 36
 \bibitem{antezana2009cell}
 \begin{barticle}
 \bauthor{\bsnm{Antezana}, \binits{E.}},
@@ -576,7 +594,7 @@ pp. \bfpage{145}--\blpage{156}
 \end{barticle}
 \endbibitem
 
-%%% 35
+%%% 37
 \bibitem{yamamoto2011allie}
 \begin{botherref}
 \oauthor{\bsnm{Yamamoto}, \binits{Y.}},
@@ -590,7 +608,7 @@ Database
 \end{botherref}
 \endbibitem
 
-%%% 36
+%%% 38
 \bibitem{kinjo2011protein}
 \begin{botherref}
 \oauthor{\bsnm{Kinjo}, \binits{A.R.}},
@@ -610,7 +628,7 @@ Nucleic acids research
 \end{botherref}
 \endbibitem
 
-%%% 37
+%%% 39
 \bibitem{uniprot2014uniprot}
 \begin{botherref}
 \oauthor{\bsnm{Consortium}, \binits{U.}}, et al.:
@@ -620,7 +638,7 @@ Nucleic acids research
 \end{botherref}
 \endbibitem
 
-%%% 38
+%%% 40
 \bibitem{tateno2002dna}
 \begin{barticle}
 \bauthor{\bsnm{Tateno}, \binits{Y.}},
@@ -639,7 +657,7 @@ Nucleic acids research
 \end{barticle}
 \endbibitem
 
-%%% 39
+%%% 41
 \bibitem{gorlitz2012splodge}
 \begin{bchapter}
 \bauthor{\bsnm{G{\"o}rlitz}, \binits{O.}},
@@ -654,7 +672,7 @@ pp. \bfpage{116}--\blpage{132}
 \end{bchapter}
 \endbibitem
 
-%%% 40
+%%% 42
 \bibitem{ghemawat2003google}
 \begin{bchapter}
 \bauthor{\bsnm{Ghemawat}, \binits{S.}},
@@ -669,7 +687,7 @@ pp. \bfpage{29}--\blpage{43}
 \end{bchapter}
 \endbibitem
 
-%%% 41
+%%% 43
 \bibitem{LDBC}
 \begin{barticle}
 \bauthor{\bsnm{Angles}, \binits{R.}},
@@ -688,7 +706,7 @@ pp. \bfpage{29}--\blpage{43}
 \end{barticle}
 \endbibitem
 
-%%% 42
+%%% 44
 \bibitem{HOBBIT}
 \begin{botherref}
 \oauthor{\bsnm{Ngomo}, \binits{A.-C.N.}},
@@ -697,7 +715,7 @@ pp. \bfpage{29}--\blpage{43}
 \end{botherref}
 \endbibitem
 
-%%% 43
+%%% 45
 \bibitem{Boncz:2013:LBG:2513591.2527070}
 \begin{bchapter}
 \bauthor{\bsnm{Boncz}, \binits{P.}}:
@@ -712,7 +730,7 @@ pp. \bfpage{1}--\blpage{2}.
 \end{bchapter}
 \endbibitem
 
-%%% 44
+%%% 46
 \bibitem{erling2015ldbc}
 \begin{bchapter}
 \bauthor{\bsnm{Erling}, \binits{O.}},
@@ -732,7 +750,7 @@ pp. \bfpage{619}--\blpage{630}
 \end{bchapter}
 \endbibitem
 
-%%% 45
+%%% 47
 \bibitem{Picalausa2011}
 \begin{botherref}
 \oauthor{\bsnm{Picalausa}, \binits{F.}},
@@ -745,7 +763,7 @@ Proceedings of the International Workshop on Semantic Web Information
 \end{botherref}
 \endbibitem
 
-%%% 46
+%%% 48
 \bibitem{Stegmaier_evaluationof}
 \begin{bchapter}
 \bauthor{\bsnm{Stegmaier}, \binits{F.}},
@@ -763,7 +781,25 @@ pp. \bfpage{39}--\blpage{55}
 \end{bchapter}
 \endbibitem
 
-%%% 47
+%%% 49
+\bibitem{dbengines}
+\begin{botherref}
+DB-Engines Ranking - Popularity Ranking of Database Management Systems.
+(Accessed August 31, 2018).
+\url{http://db-engines.com/en/ranking}
+\end{botherref}
+\endbibitem
+
+%%% 50
+\bibitem{wikidataranking}
+\begin{botherref}
+Confirm Selection of Blazegraph for Wikidata Query.
+(Accessed August 31, 2018).
+\url{https://phabricator.wikimedia.org/T90101}
+\end{botherref}
+\endbibitem
+
+%%% 51
 \bibitem{DBLP:journals/ws/FernandezMGPA13}
 \begin{barticle}
 \bauthor{\bsnm{Fern{\'{a}}ndez}, \binits{J.D.}},
@@ -779,7 +815,120 @@ pp. \bfpage{39}--\blpage{55}
 \end{barticle}
 \endbibitem
 
-%%% 48
+%%% 52
+\bibitem{fluidops}
+\begin{botherref}
+Veritas - The Leader in Enterprise Data Protection.
+(Accessed August 31, 2018).
+\url{https://www.veritas.com/?ref=fluidops}
+\end{botherref}
+\endbibitem
+
+%%% 53
+\bibitem{hdtfuseki}
+\begin{botherref}
+HDT-Fuseki.
+(Accessed August 31, 2018).
+\url{https://github.com/rdfhdt/hdt-java/tree/master/hdt-fuseki}
+\end{botherref}
+\endbibitem
+
+%%% 54
+\bibitem{ldfserver}
+\begin{botherref}
+\oauthor{\bsnm{Verborgh}, \binits{R.}}:
+Github - LinkedDataFragments/Server.js A Triple Pattern Fragments Server for
+  JavaScript.
+(Accessed August 31, 2018).
+\url{https://github.com/LinkedDataFragments/Server.js}
+\end{botherref}
+\endbibitem
+
+%%% 55
+\bibitem{ldfclient}
+\begin{botherref}
+\oauthor{\bsnm{Verborgh}, \binits{R.}}:
+Github - LinkedDataFragments/Client.js A JavaScript Client for Triple Pattern
+  Fragments Interfaces.
+(Accessed August 31, 2018).
+\url{https://github.com/LinkedDataFragments/Client.js}
+\end{botherref}
+\endbibitem
+
+%%% 56
+\bibitem{awsmarketplace}
+\begin{botherref}
+AWS Marketplace.
+(Accessed August 31, 2018).
+\url{https://aws.amazon.com/marketplace/}
+\end{botherref}
+\endbibitem
+
+%%% 57
+\bibitem{dockerhub}
+\begin{botherref}
+Docker Hub.
+(Accessed August 31, 2018).
+\url{https://hub.docker.com/}
+\end{botherref}
+\endbibitem
+
+%%% 58
+\bibitem{Virtuoso}
+\begin{botherref}
+AWS Marketplace - Virtuoso Universal Server 7.x (Enterprise -- Cloud PAGO
+  Edition).
+(Accessed August 31, 2018).
+\url{https://aws.amazon.com/marketplace/pp/B011VMCZ8K}
+\end{botherref}
+\endbibitem
+
+%%% 59
+\bibitem{graphdb}
+\begin{botherref}
+AWS Marketplace - GraphDB Cloud V7.0.1.
+(Accessed August 31, 2018).
+\url{https://aws.amazon.com/marketplace/pp/B00OM7VXGW}
+\end{botherref}
+\endbibitem
+
+%%% 60
+\bibitem{dockerhubldfserver}
+\begin{botherref}
+Linkeddatafragments/server.js - Docker Hub.
+(Accessed August 31, 2018).
+\url{https://hub.docker.com/r/linkeddatafragments/server.js/}
+\end{botherref}
+\endbibitem
+
+%%% 61
+\bibitem{hdtcpp}
+\begin{botherref}
+Rfdhdt/hdt-cpp - Docker Hub.
+(Accessed August 31, 2018).
+\url{https://hub.docker.com/r/rfdhdt/hdt-cpp/builds/}
+\end{botherref}
+\endbibitem
+
+%%% 62
+\bibitem{virtuosoos}
+\begin{botherref}
+Tenforce/virtuoso - Docker Hub.
+(Accessed August 31, 2018).
+\url{https://hub.docker.com/r/tenforce/virtuoso/}
+\end{botherref}
+\endbibitem
+
+%%% 63
+\bibitem{dockerblazegraph}
+\begin{botherref}
+Laurensdv/docker-blazegraph.
+(Accessed August 31, 2018).
+\url{https://github.com/laurensdv/docker-blazegraph/tree/master/2.1.2}
+\end{botherref}
+\endbibitem
+
+%%% 64
 \bibitem{saleem2016fine}
 \begin{barticle}
 \bauthor{\bsnm{Saleem}, \binits{M.}},
@@ -795,7 +944,16 @@ pp. \bfpage{39}--\blpage{55}
 \end{barticle}
 \endbibitem
 
-%%% 49
+%%% 65
+\bibitem{sparqlquerybm}
+\begin{botherref}
+SPARQL Query Benchmarker - Sourceforge.
+(Accessed August 31, 2018).
+\url{https://sourceforge.net/projects/sparql-query-bm/}
+\end{botherref}
+\endbibitem
+
+%%% 66
 \bibitem{Zeng}
 \begin{barticle}
 \bauthor{\bsnm{Zeng}, \binits{K.}},
@@ -811,7 +969,7 @@ pp. \bfpage{39}--\blpage{55}
 \end{barticle}
 \endbibitem
 
-%%% 50
+%%% 67
 \bibitem{Harth}
 \begin{bbook}
 \bauthor{\bsnm{Harth}, \binits{A.}},
@@ -839,7 +997,7 @@ pp. \bfpage{211}--\blpage{224}.
 \end{bbook}
 \endbibitem
 
-%%% 51
+%%% 68
 \bibitem{Ferre}
 \begin{botherref}
 \oauthor{\bsnm{Ferr{\'e}}, \binits{S.}},
@@ -852,7 +1010,7 @@ Research Report PI 1964
 \end{botherref}
 \endbibitem
 
-%%% 52
+%%% 69
 \bibitem{Oren}
 \begin{bbook}
 \bauthor{\bsnm{Oren}, \binits{E.}},
@@ -874,7 +1032,7 @@ pp. \bfpage{559}--\blpage{572}.
 \end{bbook}
 \endbibitem
 
-%%% 53
+%%% 70
 \bibitem{Groth}
 \begin{barticle}
 \bauthor{\bsnm{Loizou}, \binits{A.}},
@@ -888,7 +1046,7 @@ pp. \bfpage{559}--\blpage{572}.
 \end{barticle}
 \endbibitem
 
-%%% 54
+%%% 71
 \bibitem{cure2015evaluation}
 \begin{botherref}
 \oauthor{\bsnm{Cur{\'e}}, \binits{O.}},
@@ -942,6 +1100,18 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B3">
+  <title><p>Ontoforce - Powering Citizen Data Science</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://www.ontoforce.com</url>
+</bibl>
+
+<bibl id="B4">
+  <title><p>DISQOVER</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://www.disqover.com/</url>
+</bibl>
+
+<bibl id="B5">
   <title><p>Scaling out federated queries for life science data in
   production</p></title>
   <aug>
@@ -958,7 +1128,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <pubdate>2016</pubdate>
 </bibl>
 
-<bibl id="B4">
+<bibl id="B6">
   <title><p>An Empirical Study of Real-World {SPARQL} Queries</p></title>
   <aug>
     <au><snm>Arias</snm><fnm>M</fnm></au>
@@ -972,7 +1142,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <url>http://arxiv.org/abs/1103.5043</url>
 </bibl>
 
-<bibl id="B5">
+<bibl id="B7">
   <title><p>Querying Datasets on the {Web} with High Availability</p></title>
   <aug>
     <au><snm>Verborgh</snm><fnm>R</fnm></au>
@@ -996,7 +1166,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-196</lpage>
 </bibl>
 
-<bibl id="B6">
+<bibl id="B8">
   <title><p>A Multi-Criteria Experimental Ranking of Distributed {SPARQL}
   Evaluators</p></title>
   <aug>
@@ -1008,7 +1178,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <pubdate>2016</pubdate>
 </bibl>
 
-<bibl id="B7">
+<bibl id="B9">
   <title><p>{CumulusRDF}: linked data management on nested key-value
   stores</p></title>
   <aug>
@@ -1021,7 +1191,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <fpage>30</fpage>
 </bibl>
 
-<bibl id="B8">
+<bibl id="B10">
   <title><p>{S2RDF}: {RDF} Querying with {SPARQL} on Spark</p></title>
   <aug>
     <au><snm>Sch\"{a}tzle</snm><fnm>A</fnm></au>
@@ -1038,7 +1208,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-815</lpage>
 </bibl>
 
-<bibl id="B9">
+<bibl id="B11">
   <title><p>{PigSPARQL}: Mapping {SPARQL} to pig latin</p></title>
   <aug>
     <au><snm>Sch{\"a}tzle</snm><fnm>A</fnm></au>
@@ -1051,7 +1221,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <fpage>4</fpage>
 </bibl>
 
-<bibl id="B10">
+<bibl id="B12">
   <title><p>Benchmarking {RDF} Query Engines: The {LDBC} Semantic Publishing
   Benchmark</p></title>
   <aug>
@@ -1064,7 +1234,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   </aug>
 </bibl>
 
-<bibl id="B11">
+<bibl id="B13">
   <title><p>Querying Wikidata: Comparing {SPARQL}, Relational and Graph
   Databases</p></title>
   <aug>
@@ -1080,7 +1250,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-103</lpage>
 </bibl>
 
-<bibl id="B12">
+<bibl id="B14">
   <title><p>4store: The design and implementation of a clustered {RDF}
   store</p></title>
   <aug>
@@ -1095,7 +1265,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-109</lpage>
 </bibl>
 
-<bibl id="B13">
+<bibl id="B15">
   <title><p>H 2 RDF+: High-performance distributed joins over large-scale {RDF}
   graphs</p></title>
   <aug>
@@ -1111,7 +1281,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-263</lpage>
 </bibl>
 
-<bibl id="B14">
+<bibl id="B16">
   <title><p>Sempala: interactive {SPARQL} query processing on
   hadoop</p></title>
   <aug>
@@ -1126,7 +1296,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-179</lpage>
 </bibl>
 
-<bibl id="B15">
+<bibl id="B17">
   <title><p>High-performance, massively scalable distributed systems using the
   MapReduce software framework: the SHARD triple-store</p></title>
   <aug>
@@ -1139,7 +1309,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <fpage>4</fpage>
 </bibl>
 
-<bibl id="B16">
+<bibl id="B18">
   <title><p>BigRDFBench: A Billion Triples Benchmark for {SPARQL} Endpoint
   Federation</p></title>
   <aug>
@@ -1150,7 +1320,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <publisher>Citeseer</publisher>
 </bibl>
 
-<bibl id="B17">
+<bibl id="B19">
   <title><p>{FedX: Optimization Techniques for Federated Query Processing on
   Linked Data}</p></title>
   <aug>
@@ -1166,7 +1336,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-616</lpage>
 </bibl>
 
-<bibl id="B18">
+<bibl id="B20">
   <title><p>Splendid: {SPARQL} endpoint federation exploiting void
   descriptions</p></title>
   <aug>
@@ -1180,7 +1350,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-24</lpage>
 </bibl>
 
-<bibl id="B19">
+<bibl id="B21">
   <title><p>ANAPSID: An Adaptive Query Processing Engine for {SPARQL}
   Endpoints</p></title>
   <aug>
@@ -1201,7 +1371,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-34</lpage>
 </bibl>
 
-<bibl id="B20">
+<bibl id="B22">
   <title><p>Hibiscus: Hypergraph-based source selection for {SPARQL} endpoint
   federation</p></title>
   <aug>
@@ -1214,7 +1384,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-191</lpage>
 </bibl>
 
-<bibl id="B21">
+<bibl id="B23">
   <title><p>FEASIBLE: a feature-based {SPARQL} benchmark generation
   framework</p></title>
   <aug>
@@ -1228,7 +1398,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-69</lpage>
 </bibl>
 
-<bibl id="B22">
+<bibl id="B24">
   <title><p>MonetDB/X100: Hyper-Pipelining Query Execution.</p></title>
   <aug>
     <au><snm>Boncz</snm><fnm>PA</fnm></au>
@@ -1242,7 +1412,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-237</lpage>
 </bibl>
 
-<bibl id="B23">
+<bibl id="B25">
   <title><p>The RDF-3X engine for scalable management of {RDF} data</p></title>
   <aug>
     <au><snm>Neumann</snm><fnm>T</fnm></au>
@@ -1258,7 +1428,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-113</lpage>
 </bibl>
 
-<bibl id="B24">
+<bibl id="B26">
   <title><p>gStore: answering {SPARQL} queries via subgraph
   matching</p></title>
   <aug>
@@ -1277,7 +1447,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-493</lpage>
 </bibl>
 
-<bibl id="B25">
+<bibl id="B27">
   <title><p>NoSQL databases for RDF: an empirical evaluation</p></title>
   <aug>
     <au><snm>Cudr{\'e} Mauroux</snm><fnm>P</fnm></au>
@@ -1297,7 +1467,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-325</lpage>
 </bibl>
 
-<bibl id="B26">
+<bibl id="B28">
   <title><p>Jena-HBase: A distributed, scalable and efficient {RDF} triple
   store</p></title>
   <aug>
@@ -1313,7 +1483,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-88</lpage>
 </bibl>
 
-<bibl id="B27">
+<bibl id="B29">
   <title><p>{BioBenchmark Toyama 2012: an evaluation of the performance of
   triple stores on biological data}</p></title>
   <aug>
@@ -1331,7 +1501,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <fpage>1</fpage>
 </bibl>
 
-<bibl id="B28">
+<bibl id="B30">
   <title><p>{FedBench: A benchmark suite for federated semantic data query
   processing}</p></title>
   <aug>
@@ -1351,7 +1521,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-600</lpage>
 </bibl>
 
-<bibl id="B29">
+<bibl id="B31">
   <title><p>{LUBM: A benchmark for OWL knowledge base systems}</p></title>
   <aug>
     <au><snm>Guo</snm><fnm>Y</fnm></au>
@@ -1368,7 +1538,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-182</lpage>
 </bibl>
 
-<bibl id="B30">
+<bibl id="B32">
   <title><p>{SP\^{} 2Bench: a SPARQL performance benchmark}</p></title>
   <aug>
     <au><snm>Schmidt</snm><fnm>M</fnm></au>
@@ -1383,7 +1553,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-233</lpage>
 </bibl>
 
-<bibl id="B31">
+<bibl id="B33">
   <title><p>{The Berlin SPARQL Benchmark}</p></title>
   <aug>
     <au><snm>Bizer</snm><fnm>C</fnm></au>
@@ -1399,7 +1569,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-24</lpage>
 </bibl>
 
-<bibl id="B32">
+<bibl id="B34">
   <title><p>{DBpedia SPARQL benchmark--performance assessment with real queries
   on real data}</p></title>
   <aug>
@@ -1415,7 +1585,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-469</lpage>
 </bibl>
 
-<bibl id="B33">
+<bibl id="B35">
   <title><p>{Apples and oranges: a comparison of {RDF} benchmarks and real
   {RDF}} datasets</p></title>
   <aug>
@@ -1431,7 +1601,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-156</lpage>
 </bibl>
 
-<bibl id="B34">
+<bibl id="B36">
   <title><p>The Cell Cycle Ontology: an application ontology for the
   representation and integrated analysis of the cell cycle process</p></title>
   <aug>
@@ -1453,7 +1623,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <fpage>R58</fpage>
 </bibl>
 
-<bibl id="B35">
+<bibl id="B37">
   <title><p>Allie: a database and a search service of abbreviations and long
   forms</p></title>
   <aug>
@@ -1468,7 +1638,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <volume>2011</volume>
 </bibl>
 
-<bibl id="B36">
+<bibl id="B38">
   <title><p>Protein Data Bank Japan (PDBj): maintaining a structural data
   archive and resource description framework format</p></title>
   <aug>
@@ -1489,7 +1659,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <pubdate>2011</pubdate>
 </bibl>
 
-<bibl id="B37">
+<bibl id="B39">
   <title><p>UniProt: a hub for protein information</p></title>
   <aug>
     <au><snm>Consortium</snm><fnm>U</fnm></au>
@@ -1500,7 +1670,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <pubdate>2014</pubdate>
 </bibl>
 
-<bibl id="B38">
+<bibl id="B40">
   <title><p>DNA Data Bank of Japan (DDBJ) for genome scale research in life
   science</p></title>
   <aug>
@@ -1521,7 +1691,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-30</lpage>
 </bibl>
 
-<bibl id="B39">
+<bibl id="B41">
   <title><p>SPLODGE: systematic generation of {SPARQL} benchmark queries for
   linked open data</p></title>
   <aug>
@@ -1535,7 +1705,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-132</lpage>
 </bibl>
 
-<bibl id="B40">
+<bibl id="B42">
   <title><p>The Google file system</p></title>
   <aug>
     <au><snm>Ghemawat</snm><fnm>S</fnm></au>
@@ -1550,7 +1720,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-43</lpage>
 </bibl>
 
-<bibl id="B41">
+<bibl id="B43">
   <title><p>The Linked Data Benchmark Council: A Graph and {RDF} Industry
   Benchmarking Effort</p></title>
   <aug>
@@ -1572,7 +1742,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-31</lpage>
 </bibl>
 
-<bibl id="B42">
+<bibl id="B44">
   <title><p>{HOBBIT}: Holistic benchmarking for big linked data</p></title>
   <aug>
     <au><snm>Ngomo</snm><fnm>ACN</fnm></au>
@@ -1580,7 +1750,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   </aug>
 </bibl>
 
-<bibl id="B43">
+<bibl id="B45">
   <title><p>{LDBC}: Benchmarks for Graph and {RDF} Data Management</p></title>
   <aug>
     <au><snm>Boncz</snm><fnm>P</fnm></au>
@@ -1594,7 +1764,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-2</lpage>
 </bibl>
 
-<bibl id="B44">
+<bibl id="B46">
   <title><p>The {LDBC} social network benchmark: Interactive
   workload</p></title>
   <aug>
@@ -1614,7 +1784,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-630</lpage>
 </bibl>
 
-<bibl id="B45">
+<bibl id="B47">
   <title><p>{What are real {SPARQL} queries like?}</p></title>
   <aug>
     <au><snm>Picalausa</snm><fnm>F</fnm></au>
@@ -1627,7 +1797,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-6</lpage>
 </bibl>
 
-<bibl id="B46">
+<bibl id="B48">
   <title><p>Evaluation of current {RDF} database solutions</p></title>
   <aug>
     <au><snm>Stegmaier</snm><fnm>F</fnm></au>
@@ -1644,7 +1814,20 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-55</lpage>
 </bibl>
 
-<bibl id="B47">
+<bibl id="B49">
+  <title><p>DB-Engines Ranking - popularity ranking of database management
+  systems.</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://db-engines.com/en/ranking</url>
+</bibl>
+
+<bibl id="B50">
+  <title><p>Confirm selection of Blazegraph for wikidata query</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://phabricator.wikimedia.org/T90101</url>
+</bibl>
+
+<bibl id="B51">
   <title><p>{Binary {RDF} representation for publication and exchange
   {(HDT)}}</p></title>
   <aug>
@@ -1661,7 +1844,88 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-41</lpage>
 </bibl>
 
-<bibl id="B48">
+<bibl id="B52">
+  <title><p>Veritas - The leader in Enterprise Data Protection</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://www.veritas.com/?ref=fluidops</url>
+</bibl>
+
+<bibl id="B53">
+  <title><p>HDT-Fuseki</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://github.com/rdfhdt/hdt-java/tree/master/hdt-fuseki</url>
+</bibl>
+
+<bibl id="B54">
+  <title><p>Github - LinkedDataFragments/Server.js A Triple Pattern Fragments
+  server for JavaScript</p></title>
+  <aug>
+    <au><snm>Verborgh</snm><fnm>R</fnm></au>
+  </aug>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://github.com/LinkedDataFragments/Server.js</url>
+</bibl>
+
+<bibl id="B55">
+  <title><p>Github - LinkedDataFragments/Client.js A JavaScript client for
+  Triple Pattern Fragments interfaces.</p></title>
+  <aug>
+    <au><snm>Verborgh</snm><fnm>R</fnm></au>
+  </aug>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://github.com/LinkedDataFragments/Client.js</url>
+</bibl>
+
+<bibl id="B56">
+  <title><p>AWS Marketplace</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://aws.amazon.com/marketplace/</url>
+</bibl>
+
+<bibl id="B57">
+  <title><p>Docker Hub</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://hub.docker.com/</url>
+</bibl>
+
+<bibl id="B58">
+  <title><p>AWS Marketplace - Virtuoso Universal Server 7.x (Enterprise --
+  Cloud PAGO Edition)</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://aws.amazon.com/marketplace/pp/B011VMCZ8K</url>
+</bibl>
+
+<bibl id="B59">
+  <title><p>AWS Marketplace - GraphDB Cloud v7.0.1</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://aws.amazon.com/marketplace/pp/B00OM7VXGW</url>
+</bibl>
+
+<bibl id="B60">
+  <title><p>linkeddatafragments/server.js - Docker Hub</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://hub.docker.com/r/linkeddatafragments/server.js/</url>
+</bibl>
+
+<bibl id="B61">
+  <title><p>rfdhdt/hdt-cpp - Docker Hub</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://hub.docker.com/r/rfdhdt/hdt-cpp/builds/</url>
+</bibl>
+
+<bibl id="B62">
+  <title><p>tenforce/virtuoso - Docker Hub</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://hub.docker.com/r/tenforce/virtuoso/</url>
+</bibl>
+
+<bibl id="B63">
+  <title><p>laurensdv/docker-blazegraph</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://github.com/laurensdv/docker-blazegraph/tree/master/2.1.2</url>
+</bibl>
+
+<bibl id="B64">
   <title><p>A fine-grained evaluation of {SPARQL} endpoint federation
   systems</p></title>
   <aug>
@@ -1680,7 +1944,13 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-518</lpage>
 </bibl>
 
-<bibl id="B49">
+<bibl id="B65">
+  <title><p>SPARQL Query Benchmarker - Sourceforge</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://sourceforge.net/projects/sparql-query-bm/</url>
+</bibl>
+
+<bibl id="B66">
   <title><p>A Distributed Graph Engine for Web Scale {RDF} Data</p></title>
   <aug>
     <au><snm>Zeng</snm><fnm>K</fnm></au>
@@ -1698,7 +1968,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-276</lpage>
 </bibl>
 
-<bibl id="B50">
+<bibl id="B67">
   <title><p>YARS2: A Federated Repository for Querying Graph Structured Data
   from the Web</p></title>
   <aug>
@@ -1720,7 +1990,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-224</lpage>
 </bibl>
 
-<bibl id="B51">
+<bibl id="B68">
   <title><p>{Semantic Faceted Search: Safe and Expressive Navigation in {RDF}
   Graphs}</p></title>
   <aug>
@@ -1735,7 +2005,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <url>https://hal.inria.fr/inria-00554093</url>
 </bibl>
 
-<bibl id="B52">
+<bibl id="B69">
   <title><p>Extending Faceted Navigation for {RDF} Data</p></title>
   <aug>
     <au><snm>Oren</snm><fnm>E</fnm></au>
@@ -1754,7 +2024,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-572</lpage>
 </bibl>
 
-<bibl id="B53">
+<bibl id="B70">
   <title><p>On the formulation of performant \{SPARQL\} queries</p></title>
   <aug>
     <au><snm>Loizou</snm><fnm>A</fnm></au>
@@ -1770,7 +2040,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <url>http://www.sciencedirect.com/science/article/pii/S1570826814001061</url>
 </bibl>
 
-<bibl id="B54">
+<bibl id="B71">
   <title><p>On the Evaluation of {RDF} Distribution Algorithms Implemented over
   Apache Spark</p></title>
   <aug>
