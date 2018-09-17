@@ -1,5 +1,5 @@
 %put back Ruben's first version
-Semantic Web technology has a lot to offer to research disciplines which are inherently multidisciplinary. The Life Sciences are an interesting example, spanning multiple disciplines ranging from pharmacy to genetics to clinical trials.
+Semantic Web technology has a lot to offer to research disciplines which are inherently multidisciplinary. The Life Sciences are an interesting example, spanning multiple domains ranging from pharmacy to genetics to clinical trials.
 This necessitates the runtime integration of different datasets of significant size. 
 Being able to interact with these datasets as one virtual source requires technology capable of both managing Big Linked Data as well as successfully answering complex federated queries.
 %\vfill %otherwise latex stress linespacing to fill page
@@ -26,7 +26,6 @@ Being able to interact with these datasets as one virtual source requires techno
 %making the queries federated in nature.
 %challenges we address: more repeatable and easier to run your own benchmarks
 \subsection{Challenges}
-
 Choosing an RDF database and system architecture requires making trade-offs: 
 
 \begin{itemize}
@@ -52,8 +51,9 @@ This initial work served as an inspiration to a set of additional challenges:
 \item How will these systems behave when configured optimally?
 \end{itemize}
 
-Ontoforce~\cite{ontoforcewebsite} provided us with a real-world \mbox{Life Sciences} dataset used in the back-end of their \mbox{DISQOVER}~\cite{disqover} product. This proprietary data and query-set was previously analyzed in our SWAT4LS 2016 research paper~\cite{dewitte_swat4ls_2016}, of which we provide a summary in section~\ref{subsec:dataqueries}.
-In that paper we analyzed the queries according to their SPARQL keywords and structural features~\cite{DBLP:journals/corr/abs-1103-5043}, an approach we fill further extend in this work. 
+Ontoforce~\cite{ontoforcewebsite} provided us with a real-world Life \mbox{Sciences} dataset used in the back-end of their product \mbox{DISQOVER~\cite{disqover}}. This proprietary data and query-set was previously analyzed in our SWAT4LS 2016 research paper~\cite{dewitte_swat4ls_2016}, of which we provide a summary in the section `Datasets and Queries' on page~\pageref{subsec:dataqueries}.
+In that paper we analyzed the queries according to their SPARQL keywords and structural features~\cite{DBLP:journals/corr/abs-1103-5043}, an approach we will further extend in this work. 
+
 We were also confronted with counter-intuitive results in terms of runtime. This required re-running some of the tests and extending the benchmark software to further clarify these issues. All benchmarks involving Virtuoso on the Ontoforce data have therefore been duplicated.
 Originally, the Ontoforce benchmark was used to study scalable RDF approaches, here we also evaluated the other \emph{Vendor} systems. Additionally, we evaluated 3 \emph{SemWeb} systems (research prototypes) that are implementations of compression, federation, and the Linked Data Fragments concept~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} on WatDiv and Ontoforce data.
 
@@ -66,16 +66,26 @@ The work presented here is built around 4 research questions:
 %Methods hardware, configs, wrapper, hardware, amis,... query completeness diagnostics
 \item[RQ2] \emph{What are the different options and the associated trade-offs when choosing a linked data infrastructure setup in the context of Big Linked Data? How can different setups be compared?}
 %Options: Horizontal, vertical, compression, federation big data approaches, multithreading
-\item[RQ3] \emph{What factors have an impact on the measured performance and is this impact consistent across different RDF solutions?}
+\item[RQ3] \emph{What is the relative influence on the the measured performance of contextual factors (for example: caching) for the different RDF solutions? Is the impact similar for all solutions?}
 %query type, context=caching and server load, query completeness
-\item[RQ4] \emph{How do the RDF systems behave in a real-world setting? Can we extract insights that might be transferred and generate hypotheses to be verified in future benchmarks?}
-%query types, real world vs Watdiv, Watdiv sizes
+\item[RQ4] \emph{How do the RDF systems behave in a real-world setting? Can we extract insights that might be transferred and generate unbiased insights and hypotheses to be verified in future benchmarks?}
+%query types, real world vs Watdiv, Watdiv sizes, Decisiontree = unbiased
 \end{description} 
 
-\textbf{RQ1} will be mostly addressed in section 3, more specifically in section \ref{subsec:bmscheme} which discusses the different (reusable) benchmark components. Reliability is the focus of sections \ref{subsec:completeness} and \ref{subsec:erroranalysis} which deal with errors and query completeness. 
+\textbf{RQ1} will be mostly addressed in the section `Benchmark Approach' , more specifically in the third subsection about the reusable benchmarking scheme. Reliability is the focus of result sections `Query Result Completeness' and `Benchmark Error Analyis', 
+%\ref{subsec:completeness} and \ref{subsec:erroranalysis} 
+which deal with errors and query completeness. 
 
-The impact of dataset size is analyzed in section \ref{subsec:bigdata}, different approaches to scaling are discussed in sections \ref{subsec:vscaling} - \ref{subsec:hscaling}. How all approaches can be compared, is the subject of section \ref{sec:bmcost}, providing an answer to \textbf{RQ2}. 
+The impact of dataset size and the different approaches to scaling are discussed in the section `ResultsI'.
+%is analyzed in section \ref{subsec:bigdata},  \ref{subsec:vscaling} - %\ref{subsec:hscaling}. 
+How all approaches can be compared, is the subject of section `Benchmark Cost', %\ref{sec:bmcost}, 
+providing an answer to \textbf{RQ2}. 
 
-In answering \textbf{RQ3}, we will show that focusing on `query runtime' alone is an oversimplification. We discuss multiple factors related to the query context in section \ref{sec:runtimefactors}. We also distinguish between \emph{average} and \emph{median} query runtimes in section \ref{sec:tradeoffs}, a distinction which can have a major impact on the perceived performance.
+In answering \textbf{RQ3}, we will show that focusing on `query runtime' alone is an oversimplification. We discuss multiple factors related to the query context in section `ResultsII'. %\ref{sec:runtimefactors}. 
+We also distinguish between \emph{average} and \emph{median} query runtimes, 
+%in section \ref{sec:tradeoffs}, 
+a distinction which can have a major impact on the perceived performance.
 
-The final research question \textbf{RQ4} is dealt with in section \ref{sec:realworld}, where a custom Life Sciences benchmark is run in the context of federated faceted browsing. 
+The final research question \textbf{RQ4} is dealt with in section `ResultsIII'. 
+%\ref{sec:realworld}, 
+where a custom Life Sciences benchmark is run in the context of federated faceted browsing. 

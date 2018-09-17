@@ -40,7 +40,7 @@
 
 \paragraph{Error Frequencies}
 
-The \emph{SemWeb} systems and \textbf{Vir*} have been tested on the Ontoforce benchmark for our SWAT4LS~\cite{dewitte_swat4ls_2016} contribution. Note that \textbf{TPF} systems do currently not support all SPARQL operators and could therefore not be run on this benchmark. Only Virtuoso simulations had a sufficiently wide benchmark survival interval to enable further analysis. In Figure~\ref{fig:Fig09_FailuresOntoforceBM} we show the results for the \emph{Vendor} systems. Each simulation consists of a small bar, corresponding to the single-threaded warm-up run, and 5 concatenated bars corresponding to 5 threads in the stress test.
+The \emph{SemWeb} systems and \textbf{Vir*} have been tested on the Ontoforce benchmark for our SWAT4LS~\cite{dewitte_swat4ls_2016} contribution. Note that \textbf{TPF} systems do not currently support all SPARQL operators and could therefore not be run on this benchmark. Only Virtuoso simulations had a sufficiently wide benchmark survival interval to enable further analysis. In Figure~\ref{fig:Fig09_FailuresOntoforceBM} we show the results for the \emph{Vendor} systems. Each simulation consists of a small bar, corresponding to the single-threaded warm-up run, and 5 concatenated bars corresponding to 5 threads in the stress test.
 
 \begin{itemize}
 	\item \textbf{Bla1\_64\_Opt:} One major difference with the results on the WatDiv benchmark is Blazegraph's inability to handle the complexity of the Ontoforce queries, resulting in very short benchmark survival interval: it contains only 55 queries, of which 18 are timeouts.

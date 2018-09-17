@@ -5,7 +5,8 @@ whether insights from WatDiv generalized to a real-world use case, we worked wit
 Three datasets were generated using the WatDiv benchmark generator~\cite{alucc2014diversified}. 
 With this generator we created datasets of 10, 100, and 1000M (million) triples. 
 WatDiv datasets were also used in federated setups. 
-In these setups the dataset was partitioned using subject hash partitioning~\cite{Zeng, Harth} which led to 3 equally-sized datasets~\footnote{A vertical partitioning scheme is more appropriate to demonstrate the abilities of a federated querying system. The horizontal partitioning applied here does correspond to the Ontoforce workload since entities (with different URIs, but common predicates) are integrated in a central ontology.}.  
+In these setups the dataset was partitioned using subject hash partitioning~\cite{Zeng, Harth} which led to 3 equally-sized datasets.
+%~\footnote{A vertical partitioning scheme is more appropriate to demonstrate the abilities of a federated querying system. The horizontal partitioning applied here does correspond to the Ontoforce workload since entities (with different URIs, but common predicates) are integrated in a central ontology.}.  
 
 % aangeven dat niet optimal: zie uitleg Laurens, kan central ontology approach van Ontoforce motivatie zijn. Volstaat het om te zeggen dat dit beter kan? FedX kan anders joins proberen pushen hier is dat moeilijker? (alle preds zitten in alle nodes)
 %Ontoforce prep queries: probeer centrale queries	
@@ -44,7 +45,7 @@ An example of a federated query is the following: \\
 in their description for manufacturer "Sandoz inc". Phases come
 from chEMBL, manufacturers come from DrugBank."} \\
 
-Query Features: Triple Patterns(11), nested select queries(3), query file size ($<1$kb), operators: \sql{optional}(1), \sql{group}(1), \sql{order}(1), \sql{count}(1), \sql{union}(1), \sql{filter}(7), \sql{filter in}(2).  \\
+The corresponding query features are: Triple Patterns(11), nested select queries(3), query file size ($<1$kb), operators: \sql{optional}(1), \sql{group}(1), \sql{order}(1), \sql{count}(1), \sql{union}(1), \sql{filter}(7), \sql{filter in}(2).  \\
 
 Note that the DISQOVER interface can be configured to interact with a SPARQL-based back-end system as well as with SOLR, which works with well-chosen aggregates. The SOLR-based approach enables low-latency faceted browsing. The logs of the system however also contain the full SPARQL queries, which are used in this benchmark. 
 The SOLR aggregates are generated in an ETL process with the queries in their most general form, stripped from most of the operators. This ETL process therefore bares resemblance to the WatDiv benchmark.
@@ -52,7 +53,7 @@ The SOLR aggregates are generated in an ETL process with the queries in their mo
 
 While WatDiv queries are all BGPs, these 1,223 queries are rich in SPARQL features and sub-queries are common.
 The queries are automatically built by the system from general queries where - while browsing - additional \sql{filter} statements are added. 
-Aggregation operators and \sql{filter} operations are therefore predominant. A large fraction of queries is also non-conjunctive\footnote{\scriptsize \url{https://en.wikipedia.org/wiki/Conjunctive_query\#Relationship_to_other_query_languages} --- conjunctive: operators that do not use union, difference, only \sql{filter =}, no aggregations and no subqueries.}, making them even more challenging~\cite{Picalausa2011}.
+Aggregation operators and \sql{filter} operations are therefore predominant. A large fraction of queries is also non-conjunctive~\cite{conjunctive}, making them even more challenging~\cite{Picalausa2011}.
 Queries with over 10 triple patterns are common and more specifically unbound triples occur often. The actual binding occurs in the additional \sql{filter} statements. Half of the queries are \sql{count distinct} queries and these are also the most time consuming to resolve. 
 
 Due to the automated way of generating queries the formulation of the queries is not optimized in terms of performance~\cite{Groth}. From the point of view of Ontoforce this optimization is considered the responsibility of the triple store.

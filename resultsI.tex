@@ -2,7 +2,7 @@
 %runtimes: median - mean - response
 In this section we will study the query runtime distributions of different approaches for dealing with Linked Data at scale. In the figures both the \emph{median} and \emph{mean query runtimes} are reported. As the runtime distributions can be skewed, performance differences between systems are most often reported using the median runtime. 
 
-If we consider an ETL\footnote{\scriptsize Extract-Transform-Load:  \url{https://en.wikipedia.org/wiki/Extract,_transform,_load}} process, or equivalently a batch of queries, the mean runtime is more meaningful, as it directly translates to the total batch runtime. In the following box plots we chose to report both.
+If we consider an ETL~\cite{ETL} process, or equivalently a batch of queries, the mean runtime is more meaningful, as it directly translates to the total batch runtime. In the following box plots we chose to report both.
 
 %response times
 Some of the stores provide query results in a streaming fashion. Response times are not captured in the current query event format but are captured in the SPARQL benchmarker summary CSV-files. For GraphDB and Blazegraph the response times are respectively 27\% and 21\% lower than the mean runtimes on WatDiv1000M. For the other engines the difference was close to zero.
@@ -15,7 +15,7 @@ Some of the stores provide query results in a streaming fashion. Response times 
 % LdF1 en LDF3 											=> coincide
 
 %errors excluded
-A major concern when comparing query runtime between different engines is \emph{query completeness}. The current query event format, shown in Table~\ref{table:queryevents}, explicitly reports whether a query was solved correctly, meaning it has retrieved the complete set of results. Query completeness is the topic of section~\ref{subsec:completeness}. To interprete the results in this section correctly, it is important to understand that queries, which have incomplete results for at least one benchmark, are completely discarded in the runtime comparisons.
+A major concern when comparing query runtime between different engines is \emph{query completeness}. The current query event format, shown in Table~\ref{table:queryevents}, explicitly reports whether a query was solved correctly, meaning it has retrieved the complete set of results. Query completeness is the topic of section~\ref{subsec:completeness}. To interpret the results in this section correctly, it is important to understand that queries, which have incomplete results for at least one benchmark, are completely discarded in the runtime comparisons.
 
 \begin{table}[ht!]
 	\centering

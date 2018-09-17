@@ -40,8 +40,8 @@ There's an abundance of Linked Data benchmarks mainly operating on artificial da
 (BSBM).  For real-world data and queries the most common choice was to use the DBpedia SPARQL benchmark~\cite{morsey2011dbpedia} (DBSB), which uses the DBPedia dataset and the  queries (mostly Basic Graph Patterns (BGPs)) extracted from the actual server logs.
 %WatDiv adresses shortcomings, Feasible more complex queries
 The shortcomings of these early benchmarks were addressed in recent work, which resulted in the Waterloo SPARQL Diversity Test
-Suite~\cite{alucc2014diversified} (WatDiv). This new benchmark focuses on \emph{diversity} both in terms of the query properties and data properties. The first is achieved by generating queries from 20 BGP query templates with different shapes. The latter affects the triple pattern selectivity and therefore reveals the ability of of the internal query planning algorithms in RDF systems to make the most efficient choice to resolve a query. 
-In this work we will use WatDiv to assess the current state-of-the-art or RDF storage systems.
+Suite~\cite{alucc2014diversified} (WatDiv). This new benchmark focuses on \emph{diversity} both in terms of the query properties and data properties. The first is achieved by generating queries from 20 BGP query templates with different shapes. The latter affects the triple pattern selectivity and therefore reveals the ability of the internal query planning algorithms in RDF systems to make the most efficient choice to resolve a query. 
+In this work we will use WatDiv to assess the current state-of-the-art of RDF storage systems.
 
 %More complex queries
 FEASIBLE~\cite{saleem2015feasible} is a benchmark generator that generates queries diverse in terms of SPARQL properties. Here, the queries are selected by first converting them to normalized feature vectors and then choosing a set of mutually distant queries. Also the Semantic Publishing Benchmark~\cite{kotsevbenchmarking} (SPB) provides more complex query workloads with nested queries and all SPARQL 1.0 operators are present.
@@ -89,7 +89,8 @@ In Table~\ref{benchmarks} we provide an overview of the most recent benchmarking
 the systems tested, and the hardware setup. Our work distinguishes itself from other effort as follows:
 
 \paragraph{Up-to-date view} Specifically for the Life Sciences domain BioBenchmark Toyama 2012 is the most recent report for single-node setups.
-\paragraph{Scalability} We both study scalability in terms of dataset sizes (WatDiv), but also in terms of the size of the distribed setup (horizontal scalability) and in terms of memory resources (vertical scalability).
+
+\paragraph{Scalability} We study scalability not only in terms of dataset sizes (WatDiv), but also in terms of the size of the distributed setup (horizontal scalability) and in terms of memory resources (vertical scalability).
 
 \paragraph{Broad set of query types} Where the WatDiv runs are diverse in the space of BGP queries, the queries of Ontoforce are complex, rich in SPARQL keywords, sub-queries are common and a large fraction consists of non-conjunctive queries, which are typically very challenging~\cite{Picalausa2011}. 
 

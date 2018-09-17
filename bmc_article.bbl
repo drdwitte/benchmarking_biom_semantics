@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{71}
+\begin{thebibliography}{79}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -64,11 +64,11 @@ p. \bfpage{12}
 \bauthor{\bsnm{Hartig}, \binits{O.}},
 \bauthor{\bsnm{{\"O}zsu}, \binits{M.T.}},
 \bauthor{\bsnm{Daudjee}, \binits{K.}}:
-\bctitle{{Diversified stress testing of {RDF} data management systems}}.
-In: \bbtitle{The Semantic Web--ISWC 2014},
-pp. \bfpage{197}--\blpage{212}.
-\bpublisher{Springer}, \blocation{???}
-(\byear{2014})
+\bctitle{Diversified stress testing of rdf data management systems}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{197}--\blpage{212}
+(\byear{2014}).
+\bcomment{Springer}
 \end{bchapter}
 \endbibitem
 
@@ -109,16 +109,15 @@ In: \bbtitle{Proceedings of the 9th International Conference on Semantic Web
 
 %%% 6
 \bibitem{DBLP:journals/corr/abs-1103-5043}
-\begin{botherref}
-\oauthor{\bsnm{Arias}, \binits{M.}},
-\oauthor{\bsnm{Fern{\'{a}}ndez}, \binits{J.D.}},
-\oauthor{\bsnm{Mart{\'{\i}}nez{-}Prieto}, \binits{M.A.}},
-\oauthor{\bparticle{de~la} \bsnm{Fuente}, \binits{P.}}:
-An empirical study of real-world {SPARQL} queries.
-CoRR
-\textbf{abs/1103.5043}
-(2011)
-\end{botherref}
+\begin{bchapter}
+\bauthor{\bsnm{Gallego}, \binits{M.A.}},
+\bauthor{\bsnm{Fern{\'a}ndez}, \binits{J.D.}},
+\bauthor{\bsnm{Mart{\'\i}nez-Prieto}, \binits{M.A.}},
+\bauthor{\bparticle{de~la} \bsnm{Fuente}, \binits{P.}}:
+\bctitle{An empirical study of real-world sparql queries}.
+In: \bbtitle{USEWOD Workshop}
+(\byear{2011})
+\end{bchapter}
 \endbibitem
 
 %%% 7
@@ -134,13 +133,11 @@ CoRR
 \bauthor{\bsnm{Colpaert}, \binits{P.}},
 \bauthor{\bsnm{Mannens}, \binits{E.}},
 \bauthor{\bparticle{Van~de} \bsnm{Walle}, \binits{R.}}:
-\bctitle{Querying datasets on the {Web} with high availability}.
-In: \bbtitle{Proceedings of the 13th International Semantic Web Conference}.
-\bsertitle{Lecture Notes in Computer Science},
-vol. \bseriesno{8796},
-pp. \bfpage{180}--\blpage{196}.
-\bpublisher{Springer}, \blocation{???}
-(\byear{2014})
+\bctitle{Querying datasets on the web with high availability}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{180}--\blpage{196}
+(\byear{2014}).
+\bcomment{Springer}
 \end{bchapter}
 \endbibitem
 
@@ -251,7 +248,7 @@ pp. \bfpage{94}--\blpage{109}
 \bauthor{\bsnm{Tsoumakos}, \binits{D.}},
 \bauthor{\bsnm{Karras}, \binits{P.}},
 \bauthor{\bsnm{Koziris}, \binits{N.}}:
-\bctitle{H 2 rdf+: High-performance distributed joins over large-scale {RDF}
+\bctitle{H2rdf+: High-performance distributed joins over large-scale {RDF}
   graphs}.
 In: \bbtitle{Big Data, 2013 IEEE International Conference On},
 pp. \bfpage{255}--\blpage{263}
@@ -296,7 +293,7 @@ p. \bfpage{4}
 \oauthor{\bsnm{Saleem}, \binits{M.}},
 \oauthor{\bsnm{Hasnain}, \binits{A.}},
 \oauthor{\bsnm{Ngomo}, \binits{A.-C.N.}}:
-Bigrdfbench: A billion triples benchmark for {SPARQL} endpoint federation
+Big{RDFB}ench: A billion triples benchmark for {SPARQL} endpoint federation
 \end{botherref}
 \endbibitem
 
@@ -388,7 +385,7 @@ pp. \bfpage{52}--\blpage{69}
 \bauthor{\bsnm{Boncz}, \binits{P.A.}},
 \bauthor{\bsnm{Zukowski}, \binits{M.}},
 \bauthor{\bsnm{Nes}, \binits{N.}}:
-\bctitle{Monetdb/x100: Hyper-pipelining query execution.}
+\bctitle{Monet{DB/X}100: Hyper-pipelining query execution.}
 In: \bbtitle{CIDR},
 vol. \bseriesno{5},
 pp. \bfpage{225}--\blpage{237}
@@ -401,7 +398,7 @@ pp. \bfpage{225}--\blpage{237}
 \begin{barticle}
 \bauthor{\bsnm{Neumann}, \binits{T.}},
 \bauthor{\bsnm{Weikum}, \binits{G.}}:
-\batitle{The rdf-3x engine for scalable management of {RDF} data}.
+\batitle{The {RDF-3X} engine for scalable management of {RDF} data}.
 \bjtitle{The VLDB Journal - The International Journal on Very Large Data Bases}
 \bvolume{19}(\bissue{1}),
 \bfpage{91}--\blpage{113}
@@ -438,7 +435,7 @@ pp. \bfpage{225}--\blpage{237}
 \bauthor{\bsnm{Miranker}, \binits{D.}},
 \bauthor{\bsnm{Sequeda}, \binits{J.F.}},
 \bauthor{\bsnm{Wylot}, \binits{M.}}:
-\bctitle{Nosql databases for rdf: an empirical evaluation}.
+\bctitle{{NoSQL} databases for {RDF}: an empirical evaluation}.
 In: \bbtitle{International Semantic Web Conference},
 pp. \bfpage{310}--\blpage{325}
 (\byear{2013}).
@@ -453,7 +450,8 @@ pp. \bfpage{310}--\blpage{325}
 \bauthor{\bsnm{Kantarcioglu}, \binits{M.}},
 \bauthor{\bsnm{Thuraisingham}, \binits{B.}},
 \bauthor{\bsnm{Castagna}, \binits{P.}}:
-\bctitle{Jena-hbase: A distributed, scalable and efficient {RDF} triple store}.
+\bctitle{{Jena-HBase:} a distributed, scalable and efficient {RDF} triple
+  store}.
 In: \bbtitle{Proceedings of the 2012th International Conference on Posters \&
   Demonstrations Track-Volume 914},
 pp. \bfpage{85}--\blpage{88}
@@ -481,21 +479,20 @@ pp. \bfpage{85}--\blpage{88}
 
 %%% 30
 \bibitem{Schmidt2011}
-\begin{barticle}
+\begin{bchapter}
 \bauthor{\bsnm{Schmidt}, \binits{M.}},
-\bauthor{\bsnm{G{\"{o}}rlitz}, \binits{O.}},
+\bauthor{\bsnm{G{\"o}rlitz}, \binits{O.}},
 \bauthor{\bsnm{Haase}, \binits{P.}},
 \bauthor{\bsnm{Ladwig}, \binits{G.}},
 \bauthor{\bsnm{Schwarte}, \binits{A.}},
 \bauthor{\bsnm{Tran}, \binits{T.}}:
-\batitle{{FedBench: A benchmark suite for federated semantic data query
-  processing}}.
-\bjtitle{Lecture Notes in Computer Science (including subseries Lecture Notes
-  in Artificial Intelligence and Lecture Notes in Bioinformatics)}
-\bvolume{7031 LNCS}(\bissue{PART 1}),
-\bfpage{585}--\blpage{600}
-(\byear{2011})
-\end{barticle}
+\bctitle{Fedbench: A benchmark suite for federated semantic data query
+  processing}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{585}--\blpage{600}
+(\byear{2011}).
+\bcomment{Springer}
+\end{bchapter}
 \endbibitem
 
 %%% 31
@@ -856,6 +853,15 @@ Github - LinkedDataFragments/Client.js A JavaScript Client for Triple Pattern
 \endbibitem
 
 %%% 56
+\bibitem{ec2}
+\begin{botherref}
+Amazon EC2 Instance Types.
+(Accessed August 31, 2018).
+\url{https://aws.amazon.com/ec2/instance-types/}
+\end{botherref}
+\endbibitem
+
+%%% 57
 \bibitem{awsmarketplace}
 \begin{botherref}
 AWS Marketplace.
@@ -864,7 +870,7 @@ AWS Marketplace.
 \end{botherref}
 \endbibitem
 
-%%% 57
+%%% 58
 \bibitem{dockerhub}
 \begin{botherref}
 Docker Hub.
@@ -873,7 +879,7 @@ Docker Hub.
 \end{botherref}
 \endbibitem
 
-%%% 58
+%%% 59
 \bibitem{Virtuoso}
 \begin{botherref}
 AWS Marketplace - Virtuoso Universal Server 7.x (Enterprise -- Cloud PAGO
@@ -883,7 +889,7 @@ AWS Marketplace - Virtuoso Universal Server 7.x (Enterprise -- Cloud PAGO
 \end{botherref}
 \endbibitem
 
-%%% 59
+%%% 60
 \bibitem{graphdb}
 \begin{botherref}
 AWS Marketplace - GraphDB Cloud V7.0.1.
@@ -892,7 +898,7 @@ AWS Marketplace - GraphDB Cloud V7.0.1.
 \end{botherref}
 \endbibitem
 
-%%% 60
+%%% 61
 \bibitem{dockerhubldfserver}
 \begin{botherref}
 Linkeddatafragments/server.js - Docker Hub.
@@ -901,7 +907,7 @@ Linkeddatafragments/server.js - Docker Hub.
 \end{botherref}
 \endbibitem
 
-%%% 61
+%%% 62
 \bibitem{hdtcpp}
 \begin{botherref}
 Rfdhdt/hdt-cpp - Docker Hub.
@@ -910,7 +916,7 @@ Rfdhdt/hdt-cpp - Docker Hub.
 \end{botherref}
 \endbibitem
 
-%%% 62
+%%% 63
 \bibitem{virtuosoos}
 \begin{botherref}
 Tenforce/virtuoso - Docker Hub.
@@ -919,7 +925,7 @@ Tenforce/virtuoso - Docker Hub.
 \end{botherref}
 \endbibitem
 
-%%% 63
+%%% 64
 \bibitem{dockerblazegraph}
 \begin{botherref}
 Laurensdv/docker-blazegraph.
@@ -928,7 +934,7 @@ Laurensdv/docker-blazegraph.
 \end{botherref}
 \endbibitem
 
-%%% 64
+%%% 65
 \bibitem{saleem2016fine}
 \begin{barticle}
 \bauthor{\bsnm{Saleem}, \binits{M.}},
@@ -944,7 +950,7 @@ Laurensdv/docker-blazegraph.
 \end{barticle}
 \endbibitem
 
-%%% 65
+%%% 66
 \bibitem{sparqlquerybm}
 \begin{botherref}
 SPARQL Query Benchmarker - Sourceforge.
@@ -953,7 +959,34 @@ SPARQL Query Benchmarker - Sourceforge.
 \end{botherref}
 \endbibitem
 
-%%% 66
+%%% 67
+\bibitem{bmresults}
+\begin{botherref}
+Detailed Overview All Benchmarks.
+(Accessed August 31, 2018).
+\url{http://users.elis.ugent.be/drdwitte/resultscsv.html}
+\end{botherref}
+\endbibitem
+
+%%% 68
+\bibitem{jupyter}
+\begin{botherref}
+Project Jupyter.
+(Accessed August 31, 2018).
+\url{http://jupyter.org/}
+\end{botherref}
+\endbibitem
+
+%%% 69
+\bibitem{bmpostprocessing}
+\begin{botherref}
+Postprocessing: Jupyter Notebooks.
+(Accessed August 31, 2018).
+\url{http://users.elis.ugent.be/drdwitte/postprocessing.html}
+\end{botherref}
+\endbibitem
+
+%%% 70
 \bibitem{Zeng}
 \begin{barticle}
 \bauthor{\bsnm{Zeng}, \binits{K.}},
@@ -969,7 +1002,7 @@ SPARQL Query Benchmarker - Sourceforge.
 \end{barticle}
 \endbibitem
 
-%%% 67
+%%% 71
 \bibitem{Harth}
 \begin{bbook}
 \bauthor{\bsnm{Harth}, \binits{A.}},
@@ -997,7 +1030,7 @@ pp. \bfpage{211}--\blpage{224}.
 \end{bbook}
 \endbibitem
 
-%%% 68
+%%% 72
 \bibitem{Ferre}
 \begin{botherref}
 \oauthor{\bsnm{Ferr{\'e}}, \binits{S.}},
@@ -1010,7 +1043,7 @@ Research Report PI 1964
 \end{botherref}
 \endbibitem
 
-%%% 69
+%%% 73
 \bibitem{Oren}
 \begin{bbook}
 \bauthor{\bsnm{Oren}, \binits{E.}},
@@ -1032,7 +1065,16 @@ pp. \bfpage{559}--\blpage{572}.
 \end{bbook}
 \endbibitem
 
-%%% 70
+%%% 74
+\bibitem{conjunctive}
+\begin{botherref}
+Conjunctive Query - Wikipedia.
+(Accessed August 31, 2018).
+\url{https://en.wikipedia.org/wiki/Conjunctive_query#Relationship_to_other_query_languages}
+\end{botherref}
+\endbibitem
+
+%%% 75
 \bibitem{Groth}
 \begin{barticle}
 \bauthor{\bsnm{Loizou}, \binits{A.}},
@@ -1046,7 +1088,16 @@ pp. \bfpage{559}--\blpage{572}.
 \end{barticle}
 \endbibitem
 
-%%% 71
+%%% 76
+\bibitem{ETL}
+\begin{botherref}
+Extract-Transform-Load - Wikipedia.
+(Accessed August 31, 2018).
+\url{https://en.wikipedia.org/wiki/Extract,_transform,_load}
+\end{botherref}
+\endbibitem
+
+%%% 77
 \bibitem{cure2015evaluation}
 \begin{botherref}
 \oauthor{\bsnm{Cur{\'e}}, \binits{O.}},
@@ -1056,6 +1107,24 @@ pp. \bfpage{559}--\blpage{572}.
 On the evaluation of {RDF} distribution algorithms implemented over apache
   spark
 (2015)
+\end{botherref}
+\endbibitem
+
+%%% 78
+\bibitem{nginx}
+\begin{botherref}
+NGINX - High Performance Load Balancer, Web Server and Reverse Proxy.
+(Accessed August 31, 2018).
+\url{https://www.nginx.com/}
+\end{botherref}
+\endbibitem
+
+%%% 79
+\bibitem{sklearndtree}
+\begin{botherref}
+Decision Trees - Scikit-Learn.
+(Accessed August 31, 2018).
+\url{http://scikit-learn.org/stable/modules/tree.html}
 \end{botherref}
 \endbibitem
 
@@ -1084,16 +1153,15 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B2">
-  <title><p>{Diversified stress testing of {RDF} data management
-  systems}</p></title>
+  <title><p>Diversified stress testing of RDF data management
+  systems</p></title>
   <aug>
     <au><snm>Alu{\c{c}}</snm><fnm>G</fnm></au>
     <au><snm>Hartig</snm><fnm>O</fnm></au>
     <au><snm>{\"O}zsu</snm><fnm>MT</fnm></au>
     <au><snm>Daudjee</snm><fnm>K</fnm></au>
   </aug>
-  <source>The Semantic Web--ISWC 2014</source>
-  <publisher>Springer</publisher>
+  <source>International Semantic Web Conference</source>
   <pubdate>2014</pubdate>
   <fpage>197</fpage>
   <lpage>-212</lpage>
@@ -1129,21 +1197,19 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B6">
-  <title><p>An Empirical Study of Real-World {SPARQL} Queries</p></title>
+  <title><p>An empirical study of real-world SPARQL queries</p></title>
   <aug>
-    <au><snm>Arias</snm><fnm>M</fnm></au>
-    <au><snm>Fern{\'{a}}ndez</snm><fnm>JD</fnm></au>
-    <au><snm>Mart{\'{\i}}nez{-}Prieto</snm><fnm>MA</fnm></au>
+    <au><snm>Gallego</snm><fnm>MA</fnm></au>
+    <au><snm>Fern{\'a}ndez</snm><fnm>JD</fnm></au>
+    <au><snm>Mart{\'\i}nez Prieto</snm><fnm>MA</fnm></au>
     <au><snm>Fuente</snm><fnm>P</fnm></au>
   </aug>
-  <source>CoRR</source>
+  <source>USEWOD workshop</source>
   <pubdate>2011</pubdate>
-  <volume>abs/1103.5043</volume>
-  <url>http://arxiv.org/abs/1103.5043</url>
 </bibl>
 
 <bibl id="B7">
-  <title><p>Querying Datasets on the {Web} with High Availability</p></title>
+  <title><p>Querying datasets on the web with high availability</p></title>
   <aug>
     <au><snm>Verborgh</snm><fnm>R</fnm></au>
     <au><snm>Hartig</snm><fnm>O</fnm></au>
@@ -1156,12 +1222,8 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
     <au><snm>Mannens</snm><fnm>E</fnm></au>
     <au><snm>Walle</snm><fnm>R</fnm></au>
   </aug>
-  <source>Proceedings of the 13th International Semantic Web
-  Conference</source>
-  <publisher>Springer</publisher>
-  <series><title><p>Lecture Notes in Computer Science</p></title></series>
+  <source>International Semantic Web Conference</source>
   <pubdate>2014</pubdate>
-  <volume>8796</volume>
   <fpage>180</fpage>
   <lpage>-196</lpage>
 </bibl>
@@ -1266,7 +1328,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B15">
-  <title><p>H 2 RDF+: High-performance distributed joins over large-scale {RDF}
+  <title><p>H2RDF+: High-performance distributed joins over large-scale {RDF}
   graphs</p></title>
   <aug>
     <au><snm>Papailiou</snm><fnm>N</fnm></au>
@@ -1310,7 +1372,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B18">
-  <title><p>BigRDFBench: A Billion Triples Benchmark for {SPARQL} Endpoint
+  <title><p>Big{RDFB}ench: A Billion Triples Benchmark for {SPARQL} Endpoint
   Federation</p></title>
   <aug>
     <au><snm>Saleem</snm><fnm>M</fnm></au>
@@ -1399,7 +1461,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B24">
-  <title><p>MonetDB/X100: Hyper-Pipelining Query Execution.</p></title>
+  <title><p>Monet{DB/X}100: Hyper-Pipelining Query Execution.</p></title>
   <aug>
     <au><snm>Boncz</snm><fnm>PA</fnm></au>
     <au><snm>Zukowski</snm><fnm>M</fnm></au>
@@ -1413,7 +1475,8 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B25">
-  <title><p>The RDF-3X engine for scalable management of {RDF} data</p></title>
+  <title><p>The {RDF-3X} engine for scalable management of {RDF}
+  data</p></title>
   <aug>
     <au><snm>Neumann</snm><fnm>T</fnm></au>
     <au><snm>Weikum</snm><fnm>G</fnm></au>
@@ -1448,7 +1511,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B27">
-  <title><p>NoSQL databases for RDF: an empirical evaluation</p></title>
+  <title><p>{NoSQL} databases for {RDF}: an empirical evaluation</p></title>
   <aug>
     <au><snm>Cudr{\'e} Mauroux</snm><fnm>P</fnm></au>
     <au><snm>Enchev</snm><fnm>I</fnm></au>
@@ -1468,7 +1531,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B28">
-  <title><p>Jena-HBase: A distributed, scalable and efficient {RDF} triple
+  <title><p>{Jena-HBase:} A distributed, scalable and efficient {RDF} triple
   store</p></title>
   <aug>
     <au><snm>Khadilkar</snm><fnm>V</fnm></au>
@@ -1502,21 +1565,18 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B30">
-  <title><p>{FedBench: A benchmark suite for federated semantic data query
-  processing}</p></title>
+  <title><p>Fedbench: A benchmark suite for federated semantic data query
+  processing</p></title>
   <aug>
     <au><snm>Schmidt</snm><fnm>M</fnm></au>
-    <au><snm>G{\"{o}}rlitz</snm><fnm>O</fnm></au>
+    <au><snm>G{\"o}rlitz</snm><fnm>O</fnm></au>
     <au><snm>Haase</snm><fnm>P</fnm></au>
     <au><snm>Ladwig</snm><fnm>G</fnm></au>
     <au><snm>Schwarte</snm><fnm>A</fnm></au>
     <au><snm>Tran</snm><fnm>T</fnm></au>
   </aug>
-  <source>Lecture Notes in Computer Science (including subseries Lecture Notes
-  in Artificial Intelligence and Lecture Notes in Bioinformatics)</source>
+  <source>International Semantic Web Conference</source>
   <pubdate>2011</pubdate>
-  <volume>7031 LNCS</volume>
-  <issue>PART 1</issue>
   <fpage>585</fpage>
   <lpage>-600</lpage>
 </bibl>
@@ -1877,55 +1937,61 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 </bibl>
 
 <bibl id="B56">
+  <title><p>Amazon EC2 Instance Types</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://aws.amazon.com/ec2/instance-types/</url>
+</bibl>
+
+<bibl id="B57">
   <title><p>AWS Marketplace</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://aws.amazon.com/marketplace/</url>
 </bibl>
 
-<bibl id="B57">
+<bibl id="B58">
   <title><p>Docker Hub</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://hub.docker.com/</url>
 </bibl>
 
-<bibl id="B58">
+<bibl id="B59">
   <title><p>AWS Marketplace - Virtuoso Universal Server 7.x (Enterprise --
   Cloud PAGO Edition)</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://aws.amazon.com/marketplace/pp/B011VMCZ8K</url>
 </bibl>
 
-<bibl id="B59">
+<bibl id="B60">
   <title><p>AWS Marketplace - GraphDB Cloud v7.0.1</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://aws.amazon.com/marketplace/pp/B00OM7VXGW</url>
 </bibl>
 
-<bibl id="B60">
+<bibl id="B61">
   <title><p>linkeddatafragments/server.js - Docker Hub</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://hub.docker.com/r/linkeddatafragments/server.js/</url>
 </bibl>
 
-<bibl id="B61">
+<bibl id="B62">
   <title><p>rfdhdt/hdt-cpp - Docker Hub</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://hub.docker.com/r/rfdhdt/hdt-cpp/builds/</url>
 </bibl>
 
-<bibl id="B62">
+<bibl id="B63">
   <title><p>tenforce/virtuoso - Docker Hub</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://hub.docker.com/r/tenforce/virtuoso/</url>
 </bibl>
 
-<bibl id="B63">
+<bibl id="B64">
   <title><p>laurensdv/docker-blazegraph</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://github.com/laurensdv/docker-blazegraph/tree/master/2.1.2</url>
 </bibl>
 
-<bibl id="B64">
+<bibl id="B65">
   <title><p>A fine-grained evaluation of {SPARQL} endpoint federation
   systems</p></title>
   <aug>
@@ -1944,13 +2010,31 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-518</lpage>
 </bibl>
 
-<bibl id="B65">
+<bibl id="B66">
   <title><p>SPARQL Query Benchmarker - Sourceforge</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://sourceforge.net/projects/sparql-query-bm/</url>
 </bibl>
 
-<bibl id="B66">
+<bibl id="B67">
+  <title><p>Detailed overview all benchmarks</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://users.elis.ugent.be/drdwitte/resultscsv.html</url>
+</bibl>
+
+<bibl id="B68">
+  <title><p>Project Jupyter</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://jupyter.org/</url>
+</bibl>
+
+<bibl id="B69">
+  <title><p>Postprocessing: Jupyter notebooks</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://users.elis.ugent.be/drdwitte/postprocessing.html</url>
+</bibl>
+
+<bibl id="B70">
   <title><p>A Distributed Graph Engine for Web Scale {RDF} Data</p></title>
   <aug>
     <au><snm>Zeng</snm><fnm>K</fnm></au>
@@ -1968,7 +2052,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-276</lpage>
 </bibl>
 
-<bibl id="B67">
+<bibl id="B71">
   <title><p>YARS2: A Federated Repository for Querying Graph Structured Data
   from the Web</p></title>
   <aug>
@@ -1990,7 +2074,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-224</lpage>
 </bibl>
 
-<bibl id="B68">
+<bibl id="B72">
   <title><p>{Semantic Faceted Search: Safe and Expressive Navigation in {RDF}
   Graphs}</p></title>
   <aug>
@@ -2005,7 +2089,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <url>https://hal.inria.fr/inria-00554093</url>
 </bibl>
 
-<bibl id="B69">
+<bibl id="B73">
   <title><p>Extending Faceted Navigation for {RDF} Data</p></title>
   <aug>
     <au><snm>Oren</snm><fnm>E</fnm></au>
@@ -2024,7 +2108,13 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <lpage>-572</lpage>
 </bibl>
 
-<bibl id="B70">
+<bibl id="B74">
+  <title><p>Conjunctive Query - Wikipedia</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://en.wikipedia.org/wiki/Conjunctive_query#Relationship_to_other_query_languages</url>
+</bibl>
+
+<bibl id="B75">
   <title><p>On the formulation of performant \{SPARQL\} queries</p></title>
   <aug>
     <au><snm>Loizou</snm><fnm>A</fnm></au>
@@ -2040,7 +2130,13 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   <url>http://www.sciencedirect.com/science/article/pii/S1570826814001061</url>
 </bibl>
 
-<bibl id="B71">
+<bibl id="B76">
+  <title><p>Extract-Transform-Load - Wikipedia</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://en.wikipedia.org/wiki/Extract,_transform,_load</url>
+</bibl>
+
+<bibl id="B77">
   <title><p>On the Evaluation of {RDF} Distribution Algorithms Implemented over
   Apache Spark</p></title>
   <aug>
@@ -2051,6 +2147,19 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
   </aug>
   <source>SSWS@ISWC</source>
   <pubdate>2015</pubdate>
+</bibl>
+
+<bibl id="B78">
+  <title><p>NGINX - High Performance Load Balancer, Web Server and Reverse
+  Proxy</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://www.nginx.com/</url>
+</bibl>
+
+<bibl id="B79">
+  <title><p>Decision Trees - Scikit-Learn</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://scikit-learn.org/stable/modules/tree.html</url>
 </bibl>
 
 </refgrp>

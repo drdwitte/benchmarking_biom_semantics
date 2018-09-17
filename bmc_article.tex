@@ -264,26 +264,28 @@ addressref={A},
 \begin{abstract}
 \parttitle{Background} 
 %CONTEXT
-\todo{compare with PhD}
 Applications in the biomedical domain rely on Linked Data spanning multiple datasets for an increasing number of use cases. %\todo{DDP: only biomedical? all biomed apps?}
 Choosing a strategy for running federated queries over Big Linked Data is however a challenging task.
 %Biomedisch data, federated, big data, schaal, artificiele
+
 %NEED
-Given the abundance of Linked Data storage solutions and benchmarks,
+\noindent Given the abundance of Linked Data storage solutions and benchmarks,
 it is not straightforward to make an informed choice between platforms.
 %Hoe objectief kiezen? Snel kiezen
+
 %TASK
-This can be addressed by releasing an updated review of the state-of-the-art periodically and by providing tools and methods to make these more (easily) reproducible. 
+\noindent This can be addressed by releasing an updated review of the state-of-the-art periodically and by providing tools and methods to make these more (easily) reproducible. 
 Running a custom benchmark tailored to a specific use case becomes more feasible 
 by simplifying deployment, configuration, and post-processing.
 %Automatiseren van deployment en postprocessing, objectief maken = repeatable
 \parttitle{Results}
 %OBJECT
-In this work we present in-depth results of an extensive query performance benchmark we conducted. The focus lies on comparing scalable RDF systems and to iterate over different hardware options and engine configurations. Contrary to most benchmarking efforts, comparisons are made across different approaches to Linked Data querying, conclusions can be drawn by comparing the actual benchmark costs. Both artificial tests and a real case with queries from a biomedical search application are analyzed.
+The results in this work are obtained by performing an extensive query performance benchmark. The focus lies on comparing scalable RDF systems and iterating over different hardware options and engine configurations. Contrary to most benchmarking efforts, comparisons are made across different approaches to Linked Data querying by comparing the actual benchmark costs. Both artificial tests and a real case with queries from a biomedical search application are analyzed. To make the interpretation of the benchmark results more reproducible we relied decision trees trained on query features.
+
 %FINDINGS
-In analyzing the performance results, we discovered that single-node triple stores benefit greatly from vertical scaling and proper configuration. Results show that horizontal scalability is still a real challenge to most systems. 
+\noindent In analyzing the performance results, we discovered that single-node triple stores benefit greatly from vertical scaling and proper configuration. Results show that horizontal scalability is still a real challenge to most systems. 
 Semantic Web storage solutions based on federation, compression, or Linked Data Fragments still lag by an order of magnitude in terms of performance.  
-Furthermore we demonstrate the need for careful analysis of contextual factors influencing query runtimes: server load, availability, caching effects, and query completeness all perturb the benchmark results.
+Furthermore, we demonstrate the need for careful analysis of contextual factors influencing query runtimes: server load, availability, caching effects, and query completeness all perturb the benchmark results.
 %Horizontale schaalbaarheid, TPF, Query correctness
 %CONCLUSION
 \parttitle{Conclusions}
@@ -292,7 +294,6 @@ With this work we offer a reusable methodology to facilitate comparison between 
 %OUTLOOK	
 %Hopelijk wordt methodologie gevolgd. Future benchmarks fixed methodology
 This methodology facilitates the integration with future benchmark results.
-\todo{Decision $=$ reusable interpretations ook vermelden}
 	
 \end{abstract}
 

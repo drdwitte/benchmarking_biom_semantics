@@ -26,7 +26,7 @@ The two leftmost panels of Figure~\ref{fig:Fig02_WatdivVerticalScaling} study th
 
 
 \begin{itemize}
-	\item \textbf{Memory is no magic solution:} Especially for \textbf{Gra1\_64\_Def} and \textbf{Vir1\_64\_Def} hardly any improvement can be seen. Blazegraph takes full advantage of the additional memory, with a large shift in both median and mean runtimes. The strong hardware dependence of Blazegraph could be a motivation to also study the performance in a GPU setting\footnote{\scriptsize \url{https://www.blazegraph.com/whitepapers/Blazegraph-gpu_InDetail_BloorResearch.pdf}}, which is outside the scope of this work.
+	\item \textbf{Memory is no magic solution:} Especially for \textbf{Gra1\_64\_Def} and \textbf{Vir1\_64\_Def} hardly any improvement can be seen. Blazegraph takes full advantage of the additional memory, with a large shift in both median and mean runtimes. The strong hardware dependence of Blazegraph could be a motivation to also study the performance in a GPU setting~cite{blazegraphgpu}, which is outside the scope of this work.
 	\item \textbf{Speedups:} \textbf{Bla1\_64\_Def} has a speedup of 8.4 for its average runtime and 3.1 for its median runtime. From the other stores only \textbf{ES1\_64\_Def} benefits with a speedup of 1.8 for its average runtime.
 	\item \textbf{Benefits for fast queries:} The most outspoken positive effect is the lowering of the lower boundary of the box plots.  
 \end{itemize}
