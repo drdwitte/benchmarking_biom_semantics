@@ -22,7 +22,7 @@ In Figure~\ref{fig:Fig02_WatdivVerticalScaling} the rightmost panel corresponds 
 %
 \begin{itemize}
 	\item \textbf{Sensitivity to configuration:} \textbf{Vir1\_64} got no benefit from the RFI settings file. For 
-	\textbf{Bla1\_64} the only improvement was to explicitly configure the timeout parameter on the server side. This avoids unnecessary overhead while the client was already disconnected and leads to a speedup of approximately 3.5 for both runtime measurements. \textbf{Gra1\_64} has the highest sensitivity to proper configurations. The provided scripts ensure a batch speedup of 9.4 and a median runtime speedup of 62.
+	\textbf{Bla1\_64} the only improvement was to explicitly configure the timeout parameter on the server side. This avoids unnecessary overhead while the client is already disconnected. It leads to a speedup of approximately 3.5 for both runtime measurements. \textbf{Gra1\_64} has the highest sensitivity to proper configurations. The provided scripts ensure a batch speedup of 9.4 and a median runtime speedup of 62.
 	\item \textbf{32\_Def to 64\_Opt:} Moving from the left panel to the right in Figure~\ref{fig:Fig02_WatdivVerticalScaling}, we clearly see results converging. \textbf{Bla1\_64} is the most efficient system for processing batch workloads with an average runtime of 1.95s per query, 4.05s and 6.32s for \textbf{Vir1\_64} and \textbf{Gra1\_64} respectively. In the query performance \textbf{Vir1\_64} has a median runtime of 0.17s where \textbf{Gra1\_64} and \textbf{Bla1\_64} have runtimes of 0.65s and 0.74s respectively.
 %Bla_N1_32_W100_Def   0.191359		0.461707	=> x5
 %Gra_N1_32_W100_Def   0.047812		0.417214 	=> x15

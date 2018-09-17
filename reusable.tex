@@ -1,12 +1,14 @@
+
 To make the benchmarks fully \emph{reproducible}, we pay explicit attention to the hardware setup and the database configurations. 
 
 We offer a reusable infrastructure which consists of a number of well-maintained components for deployment, 
 to allow the end-user to test a triple store. 
 We also release our post-processing scripts and query event data publicly, so others can reproduce the analysis of the system performance exactly as described in this paper. 
-The Ontoforce benchmark cannot be reproduced by external parties due to the dataset being proprietary. The queries have however been released.
+The Ontoforce benchmark cannot be reproduced by external parties due to the dataset being proprietary. The queries have however been released and the Ontoforce dataset mostly covers open data from Life Sciences portion of the Linked Open Data cloud.
 
 \subsubsection{Reproducible hardware}
-The choice of hardware in benchmarks is often related to the availability of systems in a research group's datacenter.
+
+The choice of hardware in benchmarks is often related to the availability of systems in a research group's data center.
 We opted to use instances from a cloud provider to make the choice as generic as possible. 
 We used three different types of servers on the Elastic Compute Cloud (EC2) of Amazon Web Services~\cite{ec2} (AWS), shown in Table~\ref{instances}. 
 
@@ -14,7 +16,7 @@ We used three different types of servers on the Elastic Compute Cloud (EC2) of A
 	\centering
 	\caption{Instance types used in benchmarks and their purpose.}
 	\label{instances}
-	\scalebox{0.95}{
+	\scalebox{0.90}{
 	\begin{tabular}{l|rrl}
 		\hline
 		\textbf{Instance Type} & \textbf{vCPUs (no.)} & \textbf{RAM (GB)} & \textbf{Goal} \\
@@ -27,7 +29,7 @@ We used three different types of servers on the Elastic Compute Cloud (EC2) of A
 	}
 \end{table}
 
-An additional advantage of this approach is that the benchmark cost can be explicitly calculated. Using cost as a metric allows the comparison of benchmarks with different setups. Also the cost of certain preprocessing steps such as bulk loading or compression can be included in the comparison.
+An additional advantage of this approach is that the benchmark financial cost can be explicitly calculated. Using financial cost as a metric allows the comparison of benchmarks with different setups. Also the cost of certain preprocessing steps such as bulk loading or compression can be included in the comparison.
 
 \subsubsection{Reproducible installations and configurations}
 
@@ -69,12 +71,15 @@ The \emph{Optimized} configuration was obtained after sending out a  Request For
 \end{table}
 
 \subsubsection{Reusable Benchmark Components}
-The SPARQL Query Benchmarker software~\cite{sparqlquerybm} is a mature SPARQL-over-HTTP benchmarking tool which is highly customizable. We ran the software in \emph{benchmark} mode where it can operate given a SPARQL endpoint URI and a list of SPARQL query files. The software was run with a timeout parameter of 300s for the WatDiv benchmarks and 1200s for the Ontoforce benchmark and with 1 single-threaded warm-up run and a multi-threaded (5 threads) stress test run where 5 clients each execute a full query mix independently and in randomized order. 
+The SPARQL Query Benchmarker software~\cite{sparqlquerybm} is a mature SPARQL-over-HTTP benchmarking tool which is highly customizable. We ran the software in \emph{benchmark} mode where it can operate given a SPARQL endpoint URI and a list of SPARQL query files. The software was run with a timeout parameter of 300s for the WatDiv benchmarks and 1200s for the Ontoforce benchmark and with 1 single-threaded warm-up run and a multi-threaded (5 threads) stress test run where 5 clients each execute a full query mix independently and in randomized order. Note that we left a time gap of 3 hours in between the ingest phase and the warm-up run to ensure all processes related to ingest have finished.
 The choice for timeout parameters is related to practical considerations: 
 \begin{itemize}
 	\item Initial tests revealed that the WatDiv timeout is sufficient for most queries to complete.
 	\item The Ontoforce benchmark timeout was instated to keep the total benchmark execution time within affordable boundaries.
 \end{itemize} 
+
+\subsubsection{Reusable Post-processing and Unbiased Conclusions}
+
 
 When the benchmark successfully terminates, a CSV-file is generated containing the summary results per query: median runtime, median response time,...
 In our initial benchmarks~\cite{de2016big} this CSV-file was used, but with the Ontoforce dataset several issues surfaced:
@@ -88,9 +93,7 @@ In our initial benchmarks~\cite{de2016big} this CSV-file was used, but with the 
 	\item While the CSV-file contains useful results, it is still a summarization of the results whereby much information about the flow of the benchmarking process is lost. 
 \end{itemize}
 
-\vspace{5mm} \noindent These issues are however all confined to the process of generating the summary CSV-file. We worked around them by running 
-the benchmarker software in \emph{verbose} mode where it generates a detailed log file. This raw log file contains all data before aggregation and therefore
-before any of the previous issues occur. Storing this log data allows us to run the aggregations ourselves and provides us with all available information even when the software crashes. Additional summarizations are possible since the log file is in fact much richer in information than the original CSV-file.
+These issues are however all confined to the process of generating the summary CSV-file. We worked around them by running the benchmarker software in \emph{verbose} mode where it generates a detailed log file. This raw log file contains all data before aggregation and therefore before any of the previous issues occur. Storing this log data allows us to run the aggregations ourselves and provides us with all available information even when the software crashes. Additional summarizations are possible since the log file is in fact much richer in information than the original CSV-file.
 
 The post-processing pipeline parses this log file and converts it into a more detailed CSV file which contains \emph{query events}. These events contain the essential information of a single query execution. Query events serve as the basis for all results in this research paper. The schema of a single query event is shown in Table~\ref{table:queryevents}. All event files and derived views are \todo{online}~\cite{bmresults}.
 
@@ -122,7 +125,7 @@ To verify the correctness of these queries we extended the benchmarker software 
 
 To simplify the deployment of this modified benchmarker client, we automated this process by creating a Docker container which automatically installs the software and its dependencies.
 
-Finally, we automated major parts of the post-processing of benchmark results, because (i) this saves the future benchmark user a lot of time parsing the benchmarker log files, (ii) provides the user with a large set of instant visual results, and (iii) allows knowledge-transfer to new benchmarking efforts through script re-use.
+Next, we automated major parts of the post-processing of benchmark results, because (i) this saves the future benchmark user a lot of time parsing the benchmarker log files, (ii) provides the user with a large set of instant visual results, and (iii) allows knowledge-transfer to new benchmarking efforts through script re-use.
 
 Jupyter notebooks~\cite{jupyter} were used for the postprocessing. All notebooks are available \todo{online}~\cite{bmpostprocessing}. 
 
@@ -157,6 +160,8 @@ Jupyter notebooks~\cite{jupyter} were used for the postprocessing. All notebooks
 %\end{enumerate}
 
 Practice has shown that the event format leaves room for unanticipated analysis. For example: dealing with incorrect queries, taking into account server load or caching effects, studying the reason behind one of the query engines crashing,...
+
+Finally, also part of the conclusions drawn from the data are automated by using a machine learning approach to find the relation between certain \emph{query features} and performance parameters. This ensures that the conclusions are not the result of the author's insights or biases. 
 
 %These views can serve as input for more in-depth analysis, for example studying the domino-effect
 %of one poorly performing query on other query runtimes as reported in the Wikidata benchmark~\cite{hernandez2016querying}.

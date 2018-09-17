@@ -1,9 +1,16 @@
-\todo{compare with PhD -Hier aangekomen}\\
-In this benchmark we would like to discover trends when modifying certain aspects of the benchmark setup. In section~\ref{subsec:bmexplore} we define a \emph{benchmark space}. For every dimension in this space we try to at least test two possible values.
-Performance is not always the first concern in a system architecture. In section~\ref{subsec:featurematrix} we describe an approach using a Feature Matrix in which weights can be assigned to certain properties of a system in order to make a ranking of the different systems given a use case. Section~\ref{subsec:bmscheme} gives a detailed explanation on our attempt at making the benchmark itself more easily reproducible and comparable with other work. Section~\ref{subsec:dataqueries} introduces the benchmark data and query-sets used in this work. 
+
+In this benchmark we would like to discover trends when modifying certain aspects of the benchmark setup. In the first subsection%~\ref{subsec:bmexplore} 
+we define a \emph{benchmark space}. For every dimension in this space we try to test at test two possible values.
+Performance is not always the first concern in a system architecture. In subsection on `Store Preselection' %~\ref{subsec:featurematrix} 
+we describe an approach using a \emph{Feature Matrix} in which weights can be assigned to certain properties of a system, in order to make a ranking of the different systems, given a use case. 
+The next subsection
+%~\ref{subsec:bmscheme} 
+gives a detailed explanation on our attempt at making the benchmark itself more easily reproducible and comparable with other work. In the final subsection %~\ref{subsec:dataqueries} 
+the benchmark data and query-sets are introduced. 
 
 \subsection{Benchmark Space Exploration}
 \label{subsec:bmexplore}
+
 Assessing the performance of an RDF system with a given benchmark starts with the identification of the set of parameters its results depend on. 
 The actual outcome is a function of (at least) the following dimensions, for which we test multiple values:
 
@@ -30,8 +37,9 @@ Testing every possible combination of parameters is very time and resource consu
 	\centering
 	\caption{Overview of benchmarks run in this study.}
 	\label{bmspace}
-
+	\scalebox{0.85}{
 	\begin{tabular}{l|l|cccc}
+
 		\hline
 			
 		\textbf{Systems} & \textbf{Setup} & \multicolumn{3}{l}{\textbf{WatDiv}} &   \multicolumn{1}{l}{\textbf{Onto-}} \\
@@ -47,5 +55,5 @@ Testing every possible combination of parameters is very time and resource consu
 		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Semantic\\ Web  (3)\end{tabular}} & 64  &   & \checkmark  & \checkmark  & \checkmark \\
 		& 3 x 64 &  & \checkmark  & \checkmark  & \checkmark    \\ \hline                             
 	\end{tabular}
+	}
 \end{table}
-

@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{79}
+\begin{thebibliography}{80}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -1098,6 +1098,16 @@ Extract-Transform-Load - Wikipedia.
 \endbibitem
 
 %%% 77
+\bibitem{blazegraphgpu}
+\begin{botherref}
+\oauthor{\bsnm{Howard}, \binits{P.}}:
+Blazegraph GPU.
+(Accessed August 31, 2018).
+\url{https://www.blazegraph.com/whitepapers/Blazegraph-gpu_InDetail_BloorResearch.pdf}
+\end{botherref}
+\endbibitem
+
+%%% 78
 \bibitem{cure2015evaluation}
 \begin{botherref}
 \oauthor{\bsnm{Cur{\'e}}, \binits{O.}},
@@ -1110,7 +1120,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 \end{botherref}
 \endbibitem
 
-%%% 78
+%%% 79
 \bibitem{nginx}
 \begin{botherref}
 NGINX - High Performance Load Balancer, Web Server and Reverse Proxy.
@@ -1119,7 +1129,7 @@ NGINX - High Performance Load Balancer, Web Server and Reverse Proxy.
 \end{botherref}
 \endbibitem
 
-%%% 79
+%%% 80
 \bibitem{sklearndtree}
 \begin{botherref}
 Decision Trees - Scikit-Learn.
@@ -2137,6 +2147,15 @@ Decision Trees - Scikit-Learn.
 </bibl>
 
 <bibl id="B77">
+  <title><p>Blazegraph GPU</p></title>
+  <aug>
+    <au><snm>Howard</snm><fnm>P</fnm></au>
+  </aug>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://www.blazegraph.com/whitepapers/Blazegraph-gpu_InDetail_BloorResearch.pdf</url>
+</bibl>
+
+<bibl id="B78">
   <title><p>On the Evaluation of {RDF} Distribution Algorithms Implemented over
   Apache Spark</p></title>
   <aug>
@@ -2149,14 +2168,14 @@ Decision Trees - Scikit-Learn.
   <pubdate>2015</pubdate>
 </bibl>
 
-<bibl id="B78">
+<bibl id="B79">
   <title><p>NGINX - High Performance Load Balancer, Web Server and Reverse
   Proxy</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://www.nginx.com/</url>
 </bibl>
 
-<bibl id="B79">
+<bibl id="B80">
   <title><p>Decision Trees - Scikit-Learn</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>http://scikit-learn.org/stable/modules/tree.html</url>

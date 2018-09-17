@@ -1,10 +1,16 @@
-
-
 Only comparing query runtimes might be an oversimplification in benchmark analysis. 
-When comparing batch runtimes the slow tail of the distributions dominates the average runtimes. In section~\ref{subsec:templates} we investigate whether certain query templates dominate the batch runtimes.
+When comparing batch runtimes the slow tail of the distributions dominates the average runtimes. In the first subsection
+%~\ref{subsec:templates} 
+we investigate whether certain query templates dominate the batch runtimes.
 Query execution times depend on the state of the database, which motivates studying the query context. Previous results are still valid as all queries are executed 5 times and each time the median is taken to calculate batch runtimes.
 
-In section~\ref{subsec:load} we study the effect of the server load on the query runtimes by comparing a single-client benchmark with a stress test with 5 clients. What queries have been executed previously might also affect query runtimes due to result caching. This will be explored in section~\ref{subsec:caching}. Often not reported, but the effect of result completeness can have a big impact on the query runtimes reported, as we will discuss in section~\ref{subsec:completeness}.
+The next subsection
+%~\ref{subsec:load} 
+studies the effect of the server load on the query runtimes by comparing a single-client benchmark with a stress test with 5 clients. In the following subsection we investigate the context of a query by studying caching effects. 
+
+%This will be explored in section~\ref{subsec:caching}. 
+We conclude by studying an often unreported effect: result completeness can have a big impact on the query runtimes and should always be verified.
+%as we will discuss in section~\ref{subsec:completeness}.
 
 \subsection{Query runtimes for different template types}
 \label{subsec:templates}
