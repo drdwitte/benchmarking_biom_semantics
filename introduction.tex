@@ -31,8 +31,7 @@ Choosing an RDF database and system architecture requires making trade-offs:
 \begin{itemize}
 	\item Which features are required for the system of choice given the use case at hand, which features are optional?
 	\item What hardware is required to achieve a certain performance?
-	\item What system is most suited for a specific use case?
-	\item What are the trade-offs when using research prototypes? 
+	\item What are the risks when using research prototypes instead of mature vendor-backed solutions? 
 \end{itemize}
 
 To make matters even more complicated, database vendors are continuously improving their products making it unclear when prior results become obsolete.
@@ -54,8 +53,10 @@ This initial work served as an inspiration to a set of additional challenges:
 Ontoforce~\cite{ontoforcewebsite} provided us with a real-world Life \mbox{Sciences} dataset used in the back-end of their product \mbox{DISQOVER~\cite{disqover}}. This proprietary data and query-set was previously analyzed in our SWAT4LS 2016 research paper~\cite{dewitte_swat4ls_2016}, of which we provide a summary in the section `Datasets and Queries' on page~\pageref{subsec:dataqueries}.
 In that paper we analyzed the queries according to their SPARQL keywords and structural features~\cite{DBLP:journals/corr/abs-1103-5043}, an approach we will further extend in this work. 
 
-We were also confronted with counter-intuitive results in terms of runtime. This required re-running some of the tests and extending the benchmark software to further clarify these issues. All benchmarks involving Virtuoso on the Ontoforce data have therefore been duplicated.
-Originally, the Ontoforce benchmark was used to study scalable RDF approaches, here we also evaluated the other \emph{Vendor} systems. Additionally, we evaluated 3 \emph{SemWeb} systems (research prototypes) that are implementations of compression, federation, and the Linked Data Fragments concept~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} on WatDiv and Ontoforce data.
+We were also confronted with counter-intuitive results in terms of runtime. This required re-running some of the tests and extending the benchmark software to further clarify these issues. All benchmarks involving Virtuoso on the Ontoforce data in our SWAT4LS contribution have therefore been duplicated.
+Originally, the Ontoforce benchmark was used to study scalable RDF approaches, here we also evaluated the other \emph{Vendor} systems. Additionally, we evaluated 3 (research) \emph{Prototypes} on both Ontoforce and WatDiv benchmarks.
+
+ %that are implementations of compression, federation, %and the Linked Data Fragments %concept~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} on %WatDiv and Ontoforce data.
 
 \subsection{Research Questions}
 

@@ -71,7 +71,7 @@ The \emph{Optimized} configuration was obtained after sending out a  Request For
 \end{table}
 
 \subsubsection{Reusable Benchmark Components}
-The SPARQL Query Benchmarker software~\cite{sparqlquerybm} is a mature SPARQL-over-HTTP benchmarking tool which is highly customizable. We ran the software in \emph{benchmark} mode where it can operate given a SPARQL endpoint URI and a list of SPARQL query files. The software was run with a timeout parameter of 300s for the WatDiv benchmarks and 1200s for the Ontoforce benchmark and with 1 single-threaded warm-up run and a multi-threaded (5 threads) stress test run where 5 clients each execute a full query mix independently and in randomized order. Note that we left a time gap of 3 hours in between the ingest phase and the warm-up run to ensure all processes related to ingest have finished.
+The SPARQL Query Benchmarker software~\cite{sparqlquerybm} is a mature SPARQL-over-HTTP benchmarking tool which is highly customizable. We ran the software in \emph{benchmark} mode where it can operate given a SPARQL endpoint URI and a list of SPARQL query files. The software was run with a timeout parameter of 300s for the WatDiv benchmarks and 1200s for the Ontoforce benchmark and with 1 single-threaded warm-up run and a multi-threaded (5 threads) stress test run where 5 clients each execute a full query mix independently and in randomized order. Note that we left a time gap of 2 hours in between the ingest phase and the warm-up run to ensure all processes related to ingest have finished.
 The choice for timeout parameters is related to practical considerations: 
 \begin{itemize}
 	\item Initial tests revealed that the WatDiv timeout is sufficient for most queries to complete.
@@ -93,8 +93,8 @@ In our initial benchmarks~\cite{de2016big} this CSV-file was used, but with the 
 	\item While the CSV-file contains useful results, it is still a summarization of the results whereby much information about the flow of the benchmarking process is lost. 
 \end{itemize}
 
-These issues are however all confined to the process of generating the summary CSV-file. We worked around them by running the benchmarker software in \emph{verbose} mode where it generates a detailed log file. This raw log file contains all data before aggregation and therefore before any of the previous issues occur. Storing this log data allows us to run the aggregations ourselves and provides us with all available information even when the software crashes. Additional summarizations are possible since the log file is in fact much richer in information than the original CSV-file.
-
+These issues could be addressed by working with the raw benchmarker log files which contain more details.
+%These issues are however all confined to the process of generating the summary CSV-file. We worked around them by running the benchmarker software in \emph{verbose} mode where it generates a detailed log file. This raw log file contains all data before aggregation and therefore before any of the previous issues occur. Storing this log data allows us to run the aggregations ourselves and provides us with all available information even when the software crashes. Additional summarizations are possible since the log file is in fact much richer in information than the original CSV-file.
 The post-processing pipeline parses this log file and converts it into a more detailed CSV file which contains \emph{query events}. These events contain the essential information of a single query execution. Query events serve as the basis for all results in this research paper. The schema of a single query event is shown in Table~\ref{table:queryevents}. All event files and derived views are \todo{online}~\cite{bmresults}.
 
 \begin{table}[htbp!]

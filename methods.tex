@@ -15,7 +15,7 @@ Assessing the performance of an RDF system with a given benchmark starts with th
 The actual outcome is a function of (at least) the following dimensions, for which we test multiple values:
 
 \begin{itemize}
-	\item \textbf{The choice of database engine:} We assess 7 different systems, 4 \emph{Vendors} and 3 \emph{SemWeb} systems.
+	\item \textbf{The choice of database engine:} We assess 7 different systems, 4 \emph{Vendors} and 3 \emph{Prototypes}.
 	\item \textbf{The server hardware---especially memory:} We distinguish between 32GB and 64GB of RAM on the server.
 	\item \textbf{The size of the (optionally) distributed system:} We run tests for single and 3-node setups when supported by the RDF database. Federated systems are configured with $N+1$ nodes, with $N$ the number of slaves (1 or 3) nodes, and 1 federator node. To clarify: $N=3$ thus corresponds to 3 instances for \emph{Vendor} systems, while $N=3$ for federated setups requires $3+1$ instances. The choice for $N=3$ is related to the fact that for one of the systems only a 3-node configuration is available.
 	\item \textbf{The query properties:} The WatDiv benchmark query-set contains BGP queries, while the Ontoforce dataset consists mainly of complex aggregation-based queries.
@@ -52,7 +52,7 @@ Testing every possible combination of parameters is very time and resource consu
 		& 64/Opt         &                                  &                                   & \checkmark                                  & \checkmark                                  \\ \hline
 		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Multi-\\ Node (2)\end{tabular}} & 3 x 32         &                                  &                                   & \checkmark                                  &                                    \\
 		& 3 x 64/Opt     &                                  &                                   &                                    & \checkmark                                  \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Semantic\\ Web  (3)\end{tabular}} & 64  &   & \checkmark  & \checkmark  & \checkmark \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Prototypes  (3)\end{tabular}} & 64  &   & \checkmark  & \checkmark  & \checkmark \\
 		& 3 x 64 &  & \checkmark  & \checkmark  & \checkmark    \\ \hline                             
 	\end{tabular}
 	}
