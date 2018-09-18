@@ -1,6 +1,6 @@
 %Restate the research question that the study set out to answer
 %Begin with a sentence that refers to the main subject of discussion
-\todo{Compare with PhD -Hier aangekomen}\\
+
 In this work we offer guidelines and tools to run a \emph{reproducible} benchmark (\textbf{RQ1}). For the back-end we recommend working with hardware available via cloud providers, AMIs and Docker images for the system installation. We recommend releasing the configuration details for every store. 
 
 To enable critical reviewing benchmark output data should be released in its rawest form. The  query event data in this work turned out to be an enabler for new unanticipated research questions. One example in this work is the study of caching effects. 
@@ -16,7 +16,7 @@ Benchmark cost allows the comparison of a heterogeneous mix of RDF storage appro
 
 Future benchmarking efforts should consider, at least locally, scanning a benchmark space. This necessity was demonstrated in this work by showing the effect of dataset size and by modifying the amount of server memory. An interesting result in this aspect is that the performance of the different \emph{Vendor} systems converged as they were given better hardware and configurations.
 
-In answering \textbf{RQ3} we demonstrated that query runtimes are an oversimplified representation of performance. Many contextual factors influence the runtime comparisons: certain query types might completely dominate the mix runtimes, server load and caching effects have a different impact on the systems tested. Adding query completeness analysis, makes benchmark runtime results more trustworthy. Ignoring this aspect would have led to very different conclusions in this work.
+In answering \textbf{RQ3} we demonstrated that query runtimes are an oversimplified representation of performance. Many contextual factors influence the runtime comparisons: certain query types might completely dominate the runtime averages, server load and caching effects have a different impact on the systems tested. Adding query completeness analysis, makes benchmark runtime results more trustworthy. Ignoring this aspect would have led to very different conclusions in this work.
 
 The ranking of the different systems is not consistent if we change from artificial to real-world benchmarks (\textbf{RQ4}). This supports the advice to try and run use case specific benchmarks before deciding on a system architecture. Although it was difficult to extract transferable insights from the Ontoforce benchmark, the decision tree approach in fact shed some light on certain SPARQL query features which pose more problems to one system than another, giving the vendors some direction in optimizing their RDF storage solution. Due to the automated way of inferring these insights they can be more easily compared to other benchmarking efforts.
 

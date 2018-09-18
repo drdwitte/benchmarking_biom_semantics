@@ -40,7 +40,8 @@
 
 \paragraph{Error Frequencies}
 
-The \emph{SemWeb} systems and \textbf{Vir*} have been tested on the Ontoforce benchmark for our SWAT4LS~\cite{dewitte_swat4ls_2016} contribution. Note that \textbf{TPF} systems do not currently support all SPARQL operators and could therefore not be run on this benchmark. Only Virtuoso simulations had a sufficiently wide benchmark survival interval to enable further analysis. In Figure~\ref{fig:Fig09_FailuresOntoforceBM} we show the results for the \emph{Vendor} systems. Each simulation consists of a small bar, corresponding to the single-threaded warm-up run, and 5 concatenated bars corresponding to 5 threads in the stress test.
+The \emph{SemWeb} systems and \textbf{Vir*} have been tested on the Ontoforce benchmark for our SWAT4LS~\cite{dewitte_swat4ls_2016} contribution. Note that \textbf{TPF} systems do not currently support all SPARQL operators and could therefore not be run on this benchmark.  In Figure~\ref{fig:Fig09_FailuresOntoforceBM} we show the results for the \emph{Vendor} systems. Each simulation consists of a small bar, corresponding to the single-threaded warm-up run, and 5 concatenated bars corresponding to 5 threads in the stress test.
+The Figure also shows that only Virtuoso simulations had a sufficiently wide benchmark survival interval to enable further analysis.
 
 \begin{itemize}
 	\item \textbf{Bla1\_64\_Opt:} One major difference with the results on the WatDiv benchmark is Blazegraph's inability to handle the complexity of the Ontoforce queries, resulting in very short benchmark survival interval: it contains only 55 queries, of which 18 are timeouts.
@@ -52,7 +53,8 @@ The \emph{SemWeb} systems and \textbf{Vir*} have been tested on the Ontoforce be
 	\item \textbf{Vir1\_*\_Opt:} Virtuoso is both consistent and successful on this benchmark with only 1\% of queries consistently failing, overall the success rate is 98\%. These failures correspond mainly to queries which contain \emph{property paths}. None of the other stores could handle these queries. 
 	It should be noted that during the creation of the DISQOVER product, Virtuoso was frequently used as a back-end system, which partially implies a certain favorable bias in the Ontoforce results.The \textbf{Vir1\_32\_Opt} in the SWAT4LS~\cite{dewitte_swat4ls_2016} paper had 41\% incomplete queries. This re-run however, achieves the same figures as the 64GB run.
 	
-	\item \textbf{Vir3\_64\_Opt\_*:} Although the success rate of \textbf{Vir3\_64\_Opt\_0} is only 55\%, 92\% of the queries are successfully executed at least once, which makes it possible to make runtime comparisons. \textbf{Vir3\_64\_Opt\_2} has far less reported errors. Post-processing revealed issues with query completeness (orange) for 37\% of the queries.
+	\item \textbf{Vir3\_64\_Opt\_*:} The  \textbf{Vir3\_64\_Opt} setup was re-run multiple times, the different runs are identified with an additional sequence number 0-2:
+	Although the success rate of \textbf{Vir3\_64\_Opt\_0} is only 55\%, 92\% of the queries are successfully executed at least once, which makes it possible to make runtime comparisons. \textbf{Vir3\_64\_Opt\_2} has far less reported errors. Post-processing revealed issues with query completeness (orange) for 37\% of the queries.
 \end{itemize}
 
 
@@ -64,14 +66,14 @@ Consequently, we studied the number of results per query:
 
  
 \begin{itemize}
-	\item \textbf{Inter-thread consistency:} As a first step we analysed whether for each individual system the number of query results was consistent for each query-mix. 
+	\item \textbf{Inter-thread consistency:} As a first step we analyzed whether for each individual system the number of query results was consistent for each query-mix. 
 	Without any exception this inter-thread consistency was confirmed.
 	
 	\item \textbf{Query consensus:} In the query event format, described in Table~\ref{table:queryevents}, one field indicates whether a query is correct or its result count incomplete. These values are obtained by creating a query consensus, with the following rules. If at least two separate \emph{Vendor} systems agreed on the number of results we assume this results is `correct', for 97.3\% this is the case. If only 1 engine can solve a query we label these as `uncertain'. Virtuoso solves 19 queries for which no consensus can be derived. For 13 queries none of the systems managed to generate a solution. 8 of these contain a property path operator, the other 5 have \sql{FILTER IN} operators containing large URI lists, such that the file size of the query is between 10 and 100 kb.
 	
 	\item \textbf{Count Queries:} Of the 19 `uncertain' queries solved by Virtuoso 15 are \sql{count} queries. However, upon inspection the \sql{count} operator was always part of a sub-query, so this result can not be disproven. The benchmark software only reports the number of results per query. We extended it to also download the actual results to be able to verify whether the \sql{count} queries are consistent between the stores. However, no inconsistencies were found there.
 	
-	\item \textbf{Incorrect Queries:} Some of the Virtuoso benchmarks have incorrect queries. The typical pattern is that the query is executed $< 1s$ and generates 0 results. 1 query also had the query result limit $ = 2^{20}$. To get more insight into the context of incomplete queries we executed the \textbf{Vir3\_64} benchmark an additional 3 times. However, the cluster did not exhibit this behavior, but the new benchmarks never made it to the stress test, with the best run having a benchmark survival interval of length 228 queries.
+	\item \textbf{Incorrect Query results:} Some of the Virtuoso benchmarks have incorrect results. The typical pattern is that the query is executed $< 1s$ and generates 0 results. 1 query also had the query result limit $ = 2^{20}$. To get more insight into the context of incomplete queries we executed the \textbf{Vir3\_64} benchmark an additional 3 times. In these runs the incorrect query results were not observed, but, but the new benchmarks never made it to the stress test, with the best run having a benchmark survival interval with a length of 228 queries.
 \end{itemize}
 
 

@@ -35,7 +35,7 @@ The queries are generated from 20 query templates. Four different query template
 \end{itemize}
 Per query template we generated 20 queries. In the original work we used 100 queries but to speed up the benchmarking process and to reduce the infrastructure cost we switched to 20, corresponding to 400 queries.
 
-The query-mix provided by Ontoforce was extracted from the user logs of the DISQOVER search interface. Ontoforce has decided to release the query-set (project website).
+The query-mix provided by Ontoforce was extracted from the user logs of the DISQOVER search interface. Ontoforce has decided to release the query-set \todo{(see Suppl. Material)}.
 The queries are interactive federated queries associated with faceted browsing~\cite{Ferre, Oren}.
 
 An example of a federated query is the following: \\
@@ -49,9 +49,9 @@ The corresponding query features are: Triple Patterns(11), nested select queries
 Note that the DISQOVER interface can be configured to interact with a SPARQL-based back-end system as well as with SOLR, which works with well-chosen aggregates. The SOLR-based approach enables low-latency faceted browsing. The logs of the system however also contain the full SPARQL queries, which are used in this benchmark. 
 The SOLR aggregates are generated in an ETL process with the queries in their most general form, stripped from most of the operators. This ETL process therefore bares resemblance to the WatDiv benchmark.
 
-While WatDiv queries are all BGPs, these 1,223 queries are rich in SPARQL features and sub-queries are common.
-The queries are automatically built by the system from general queries where - while browsing - additional \sql{filter} statements are added. 
+The 1,223 DISQOVER queries are rich in SPARQL-features and sub-queries are common. This is a stark contrast with WatDiv for which all queries are BPGs.
+The DISQOVER queries are automatically built by the system from more general queries to which additional \sql{filter} statements are added, while browsing the UI.
 Aggregation operators and \sql{filter} operations are therefore predominant. A large fraction of queries is also non-conjunctive~\cite{conjunctive}, making them even more challenging~\cite{Picalausa2011}.
-Queries with over 10 triple patterns are common and more specifically unbound triples occur often. The actual binding occurs in the additional \sql{filter} statements. Half of the queries are \sql{count distinct} queries and these are also the most time consuming to resolve. 
+Queries with over 10 triple patterns are common and more specifically unbound triples, with three variables, occur often. The actual binding occurs in the additional \sql{filter} statements. Half of the queries are \sql{count distinct} queries and these are also the most time consuming to resolve. 
 
 Due to the automated way of generating queries the formulation of the queries is not optimized in terms of performance~\cite{Groth}. From the point of view of Ontoforce this optimization is considered the responsibility of the triple store.

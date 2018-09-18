@@ -1,10 +1,19 @@
 %runtimes: median - mean - response
-In this section we will study the query runtime distributions of different approaches for dealing with Linked Data at scale. To summarize runtime results we rely on mean and median values. If a query is executed multiple times, the query runtime is defined as the median value of the different executions. If we aggregate runtimes over different queries, for example per query template, we report both the \emph{median} and \emph{mean query runtimes}. As the runtime distributions can be skewed, performance differences between systems are most often reported using the median runtime. 
+In this section we will study the query runtime distributions of different approaches for dealing with Linked Data at scale. To summarize runtime results we rely on mean and median values. 
 
-If we consider an ETL~\cite{ETL} process, or equivalently a batch of queries, the mean runtime is more meaningful, as it directly translates to the total batch runtime. In the following box plots we chose to report both.
+Queries are typically executed multiple times. The \emph{query runtime} is defined as the median value of the different query executions in a run. 
+
+If we aggregate runtimes over \emph{different queries}, for example when we aggregate per query template, we report both the \emph{median} and \emph{mean query runtimes}. 
+
+As the runtime distributions can be skewed, performance differences between systems are most often reported using the median runtime of an aggregate or benchmark run. 
+
+If we consider an ETL~\cite{ETL} process, or equivalently a batch of queries, the mean runtime becomes more meaningful, as it directly translates to the total runtime of an aggregate or full run. In the following box plots we chose to report both.
 
 %response times
-Some of the stores provide query results in a streaming fashion. Response times are not captured in the current query event format but are captured in the SPARQL benchmarker summary CSV-files. For GraphDB and Blazegraph the response times are respectively 27\% and 21\% lower than the mean runtimes on WatDiv1000M. For the other engines the difference was close to zero.
+\emph{Query response times} correspond to the lag between sending a query and receiving the first server response. 
+Some of the stores provide query results in a streaming fashion, 
+therefore response times can be different from query runtimes.
+Response times are not captured in the current query event format but are captured in the SPARQL benchmarker summary CSV-files. For GraphDB and Blazegraph the response times are respectively 27\% and 21\% lower than the mean runtimes on WatDiv1000M. For the other engines the difference was close to zero.
 %N1_64_Opt WatDiv 1000M: 
 %Store 			Avg Mix Response 	Avg Mix Runtime
 %Blazegraph: 	7436.614781577 		9361.074445217   	=> 1925 sneller = 21% lager

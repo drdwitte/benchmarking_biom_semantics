@@ -275,12 +275,11 @@ it is not straightforward to make an informed choice between platforms.
 
 %TASK
 \noindent This can be addressed by releasing an updated review of the state-of-the-art periodically and by providing tools and methods to make these more (easily) reproducible. 
-Running a custom benchmark tailored to a specific use case becomes more feasible 
-by simplifying deployment, configuration, and post-processing.
+Running a custom benchmark tailored to a specific use case becomes more feasible by simplifying deployment, configuration, and post-processing.
 %Automatiseren van deployment en postprocessing, objectief maken = repeatable
 \parttitle{Results}
 %OBJECT
-The results in this work are obtained by performing an extensive query performance benchmark. The focus lies on comparing scalable RDF systems and iterating over different hardware options and engine configurations. Contrary to most benchmarking efforts, comparisons are made across different approaches to Linked Data querying by comparing the actual benchmark costs. Both artificial tests and a real case with queries from a biomedical search application are analyzed. To make the interpretation of the benchmark results more reproducible we relied decision trees trained on query features.
+The results in this work are obtained by performing an extensive query performance benchmark. The focus lies on comparing scalable RDF systems and iterating over different hardware options and engine configurations. Contrary to most benchmarking efforts, comparisons are made across different approaches to Linked Data querying by comparing the financial benchmark costs. Both artificial tests and a real case with queries from a biomedical search application are analyzed. To make the interpretation of the benchmark results more reproducible we relied decision trees trained on query features.
 
 %FINDINGS
 \noindent In analyzing the performance results, we discovered that single-node triple stores benefit greatly from vertical scaling and proper configuration. Results show that horizontal scalability is still a real challenge to most systems. 
@@ -489,13 +488,15 @@ We would also like to express our gratitude for the support provided by the staf
 %      A short description of the figure content
 %      should go here.}
 %      \end{figure}
+ 
+\todo{Replace Flu with FedX inside figures!}
   
 %1    
 \begin{figure}[ht!]
 	\centering
 	%\includegraphics[width=0.9\linewidth]{imgs/Fig01_WatdivNoSQLDataScaling}
 	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
-	\caption{ \csentence{Query runtime distributions of \emph{Vendor} systems for 3 different sizes of WatDiv.} Dots correspond to average runtimes, while the horizontal lines in the box plots correspond to median runtimes. The difference is scaling behavior between \textbf{Vir\_32} (linear) and the other stores emphasizes the different impact of server memory on runtime behavior. \textbf{Bla1\_32} and \textbf{Gra1\_32} are very close for batch workloads, for individual queries GraphDB is superior except when scaling up to WatDiv1000M. \textbf{ES1\_32} is the only store with timeout problems starting from WatDiv100M. }
+	\caption{ \csentence{Query runtime distributions of \emph{Vendor} systems for 3 different sizes of WatDiv.} Dots correspond to average runtimes, while the horizontal lines in the box plots correspond to median runtimes. The difference is scaling behavior between \textbf{Vir\_32} (linear) and the other stores emphasizes the different impact of server memory on runtime behavior. \textbf{Bla1\_32} and \textbf{Gra1\_32} are very close in terms of average runtimes, for individual queries GraphDB is superior except when scaling up to WatDiv1000M. \textbf{ES1\_32} is the only store with timeout problems starting from WatDiv100M. }
 	\label{fig:Fig01_WatdivNoSQLDataScaling}
 \end{figure} 
    
@@ -504,16 +505,17 @@ We would also like to express our gratitude for the support provided by the staf
 	\centering
 	%\includegraphics[width=0.9\linewidth]{imgs/Fig02_WatdivVerticalScaling}
 	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
-	\caption{\csentence{Query runtime distributions for WatDiv1000M showing the effect of increasing memory from 32GB (left) to 64GB (center) and \emph{Optimized} configurations (right)}. Virtuoso hardly doesn't benefit from additional memory or better configurations. GraphDB is the most sensitive to proper configuration. In the right panel engine performance starts converging. For batch workloads \textbf{Bla1\_64\_Opt} is the fastest, in terms of median runtimes both \textbf{Vir1\_64\_*} setups perform best.}
+	\caption{\csentence{Query runtime distributions for WatDiv1000M showing the effect of increasing memory from 32GB (left) to 64GB (center) and \emph{Optimized} configurations (right)}. Virtuoso hardly doesn't benefit from additional memory or better configurations. GraphDB is the most sensitive to proper configuration. In the right panel engine performance starts converging. In terms of average runtimes \textbf{Bla1\_64\_Opt} is the fastest, in terms of median runtimes both \textbf{Vir1\_64\_*} setups perform best.}
 	\label{fig:Fig02_WatdivVerticalScaling}
 \end{figure}
 
+%explained in text why there is only a single FedX1 simulation => queries are the same!
 %3      
 \begin{figure}[ht!]
 	\centering
 	%\includegraphics[width=0.99\linewidth]{imgs/Fig03_BenchmarkSurvival_Other_Watdiv_Default}
 	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
-	\caption{\csentence{Benchmark survival interval for 3 \emph{SemWeb} solutions}. For early crashes the amount of queries until system failure is reported, as well as the query template causing the failure. \textbf{Flu3\_64} crashes upon the first occurrence of a \textbf{C3} query. \textbf{Fus1\_64} survives the warm-up run for WatDiv100M but crashes upon the first occurrence of a \textbf{C2} query in the stress test, for WatDiv1000M again the first \textbf{C2} query in the warm-up run causes the crash.}
+	\caption{\csentence{Benchmark survival interval for 3 \emph{SemWeb} solutions}. For early crashes the amount of queries until system failure is reported, as well as the query template causing the failure. \textbf{FedX3\_64} crashes upon the first occurrence of a \textbf{C3} query. \textbf{Fus1\_64} survives the warm-up run for WatDiv100M but crashes upon the first occurrence of a \textbf{C2} query in the stress test, for WatDiv1000M again the first \textbf{C2} query in the warm-up run causes the crash.}
 	\label{fig:Fig03_BenchmarkSurvival_Other_Watdiv_Default}
 \end{figure}   
 
@@ -572,7 +574,7 @@ We would also like to express our gratitude for the support provided by the staf
 	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
 	\caption{\csentence{Overview of successes and errors per query (Y-axis) and thread (X-axis) on the Ontoforce benchmark.}
 		Queries are sorted per system in order to group error behavior and are not consistent between simulations!
-		Blazegraph has a short benchmark survival interval. \textbf{ES1}, \textbf{Gra1} and \textbf{Vir3} Cluster setups have a lot of errors but most queries execute successfully at least once, which allows runtime comparisons. \textbf{Vir3\_64\_Opt\_0} is the most successful Virtuoso cluster run as query completeness analysis revealed that \textbf{Vir3\_64\_Opt\_2} has unreported errors for 37\% of the queries.
+		Blazegraph has a short benchmark survival interval. \textbf{ES1}, \textbf{Gra1} and \textbf{Vir3} Cluster setups have a lot of errors but most queries execute successfully at least once, which allows runtime comparisons. \textbf{Vir3\_64} was re-run multiple times and labeled with an additional index: \textbf{Vir3\_64\_Opt\_0} is the most successful Virtuoso cluster run as query completeness analysis revealed that \textbf{Vir3\_64\_Opt\_2} has unreported errors for 37\% of the queries.
 	}
 	\label{fig:Fig09_FailuresOntoforceBM}
 \end{figure}   

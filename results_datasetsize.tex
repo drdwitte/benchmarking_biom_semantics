@@ -3,7 +3,7 @@
 %RESULTS Rev1: Notebook Rev1_13 - B Errors & Timeout percentage
 %
 The previous benchmark results~\cite{de2016big} stem from the \emph{None} configuration. In this section however, we use the \emph{Default} configuration of the \emph{Vendor} systems.
-In Figure~\ref{fig:Fig01_WatdivNoSQLDataScaling} query runtime distributions are shown for the 4 \emph{Vendor} systems for three different dataset sizes of the WatDiv benchmark: 10M, 100M, and 1000M (million) triples.
+In Figure~\ref{fig:Fig01_WatdivNoSQLDataScaling} query runtime distributions are shown for the 4 \emph{Vendor} systems for three different dataset sizes of the WatDiv benchmark: 10M, 100M, and 1000M (million) triples. Note that for these benchmark runs we used a setup with 32 GB memory.
 %
 %median/mean
 %Bla_N1_32_W10_Def    0.033637		0.058546
@@ -34,9 +34,10 @@ In Figure~\ref{fig:Fig01_WatdivNoSQLDataScaling} query runtime distributions are
 %Es_N1_32_W1000_Def:	Success: 67.2	Error: 0.0	Timeout: 32.7
 %Vir_N1_32_W1000_Def:	Success: 99.9	Error: 0.04	Timeout: 0.0
 \item \textbf{Timeouts \& Errors:} Most of the queries are executed successfully by all \emph{Vendor} systems. For WatDiv1000M \textbf{Bla1\_32} already has a timeout percentage of 11.6\% and for \textbf{ES1\_32} this is even 32.7\%. Note however that these results do not affect the plots as we only use query events from the \emph{benchmark survival interval}. 
-\item \textbf{GraphDB vs Virtuoso:} In terms of median runtime both \textbf{Gra1\_32} and \textbf{Vir1\_32} are tied at 0.01s and 0.05s in the two leftmost panels of Fig.~\ref{fig:Fig01_WatdivNoSQLDataScaling}. With sufficient memory these engines can remain competitive. However, in the 32GB setting only \textbf{Vir1\_32} is performing, with a median runtime of 18.6s. \textbf{Gra\_32}, more than the other stores, suffers from a slow tail which has a major effect on the mix runtimes. There Virtuoso is 1.5-2 times faster.
+\item \textbf{GraphDB vs Virtuoso:} In terms of median runtime both \textbf{Gra1\_32} and \textbf{Vir1\_32} are tied at 0.01s and 0.05s in the two leftmost panels of Fig.~\ref{fig:Fig01_WatdivNoSQLDataScaling}. With sufficient memory these engines can remain competitive. However, for 1000M dataset only \textbf{Vir1\_32} is performing well, with an increase in median runtime with a factor of 18.6 compared to 100M run while the median runtimes of the other stores increase with a factor of 100 or more. 
+\textbf{Gra\_32}, more than the other stores, suffers from a long tail which has a major effect on the average runtimes for WatDiv10M and 100M. If we compare these runtimes, Virtuoso is 1.5-2 times faster.
 
-\item \textbf{Blazegraph vs. GraphDB:} \textbf{Bla1\_32} competes with \textbf{Gra1\_32} for batch workloads but not in terms of median runtimes.
+\item \textbf{Blazegraph vs. GraphDB:} \textbf{Bla1\_32} competes with \textbf{Gra1\_32} in terms of average runtimes but not in terms of median runtimes.
 
 \item \textbf{ES consistently last:} \textbf{ES\_32}, even on WatDiv10M, lags by a factor of at least 5 to the other systems. For WatDiv100M already the nonlinear scaling behavior sets in, making it the only engine to experience problems with the 100M dataset. 
 \end{itemize}
