@@ -1,0 +1,40 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    "?facet_key",
+    "?field_name"
+  ],
+  "distinct": true,
+  "from": {
+    "default": [
+      "http://ns.ontoforce.com/graphs/uploaded_configuration_graph_20160223141343704238"
+    ],
+    "named": []
+  },
+  "where": [
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": "?facet_key",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "http://ns.ontoforce.com/2013/disqover#Facet"
+        },
+        {
+          "subject": "?facet_key",
+          "predicate": "http://ns.ontoforce.com/2013/disqover#solrFieldName",
+          "object": "?field_name"
+        }
+      ]
+    }
+  ],
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "disq": "http://ns.ontoforce.com/2013/disqover#"
+  }
+}

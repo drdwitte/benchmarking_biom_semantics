@@ -1,0 +1,969 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    {
+      "expression": "?class",
+      "variable": "?val"
+    },
+    {
+      "expression": {
+        "expression": "?original",
+        "type": "aggregate",
+        "aggregation": "count",
+        "distinct": true
+      },
+      "variable": "?vc"
+    }
+  ],
+  "where": [
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": "?original",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "?class"
+        }
+      ]
+    },
+    {
+      "type": "union",
+      "patterns": [
+        {
+          "type": "query",
+          "queryType": "SELECT",
+          "variables": [
+            "?original",
+            "?assoc"
+          ],
+          "where": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?original",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?assoc"
+                }
+              ]
+            },
+            {
+              "type": "union",
+              "patterns": [
+                {
+                  "type": "query",
+                  "queryType": "SELECT",
+                  "variables": [
+                    "?class",
+                    "?original_1",
+                    "?p"
+                  ],
+                  "where": [
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original_1_linked",
+                          "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                          "object": "?pref"
+                        },
+                        {
+                          "subject": "?s",
+                          "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                          "object": "?pref"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "union",
+                      "patterns": [
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?s",
+                              "predicate": "?p",
+                              "object": "?original_1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original_1",
+                              "predicate": "?p",
+                              "object": "?s"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original_1",
+                          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                          "object": "?class"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "in",
+                        "args": [
+                          "?original_1_linked",
+                          [
+                            "http://www.ncbi.nlm.nih.gov/gene/100008638",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009017",
+                            "http://www.ncbi.nlm.nih.gov/gene/100302458",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339322",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339570",
+                            "http://www.ncbi.nlm.nih.gov/gene/100341848",
+                            "http://www.ncbi.nlm.nih.gov/gene/100342943",
+                            "http://www.ncbi.nlm.nih.gov/gene/100344172",
+                            "http://www.ncbi.nlm.nih.gov/gene/100345758",
+                            "http://www.ncbi.nlm.nih.gov/gene/100346534",
+                            "http://www.ncbi.nlm.nih.gov/gene/100348980",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354018",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354326",
+                            "http://www.ncbi.nlm.nih.gov/gene/100356081",
+                            "http://www.ncbi.nlm.nih.gov/gene/100358075",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349030",
+                            "http://www.ncbi.nlm.nih.gov/gene/12475",
+                            "http://www.ncbi.nlm.nih.gov/gene/12481",
+                            "http://www.ncbi.nlm.nih.gov/gene/12504",
+                            "http://www.ncbi.nlm.nih.gov/gene/12505",
+                            "http://www.ncbi.nlm.nih.gov/gene/12507",
+                            "http://www.ncbi.nlm.nih.gov/gene/12527",
+                            "http://www.ncbi.nlm.nih.gov/gene/20998",
+                            "http://www.ncbi.nlm.nih.gov/gene/58181",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009116",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008808",
+                            "http://www.ncbi.nlm.nih.gov/gene/100352488",
+                            "http://www.ncbi.nlm.nih.gov/gene/111343",
+                            "http://www.ncbi.nlm.nih.gov/gene/12487",
+                            "http://www.ncbi.nlm.nih.gov/gene/17470",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008681",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354583",
+                            "http://www.ncbi.nlm.nih.gov/gene/103345636",
+                            "http://www.ncbi.nlm.nih.gov/gene/12159",
+                            "http://www.ncbi.nlm.nih.gov/gene/16189",
+                            "http://www.ncbi.nlm.nih.gov/gene/17221",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349580",
+                            "http://www.ncbi.nlm.nih.gov/gene/103350795",
+                            "http://www.ncbi.nlm.nih.gov/gene/102184359",
+                            "http://www.ncbi.nlm.nih.gov/gene/12508",
+                            "http://www.ncbi.nlm.nih.gov/gene/16173"
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "!",
+                        "args": [
+                          {
+                            "type": "operation",
+                            "operator": "in",
+                            "args": [
+                              "?p",
+                              [
+                                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "http://ns.ontoforce.com/2013/disqover#preferredUri"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "query",
+                  "queryType": "SELECT",
+                  "variables": [
+                    "?class",
+                    "?original_1",
+                    "?p"
+                  ],
+                  "where": [
+                    {
+                      "type": "union",
+                      "patterns": [
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original_1_linked",
+                              "predicate": "?p",
+                              "object": "?original_1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original_1",
+                              "predicate": "?p",
+                              "object": "?original_1_linked"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original_1",
+                          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                          "object": "?class"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "in",
+                        "args": [
+                          "?original_1_linked",
+                          [
+                            "http://www.ncbi.nlm.nih.gov/gene/100008638",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009017",
+                            "http://www.ncbi.nlm.nih.gov/gene/100302458",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339322",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339570",
+                            "http://www.ncbi.nlm.nih.gov/gene/100341848",
+                            "http://www.ncbi.nlm.nih.gov/gene/100342943",
+                            "http://www.ncbi.nlm.nih.gov/gene/100344172",
+                            "http://www.ncbi.nlm.nih.gov/gene/100345758",
+                            "http://www.ncbi.nlm.nih.gov/gene/100346534",
+                            "http://www.ncbi.nlm.nih.gov/gene/100348980",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354018",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354326",
+                            "http://www.ncbi.nlm.nih.gov/gene/100356081",
+                            "http://www.ncbi.nlm.nih.gov/gene/100358075",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349030",
+                            "http://www.ncbi.nlm.nih.gov/gene/12475",
+                            "http://www.ncbi.nlm.nih.gov/gene/12481",
+                            "http://www.ncbi.nlm.nih.gov/gene/12504",
+                            "http://www.ncbi.nlm.nih.gov/gene/12505",
+                            "http://www.ncbi.nlm.nih.gov/gene/12507",
+                            "http://www.ncbi.nlm.nih.gov/gene/12527",
+                            "http://www.ncbi.nlm.nih.gov/gene/20998",
+                            "http://www.ncbi.nlm.nih.gov/gene/58181",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009116",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008808",
+                            "http://www.ncbi.nlm.nih.gov/gene/100352488",
+                            "http://www.ncbi.nlm.nih.gov/gene/111343",
+                            "http://www.ncbi.nlm.nih.gov/gene/12487",
+                            "http://www.ncbi.nlm.nih.gov/gene/17470",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008681",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354583",
+                            "http://www.ncbi.nlm.nih.gov/gene/103345636",
+                            "http://www.ncbi.nlm.nih.gov/gene/12159",
+                            "http://www.ncbi.nlm.nih.gov/gene/16189",
+                            "http://www.ncbi.nlm.nih.gov/gene/17221",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349580",
+                            "http://www.ncbi.nlm.nih.gov/gene/103350795",
+                            "http://www.ncbi.nlm.nih.gov/gene/102184359",
+                            "http://www.ncbi.nlm.nih.gov/gene/12508",
+                            "http://www.ncbi.nlm.nih.gov/gene/16173"
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "!",
+                        "args": [
+                          {
+                            "type": "operation",
+                            "operator": "in",
+                            "args": [
+                              "?p",
+                              [
+                                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "http://ns.ontoforce.com/2013/disqover#preferredUri"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "query",
+                  "queryType": "SELECT",
+                  "variables": [
+                    "?class",
+                    "?original_1",
+                    "?p"
+                  ],
+                  "where": [
+                    {
+                      "type": "union",
+                      "patterns": [
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original_1_linked",
+                              "predicate": "?p",
+                              "object": "?original_1_nopref"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original_1_nopref",
+                              "predicate": "?p",
+                              "object": "?original_1_linked"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original_1_nopref",
+                          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                          "object": "?class"
+                        },
+                        {
+                          "subject": "?original_1_nopref",
+                          "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                          "object": "?original_1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "in",
+                        "args": [
+                          "?original_1_linked",
+                          [
+                            "http://www.ncbi.nlm.nih.gov/gene/100008638",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009017",
+                            "http://www.ncbi.nlm.nih.gov/gene/100302458",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339322",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339570",
+                            "http://www.ncbi.nlm.nih.gov/gene/100341848",
+                            "http://www.ncbi.nlm.nih.gov/gene/100342943",
+                            "http://www.ncbi.nlm.nih.gov/gene/100344172",
+                            "http://www.ncbi.nlm.nih.gov/gene/100345758",
+                            "http://www.ncbi.nlm.nih.gov/gene/100346534",
+                            "http://www.ncbi.nlm.nih.gov/gene/100348980",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354018",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354326",
+                            "http://www.ncbi.nlm.nih.gov/gene/100356081",
+                            "http://www.ncbi.nlm.nih.gov/gene/100358075",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349030",
+                            "http://www.ncbi.nlm.nih.gov/gene/12475",
+                            "http://www.ncbi.nlm.nih.gov/gene/12481",
+                            "http://www.ncbi.nlm.nih.gov/gene/12504",
+                            "http://www.ncbi.nlm.nih.gov/gene/12505",
+                            "http://www.ncbi.nlm.nih.gov/gene/12507",
+                            "http://www.ncbi.nlm.nih.gov/gene/12527",
+                            "http://www.ncbi.nlm.nih.gov/gene/20998",
+                            "http://www.ncbi.nlm.nih.gov/gene/58181",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009116",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008808",
+                            "http://www.ncbi.nlm.nih.gov/gene/100352488",
+                            "http://www.ncbi.nlm.nih.gov/gene/111343",
+                            "http://www.ncbi.nlm.nih.gov/gene/12487",
+                            "http://www.ncbi.nlm.nih.gov/gene/17470",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008681",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354583",
+                            "http://www.ncbi.nlm.nih.gov/gene/103345636",
+                            "http://www.ncbi.nlm.nih.gov/gene/12159",
+                            "http://www.ncbi.nlm.nih.gov/gene/16189",
+                            "http://www.ncbi.nlm.nih.gov/gene/17221",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349580",
+                            "http://www.ncbi.nlm.nih.gov/gene/103350795",
+                            "http://www.ncbi.nlm.nih.gov/gene/102184359",
+                            "http://www.ncbi.nlm.nih.gov/gene/12508",
+                            "http://www.ncbi.nlm.nih.gov/gene/16173"
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "!",
+                        "args": [
+                          {
+                            "type": "operation",
+                            "operator": "in",
+                            "args": [
+                              "?p",
+                              [
+                                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "http://ns.ontoforce.com/2013/disqover#preferredUri"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "!=",
+                        "args": [
+                          "?original_1_nopref",
+                          "?original_1"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?original_1",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?assoc"
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_2"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_3"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "query",
+          "queryType": "SELECT",
+          "variables": [
+            "?original",
+            "?assoc"
+          ],
+          "where": [
+            {
+              "type": "union",
+              "patterns": [
+                {
+                  "type": "query",
+                  "queryType": "SELECT",
+                  "variables": [
+                    "?class",
+                    "?original",
+                    "?p"
+                  ],
+                  "where": [
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original_linked",
+                          "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                          "object": "?pref"
+                        },
+                        {
+                          "subject": "?s",
+                          "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                          "object": "?pref"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "union",
+                      "patterns": [
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?s",
+                              "predicate": "?p",
+                              "object": "?original"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original",
+                              "predicate": "?p",
+                              "object": "?s"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original",
+                          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                          "object": "?class"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "in",
+                        "args": [
+                          "?original_linked",
+                          [
+                            "http://www.ncbi.nlm.nih.gov/gene/100008638",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009017",
+                            "http://www.ncbi.nlm.nih.gov/gene/100302458",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339322",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339570",
+                            "http://www.ncbi.nlm.nih.gov/gene/100341848",
+                            "http://www.ncbi.nlm.nih.gov/gene/100342943",
+                            "http://www.ncbi.nlm.nih.gov/gene/100344172",
+                            "http://www.ncbi.nlm.nih.gov/gene/100345758",
+                            "http://www.ncbi.nlm.nih.gov/gene/100346534",
+                            "http://www.ncbi.nlm.nih.gov/gene/100348980",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354018",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354326",
+                            "http://www.ncbi.nlm.nih.gov/gene/100356081",
+                            "http://www.ncbi.nlm.nih.gov/gene/100358075",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349030",
+                            "http://www.ncbi.nlm.nih.gov/gene/12475",
+                            "http://www.ncbi.nlm.nih.gov/gene/12481",
+                            "http://www.ncbi.nlm.nih.gov/gene/12504",
+                            "http://www.ncbi.nlm.nih.gov/gene/12505",
+                            "http://www.ncbi.nlm.nih.gov/gene/12507",
+                            "http://www.ncbi.nlm.nih.gov/gene/12527",
+                            "http://www.ncbi.nlm.nih.gov/gene/20998",
+                            "http://www.ncbi.nlm.nih.gov/gene/58181",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009116",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008808",
+                            "http://www.ncbi.nlm.nih.gov/gene/100352488",
+                            "http://www.ncbi.nlm.nih.gov/gene/111343",
+                            "http://www.ncbi.nlm.nih.gov/gene/12487",
+                            "http://www.ncbi.nlm.nih.gov/gene/17470",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008681",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354583",
+                            "http://www.ncbi.nlm.nih.gov/gene/103345636",
+                            "http://www.ncbi.nlm.nih.gov/gene/12159",
+                            "http://www.ncbi.nlm.nih.gov/gene/16189",
+                            "http://www.ncbi.nlm.nih.gov/gene/17221",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349580",
+                            "http://www.ncbi.nlm.nih.gov/gene/103350795",
+                            "http://www.ncbi.nlm.nih.gov/gene/102184359",
+                            "http://www.ncbi.nlm.nih.gov/gene/12508",
+                            "http://www.ncbi.nlm.nih.gov/gene/16173"
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "!",
+                        "args": [
+                          {
+                            "type": "operation",
+                            "operator": "in",
+                            "args": [
+                              "?p",
+                              [
+                                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "http://ns.ontoforce.com/2013/disqover#preferredUri"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "query",
+                  "queryType": "SELECT",
+                  "variables": [
+                    "?class",
+                    "?original",
+                    "?p"
+                  ],
+                  "where": [
+                    {
+                      "type": "union",
+                      "patterns": [
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original_linked",
+                              "predicate": "?p",
+                              "object": "?original"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original",
+                              "predicate": "?p",
+                              "object": "?original_linked"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original",
+                          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                          "object": "?class"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "in",
+                        "args": [
+                          "?original_linked",
+                          [
+                            "http://www.ncbi.nlm.nih.gov/gene/100008638",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009017",
+                            "http://www.ncbi.nlm.nih.gov/gene/100302458",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339322",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339570",
+                            "http://www.ncbi.nlm.nih.gov/gene/100341848",
+                            "http://www.ncbi.nlm.nih.gov/gene/100342943",
+                            "http://www.ncbi.nlm.nih.gov/gene/100344172",
+                            "http://www.ncbi.nlm.nih.gov/gene/100345758",
+                            "http://www.ncbi.nlm.nih.gov/gene/100346534",
+                            "http://www.ncbi.nlm.nih.gov/gene/100348980",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354018",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354326",
+                            "http://www.ncbi.nlm.nih.gov/gene/100356081",
+                            "http://www.ncbi.nlm.nih.gov/gene/100358075",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349030",
+                            "http://www.ncbi.nlm.nih.gov/gene/12475",
+                            "http://www.ncbi.nlm.nih.gov/gene/12481",
+                            "http://www.ncbi.nlm.nih.gov/gene/12504",
+                            "http://www.ncbi.nlm.nih.gov/gene/12505",
+                            "http://www.ncbi.nlm.nih.gov/gene/12507",
+                            "http://www.ncbi.nlm.nih.gov/gene/12527",
+                            "http://www.ncbi.nlm.nih.gov/gene/20998",
+                            "http://www.ncbi.nlm.nih.gov/gene/58181",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009116",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008808",
+                            "http://www.ncbi.nlm.nih.gov/gene/100352488",
+                            "http://www.ncbi.nlm.nih.gov/gene/111343",
+                            "http://www.ncbi.nlm.nih.gov/gene/12487",
+                            "http://www.ncbi.nlm.nih.gov/gene/17470",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008681",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354583",
+                            "http://www.ncbi.nlm.nih.gov/gene/103345636",
+                            "http://www.ncbi.nlm.nih.gov/gene/12159",
+                            "http://www.ncbi.nlm.nih.gov/gene/16189",
+                            "http://www.ncbi.nlm.nih.gov/gene/17221",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349580",
+                            "http://www.ncbi.nlm.nih.gov/gene/103350795",
+                            "http://www.ncbi.nlm.nih.gov/gene/102184359",
+                            "http://www.ncbi.nlm.nih.gov/gene/12508",
+                            "http://www.ncbi.nlm.nih.gov/gene/16173"
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "!",
+                        "args": [
+                          {
+                            "type": "operation",
+                            "operator": "in",
+                            "args": [
+                              "?p",
+                              [
+                                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "http://ns.ontoforce.com/2013/disqover#preferredUri"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "query",
+                  "queryType": "SELECT",
+                  "variables": [
+                    "?class",
+                    "?original",
+                    "?p"
+                  ],
+                  "where": [
+                    {
+                      "type": "union",
+                      "patterns": [
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original_linked",
+                              "predicate": "?p",
+                              "object": "?original_nopref"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "bgp",
+                          "triples": [
+                            {
+                              "subject": "?original_nopref",
+                              "predicate": "?p",
+                              "object": "?original_linked"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original_nopref",
+                          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                          "object": "?class"
+                        },
+                        {
+                          "subject": "?original_nopref",
+                          "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                          "object": "?original"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "in",
+                        "args": [
+                          "?original_linked",
+                          [
+                            "http://www.ncbi.nlm.nih.gov/gene/100008638",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009017",
+                            "http://www.ncbi.nlm.nih.gov/gene/100302458",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339322",
+                            "http://www.ncbi.nlm.nih.gov/gene/100339570",
+                            "http://www.ncbi.nlm.nih.gov/gene/100341848",
+                            "http://www.ncbi.nlm.nih.gov/gene/100342943",
+                            "http://www.ncbi.nlm.nih.gov/gene/100344172",
+                            "http://www.ncbi.nlm.nih.gov/gene/100345758",
+                            "http://www.ncbi.nlm.nih.gov/gene/100346534",
+                            "http://www.ncbi.nlm.nih.gov/gene/100348980",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354018",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354326",
+                            "http://www.ncbi.nlm.nih.gov/gene/100356081",
+                            "http://www.ncbi.nlm.nih.gov/gene/100358075",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349030",
+                            "http://www.ncbi.nlm.nih.gov/gene/12475",
+                            "http://www.ncbi.nlm.nih.gov/gene/12481",
+                            "http://www.ncbi.nlm.nih.gov/gene/12504",
+                            "http://www.ncbi.nlm.nih.gov/gene/12505",
+                            "http://www.ncbi.nlm.nih.gov/gene/12507",
+                            "http://www.ncbi.nlm.nih.gov/gene/12527",
+                            "http://www.ncbi.nlm.nih.gov/gene/20998",
+                            "http://www.ncbi.nlm.nih.gov/gene/58181",
+                            "http://www.ncbi.nlm.nih.gov/gene/100009116",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008808",
+                            "http://www.ncbi.nlm.nih.gov/gene/100352488",
+                            "http://www.ncbi.nlm.nih.gov/gene/111343",
+                            "http://www.ncbi.nlm.nih.gov/gene/12487",
+                            "http://www.ncbi.nlm.nih.gov/gene/17470",
+                            "http://www.ncbi.nlm.nih.gov/gene/100008681",
+                            "http://www.ncbi.nlm.nih.gov/gene/100354583",
+                            "http://www.ncbi.nlm.nih.gov/gene/103345636",
+                            "http://www.ncbi.nlm.nih.gov/gene/12159",
+                            "http://www.ncbi.nlm.nih.gov/gene/16189",
+                            "http://www.ncbi.nlm.nih.gov/gene/17221",
+                            "http://www.ncbi.nlm.nih.gov/gene/103349580",
+                            "http://www.ncbi.nlm.nih.gov/gene/103350795",
+                            "http://www.ncbi.nlm.nih.gov/gene/102184359",
+                            "http://www.ncbi.nlm.nih.gov/gene/12508",
+                            "http://www.ncbi.nlm.nih.gov/gene/16173"
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "!",
+                        "args": [
+                          {
+                            "type": "operation",
+                            "operator": "in",
+                            "args": [
+                              "?p",
+                              [
+                                "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                                "http://ns.ontoforce.com/2013/disqover#preferredUri"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "!=",
+                        "args": [
+                          "?original_nopref",
+                          "?original"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "optional",
+              "patterns": [
+                {
+                  "type": "bgp",
+                  "triples": [
+                    {
+                      "subject": "?original",
+                      "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                      "object": "?assoc"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?assoc"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_2"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_3"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "expression": "?class"
+    }
+  ],
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/"
+  }
+}

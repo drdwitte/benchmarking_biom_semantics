@@ -1,0 +1,1096 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    {
+      "expression": {
+        "expression": "?id",
+        "type": "aggregate",
+        "aggregation": "count",
+        "distinct": true
+      },
+      "variable": "?total_count"
+    }
+  ],
+  "where": [
+    {
+      "type": "union",
+      "patterns": [
+        {
+          "type": "query",
+          "queryType": "SELECT",
+          "variables": [
+            "?original",
+            "?id",
+            "?v"
+          ],
+          "where": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?original",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                },
+                {
+                  "subject": "?original_1",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "object": "?v"
+                },
+                {
+                  "subject": "?original_2",
+                  "predicate": "?facet_source_1",
+                  "object": "?facet_value_1"
+                },
+                {
+                  "subject": "?original_3",
+                  "predicate": "?facet_source_2",
+                  "object": "?facet_value_2"
+                }
+              ]
+            },
+            {
+              "type": "union",
+              "patterns": [
+                {
+                  "type": "optional",
+                  "patterns": [
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original_4",
+                          "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                          "object": "?id"
+                        },
+                        {
+                          "subject": "?original_4",
+                          "predicate": "http://ns.ontoforce.com/ontologies/drugchemical/group",
+                          "object": "?facet_value_3"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "patterns": [
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original_5",
+                          "predicate": "?facet_source_3",
+                          "object": "?facet_value_4"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "=",
+                        "args": [
+                          "?facet_source_3",
+                          "http://ns.ontoforce.com/ontologies/drugchemical/group"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "=",
+                        "args": [
+                          "?facet_value_4",
+                          "http://ns.ontoforce.com/ontologies/drugchemical/withdrawn"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "patterns": [
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original_6",
+                          "predicate": "?facet_source_4",
+                          "object": "?facet_value_5"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "=",
+                        "args": [
+                          "?facet_source_4",
+                          "http://ns.ontoforce.com/ontologies/drugchemical/group"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "=",
+                        "args": [
+                          "?facet_value_5",
+                          "http://ns.ontoforce.com/ontologies/drugchemical/nutraceutical"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?original_1",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                },
+                {
+                  "subject": "?original_2",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                },
+                {
+                  "subject": "?original_3",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                },
+                {
+                  "subject": "?original_5",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                },
+                {
+                  "subject": "?original_6",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "in",
+                "args": [
+                  "?v",
+                  [
+                    "http://purl.obolibrary.org/obo/ERO_0000230",
+                    "http://purl.obolibrary.org/obo/ERO_0000229",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Assay",
+                    "http://purl.obolibrary.org/obo/ERO_0000990",
+                    "http://purl.obolibrary.org/obo/ERO_0000989",
+                    "http://purl.obolibrary.org/obo/ERO_0000988",
+                    "http://purl.obolibrary.org/obo/ERO_0000020",
+                    "http://rdf.ebi.ac.uk/terms/chembl#CellLine",
+                    "http://ns.ontoforce.com/2013/disqover#antibody_related_cell_line_class",
+                    "http://purl.obolibrary.org/obo/ERO_0001400",
+                    "http://purl.obolibrary.org/obo/ERO_0001399",
+                    "http://purl.obolibrary.org/obo/ERO_0001962",
+                    "http://purl.obolibrary.org/obo/ERO_0001398",
+                    "http://purl.obolibrary.org/obo/ERO_0001397",
+                    "http://purl.obolibrary.org/obo/ERO_0001396",
+                    "http://purl.obolibrary.org/obo/ERO_0000009",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/WHO",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/ClinicalTrial",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/phenotype",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/do_disease",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/meshDisease",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/SMQ",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/meddraCondition",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/condition",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/Disorder",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/icd9_DiseaseOrInjury",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/ICD10",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/disease",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/icd10_DiseaseOrInjury",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/meshDrugChemical",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/cofactor",
+                    "http://ns.ontoforce.com/ontologies/integration_ontology#DrugIntervention",
+                    "http://rdf.ebi.ac.uk/terms/chembl#OligosaccharideTarget",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Compound",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMoleculeTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMolecule",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Drug",
+                    "http://ns.ontoforce.com/ontologies/dailymed/Drug",
+                    "http://ns.ontoforce.com/ontologies/enzyme/classes/meshEnzyme",
+                    "http://ns.ontoforce.com/ontologies/enzyme/classes/enzyme",
+                    "http://rdf.ebi.ac.uk/terms/chembl#EnzymeClassRef",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Enzyme",
+                    "http://ns.ontoforce.com/ontologies/gene/classes/umlsGene",
+                    "http://ns.ontoforce.com/ontologies/gene/classes/GeneOrdo",
+                    "http://ns.ontoforce.com/ontologies/gene/classes/Gene",
+                    "http://ns.ontoforce.com/ontologies/gene/classes/GeneNcbi",
+                    "http://ns.ontoforce.com/ontologies/homology/classes/HomologeneGroup",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Journal",
+                    "http://purl.org/ontology/bibo/Journal",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/rxnormMedicine",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/umlsMedicine",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/Product",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/umlsOrganism",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/meshOrganism",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/division",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/taxonomy",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/nif_taxonomy",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/eaglei_taxonomy",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Organism",
+                    "http://ns.ontoforce.com/ontologies/organization/classes/labeler",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/applicant_organisation",
+                    "http://ns.ontoforce.com/ontologies/organization/classes/location",
+                    "http://vivoweb.org/ontology/core#School",
+                    "http://vivoweb.org/ontology/core#University",
+                    "http://vivoweb.org/ontology/core#ResearchOrganization",
+                    "http://vivoweb.org/ontology/core#Hospital",
+                    "http://vivoweb.org/ontology/core#PrivateCompany",
+                    "http://vivoweb.org/ontology/core#Company",
+                    "http://vivoweb.org/ontology/core#GovernmentAgency",
+                    "http://vivoweb.org/ontology/core#Association",
+                    "http://vivoweb.org/ontology/core#AcademicDepartment",
+                    "http://purl.obolibrary.org/obo/ERO_0001993",
+                    "http://purl.obolibrary.org/obo/ERO_0001844",
+                    "http://vivoweb.org/ontology/core#Division",
+                    "http://vivoweb.org/ontology/core#Institute",
+                    "http://vivoweb.org/ontology/core#ClinicalOrganization",
+                    "http://vivoweb.org/ontology/core#Center",
+                    "http://vivoweb.org/ontology/core#Foundation",
+                    "http://vivoweb.org/ontology/core#Laboratory",
+                    "http://vivoweb.org/ontology/core#ServiceProvidingLaboratory",
+                    "http://vivoweb.org/ontology/core#Consortium",
+                    "http://vivoweb.org/ontology/core#CoreLaboratory",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/labeler",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/facility",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/collaborator",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/lead_sponsor",
+                    "http://ns.ontoforce.com/ontologies/organization/classes/vendor",
+                    "http://ns.ontoforce.com/ontologies/patent/classes/Family",
+                    "http://rdf.ebi.ac.uk/terms/chembl#IbmPatentStructureRef",
+                    "http://rdf.ebi.ac.uk/terms/chembl#IbmPatentRef",
+                    "http://ns.ontoforce.com/ontologies/patent/classes/Patent",
+                    "http://ns.ontoforce.com/ontologies/pathway/classes/react_pathway",
+                    "http://ns.ontoforce.com/ontologies/pathway/classes/wp_Pathway",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/contact",
+                    "http://ns.ontoforce.com/ontologies/person/classes/applicant_person",
+                    "http://ns.ontoforce.com/ontologies/person/classes/inventor",
+                    "http://xmlns.com/foaf/0.1/Person",
+                    "http://ns.ontoforce.com/ontologies/person/classes/contact",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/Person",
+                    "http://ns.ontoforce.com/ontologies/person/classes/Person",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/Person",
+                    "http://purl.obolibrary.org/obo/ERO_0000592",
+                    "http://purl.obolibrary.org/obo/ERO_0000593",
+                    "http://purl.obolibrary.org/obo/ERO_0000591",
+                    "http://purl.obolibrary.org/obo/ERO_0000594",
+                    "http://purl.obolibrary.org/obo/ERO_0000620",
+                    "http://purl.obolibrary.org/obo/ERO_0000619",
+                    "http://purl.obolibrary.org/obo/ERO_0001137",
+                    "http://purl.obolibrary.org/obo/ERO_0001139",
+                    "http://purl.obolibrary.org/obo/ERO_0001138",
+                    "http://purl.obolibrary.org/obo/ERO_0001136",
+                    "http://purl.obolibrary.org/obo/ERO_0001135",
+                    "http://purl.obolibrary.org/obo/ERO_0001514",
+                    "http://purl.obolibrary.org/obo/ERO_0001142",
+                    "http://purl.obolibrary.org/obo/ERO_0000290",
+                    "http://purl.obolibrary.org/obo/ERO_0000289",
+                    "http://purl.obolibrary.org/obo/ERO_0001140",
+                    "http://purl.obolibrary.org/obo/ERO_0001195",
+                    "http://purl.obolibrary.org/obo/OBI_0000410",
+                    "http://purl.obolibrary.org/obo/ERO_0000295",
+                    "http://purl.obolibrary.org/obo/ERO_0000621",
+                    "http://purl.obolibrary.org/obo/ERO_0000431",
+                    "http://purl.obolibrary.org/obo/ERO_0000287",
+                    "http://purl.obolibrary.org/obo/ERO_0000288",
+                    "http://purl.obolibrary.org/obo/ERO_0001158",
+                    "http://purl.obolibrary.org/obo/ERO_0000286",
+                    "http://purl.obolibrary.org/obo/ERO_0001133",
+                    "http://purl.obolibrary.org/obo/ERO_0000285",
+                    "http://ns.ontoforce.com/ontologies/protein/classes/meshProtein",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SingleProtein",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ChimericProtein",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinMolecule",
+                    "http://ns.ontoforce.com/ontologies/protein/classes/Protein",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Document",
+                    "http://purl.org/spar/biro/BibliographicRecord",
+                    "http://ns.ontoforce.com/ontologies/relation/classes/gene_disease_association",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Activity",
+                    "http://ns.ontoforce.com/ontologies/relation/classes/relation_type",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/onset_clinicalcourse",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/mortality_aging",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/inheritance",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/umlsGo",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/rxnormUncat",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/atc",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/mitochondrial_genetic_code",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/genetic_code",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/notCondition",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/condition_nonvalidated",
+                    "http://purl.obolibrary.org/obo/ERO_0001536",
+                    "http://purl.obolibrary.org/obo/ERO_0001551",
+                    "http://purl.obolibrary.org/obo/ERO_0001545",
+                    "http://purl.obolibrary.org/obo/ERO_0000404",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/cpc_tree/classification",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classification",
+                    "http://ns.ontoforce.com/2013/disqover#missingValue",
+                    "http://ns.ontoforce.com/2013/disqover#related_technique_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/AnatomyPart",
+                    "http://ns.ontoforce.com/2013/disqover#cellline_type_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Country",
+                    "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass",
+                    "http://www.orpha.net/ORDO/Orphanet_C023",
+                    "http://www.orpha.net/ORDO/Orphanet_C012",
+                    "http://www.orpha.net/ORDO/Orphanet_C005",
+                    "http://rdf.ebi.ac.uk/terms/chembl#InterproRef",
+                    "http://www.geneontology.org/dtds/go.dtd#term",
+                    "http://rdf.ebi.ac.uk/terms/chembl#UnknownTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#UnclassifiedTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Tissue",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SubCellular",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Phenotype",
+                    "http://rdf.ebi.ac.uk/terms/chembl#NucleicAcid",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Macromolecule",
+                    "http://rdf.ebi.ac.uk/terms/chembl#CellLineTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ADMET",
+                    "http://ns.ontoforce.com/ontologies/mesh/SupplementalRecord",
+                    "http://ns.ontoforce.com/ontologies/atc/ATC_Code",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Grant",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/MeshTag",
+                    "http://purl.org/dc/terms/LinguisticSystem",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Repeat",
+                    "http://ns.ontoforce.com/ontologies/interpro/PTM",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Family",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Domain",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Sites",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinClassification",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinSelectivityGroup",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinProteinInteraction",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinComplexGroup",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinFamily",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinComplex",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinNucleicAcidComplex",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinTarget",
+                    "http://ns.ontoforce.com/configuration#plasmid_location",
+                    "http://ns.ontoforce.com/configuration#plasmid_selectable_marker",
+                    "http://ns.ontoforce.com/configuration#plasmid_expression_organism",
+                    "http://ns.ontoforce.com/2013/disqover#plasmid_insert_type_class",
+                    "http://ns.ontoforce.com/2013/disqover#plasmid_type_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/applicant_person",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/inventor",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/office",
+                    "http://ns.ontoforce.com/ontologies/epo/types/office",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/marketing_cat",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/pharclass_chemical_ingredient",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/pharclass_pe",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/pharclass_moa",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/pharclass_epc",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/route_name",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/dosage_form",
+                    "http://ns.ontoforce.com/ontologies/homology/classes/related_homology_resources",
+                    "http://ns.ontoforce.com/ontologies/homology/classes/conserved_domains",
+                    "http://ns.ontoforce.com/ontologies/homology/classes/phenotypes",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/status",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/RefSeqStatus",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/geneType",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/chromosome",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/nomenclatureStatus",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/defaultSymbol",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/GO_term_function",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/GO_term_component",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/GO_term_process",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/GO_term",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/hierarchy",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/affectedOrganism",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/group",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/manufacturer",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/typeTag",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/phaseTag",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Mechanism",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Mechanism",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/maddra_uncat_child",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/maddra_uncat_parent",
+                    "http://ns.ontoforce.com/datasets/uncategorized/classes/ordo_relation",
+                    "http://ns.ontoforce.com/datasets/uncategorized/classes/uncat_child",
+                    "http://ns.ontoforce.com/datasets/uncategorized/classes/uncat_parent",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/cause",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/inheritance_type",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/causative_agent",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/finding_site",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/manifestation",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/has_child",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/has_parent",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/clinical_course",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/occasionalClinicalSign",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/frequentClinicalSign",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/veryFrequentClinicalSign",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/clinicalSign",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/prevalence_at_birth_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/point_prevalence_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/lifetime_prevalence_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/annual_incidence_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/avr_age_of_death",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/avr_age_of_onset",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/type_of_inheritance",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/meddra",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/timePerspective",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/observationalModel",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/primaryPurpose",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/masking",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/interventionModel",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/allocation",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/endpoint",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/condition",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/registry",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/gender",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/country",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/status",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/phase",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/study_type",
+                    "http://purl.obolibrary.org/obo/ERO_0001964",
+                    "http://purl.obolibrary.org/obo/ERO_0000015",
+                    "http://ns.ontoforce.com/configuration#biospecimen_location",
+                    "http://ns.ontoforce.com/configuration#biospecimen_source_anatomical_structure",
+                    "http://ns.ontoforce.com/2013/disqover#antibody_isotype_class",
+                    "http://ns.ontoforce.com/2013/disqover#antibody_immogenic_material_type_class",
+                    "http://ns.ontoforce.com/2013/disqover#target_type_class",
+                    "http://ns.ontoforce.com/configuration#antibody_related_technique",
+                    "http://ns.ontoforce.com/2013/disqover#antibody_type_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/TaxonomyTag",
+                    "http://ns.ontoforce.com/ontologies/genomicvariant/classes/SNP"
+                  ]
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_1",
+                  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "in",
+                "args": [
+                  "?facet_value_1",
+                  [
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/meshDrugChemical",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/cofactor",
+                    "http://ns.ontoforce.com/ontologies/integration_ontology#DrugIntervention",
+                    "http://rdf.ebi.ac.uk/terms/chembl#OligosaccharideTarget",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Compound",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMoleculeTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMolecule",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Drug",
+                    "http://ns.ontoforce.com/ontologies/dailymed/Drug"
+                  ]
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_2",
+                  "http://ns.ontoforce.com/ontologies/drugchemical/highestDevelopmentPhase"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_value_2",
+                  "http://ns.ontoforce.com/ontologies/chembl/4"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_3"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "query",
+          "queryType": "SELECT",
+          "variables": [
+            "?original",
+            "?id",
+            "?v"
+          ],
+          "where": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?original",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "object": "?v"
+                },
+                {
+                  "subject": "?original",
+                  "predicate": "?facet_source_5",
+                  "object": "?facet_value_6"
+                },
+                {
+                  "subject": "?original",
+                  "predicate": "?facet_source_6",
+                  "object": "?facet_value_7"
+                }
+              ]
+            },
+            {
+              "type": "union",
+              "patterns": [
+                {
+                  "type": "optional",
+                  "patterns": [
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original",
+                          "predicate": "http://ns.ontoforce.com/ontologies/drugchemical/group",
+                          "object": "?facet_value_8"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "patterns": [
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original",
+                          "predicate": "?facet_source_7",
+                          "object": "?facet_value_9"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "=",
+                        "args": [
+                          "?facet_source_7",
+                          "http://ns.ontoforce.com/ontologies/drugchemical/group"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "=",
+                        "args": [
+                          "?facet_value_9",
+                          "http://ns.ontoforce.com/ontologies/drugchemical/withdrawn"
+                        ]
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "group",
+                  "patterns": [
+                    {
+                      "type": "bgp",
+                      "triples": [
+                        {
+                          "subject": "?original",
+                          "predicate": "?facet_source_8",
+                          "object": "?facet_value_10"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "=",
+                        "args": [
+                          "?facet_source_8",
+                          "http://ns.ontoforce.com/ontologies/drugchemical/group"
+                        ]
+                      }
+                    },
+                    {
+                      "type": "filter",
+                      "expression": {
+                        "type": "operation",
+                        "operator": "=",
+                        "args": [
+                          "?facet_value_10",
+                          "http://ns.ontoforce.com/ontologies/drugchemical/nutraceutical"
+                        ]
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "optional",
+              "patterns": [
+                {
+                  "type": "bgp",
+                  "triples": [
+                    {
+                      "subject": "?original",
+                      "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                      "object": "?id"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "in",
+                "args": [
+                  "?v",
+                  [
+                    "http://purl.obolibrary.org/obo/ERO_0000230",
+                    "http://purl.obolibrary.org/obo/ERO_0000229",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Assay",
+                    "http://purl.obolibrary.org/obo/ERO_0000990",
+                    "http://purl.obolibrary.org/obo/ERO_0000989",
+                    "http://purl.obolibrary.org/obo/ERO_0000988",
+                    "http://purl.obolibrary.org/obo/ERO_0000020",
+                    "http://rdf.ebi.ac.uk/terms/chembl#CellLine",
+                    "http://ns.ontoforce.com/2013/disqover#antibody_related_cell_line_class",
+                    "http://purl.obolibrary.org/obo/ERO_0001400",
+                    "http://purl.obolibrary.org/obo/ERO_0001399",
+                    "http://purl.obolibrary.org/obo/ERO_0001962",
+                    "http://purl.obolibrary.org/obo/ERO_0001398",
+                    "http://purl.obolibrary.org/obo/ERO_0001397",
+                    "http://purl.obolibrary.org/obo/ERO_0001396",
+                    "http://purl.obolibrary.org/obo/ERO_0000009",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/WHO",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/ClinicalTrial",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/phenotype",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/do_disease",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/meshDisease",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/SMQ",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/meddraCondition",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/condition",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/Disorder",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/icd9_DiseaseOrInjury",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/ICD10",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/disease",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/icd10_DiseaseOrInjury",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/meshDrugChemical",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/cofactor",
+                    "http://ns.ontoforce.com/ontologies/integration_ontology#DrugIntervention",
+                    "http://rdf.ebi.ac.uk/terms/chembl#OligosaccharideTarget",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Compound",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMoleculeTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMolecule",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Drug",
+                    "http://ns.ontoforce.com/ontologies/dailymed/Drug",
+                    "http://ns.ontoforce.com/ontologies/enzyme/classes/meshEnzyme",
+                    "http://ns.ontoforce.com/ontologies/enzyme/classes/enzyme",
+                    "http://rdf.ebi.ac.uk/terms/chembl#EnzymeClassRef",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Enzyme",
+                    "http://ns.ontoforce.com/ontologies/gene/classes/umlsGene",
+                    "http://ns.ontoforce.com/ontologies/gene/classes/GeneOrdo",
+                    "http://ns.ontoforce.com/ontologies/gene/classes/Gene",
+                    "http://ns.ontoforce.com/ontologies/gene/classes/GeneNcbi",
+                    "http://ns.ontoforce.com/ontologies/homology/classes/HomologeneGroup",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Journal",
+                    "http://purl.org/ontology/bibo/Journal",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/rxnormMedicine",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/umlsMedicine",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/Product",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/umlsOrganism",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/meshOrganism",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/division",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/taxonomy",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/nif_taxonomy",
+                    "http://ns.ontoforce.com/ontologies/organism/classes/eaglei_taxonomy",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Organism",
+                    "http://ns.ontoforce.com/ontologies/organization/classes/labeler",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/applicant_organisation",
+                    "http://ns.ontoforce.com/ontologies/organization/classes/location",
+                    "http://vivoweb.org/ontology/core#School",
+                    "http://vivoweb.org/ontology/core#University",
+                    "http://vivoweb.org/ontology/core#ResearchOrganization",
+                    "http://vivoweb.org/ontology/core#Hospital",
+                    "http://vivoweb.org/ontology/core#PrivateCompany",
+                    "http://vivoweb.org/ontology/core#Company",
+                    "http://vivoweb.org/ontology/core#GovernmentAgency",
+                    "http://vivoweb.org/ontology/core#Association",
+                    "http://vivoweb.org/ontology/core#AcademicDepartment",
+                    "http://purl.obolibrary.org/obo/ERO_0001993",
+                    "http://purl.obolibrary.org/obo/ERO_0001844",
+                    "http://vivoweb.org/ontology/core#Division",
+                    "http://vivoweb.org/ontology/core#Institute",
+                    "http://vivoweb.org/ontology/core#ClinicalOrganization",
+                    "http://vivoweb.org/ontology/core#Center",
+                    "http://vivoweb.org/ontology/core#Foundation",
+                    "http://vivoweb.org/ontology/core#Laboratory",
+                    "http://vivoweb.org/ontology/core#ServiceProvidingLaboratory",
+                    "http://vivoweb.org/ontology/core#Consortium",
+                    "http://vivoweb.org/ontology/core#CoreLaboratory",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/labeler",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/facility",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/collaborator",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/lead_sponsor",
+                    "http://ns.ontoforce.com/ontologies/organization/classes/vendor",
+                    "http://ns.ontoforce.com/ontologies/patent/classes/Family",
+                    "http://rdf.ebi.ac.uk/terms/chembl#IbmPatentStructureRef",
+                    "http://rdf.ebi.ac.uk/terms/chembl#IbmPatentRef",
+                    "http://ns.ontoforce.com/ontologies/patent/classes/Patent",
+                    "http://ns.ontoforce.com/ontologies/pathway/classes/react_pathway",
+                    "http://ns.ontoforce.com/ontologies/pathway/classes/wp_Pathway",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/contact",
+                    "http://ns.ontoforce.com/ontologies/person/classes/applicant_person",
+                    "http://ns.ontoforce.com/ontologies/person/classes/inventor",
+                    "http://xmlns.com/foaf/0.1/Person",
+                    "http://ns.ontoforce.com/ontologies/person/classes/contact",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/Person",
+                    "http://ns.ontoforce.com/ontologies/person/classes/Person",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/Person",
+                    "http://purl.obolibrary.org/obo/ERO_0000592",
+                    "http://purl.obolibrary.org/obo/ERO_0000593",
+                    "http://purl.obolibrary.org/obo/ERO_0000591",
+                    "http://purl.obolibrary.org/obo/ERO_0000594",
+                    "http://purl.obolibrary.org/obo/ERO_0000620",
+                    "http://purl.obolibrary.org/obo/ERO_0000619",
+                    "http://purl.obolibrary.org/obo/ERO_0001137",
+                    "http://purl.obolibrary.org/obo/ERO_0001139",
+                    "http://purl.obolibrary.org/obo/ERO_0001138",
+                    "http://purl.obolibrary.org/obo/ERO_0001136",
+                    "http://purl.obolibrary.org/obo/ERO_0001135",
+                    "http://purl.obolibrary.org/obo/ERO_0001514",
+                    "http://purl.obolibrary.org/obo/ERO_0001142",
+                    "http://purl.obolibrary.org/obo/ERO_0000290",
+                    "http://purl.obolibrary.org/obo/ERO_0000289",
+                    "http://purl.obolibrary.org/obo/ERO_0001140",
+                    "http://purl.obolibrary.org/obo/ERO_0001195",
+                    "http://purl.obolibrary.org/obo/OBI_0000410",
+                    "http://purl.obolibrary.org/obo/ERO_0000295",
+                    "http://purl.obolibrary.org/obo/ERO_0000621",
+                    "http://purl.obolibrary.org/obo/ERO_0000431",
+                    "http://purl.obolibrary.org/obo/ERO_0000287",
+                    "http://purl.obolibrary.org/obo/ERO_0000288",
+                    "http://purl.obolibrary.org/obo/ERO_0001158",
+                    "http://purl.obolibrary.org/obo/ERO_0000286",
+                    "http://purl.obolibrary.org/obo/ERO_0001133",
+                    "http://purl.obolibrary.org/obo/ERO_0000285",
+                    "http://ns.ontoforce.com/ontologies/protein/classes/meshProtein",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SingleProtein",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ChimericProtein",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinMolecule",
+                    "http://ns.ontoforce.com/ontologies/protein/classes/Protein",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Document",
+                    "http://purl.org/spar/biro/BibliographicRecord",
+                    "http://ns.ontoforce.com/ontologies/relation/classes/gene_disease_association",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Activity",
+                    "http://ns.ontoforce.com/ontologies/relation/classes/relation_type",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/onset_clinicalcourse",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/mortality_aging",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/inheritance",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/umlsGo",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/rxnormUncat",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/atc",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/mitochondrial_genetic_code",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/genetic_code",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/notCondition",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/condition_nonvalidated",
+                    "http://purl.obolibrary.org/obo/ERO_0001536",
+                    "http://purl.obolibrary.org/obo/ERO_0001551",
+                    "http://purl.obolibrary.org/obo/ERO_0001545",
+                    "http://purl.obolibrary.org/obo/ERO_0000404",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/cpc_tree/classification",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classification",
+                    "http://ns.ontoforce.com/2013/disqover#missingValue",
+                    "http://ns.ontoforce.com/2013/disqover#related_technique_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/AnatomyPart",
+                    "http://ns.ontoforce.com/2013/disqover#cellline_type_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Country",
+                    "http://www.geneontology.org/formats/oboInOwl#ObsoleteClass",
+                    "http://www.orpha.net/ORDO/Orphanet_C023",
+                    "http://www.orpha.net/ORDO/Orphanet_C012",
+                    "http://www.orpha.net/ORDO/Orphanet_C005",
+                    "http://rdf.ebi.ac.uk/terms/chembl#InterproRef",
+                    "http://www.geneontology.org/dtds/go.dtd#term",
+                    "http://rdf.ebi.ac.uk/terms/chembl#UnknownTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#UnclassifiedTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Tissue",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SubCellular",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Phenotype",
+                    "http://rdf.ebi.ac.uk/terms/chembl#NucleicAcid",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Macromolecule",
+                    "http://rdf.ebi.ac.uk/terms/chembl#CellLineTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ADMET",
+                    "http://ns.ontoforce.com/ontologies/mesh/SupplementalRecord",
+                    "http://ns.ontoforce.com/ontologies/atc/ATC_Code",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Grant",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/MeshTag",
+                    "http://purl.org/dc/terms/LinguisticSystem",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Repeat",
+                    "http://ns.ontoforce.com/ontologies/interpro/PTM",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Family",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Domain",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Sites",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinClassification",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinSelectivityGroup",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinProteinInteraction",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinComplexGroup",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinFamily",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinComplex",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinNucleicAcidComplex",
+                    "http://rdf.ebi.ac.uk/terms/chembl#ProteinTarget",
+                    "http://ns.ontoforce.com/configuration#plasmid_location",
+                    "http://ns.ontoforce.com/configuration#plasmid_selectable_marker",
+                    "http://ns.ontoforce.com/configuration#plasmid_expression_organism",
+                    "http://ns.ontoforce.com/2013/disqover#plasmid_insert_type_class",
+                    "http://ns.ontoforce.com/2013/disqover#plasmid_type_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/applicant_person",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/inventor",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/office",
+                    "http://ns.ontoforce.com/ontologies/epo/types/office",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/marketing_cat",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/pharclass_chemical_ingredient",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/pharclass_pe",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/pharclass_moa",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/pharclass_epc",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/route_name",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/dosage_form",
+                    "http://ns.ontoforce.com/ontologies/homology/classes/related_homology_resources",
+                    "http://ns.ontoforce.com/ontologies/homology/classes/conserved_domains",
+                    "http://ns.ontoforce.com/ontologies/homology/classes/phenotypes",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/status",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/RefSeqStatus",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/geneType",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/chromosome",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/nomenclatureStatus",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/defaultSymbol",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/GO_term_function",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/GO_term_component",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/GO_term_process",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/GO_term",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/hierarchy",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/affectedOrganism",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/group",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/manufacturer",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/typeTag",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/phaseTag",
+                    "http://rdf.ebi.ac.uk/terms/chembl#Mechanism",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/Mechanism",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/maddra_uncat_child",
+                    "http://ns.ontoforce.com/ontologies/disease/classes/maddra_uncat_parent",
+                    "http://ns.ontoforce.com/datasets/uncategorized/classes/ordo_relation",
+                    "http://ns.ontoforce.com/datasets/uncategorized/classes/uncat_child",
+                    "http://ns.ontoforce.com/datasets/uncategorized/classes/uncat_parent",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/cause",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/inheritance_type",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/causative_agent",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/finding_site",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/manifestation",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/has_child",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/has_parent",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/clinical_course",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/occasionalClinicalSign",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/frequentClinicalSign",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/veryFrequentClinicalSign",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/clinicalSign",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/prevalence_at_birth_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/point_prevalence_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/lifetime_prevalence_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/annual_incidence_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/avr_age_of_death",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/avr_age_of_onset",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/type_of_inheritance",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/meddra",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/timePerspective",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/observationalModel",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/primaryPurpose",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/masking",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/interventionModel",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/allocation",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/endpoint",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/condition",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/registry",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/gender",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/country",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/status",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/phase",
+                    "http://ns.ontoforce.com/ontologies/clinicalstudy/classes/study_type",
+                    "http://purl.obolibrary.org/obo/ERO_0001964",
+                    "http://purl.obolibrary.org/obo/ERO_0000015",
+                    "http://ns.ontoforce.com/configuration#biospecimen_location",
+                    "http://ns.ontoforce.com/configuration#biospecimen_source_anatomical_structure",
+                    "http://ns.ontoforce.com/2013/disqover#antibody_isotype_class",
+                    "http://ns.ontoforce.com/2013/disqover#antibody_immogenic_material_type_class",
+                    "http://ns.ontoforce.com/2013/disqover#target_type_class",
+                    "http://ns.ontoforce.com/configuration#antibody_related_technique",
+                    "http://ns.ontoforce.com/2013/disqover#antibody_type_class",
+                    "http://ns.ontoforce.com/ontologies/uncategorized/classes/TaxonomyTag",
+                    "http://ns.ontoforce.com/ontologies/genomicvariant/classes/SNP"
+                  ]
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_5",
+                  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "in",
+                "args": [
+                  "?facet_value_6",
+                  [
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/meshDrugChemical",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/cofactor",
+                    "http://ns.ontoforce.com/ontologies/integration_ontology#DrugIntervention",
+                    "http://rdf.ebi.ac.uk/terms/chembl#OligosaccharideTarget",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Compound",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMoleculeTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMolecule",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Drug",
+                    "http://ns.ontoforce.com/ontologies/dailymed/Drug"
+                  ]
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_6",
+                  "http://ns.ontoforce.com/ontologies/drugchemical/highestDevelopmentPhase"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_value_7",
+                  "http://ns.ontoforce.com/ontologies/chembl/4"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?id"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_3"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_8"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/"
+  }
+}

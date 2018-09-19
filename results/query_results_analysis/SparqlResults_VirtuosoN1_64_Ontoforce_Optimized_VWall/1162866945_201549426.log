@@ -1,0 +1,7 @@
+3^^http://www.w3.org/2001/XMLSchema#integer,http://rdf.ebi.ac.uk/terms/chembl#Organism,
+13^^http://www.w3.org/2001/XMLSchema#integer,http://www.w3.org/2002/07/owl#Class,
+2^^http://www.w3.org/2001/XMLSchema#integer,http://ns.ontoforce.com/2013/disqover#antibody_type_class,
+1^^http://www.w3.org/2001/XMLSchema#integer,http://ns.ontoforce.com/ontologies/organization/classes/vendor,
+51^^http://www.w3.org/2001/XMLSchema#integer,http://ns.ontoforce.com/ontologies/gene/classes/GeneNcbi,
+8^^http://www.w3.org/2001/XMLSchema#integer,http://ns.ontoforce.com/2013/disqover#related_technique_class,
+9^^http://www.w3.org/2001/XMLSchema#integer,http://ns.ontoforce.com/ontologies/organism/classes/taxonomy,

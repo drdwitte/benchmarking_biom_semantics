@@ -1,0 +1,186 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    "?ct",
+    "?label",
+    "?icon",
+    "?rank",
+    "?unclassified",
+    {
+      "expression": {
+        "type": "operation",
+        "operator": "coalesce",
+        "args": [
+          "?this_in_index",
+          "?all_in_index"
+        ]
+      },
+      "variable": "?in_index"
+    },
+    "?defaultHidden",
+    "?description",
+    "?relevancyDate"
+  ],
+  "where": [
+    {
+      "type": "graph",
+      "patterns": [
+        {
+          "type": "bgp",
+          "triples": [
+            {
+              "subject": "?ct",
+              "predicate": "http://ns.ontoforce.com/2013/disqover#useAs",
+              "object": "http://ns.ontoforce.com/2013/disqover#CanonicalType"
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?ct",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#icon",
+                  "object": "?icon"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?ct",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#rank",
+                  "object": "?rank"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?ct",
+                  "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                  "object": "?label"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?ct",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#inTextIndex",
+                  "object": "?this_in_index"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "http://ns.ontoforce.com/2013/disqover#all",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#inTextIndex",
+                  "object": "?all_in_index"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?ct",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#unclassified",
+                  "object": "?unclassified"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?ct",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#description",
+                  "object": "?description"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?ct",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#defaultHidden",
+                  "object": "?defaultHidden"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?ct",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#relevancyDate",
+                  "object": "?relevancyDate"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "http://ns.ontoforce.com/graphs/ontologies/integrator-u18"
+    }
+  ],
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "disq": "http://ns.ontoforce.com/2013/disqover#"
+  }
+}

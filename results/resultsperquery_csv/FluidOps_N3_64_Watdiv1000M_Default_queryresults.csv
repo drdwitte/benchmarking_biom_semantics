@@ -1,0 +1,5 @@
+sim_id	query_name	number_of_results
+Flu_N3_64_W1000_Def	F2/F2_split1.sparql	793
+Flu_N3_64_W1000_Def	F4/F4_split10.sparql	2203
+Flu_N3_64_W1000_Def	L4/L4_split4.sparql	5952
+Flu_N3_64_W1000_Def	S5/S5_split4.sparql	0

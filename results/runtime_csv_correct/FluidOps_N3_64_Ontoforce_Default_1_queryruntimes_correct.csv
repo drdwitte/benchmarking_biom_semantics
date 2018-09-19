@@ -1,0 +1,11 @@
+query_name	thread_type	success	errors	timeouts	median_runtime
+queries/xse	warmup	0.0	1.0	0.0	1200.0
+queries/xzads	warmup	0.0	1.0	0.0	1200.0
+queries/xzagf	warmup	0.0	1.0	0.0	1200.0
+queries/xfe	warmup	1.0	0.0	0.0	0.016537011
+queries/xow	warmup	1.0	0.0	0.0	0.639456007
+queries/xpx	warmup	1.0	0.0	0.0	0.016974588000000002
+queries/xqw	warmup	1.0	0.0	0.0	0.012629417
+queries/xzadj	warmup	1.0	0.0	0.0	0.012727519
+queries/xzagv	warmup	1.0	0.0	0.0	0.01248939
+queries/xzank	warmup	1.0	0.0	0.0	0.013633097

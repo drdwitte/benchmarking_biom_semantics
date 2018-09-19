@@ -1,0 +1,5 @@
+dataset	load_time	sim_id
+Watdiv100M	889	LDF_N1_64_W100_Def
+Watdiv100M	307	LDF_N3_64_W100_Def
+Watdiv100M	286	Flu_N3_64_W100_Def
+Watdiv100M	852	Fus_N1_64_W100_Def

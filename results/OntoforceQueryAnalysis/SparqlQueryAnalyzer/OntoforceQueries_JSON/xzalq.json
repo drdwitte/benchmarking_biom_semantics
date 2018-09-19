@@ -1,0 +1,148 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    "?id"
+  ],
+  "where": [
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": "?id",
+          "predicate": "?facet_source_1",
+          "object": "?facet_value_1"
+        }
+      ]
+    },
+    {
+      "type": "optional",
+      "patterns": [
+        {
+          "type": "bgp",
+          "triples": [
+            {
+              "subject": "?id",
+              "predicate": "http://ns.ontoforce.com/2013/disqover#source_organism",
+              "object": "?facet_value_2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": "?id",
+          "predicate": "?facet_source_2",
+          "object": "?facet_value_3"
+        },
+        {
+          "subject": "?id",
+          "predicate": "?facet_source_3",
+          "object": "?facet_value_4"
+        }
+      ]
+    },
+    {
+      "type": "filter",
+      "expression": {
+        "type": "operation",
+        "operator": "=",
+        "args": [
+          "?facet_source_1",
+          "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        ]
+      }
+    },
+    {
+      "type": "filter",
+      "expression": {
+        "type": "operation",
+        "operator": "in",
+        "args": [
+          "?facet_value_1",
+          [
+            "http://purl.obolibrary.org/obo/ERO_0000230",
+            "http://purl.obolibrary.org/obo/ERO_0000229"
+          ]
+        ]
+      }
+    },
+    {
+      "type": "filter",
+      "expression": {
+        "type": "operation",
+        "operator": "=",
+        "args": [
+          "?facet_source_2",
+          "http://purl.obolibrary.org/obo/ERO_0001534"
+        ]
+      }
+    },
+    {
+      "type": "filter",
+      "expression": {
+        "type": "operation",
+        "operator": "=",
+        "args": [
+          "?facet_value_3",
+          "http://purl.obolibrary.org/obo/OBI_0000690"
+        ]
+      }
+    },
+    {
+      "type": "filter",
+      "expression": {
+        "type": "operation",
+        "operator": "=",
+        "args": [
+          "?facet_source_3",
+          "http://purl.obolibrary.org/obo/ERO_0000034"
+        ]
+      }
+    },
+    {
+      "type": "filter",
+      "expression": {
+        "type": "operation",
+        "operator": "=",
+        "args": [
+          "?facet_value_4",
+          "http://ns.ontoforce.com/datasets/antibody/vendor#aviva_systems_biology"
+        ]
+      }
+    },
+    {
+      "type": "filter",
+      "expression": {
+        "type": "operation",
+        "operator": "!",
+        "args": [
+          {
+            "type": "operation",
+            "operator": "bound",
+            "args": [
+              "?facet_value_2"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "group": [
+    {
+      "expression": "?id"
+    }
+  ],
+  "limit": 20,
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "disq": "http://ns.ontoforce.com/2013/disqover#"
+  }
+}

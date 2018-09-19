@@ -1,0 +1,6 @@
+query_name	thread_type	success	errors	timeouts	median_runtime
+queries/xzait	warmup	0.0	1.0	0.0	1200.0
+queries/xdx	warmup	1.0	0.0	0.0	0.039536706000000005
+queries/xlx	warmup	1.0	0.0	0.0	0.013525121999999999
+queries/xyl	warmup	1.0	0.0	0.0	0.010566504
+queries/xyr	warmup	1.0	0.0	0.0	0.014555581

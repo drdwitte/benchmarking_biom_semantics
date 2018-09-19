@@ -1,0 +1,5 @@
+query_name	thread_type	success	errors	timeouts	median_runtime
+F2/F2_split1.sparql	warmup	1	0.0	0.0	60.748212102
+F4/F4_split10.sparql	warmup	1	0.0	0.0	61.347327
+L4/L4_split4.sparql	warmup	1	0.0	0.0	37.702362819
+S5/S5_split4.sparql	warmup	1	0.0	0.0	112.30699760799999

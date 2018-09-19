@@ -1,0 +1,84 @@
+#!/usr/bin/env node
+const args = process.argv.slice(2);
+
+if (args.length !== 1) {
+  console.error('usage: ./analyze-query query.json');
+  process.exit(1);
+}
+
+const fs = require('fs'),
+      _ = require('lodash');
+
+function analyzeQueryFile(file) {
+  return analyzeQuery(JSON.parse(fs.readFileSync(file, { encoding: 'utf8' })));
+}
+
+function analyzeQuery(query) {
+  const json = JSON.stringify(query, null, '  ');
+  const analysis = {
+    kind: query.type,
+    jsonSize: json.length,
+    jsonLines: json.split('\n').length,
+  };
+  return merge(analysis, analyzeBlock(query));
+}
+
+function analyzeBlock(block) {
+  const subPatterns = (block.patterns || block.where || []).map(analyzeBlock);
+  const triplePatterns = analyzeTriplePatterns(block.triples || []);
+  const variables =  analyzeVariables(block.variables || []);
+  const analysis = {
+    count: {
+      [block.type]: 1,
+      triplePattern: (block.triples || []).length,
+      keys: Object.keys(block).length,
+    },
+    depth: Math.max(0, ...subPatterns.map(s => s.depth || 1)) + 1,
+  };
+  return merge(analysis, ...subPatterns, triplePatterns, variables);
+}
+
+function analyzeTriplePatterns(patterns) {
+  const counts = {};
+  for (pattern of patterns) {
+    const fingerprint = 'tp_' +
+                        (isVar(pattern.subject)   ? '?' : 's') +
+                        (isVar(pattern.predicate) ? '?' : 'p') +
+                        (isVar(pattern.object)    ? '?' : 'o');
+    increment(counts, fingerprint);
+  }
+  return { count: counts };
+}
+
+function analyzeVariables(variables) {
+  const counts = {};
+  for (variable of variables) {
+    const expression = variable.expression;
+    if (expression) {
+      if (expression.distinct)
+        increment(counts, 'distinct');
+      if (expression.aggregation)
+        increment(counts, 'aggregation_' + expression.aggregation);
+    }
+  }
+  return { count: counts };
+}
+
+function merge(...objects) {
+  return _.mergeWith({}, ...objects, (x, y, key) => {
+    if (key in merge)
+      return merge[key](x, y);
+  });
+}
+merge.count = (a, b) => (_.mergeWith(a, b, (x, y) => (x || 0) + (y || 0)));
+merge.depth = (a, b) => Math.max(a || 0, b || 0);
+
+function isVar(entity) {
+  return entity[0] === '?';
+}
+
+function increment(object, key) {
+  object[key] = (object[key] || 0) + 1;
+}
+
+console.log(JSON.stringify(analyzeQueryFile(args[0]), null, 2));

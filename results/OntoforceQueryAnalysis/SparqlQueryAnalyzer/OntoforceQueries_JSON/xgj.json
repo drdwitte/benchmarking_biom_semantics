@@ -1,0 +1,384 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    {
+      "expression": {
+        "expression": "?id",
+        "type": "aggregate",
+        "aggregation": "count",
+        "distinct": true
+      },
+      "variable": "?total_count"
+    }
+  ],
+  "where": [
+    {
+      "type": "union",
+      "patterns": [
+        {
+          "type": "query",
+          "queryType": "SELECT",
+          "variables": [
+            "?original",
+            "?id"
+          ],
+          "where": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?original",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                },
+                {
+                  "subject": "?original_1",
+                  "predicate": "?facet_source_1",
+                  "object": "?facet_value_1"
+                },
+                {
+                  "subject": "?original_2",
+                  "predicate": "?facet_source_2",
+                  "object": "?facet_value_2"
+                },
+                {
+                  "subject": "?original_3",
+                  "predicate": "?facet_source_3",
+                  "object": "?facet_value_3"
+                }
+              ]
+            },
+            {
+              "type": "optional",
+              "patterns": [
+                {
+                  "type": "bgp",
+                  "triples": [
+                    {
+                      "subject": "?original_4",
+                      "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                      "object": "?id"
+                    },
+                    {
+                      "subject": "?original_4",
+                      "predicate": "http://ns.ontoforce.com/ontologies/drugchemical/MoA_mapped",
+                      "object": "?facet_value_4"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?original_1",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                },
+                {
+                  "subject": "?original_2",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                },
+                {
+                  "subject": "?original_3",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?id"
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_1",
+                  "http://ns.ontoforce.com/ontologies/drugchemical/MoA_mapped"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_value_1",
+                  "http://ns.ontoforce.com/ontologies/chembl/MoA_mapped_uri/19c54a4b2c23dd7892e264c976c05d95"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_2",
+                  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "in",
+                "args": [
+                  "?facet_value_2",
+                  [
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/meshDrugChemical",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/cofactor",
+                    "http://ns.ontoforce.com/ontologies/integration_ontology#DrugIntervention",
+                    "http://rdf.ebi.ac.uk/terms/chembl#OligosaccharideTarget",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Compound",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMoleculeTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMolecule",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Drug",
+                    "http://ns.ontoforce.com/ontologies/dailymed/Drug"
+                  ]
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_3",
+                  "http://ns.ontoforce.com/ontologies/drugchemical/highestDevelopmentPhase"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_value_3",
+                  "http://ns.ontoforce.com/ontologies/chembl/4"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_4"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "query",
+          "queryType": "SELECT",
+          "variables": [
+            "?original",
+            "?id"
+          ],
+          "where": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?original",
+                  "predicate": "?facet_source_4",
+                  "object": "?facet_value_5"
+                },
+                {
+                  "subject": "?original",
+                  "predicate": "?facet_source_5",
+                  "object": "?facet_value_6"
+                },
+                {
+                  "subject": "?original",
+                  "predicate": "?facet_source_6",
+                  "object": "?facet_value_7"
+                }
+              ]
+            },
+            {
+              "type": "optional",
+              "patterns": [
+                {
+                  "type": "bgp",
+                  "triples": [
+                    {
+                      "subject": "?original",
+                      "predicate": "http://ns.ontoforce.com/ontologies/drugchemical/MoA_mapped",
+                      "object": "?facet_value_8"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "optional",
+              "patterns": [
+                {
+                  "type": "bgp",
+                  "triples": [
+                    {
+                      "subject": "?original",
+                      "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                      "object": "?id"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_4",
+                  "http://ns.ontoforce.com/ontologies/drugchemical/MoA_mapped"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_value_5",
+                  "http://ns.ontoforce.com/ontologies/chembl/MoA_mapped_uri/19c54a4b2c23dd7892e264c976c05d95"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_5",
+                  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "in",
+                "args": [
+                  "?facet_value_6",
+                  [
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/meshDrugChemical",
+                    "http://ns.ontoforce.com/ontologies/medicine/classes/substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/cofactor",
+                    "http://ns.ontoforce.com/ontologies/integration_ontology#DrugIntervention",
+                    "http://rdf.ebi.ac.uk/terms/chembl#OligosaccharideTarget",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Compound",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMoleculeTarget",
+                    "http://rdf.ebi.ac.uk/terms/chembl#SmallMolecule",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Substance",
+                    "http://ns.ontoforce.com/ontologies/drugchemical/classes/Drug",
+                    "http://ns.ontoforce.com/ontologies/dailymed/Drug"
+                  ]
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_source_6",
+                  "http://ns.ontoforce.com/ontologies/drugchemical/highestDevelopmentPhase"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?facet_value_7",
+                  "http://ns.ontoforce.com/ontologies/chembl/4"
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?id"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_4"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_8"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/"
+  }
+}

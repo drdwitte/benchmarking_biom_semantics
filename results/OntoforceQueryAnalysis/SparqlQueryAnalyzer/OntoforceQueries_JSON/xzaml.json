@@ -1,0 +1,210 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    {
+      "expression": "?class",
+      "variable": "?val"
+    },
+    {
+      "expression": {
+        "expression": "?original",
+        "type": "aggregate",
+        "aggregation": "count",
+        "distinct": true
+      },
+      "variable": "?vc"
+    }
+  ],
+  "where": [
+    {
+      "type": "bgp",
+      "triples": [
+        {
+          "subject": "?original",
+          "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+          "object": "?class"
+        }
+      ]
+    },
+    {
+      "type": "union",
+      "patterns": [
+        {
+          "type": "query",
+          "queryType": "SELECT",
+          "variables": [
+            "?original",
+            "?assoc"
+          ],
+          "where": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?original",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?assoc"
+                },
+                {
+                  "subject": "?original_1",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                  "object": "?assoc"
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?original_1"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_2"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_4"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "query",
+          "queryType": "SELECT",
+          "variables": [
+            "?original",
+            "?assoc"
+          ],
+          "where": [
+            {
+              "type": "optional",
+              "patterns": [
+                {
+                  "type": "bgp",
+                  "triples": [
+                    {
+                      "subject": "?original",
+                      "predicate": "http://ns.ontoforce.com/2013/disqover#preferredUri",
+                      "object": "?assoc"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?original"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?assoc"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_2"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "!",
+                "args": [
+                  {
+                    "type": "operation",
+                    "operator": "bound",
+                    "args": [
+                      "?facet_value_4"
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "expression": "?class"
+    }
+  ],
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/"
+  }
+}

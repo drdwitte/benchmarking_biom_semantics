@@ -1,0 +1,1224 @@
+sim_id	query_name	thread_id	thread_type	order_id	number_of_results	runtime	flag	correct
+Vir_N3_64_Ont_Opt_AWS3	queries/xnb	1.0	warmup	1.0	-1.0	1200.0	TIMEOUT	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgg	1.0	warmup	2.0	2.0	0.200591772	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaog	1.0	warmup	3.0	1.0	1.9956109569999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwl	1.0	warmup	4.0	0.0	0.17148838800000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xht	1.0	warmup	5.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpj	1.0	warmup	6.0	1.0	1.553741698	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbq	1.0	warmup	7.0	1.0	1.692709994	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xak	1.0	warmup	8.0	1.0	1.90593307	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xoj	1.0	warmup	9.0	0.0	0.17412481700000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xot	1.0	warmup	10.0	1.0	0.96440047	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xee	1.0	warmup	11.0	0.0	0.17275274	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaos	1.0	warmup	12.0	1.0	2.5488525269999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xll	1.0	warmup	13.0	1.0	3.781315424	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqy	1.0	warmup	14.0	1.0	144.671902198	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsq	1.0	warmup	15.0	1.0	0.668999776	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xuc	1.0	warmup	16.0	1.0	1.528095601	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaeg	1.0	warmup	17.0	1.0	358.78106103600004	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavf	1.0	warmup	18.0	0.0	0.179305813	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpq	1.0	warmup	19.0	1.0	0.829424512	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xox	1.0	warmup	20.0	1.0	1.718891951	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavv	1.0	warmup	21.0	0.0	0.17037811300000005	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwx	1.0	warmup	22.0	0.0	0.170467502	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsa	1.0	warmup	23.0	1.0	1.70379571	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xba	1.0	warmup	24.0	0.0	0.16995452600000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaoh	1.0	warmup	25.0	1.0	1.7842281800000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xur	1.0	warmup	26.0	1.0	1.7133175900000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqg	1.0	warmup	27.0	1.0	1.7297773490000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xag	1.0	warmup	28.0	1.0	0.429463067	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlh	1.0	warmup	29.0	1.0	0.45566517	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqe	1.0	warmup	30.0	1.0	1.733554836	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfe	1.0	warmup	31.0	1.0	0.200627572	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwd	1.0	warmup	32.0	0.0	1.35226809	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgn	1.0	warmup	33.0	1.0	0.22405573	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcx	1.0	warmup	34.0	0.0	0.16984089800000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafo	1.0	warmup	35.0	1.0	1.503178388	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacn	1.0	warmup	36.0	1.0	1.702182324	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaaa	1.0	warmup	37.0	1.0	1.536585659	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xib	1.0	warmup	38.0	1.0	1.673948018	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalo	1.0	warmup	39.0	1.0	1.691907545	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzawa	1.0	warmup	40.0	1.0	68.003464897	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaay	1.0	warmup	41.0	1.0	1.5270309569999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamo	1.0	warmup	42.0	4.0	0.18399006	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzary	1.0	warmup	43.0	1.0	1.6566244449999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaof	1.0	warmup	44.0	1.0	0.681955222	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfu	1.0	warmup	45.0	1.0	1.560704239	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xtf	1.0	warmup	46.0	1.0	0.5985923679999999	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaek	1.0	warmup	47.0	1.0	1.5789665240000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xiu	1.0	warmup	48.0	1.0	1.6774511069999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xch	1.0	warmup	49.0	1.0	73.97839023600001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzara	1.0	warmup	50.0	-1.0	1200.0	TIMEOUT	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadu	1.0	warmup	51.0	1.0	1.8841851109999999	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpe	1.0	warmup	52.0	1.0	0.21664662	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxm	1.0	warmup	53.0	1.0	0.212015307	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdv	1.0	warmup	54.0	2.0	0.200258767	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadv	1.0	warmup	55.0	1.0	1.84484049	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzajx	1.0	warmup	56.0	1.0	1.768662926	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhz	1.0	warmup	57.0	1.0	3.8183599910000003	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaob	1.0	warmup	58.0	1.0	0.201010694	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmx	1.0	warmup	59.0	1.0	1.846620857	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xni	1.0	warmup	60.0	1.0	0.207232965	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xye	1.0	warmup	61.0	7.0	0.216621128	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsz	1.0	warmup	62.0	0.0	0.16956522200000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlo	1.0	warmup	63.0	1.0	1.7970813140000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatm	1.0	warmup	64.0	1.0	0.17193325999999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsm	1.0	warmup	65.0	1.0	1.938495932	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqv	1.0	warmup	66.0	1.0	1.9103046119999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgr	1.0	warmup	67.0	1.0	0.212270268	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyx	1.0	warmup	68.0	6.0	0.21733749600000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xrj	1.0	warmup	69.0	1.0	0.7142253500000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahc	1.0	warmup	70.0	-1.0	1200.0	TIMEOUT	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwt	1.0	warmup	71.0	0.0	9.143471087	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvs	1.0	warmup	72.0	1.0	1.945861683	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwc	1.0	warmup	73.0	1.0	36.522656962	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatf	1.0	warmup	74.0	1.0	2.372400663	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbo	1.0	warmup	75.0	1.0	0.249794685	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xds	1.0	warmup	76.0	2.0	516.0572193119999	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdb	1.0	warmup	77.0	0.0	6.588560147000001	SUCCESS	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxp	1.0	warmup	78.0	1.0	0.21794393899999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafj	1.0	warmup	79.0	0.0	0.17167418199999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xso	1.0	warmup	80.0	1.0	2.107981181	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahm	1.0	warmup	81.0	1.0	2.027865445	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkc	1.0	warmup	82.0	1.0	0.172539692	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakb	1.0	warmup	83.0	1.0	0.9363499540000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzang	1.0	warmup	84.0	0.0	0.170885342	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamr	1.0	warmup	85.0	1.0	0.227130844	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfk	1.0	warmup	86.0	1.0	1.775297617	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzape	1.0	warmup	87.0	2.0	109.41497287600001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzath	1.0	warmup	88.0	1.0	1.79647299	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwi	1.0	warmup	89.0	1.0	1.954424561	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xie	1.0	warmup	90.0	1.0	17.567256623000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xnm	1.0	warmup	91.0	0.0	0.171186007	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhd	1.0	warmup	92.0	1.0	1.901231394	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagm	1.0	warmup	93.0	1.0	1.905688825	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjl	1.0	warmup	94.0	2.0	9.649023541	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xrv	1.0	warmup	95.0	1.0	1.018375923	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavr	1.0	warmup	96.0	0.0	0.172510537	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatu	1.0	warmup	97.0	0.0	0.16912460899999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xet	1.0	warmup	98.0	0.0	0.16878695800000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaox	1.0	warmup	99.0	1.0	1.946783335	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalt	1.0	warmup	100.0	0.0	0.816797798	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabm	1.0	warmup	101.0	1.0	0.17110631399999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapa	1.0	warmup	102.0	0.0	0.17137067099999995	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalb	1.0	warmup	103.0	1.0	0.984515978	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxa	1.0	warmup	104.0	2.0	0.192709727	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsc	1.0	warmup	105.0	0.0	0.17398382199999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagg	1.0	warmup	106.0	1.0	0.205607946	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgw	1.0	warmup	107.0	6.0	0.207050321	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarm	1.0	warmup	108.0	1.0	1.8556499969999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhx	1.0	warmup	109.0	1.0	0.410772712	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxr	1.0	warmup	110.0	0.0	0.7247699910000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqq	1.0	warmup	111.0	2.0	0.187647229	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xuy	1.0	warmup	112.0	0.0	0.17265603899999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabd	1.0	warmup	113.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxh	1.0	warmup	114.0	1.0	0.222127603	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzags	1.0	warmup	115.0	1.0	0.507688514	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqj	1.0	warmup	116.0	3.0	0.205782731	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsg	1.0	warmup	117.0	1.0	1.873746102	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmq	1.0	warmup	118.0	-1.0	1200.0	TIMEOUT	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdg	1.0	warmup	119.0	1.0	2.2060399360000003	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaud	1.0	warmup	120.0	1.0	34.564531222	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyo	1.0	warmup	121.0	0.0	0.18228677199999999	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmm	1.0	warmup	122.0	1.0	0.214304319	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaum	1.0	warmup	123.0	1.0	0.19192031	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzami	1.0	warmup	124.0	1.0	0.286338376	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabi	1.0	warmup	125.0	1.0	1.958583139	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzajj	1.0	warmup	126.0	0.0	0.17255211199999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfb	1.0	warmup	127.0	-1.0	1200.0	TIMEOUT	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaaq	1.0	warmup	128.0	-1.0	1200.0	TIMEOUT	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xrl	1.0	warmup	129.0	1.0	2.371639652	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xij	1.0	warmup	130.0	1.0	2.9908659460000004	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarh	1.0	warmup	131.0	0.0	0.225904973	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahs	1.0	warmup	132.0	1.0	2.479472715	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xtb	1.0	warmup	133.0	1.0	0.265491357	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xea	1.0	warmup	134.0	1.0	2.921752836	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahp	1.0	warmup	135.0	1.0	0.271784431	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzade	1.0	warmup	136.0	1.0	0.18720435	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaou	1.0	warmup	137.0	1.0	0.226857047	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcj	1.0	warmup	138.0	1.0	1.393012794	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagh	1.0	warmup	139.0	-1.0	1200.0	TIMEOUT	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzall	1.0	warmup	140.0	1.0	0.335623082	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafc	1.0	warmup	141.0	1.0	2.55620579	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwu	1.0	warmup	142.0	1.0	2.18433023	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyp	1.0	warmup	143.0	0.0	0.17338835800000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavu	1.0	warmup	144.0	1.0	2.204478039	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqz	1.0	warmup	145.0	1.0	2.191098406	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzanu	1.0	warmup	146.0	18.0	1.1317966990000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzanf	1.0	warmup	147.0	9.0	6.763652901	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xln	1.0	warmup	148.0	0.0	0.176660078	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsp	1.0	warmup	149.0	0.0	0.17565561400000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzajp	1.0	warmup	150.0	1.0	2.2952516220000003	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xta	1.0	warmup	151.0	1.0	0.19515645	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaty	1.0	warmup	152.0	1.0	0.213114707	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahb	1.0	warmup	153.0	20.0	1.208219834	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatk	1.0	warmup	154.0	0.0	0.178982453	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakm	1.0	warmup	155.0	2.0	0.20566975899999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavb	1.0	warmup	156.0	1001.0	3.100573465	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfy	1.0	warmup	157.0	1.0	3.893538641	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzajw	1.0	warmup	158.0	0.0	0.167554824	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamw	1.0	warmup	159.0	1.0	0.27241981	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahq	1.0	warmup	160.0	0.0	0.169038374	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabj	1.0	warmup	161.0	0.0	0.285043846	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzasd	1.0	warmup	162.0	1.0	0.178673988	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpl	1.0	warmup	163.0	1.0	0.198700901	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xno	1.0	warmup	164.0	1.0	6.232838448000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafz	1.0	warmup	165.0	1.0	3.0227717889999997	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvo	1.0	warmup	166.0	1.0	0.171219636	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzajh	1.0	warmup	167.0	1.0	2.368471608	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadg	1.0	warmup	168.0	1.0	2.269636455	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarv	1.0	warmup	169.0	1.0	2.242168583	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhj	1.0	warmup	170.0	1.0	2.236464575	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaal	1.0	warmup	171.0	1.0	0.288300435	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmk	1.0	warmup	172.0	1.0	2.4321673660000003	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqk	1.0	warmup	173.0	1.0	2.433099033	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xaj	1.0	warmup	174.0	2.0	0.5477514370000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xaa	1.0	warmup	175.0	1.0	0.248592414	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqs	1.0	warmup	176.0	1.0	2.401178301	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbe	1.0	warmup	177.0	1.0	0.198303447	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalm	1.0	warmup	178.0	1.0	0.167611014	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvd	1.0	warmup	179.0	1.0	0.185106847	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabp	1.0	warmup	180.0	1.0	0.24997944800000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzala	1.0	warmup	181.0	1.0	2.44978876	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaax	1.0	warmup	182.0	1.0	2.5054513000000003	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmj	1.0	warmup	183.0	1.0	0.197810049	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzata	1.0	warmup	184.0	3.0	0.458149168	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqn	1.0	warmup	185.0	1.0	1.2713373559999999	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatr	1.0	warmup	186.0	1.0	0.20258108800000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzart	1.0	warmup	187.0	2.0	5.661483241	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfd	1.0	warmup	188.0	1.0	0.224640134	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xik	1.0	warmup	189.0	0.0	0.17317314399999997	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakc	1.0	warmup	190.0	1.0	78.83580438899999	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlw	1.0	warmup	191.0	2.0	5.6846744010000005	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzant	1.0	warmup	192.0	1.0	0.241965465	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaku	1.0	warmup	193.0	1.0	2.158756404	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xec	1.0	warmup	194.0	1.0	2.5731203380000003	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacl	1.0	warmup	195.0	1.0	2.148532005	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xux	1.0	warmup	196.0	1.0	2.249715906	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzand	1.0	warmup	197.0	1.0	0.22144376100000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgt	1.0	warmup	198.0	0.0	0.167318553	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfr	1.0	warmup	199.0	1.0	0.20357656899999999	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakn	1.0	warmup	200.0	1.0	0.6254193720000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzain	1.0	warmup	201.0	0.0	0.18060813399999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavk	1.0	warmup	202.0	1.0	120.236552796	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xra	1.0	warmup	203.0	1.0	0.20646841100000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xka	1.0	warmup	204.0	0.0	0.177505957	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaiy	1.0	warmup	205.0	1.0	0.196688878	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaic	1.0	warmup	206.0	0.0	0.16844427899999997	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzauv	1.0	warmup	207.0	1.0	0.217516973	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpw	1.0	warmup	208.0	1.0	0.22820944899999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvl	1.0	warmup	209.0	1.0	0.216650325	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsx	1.0	warmup	210.0	0.0	0.180635763	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpp	1.0	warmup	211.0	2.0	0.215507726	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xna	1.0	warmup	212.0	0.0	0.188220799	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafk	1.0	warmup	213.0	1.0	0.18107274399999998	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkv	1.0	warmup	214.0	1.0	0.274364154	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaoi	1.0	warmup	215.0	1.0	2.15426266	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlf	1.0	warmup	216.0	0.0	1.5714535530000002	SUCCESS	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzady	1.0	warmup	217.0	-1.0	1200.0	TIMEOUT	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xes	1.0	warmup	218.0	1001.0	2.69648954	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagi	1.0	warmup	219.0	1.0	0.19981475	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaan	1.0	warmup	220.0	1.0	93.02456717700001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlb	1.0	warmup	221.0	0.0	0.17599405	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagk	1.0	warmup	222.0	1.0	0.222732681	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahk	1.0	warmup	223.0	0.0	0.17884178899999997	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqg	1.0	warmup	224.0	2.0	0.22336872100000002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzanq	1.0	warmup	225.0	1.0	2.88290373	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xge	1.0	warmup	226.0	692.0	0.5879266830000001	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjf	1.0	warmup	227.0	20.0	132.60443819300002	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhq	1.0	warmup	228.0	1.0	135.943902347	SUCCESS	CORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacc	1.0	warmup	229.0	-1.0	1200.0	TIMEOUT	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkl	1.0	warmup	230.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqw	1.0	warmup	231.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgc	1.0	warmup	232.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlu	1.0	warmup	233.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalc	1.0	warmup	234.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafm	1.0	warmup	235.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xeh	1.0	warmup	236.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakd	1.0	warmup	237.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbh	1.0	warmup	238.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xnt	1.0	warmup	239.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xtv	1.0	warmup	240.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkb	1.0	warmup	241.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaeb	1.0	warmup	242.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacz	1.0	warmup	243.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapo	1.0	warmup	244.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xar	1.0	warmup	245.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagw	1.0	warmup	246.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadt	1.0	warmup	247.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaov	1.0	warmup	248.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgm	1.0	warmup	249.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaja	1.0	warmup	250.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahz	1.0	warmup	251.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcu	1.0	warmup	252.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapf	1.0	warmup	253.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzama	1.0	warmup	254.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaun	1.0	warmup	255.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzasx	1.0	warmup	256.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaeo	1.0	warmup	257.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacr	1.0	warmup	258.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzard	1.0	warmup	259.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlc	1.0	warmup	260.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaga	1.0	warmup	261.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafg	1.0	warmup	262.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavg	1.0	warmup	263.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xma	1.0	warmup	264.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xuo	1.0	warmup	265.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xym	1.0	warmup	266.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsh	1.0	warmup	267.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzajk	1.0	warmup	268.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpg	1.0	warmup	269.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xrh	1.0	warmup	270.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xum	1.0	warmup	271.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahi	1.0	warmup	272.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxo	1.0	warmup	273.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaky	1.0	warmup	274.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzanm	1.0	warmup	275.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqj	1.0	warmup	276.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzach	1.0	warmup	277.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjb	1.0	warmup	278.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xtt	1.0	warmup	279.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyz	1.0	warmup	280.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsn	1.0	warmup	281.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjt	1.0	warmup	282.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzame	1.0	warmup	283.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzake	1.0	warmup	284.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatl	1.0	warmup	285.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzase	1.0	warmup	286.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xce	1.0	warmup	287.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcc	1.0	warmup	288.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarc	1.0	warmup	289.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzano	1.0	warmup	290.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaka	1.0	warmup	291.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdf	1.0	warmup	292.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzanp	1.0	warmup	293.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwg	1.0	warmup	294.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacx	1.0	warmup	295.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavq	1.0	warmup	296.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsb	1.0	warmup	297.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzanc	1.0	warmup	298.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzari	1.0	warmup	299.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xio	1.0	warmup	300.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarg	1.0	warmup	301.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xoy	1.0	warmup	302.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcs	1.0	warmup	303.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjh	1.0	warmup	304.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxy	1.0	warmup	305.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvr	1.0	warmup	306.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvq	1.0	warmup	307.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdm	1.0	warmup	308.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatd	1.0	warmup	309.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavc	1.0	warmup	310.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xya	1.0	warmup	311.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyd	1.0	warmup	312.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcf	1.0	warmup	313.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbf	1.0	warmup	314.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalj	1.0	warmup	315.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzats	1.0	warmup	316.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadp	1.0	warmup	317.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzanz	1.0	warmup	318.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakp	1.0	warmup	319.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xoq	1.0	warmup	320.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdy	1.0	warmup	321.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaut	1.0	warmup	322.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakf	1.0	warmup	323.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamb	1.0	warmup	324.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcz	1.0	warmup	325.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xrz	1.0	warmup	326.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjk	1.0	warmup	327.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafl	1.0	warmup	328.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xoi	1.0	warmup	329.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzajv	1.0	warmup	330.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaok	1.0	warmup	331.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatc	1.0	warmup	332.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xip	1.0	warmup	333.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmt	1.0	warmup	334.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaps	1.0	warmup	335.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagp	1.0	warmup	336.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabs	1.0	warmup	337.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahu	1.0	warmup	338.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwj	1.0	warmup	339.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabk	1.0	warmup	340.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzasg	1.0	warmup	341.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaef	1.0	warmup	342.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavh	1.0	warmup	343.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapj	1.0	warmup	344.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaew	1.0	warmup	345.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalg	1.0	warmup	346.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzajm	1.0	warmup	347.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadd	1.0	warmup	348.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbu	1.0	warmup	349.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaua	1.0	warmup	350.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahe	1.0	warmup	351.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjg	1.0	warmup	352.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaiq	1.0	warmup	353.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xit	1.0	warmup	354.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyn	1.0	warmup	355.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacf	1.0	warmup	356.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkq	1.0	warmup	357.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xtp	1.0	warmup	358.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafw	1.0	warmup	359.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xui	1.0	warmup	360.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagq	1.0	warmup	361.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xnr	1.0	warmup	362.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaav	1.0	warmup	363.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xne	1.0	warmup	364.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqe	1.0	warmup	365.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhr	1.0	warmup	366.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafp	1.0	warmup	367.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaug	1.0	warmup	368.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxc	1.0	warmup	369.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhf	1.0	warmup	370.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xia	1.0	warmup	371.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xnl	1.0	warmup	372.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmp	1.0	warmup	373.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xer	1.0	warmup	374.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xtr	1.0	warmup	375.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakz	1.0	warmup	376.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyq	1.0	warmup	377.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaez	1.0	warmup	378.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvj	1.0	warmup	379.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzanr	1.0	warmup	380.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahd	1.0	warmup	381.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xnh	1.0	warmup	382.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwf	1.0	warmup	383.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdp	1.0	warmup	384.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaoa	1.0	warmup	385.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xej	1.0	warmup	386.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqc	1.0	warmup	387.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqi	1.0	warmup	388.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzais	1.0	warmup	389.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzauo	1.0	warmup	390.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaam	1.0	warmup	391.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbm	1.0	warmup	392.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxi	1.0	warmup	393.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaly	1.0	warmup	394.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagt	1.0	warmup	395.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbr	1.0	warmup	396.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xny	1.0	warmup	397.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacy	1.0	warmup	398.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakg	1.0	warmup	399.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzage	1.0	warmup	400.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xiy	1.0	warmup	401.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamu	1.0	warmup	402.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpt	1.0	warmup	403.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalq	1.0	warmup	404.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabg	1.0	warmup	405.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalv	1.0	warmup	406.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapz	1.0	warmup	407.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqh	1.0	warmup	408.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xas	1.0	warmup	409.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xci	1.0	warmup	410.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xde	1.0	warmup	411.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaba	1.0	warmup	412.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzalf	1.0	warmup	413.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacp	1.0	warmup	414.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkr	1.0	warmup	415.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xek	1.0	warmup	416.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaer	1.0	warmup	417.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xve	1.0	warmup	418.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xrp	1.0	warmup	419.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwq	1.0	warmup	420.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxs	1.0	warmup	421.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaux	1.0	warmup	422.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xez	1.0	warmup	423.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvt	1.0	warmup	424.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsk	1.0	warmup	425.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagf	1.0	warmup	426.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapm	1.0	warmup	427.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xrm	1.0	warmup	428.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkp	1.0	warmup	429.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xeu	1.0	warmup	430.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxb	1.0	warmup	431.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkn	1.0	warmup	432.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyb	1.0	warmup	433.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaij	1.0	warmup	434.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaey	1.0	warmup	435.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdr	1.0	warmup	436.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmo	1.0	warmup	437.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapd	1.0	warmup	438.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqr	1.0	warmup	439.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafb	1.0	warmup	440.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzany	1.0	warmup	441.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxn	1.0	warmup	442.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xah	1.0	warmup	443.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamk	1.0	warmup	444.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatz	1.0	warmup	445.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzank	1.0	warmup	446.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmr	1.0	warmup	447.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xji	1.0	warmup	448.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafn	1.0	warmup	449.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjd	1.0	warmup	450.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xic	1.0	warmup	451.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbk	1.0	warmup	452.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xuh	1.0	warmup	453.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxj	1.0	warmup	454.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzact	1.0	warmup	455.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xoc	1.0	warmup	456.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzals	1.0	warmup	457.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaca	1.0	warmup	458.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapn	1.0	warmup	459.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xeo	1.0	warmup	460.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxk	1.0	warmup	461.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahr	1.0	warmup	462.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xif	1.0	warmup	463.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavy	1.0	warmup	464.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xri	1.0	warmup	465.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xii	1.0	warmup	466.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkf	1.0	warmup	467.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcp	1.0	warmup	468.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xke	1.0	warmup	469.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzars	1.0	warmup	470.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xaz	1.0	warmup	471.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaoc	1.0	warmup	472.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaiv	1.0	warmup	473.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzanx	1.0	warmup	474.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xkg	1.0	warmup	475.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaib	1.0	warmup	476.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xnu	1.0	warmup	477.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakj	1.0	warmup	478.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfp	1.0	warmup	479.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyg	1.0	warmup	480.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaom	1.0	warmup	481.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabv	1.0	warmup	482.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xuj	1.0	warmup	483.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xae	1.0	warmup	484.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaiu	1.0	warmup	485.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xuq	1.0	warmup	486.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamp	1.0	warmup	487.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavt	1.0	warmup	488.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xmg	1.0	warmup	489.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacd	1.0	warmup	490.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarn	1.0	warmup	491.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatp	1.0	warmup	492.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaht	1.0	warmup	493.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaid	1.0	warmup	494.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdx	1.0	warmup	495.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahn	1.0	warmup	496.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgj	1.0	warmup	497.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xct	1.0	warmup	498.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacg	1.0	warmup	499.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzana	1.0	warmup	500.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xin	1.0	warmup	501.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapy	1.0	warmup	502.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwp	1.0	warmup	503.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaje	1.0	warmup	504.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwm	1.0	warmup	505.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xue	1.0	warmup	506.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaci	1.0	warmup	507.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xnd	1.0	warmup	508.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwa	1.0	warmup	509.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbb	1.0	warmup	510.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafr	1.0	warmup	511.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqk	1.0	warmup	512.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbt	1.0	warmup	513.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafd	1.0	warmup	514.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbp	1.0	warmup	515.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xat	1.0	warmup	516.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahg	1.0	warmup	517.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxq	1.0	warmup	518.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamc	1.0	warmup	519.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvk	1.0	warmup	520.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaoq	1.0	warmup	521.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaie	1.0	warmup	522.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjj	1.0	warmup	523.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xoz	1.0	warmup	524.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzauc	1.0	warmup	525.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaot	1.0	warmup	526.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapu	1.0	warmup	527.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjs	1.0	warmup	528.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xho	1.0	warmup	529.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xok	1.0	warmup	530.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaki	1.0	warmup	531.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsj	1.0	warmup	532.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaoo	1.0	warmup	533.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbl	1.0	warmup	534.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xay	1.0	warmup	535.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzago	1.0	warmup	536.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdn	1.0	warmup	537.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhw	1.0	warmup	538.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadq	1.0	warmup	539.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfh	1.0	warmup	540.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xly	1.0	warmup	541.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xki	1.0	warmup	542.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagd	1.0	warmup	543.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadb	1.0	warmup	544.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqx	1.0	warmup	545.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xaw	1.0	warmup	546.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjm	1.0	warmup	547.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfs	1.0	warmup	548.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapt	1.0	warmup	549.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xun	1.0	warmup	550.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavn	1.0	warmup	551.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgu	1.0	warmup	552.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavp	1.0	warmup	553.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaig	1.0	warmup	554.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamq	1.0	warmup	555.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xld	1.0	warmup	556.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyj	1.0	warmup	557.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsw	1.0	warmup	558.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdc	1.0	warmup	559.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xte	1.0	warmup	560.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakk	1.0	warmup	561.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarf	1.0	warmup	562.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabu	1.0	warmup	563.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzasa	1.0	warmup	564.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzams	1.0	warmup	565.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxl	1.0	warmup	566.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbx	1.0	warmup	567.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xsi	1.0	warmup	568.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavj	1.0	warmup	569.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaub	1.0	warmup	570.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xrf	1.0	warmup	571.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xps	1.0	warmup	572.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfq	1.0	warmup	573.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpf	1.0	warmup	574.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyh	1.0	warmup	575.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaii	1.0	warmup	576.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacj	1.0	warmup	577.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzajo	1.0	warmup	578.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xeg	1.0	warmup	579.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarx	1.0	warmup	580.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfg	1.0	warmup	581.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacm	1.0	warmup	582.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xto	1.0	warmup	583.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzasl	1.0	warmup	584.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xtd	1.0	warmup	585.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xfo	1.0	warmup	586.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabz	1.0	warmup	587.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqr	1.0	warmup	588.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafh	1.0	warmup	589.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xax	1.0	warmup	590.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xex	1.0	warmup	591.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xus	1.0	warmup	592.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhs	1.0	warmup	593.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzale	1.0	warmup	594.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xuk	1.0	warmup	595.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyf	1.0	warmup	596.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhh	1.0	warmup	597.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamh	1.0	warmup	598.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdk	1.0	warmup	599.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpn	1.0	warmup	600.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xab	1.0	warmup	601.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xns	1.0	warmup	602.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzahf	1.0	warmup	603.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xep	1.0	warmup	604.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xnw	1.0	warmup	605.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvc	1.0	warmup	606.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgb	1.0	warmup	607.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xel	1.0	warmup	608.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpv	1.0	warmup	609.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaby	1.0	warmup	610.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxe	1.0	warmup	611.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzapw	1.0	warmup	612.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xos	1.0	warmup	613.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabl	1.0	warmup	614.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xpc	1.0	warmup	615.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadx	1.0	warmup	616.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzakq	1.0	warmup	617.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xwo	1.0	warmup	618.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagj	1.0	warmup	619.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzace	1.0	warmup	620.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaee	1.0	warmup	621.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlv	1.0	warmup	622.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xku	1.0	warmup	623.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgk	1.0	warmup	624.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcy	1.0	warmup	625.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xqq	1.0	warmup	626.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdz	1.0	warmup	627.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhm	1.0	warmup	628.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzavs	1.0	warmup	629.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaea	1.0	warmup	630.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xtm	1.0	warmup	631.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgv	1.0	warmup	632.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xff	1.0	warmup	633.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjc	1.0	warmup	634.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaaw	1.0	warmup	635.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaro	1.0	warmup	636.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzati	1.0	warmup	637.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzair	1.0	warmup	638.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xiq	1.0	warmup	639.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xgs	1.0	warmup	640.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagc	1.0	warmup	641.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xvb	1.0	warmup	642.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarl	1.0	warmup	643.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatw	1.0	warmup	644.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbz	1.0	warmup	645.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xnn	1.0	warmup	646.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamy	1.0	warmup	647.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaft	1.0	warmup	648.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzack	1.0	warmup	649.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatv	1.0	warmup	650.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzarj	1.0	warmup	651.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaap	1.0	warmup	652.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xdi	1.0	warmup	653.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzamd	1.0	warmup	654.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatn	1.0	warmup	655.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaex	1.0	warmup	656.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcv	1.0	warmup	657.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xbd	1.0	warmup	658.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaip	1.0	warmup	659.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xew	1.0	warmup	660.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xor	1.0	warmup	661.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhb	1.0	warmup	662.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xcq	1.0	warmup	663.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xth	1.0	warmup	664.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadi	1.0	warmup	665.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlg	1.0	warmup	666.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqm	1.0	warmup	667.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xxg	1.0	warmup	668.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabr	1.0	warmup	669.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xse	1.0	warmup	670.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadw	1.0	warmup	671.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzacb	1.0	warmup	672.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xlm	1.0	warmup	673.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xhi	1.0	warmup	674.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzadl	1.0	warmup	675.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xyt	1.0	warmup	676.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaae	1.0	warmup	677.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xjx	1.0	warmup	678.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzasy	1.0	warmup	679.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaqv	1.0	warmup	680.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaod	1.0	warmup	681.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzatq	1.0	warmup	682.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzafq	1.0	warmup	683.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagu	1.0	warmup	684.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzabo	1.0	warmup	685.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzagb	1.0	warmup	686.0	-1.0	-1.0	ERROR	INCORRECT
+Vir_N3_64_Ont_Opt_AWS3	queries/xzaat	1.0	warmup	687.0	-1.0	-1.0	ERROR	INCORRECT
+	queries/xac							INCORRECT
+	queries/xad							INCORRECT
+	queries/xaf							INCORRECT
+	queries/xai							INCORRECT
+	queries/xal							INCORRECT
+	queries/xam							INCORRECT
+	queries/xan							INCORRECT
+	queries/xao							INCORRECT
+	queries/xap							INCORRECT
+	queries/xaq							INCORRECT
+	queries/xau							INCORRECT
+	queries/xav							INCORRECT
+	queries/xbc							INCORRECT
+	queries/xbg							INCORRECT
+	queries/xbi							INCORRECT
+	queries/xbj							INCORRECT
+	queries/xbn							INCORRECT
+	queries/xbs							INCORRECT
+	queries/xbv							INCORRECT
+	queries/xbw							INCORRECT
+	queries/xby							INCORRECT
+	queries/xca							INCORRECT
+	queries/xcb							INCORRECT
+	queries/xcd							INCORRECT
+	queries/xcg							INCORRECT
+	queries/xck							INCORRECT
+	queries/xcl							INCORRECT
+	queries/xcm							INCORRECT
+	queries/xcn							INCORRECT
+	queries/xco							INCORRECT
+	queries/xcr							INCORRECT
+	queries/xcw							INCORRECT
+	queries/xda							INCORRECT
+	queries/xdd							INCORRECT
+	queries/xdh							INCORRECT
+	queries/xdj							INCORRECT
+	queries/xdl							INCORRECT
+	queries/xdo							INCORRECT
+	queries/xdq							INCORRECT
+	queries/xdt							INCORRECT
+	queries/xdu							INCORRECT
+	queries/xdw							INCORRECT
+	queries/xeb							INCORRECT
+	queries/xed							INCORRECT
+	queries/xef							INCORRECT
+	queries/xei							INCORRECT
+	queries/xem							INCORRECT
+	queries/xen							INCORRECT
+	queries/xeq							INCORRECT
+	queries/xev							INCORRECT
+	queries/xey							INCORRECT
+	queries/xfa							INCORRECT
+	queries/xfc							INCORRECT
+	queries/xfi							INCORRECT
+	queries/xfj							INCORRECT
+	queries/xfl							INCORRECT
+	queries/xfm							INCORRECT
+	queries/xfn							INCORRECT
+	queries/xft							INCORRECT
+	queries/xfv							INCORRECT
+	queries/xfw							INCORRECT
+	queries/xfx							INCORRECT
+	queries/xfz							INCORRECT
+	queries/xga							INCORRECT
+	queries/xgd							INCORRECT
+	queries/xgf							INCORRECT
+	queries/xgh							INCORRECT
+	queries/xgi							INCORRECT
+	queries/xgl							INCORRECT
+	queries/xgo							INCORRECT
+	queries/xgp							INCORRECT
+	queries/xgq							INCORRECT
+	queries/xgx							INCORRECT
+	queries/xgy							INCORRECT
+	queries/xgz							INCORRECT
+	queries/xha							INCORRECT
+	queries/xhc							INCORRECT
+	queries/xhe							INCORRECT
+	queries/xhg							INCORRECT
+	queries/xhk							INCORRECT
+	queries/xhl							INCORRECT
+	queries/xhn							INCORRECT
+	queries/xhp							INCORRECT
+	queries/xhu							INCORRECT
+	queries/xhv							INCORRECT
+	queries/xhy							INCORRECT
+	queries/xid							INCORRECT
+	queries/xig							INCORRECT
+	queries/xih							INCORRECT
+	queries/xil							INCORRECT
+	queries/xim							INCORRECT
+	queries/xir							INCORRECT
+	queries/xis							INCORRECT
+	queries/xiv							INCORRECT
+	queries/xiw							INCORRECT
+	queries/xix							INCORRECT
+	queries/xiz							INCORRECT
+	queries/xja							INCORRECT
+	queries/xje							INCORRECT
+	queries/xjn							INCORRECT
+	queries/xjo							INCORRECT
+	queries/xjp							INCORRECT
+	queries/xjq							INCORRECT
+	queries/xjr							INCORRECT
+	queries/xju							INCORRECT
+	queries/xjv							INCORRECT
+	queries/xjw							INCORRECT
+	queries/xjy							INCORRECT
+	queries/xjz							INCORRECT
+	queries/xkd							INCORRECT
+	queries/xkh							INCORRECT
+	queries/xkj							INCORRECT
+	queries/xkk							INCORRECT
+	queries/xkm							INCORRECT
+	queries/xko							INCORRECT
+	queries/xks							INCORRECT
+	queries/xkt							INCORRECT
+	queries/xkw							INCORRECT
+	queries/xkx							INCORRECT
+	queries/xky							INCORRECT
+	queries/xkz							INCORRECT
+	queries/xla							INCORRECT
+	queries/xle							INCORRECT
+	queries/xli							INCORRECT
+	queries/xlj							INCORRECT
+	queries/xlk							INCORRECT
+	queries/xlp							INCORRECT
+	queries/xlq							INCORRECT
+	queries/xlr							INCORRECT
+	queries/xls							INCORRECT
+	queries/xlt							INCORRECT
+	queries/xlx							INCORRECT
+	queries/xlz							INCORRECT
+	queries/xmb							INCORRECT
+	queries/xmc							INCORRECT
+	queries/xmd							INCORRECT
+	queries/xme							INCORRECT
+	queries/xmf							INCORRECT
+	queries/xmh							INCORRECT
+	queries/xmi							INCORRECT
+	queries/xml							INCORRECT
+	queries/xmn							INCORRECT
+	queries/xms							INCORRECT
+	queries/xmu							INCORRECT
+	queries/xmv							INCORRECT
+	queries/xmw							INCORRECT
+	queries/xmy							INCORRECT
+	queries/xmz							INCORRECT
+	queries/xnc							INCORRECT
+	queries/xnf							INCORRECT
+	queries/xng							INCORRECT
+	queries/xnj							INCORRECT
+	queries/xnk							INCORRECT
+	queries/xnp							INCORRECT
+	queries/xnq							INCORRECT
+	queries/xnv							INCORRECT
+	queries/xnx							INCORRECT
+	queries/xnz							INCORRECT
+	queries/xoa							INCORRECT
+	queries/xob							INCORRECT
+	queries/xod							INCORRECT
+	queries/xoe							INCORRECT
+	queries/xof							INCORRECT
+	queries/xog							INCORRECT
+	queries/xoh							INCORRECT
+	queries/xol							INCORRECT
+	queries/xom							INCORRECT
+	queries/xon							INCORRECT
+	queries/xoo							INCORRECT
+	queries/xop							INCORRECT
+	queries/xou							INCORRECT
+	queries/xov							INCORRECT
+	queries/xow							INCORRECT
+	queries/xpa							INCORRECT
+	queries/xpb							INCORRECT
+	queries/xpd							INCORRECT
+	queries/xph							INCORRECT
+	queries/xpi							INCORRECT
+	queries/xpk							INCORRECT
+	queries/xpm							INCORRECT
+	queries/xpo							INCORRECT
+	queries/xpr							INCORRECT
+	queries/xpu							INCORRECT
+	queries/xpx							INCORRECT
+	queries/xpy							INCORRECT
+	queries/xpz							INCORRECT
+	queries/xqa							INCORRECT
+	queries/xqb							INCORRECT
+	queries/xqd							INCORRECT
+	queries/xqf							INCORRECT
+	queries/xql							INCORRECT
+	queries/xqm							INCORRECT
+	queries/xqo							INCORRECT
+	queries/xqp							INCORRECT
+	queries/xqs							INCORRECT
+	queries/xqt							INCORRECT
+	queries/xqu							INCORRECT
+	queries/xqx							INCORRECT
+	queries/xqz							INCORRECT
+	queries/xrb							INCORRECT
+	queries/xrc							INCORRECT
+	queries/xrd							INCORRECT
+	queries/xre							INCORRECT
+	queries/xrg							INCORRECT
+	queries/xrk							INCORRECT
+	queries/xrn							INCORRECT
+	queries/xro							INCORRECT
+	queries/xrq							INCORRECT
+	queries/xrr							INCORRECT
+	queries/xrs							INCORRECT
+	queries/xrt							INCORRECT
+	queries/xru							INCORRECT
+	queries/xrw							INCORRECT
+	queries/xrx							INCORRECT
+	queries/xry							INCORRECT
+	queries/xsd							INCORRECT
+	queries/xsf							INCORRECT
+	queries/xsl							INCORRECT
+	queries/xsr							INCORRECT
+	queries/xss							INCORRECT
+	queries/xst							INCORRECT
+	queries/xsu							INCORRECT
+	queries/xsv							INCORRECT
+	queries/xsy							INCORRECT
+	queries/xtc							INCORRECT
+	queries/xtg							INCORRECT
+	queries/xti							INCORRECT
+	queries/xtj							INCORRECT
+	queries/xtk							INCORRECT
+	queries/xtl							INCORRECT
+	queries/xtn							INCORRECT
+	queries/xtq							INCORRECT
+	queries/xts							INCORRECT
+	queries/xtu							INCORRECT
+	queries/xtw							INCORRECT
+	queries/xtx							INCORRECT
+	queries/xty							INCORRECT
+	queries/xtz							INCORRECT
+	queries/xua							INCORRECT
+	queries/xub							INCORRECT
+	queries/xud							INCORRECT
+	queries/xuf							INCORRECT
+	queries/xug							INCORRECT
+	queries/xul							INCORRECT
+	queries/xup							INCORRECT
+	queries/xut							INCORRECT
+	queries/xuu							INCORRECT
+	queries/xuv							INCORRECT
+	queries/xuw							INCORRECT
+	queries/xuz							INCORRECT
+	queries/xva							INCORRECT
+	queries/xvf							INCORRECT
+	queries/xvg							INCORRECT
+	queries/xvh							INCORRECT
+	queries/xvi							INCORRECT
+	queries/xvm							INCORRECT
+	queries/xvn							INCORRECT
+	queries/xvp							INCORRECT
+	queries/xvu							INCORRECT
+	queries/xvv							INCORRECT
+	queries/xvw							INCORRECT
+	queries/xvx							INCORRECT
+	queries/xvy							INCORRECT
+	queries/xvz							INCORRECT
+	queries/xwb							INCORRECT
+	queries/xwe							INCORRECT
+	queries/xwh							INCORRECT
+	queries/xwk							INCORRECT
+	queries/xwn							INCORRECT
+	queries/xwr							INCORRECT
+	queries/xws							INCORRECT
+	queries/xwv							INCORRECT
+	queries/xww							INCORRECT
+	queries/xwy							INCORRECT
+	queries/xwz							INCORRECT
+	queries/xxd							INCORRECT
+	queries/xxf							INCORRECT
+	queries/xxt							INCORRECT
+	queries/xxu							INCORRECT
+	queries/xxv							INCORRECT
+	queries/xxw							INCORRECT
+	queries/xxx							INCORRECT
+	queries/xxz							INCORRECT
+	queries/xyc							INCORRECT
+	queries/xyi							INCORRECT
+	queries/xyk							INCORRECT
+	queries/xyl							INCORRECT
+	queries/xyr							INCORRECT
+	queries/xys							INCORRECT
+	queries/xyu							INCORRECT
+	queries/xyv							INCORRECT
+	queries/xyw							INCORRECT
+	queries/xyy							INCORRECT
+	queries/xzaab							INCORRECT
+	queries/xzaac							INCORRECT
+	queries/xzaad							INCORRECT
+	queries/xzaaf							INCORRECT
+	queries/xzaag							INCORRECT
+	queries/xzaah							INCORRECT
+	queries/xzaai							INCORRECT
+	queries/xzaaj							INCORRECT
+	queries/xzaak							INCORRECT
+	queries/xzaao							INCORRECT
+	queries/xzaar							INCORRECT
+	queries/xzaas							INCORRECT
+	queries/xzaau							INCORRECT
+	queries/xzaaz							INCORRECT
+	queries/xzabb							INCORRECT
+	queries/xzabc							INCORRECT
+	queries/xzabe							INCORRECT
+	queries/xzabf							INCORRECT
+	queries/xzabh							INCORRECT
+	queries/xzabn							INCORRECT
+	queries/xzabq							INCORRECT
+	queries/xzabt							INCORRECT
+	queries/xzabw							INCORRECT
+	queries/xzabx							INCORRECT
+	queries/xzaco							INCORRECT
+	queries/xzacq							INCORRECT
+	queries/xzacs							INCORRECT
+	queries/xzacu							INCORRECT
+	queries/xzacv							INCORRECT
+	queries/xzacw							INCORRECT
+	queries/xzada							INCORRECT
+	queries/xzadc							INCORRECT
+	queries/xzadf							INCORRECT
+	queries/xzadh							INCORRECT
+	queries/xzadj							INCORRECT
+	queries/xzadk							INCORRECT
+	queries/xzadm							INCORRECT
+	queries/xzadn							INCORRECT
+	queries/xzado							INCORRECT
+	queries/xzadr							INCORRECT
+	queries/xzads							INCORRECT
+	queries/xzadz							INCORRECT
+	queries/xzaec							INCORRECT
+	queries/xzaed							INCORRECT
+	queries/xzaeh							INCORRECT
+	queries/xzaei							INCORRECT
+	queries/xzaej							INCORRECT
+	queries/xzael							INCORRECT
+	queries/xzaem							INCORRECT
+	queries/xzaen							INCORRECT
+	queries/xzaep							INCORRECT
+	queries/xzaeq							INCORRECT
+	queries/xzaes							INCORRECT
+	queries/xzaet							INCORRECT
+	queries/xzaeu							INCORRECT
+	queries/xzaev							INCORRECT
+	queries/xzafa							INCORRECT
+	queries/xzafe							INCORRECT
+	queries/xzaff							INCORRECT
+	queries/xzafi							INCORRECT
+	queries/xzafs							INCORRECT
+	queries/xzafu							INCORRECT
+	queries/xzafv							INCORRECT
+	queries/xzafx							INCORRECT
+	queries/xzafy							INCORRECT
+	queries/xzagl							INCORRECT
+	queries/xzagn							INCORRECT
+	queries/xzagr							INCORRECT
+	queries/xzagv							INCORRECT
+	queries/xzagx							INCORRECT
+	queries/xzagy							INCORRECT
+	queries/xzagz							INCORRECT
+	queries/xzaha							INCORRECT
+	queries/xzahh							INCORRECT
+	queries/xzahj							INCORRECT
+	queries/xzahl							INCORRECT
+	queries/xzaho							INCORRECT
+	queries/xzahv							INCORRECT
+	queries/xzahw							INCORRECT
+	queries/xzahx							INCORRECT
+	queries/xzahy							INCORRECT
+	queries/xzaia							INCORRECT
+	queries/xzaif							INCORRECT
+	queries/xzaih							INCORRECT
+	queries/xzaik							INCORRECT
+	queries/xzail							INCORRECT
+	queries/xzaim							INCORRECT
+	queries/xzaio							INCORRECT
+	queries/xzait							INCORRECT
+	queries/xzaiw							INCORRECT
+	queries/xzaix							INCORRECT
+	queries/xzaiz							INCORRECT
+	queries/xzajb							INCORRECT
+	queries/xzajc							INCORRECT
+	queries/xzajd							INCORRECT
+	queries/xzajf							INCORRECT
+	queries/xzajg							INCORRECT
+	queries/xzaji							INCORRECT
+	queries/xzajl							INCORRECT
+	queries/xzajn							INCORRECT
+	queries/xzajq							INCORRECT
+	queries/xzajr							INCORRECT
+	queries/xzajs							INCORRECT
+	queries/xzajt							INCORRECT
+	queries/xzaju							INCORRECT
+	queries/xzajy							INCORRECT
+	queries/xzajz							INCORRECT
+	queries/xzakh							INCORRECT
+	queries/xzakl							INCORRECT
+	queries/xzako							INCORRECT
+	queries/xzakr							INCORRECT
+	queries/xzaks							INCORRECT
+	queries/xzakt							INCORRECT
+	queries/xzakv							INCORRECT
+	queries/xzakw							INCORRECT
+	queries/xzakx							INCORRECT
+	queries/xzald							INCORRECT
+	queries/xzalh							INCORRECT
+	queries/xzali							INCORRECT
+	queries/xzalk							INCORRECT
+	queries/xzaln							INCORRECT
+	queries/xzalp							INCORRECT
+	queries/xzalr							INCORRECT
+	queries/xzalu							INCORRECT
+	queries/xzalw							INCORRECT
+	queries/xzalx							INCORRECT
+	queries/xzalz							INCORRECT
+	queries/xzamf							INCORRECT
+	queries/xzamg							INCORRECT
+	queries/xzamj							INCORRECT
+	queries/xzaml							INCORRECT
+	queries/xzamm							INCORRECT
+	queries/xzamn							INCORRECT
+	queries/xzamt							INCORRECT
+	queries/xzamv							INCORRECT
+	queries/xzamx							INCORRECT
+	queries/xzamz							INCORRECT
+	queries/xzanb							INCORRECT
+	queries/xzane							INCORRECT
+	queries/xzanh							INCORRECT
+	queries/xzani							INCORRECT
+	queries/xzanj							INCORRECT
+	queries/xzanl							INCORRECT
+	queries/xzann							INCORRECT
+	queries/xzans							INCORRECT
+	queries/xzanv							INCORRECT
+	queries/xzanw							INCORRECT
+	queries/xzaoe							INCORRECT
+	queries/xzaoj							INCORRECT
+	queries/xzaol							INCORRECT
+	queries/xzaon							INCORRECT
+	queries/xzaop							INCORRECT
+	queries/xzaor							INCORRECT
+	queries/xzaow							INCORRECT
+	queries/xzaoy							INCORRECT
+	queries/xzaoz							INCORRECT
+	queries/xzapb							INCORRECT
+	queries/xzapc							INCORRECT
+	queries/xzapg							INCORRECT
+	queries/xzaph							INCORRECT
+	queries/xzapi							INCORRECT
+	queries/xzapk							INCORRECT
+	queries/xzapl							INCORRECT
+	queries/xzapp							INCORRECT
+	queries/xzapq							INCORRECT
+	queries/xzapr							INCORRECT
+	queries/xzapv							INCORRECT
+	queries/xzapx							INCORRECT
+	queries/xzaqa							INCORRECT
+	queries/xzaqb							INCORRECT
+	queries/xzaqc							INCORRECT
+	queries/xzaqd							INCORRECT
+	queries/xzaqf							INCORRECT
+	queries/xzaqh							INCORRECT
+	queries/xzaqi							INCORRECT
+	queries/xzaql							INCORRECT
+	queries/xzaqn							INCORRECT
+	queries/xzaqo							INCORRECT
+	queries/xzaqp							INCORRECT
+	queries/xzaqt							INCORRECT
+	queries/xzaqu							INCORRECT
+	queries/xzaqw							INCORRECT
+	queries/xzaqy							INCORRECT
+	queries/xzarb							INCORRECT
+	queries/xzare							INCORRECT
+	queries/xzark							INCORRECT
+	queries/xzarp							INCORRECT
+	queries/xzarq							INCORRECT
+	queries/xzarr							INCORRECT
+	queries/xzaru							INCORRECT
+	queries/xzarw							INCORRECT
+	queries/xzarz							INCORRECT
+	queries/xzasb							INCORRECT
+	queries/xzasc							INCORRECT
+	queries/xzasf							INCORRECT
+	queries/xzash							INCORRECT
+	queries/xzasi							INCORRECT
+	queries/xzasj							INCORRECT
+	queries/xzask							INCORRECT
+	queries/xzasm							INCORRECT
+	queries/xzasn							INCORRECT
+	queries/xzaso							INCORRECT
+	queries/xzasp							INCORRECT
+	queries/xzasq							INCORRECT
+	queries/xzasr							INCORRECT
+	queries/xzass							INCORRECT
+	queries/xzast							INCORRECT
+	queries/xzasu							INCORRECT
+	queries/xzasv							INCORRECT
+	queries/xzasw							INCORRECT
+	queries/xzasz							INCORRECT
+	queries/xzatb							INCORRECT
+	queries/xzate							INCORRECT
+	queries/xzatg							INCORRECT
+	queries/xzatj							INCORRECT
+	queries/xzato							INCORRECT
+	queries/xzatt							INCORRECT
+	queries/xzatx							INCORRECT
+	queries/xzaue							INCORRECT
+	queries/xzauf							INCORRECT
+	queries/xzauh							INCORRECT
+	queries/xzaui							INCORRECT
+	queries/xzauj							INCORRECT
+	queries/xzauk							INCORRECT
+	queries/xzaul							INCORRECT
+	queries/xzaup							INCORRECT
+	queries/xzauq							INCORRECT
+	queries/xzaur							INCORRECT
+	queries/xzaus							INCORRECT
+	queries/xzauu							INCORRECT
+	queries/xzauw							INCORRECT
+	queries/xzauy							INCORRECT
+	queries/xzauz							INCORRECT
+	queries/xzava							INCORRECT
+	queries/xzavd							INCORRECT
+	queries/xzave							INCORRECT
+	queries/xzavi							INCORRECT
+	queries/xzavl							INCORRECT
+	queries/xzavm							INCORRECT
+	queries/xzavo							INCORRECT
+	queries/xzavw							INCORRECT
+	queries/xzavx							INCORRECT
+	queries/xzavz							INCORRECT

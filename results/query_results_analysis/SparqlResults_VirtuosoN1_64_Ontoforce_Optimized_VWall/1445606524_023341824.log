@@ -1,0 +1,4 @@
+0^^http://www.w3.org/2001/XMLSchema#integer,http://ns.ontoforce.com/ontologies/ncbi-gene/model,MODEL,
+0^^http://www.w3.org/2001/XMLSchema#integer,http://ns.ontoforce.com/ontologies/ncbi-gene/provisional,PROVISIONAL,
+0^^http://www.w3.org/2001/XMLSchema#integer,http://ns.ontoforce.com/ontologies/ncbi-gene/reviewed,REVIEWED,
+0^^http://www.w3.org/2001/XMLSchema#integer,http://ns.ontoforce.com/ontologies/ncbi-gene/validated,VALIDATED,

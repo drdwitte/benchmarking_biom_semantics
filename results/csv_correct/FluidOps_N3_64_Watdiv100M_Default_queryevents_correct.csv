@@ -1,0 +1,392 @@
+sim_id	query_name	thread_id	thread_type	order_id	number_of_results	runtime	flag	correct
+Flu_N3_64_W100_Def	F1/F1_split11.sparql	1.0	warmup	1.0	2.0	8.646807594	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S4/S4_split2.sparql	1.0	warmup	2.0	0.0	6.27947014	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	F4/F4_split14.sparql	1.0	warmup	3.0	299.0	6.934620978	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S3/S3_split9.sparql	1.0	warmup	4.0	0.0	13.365095899000002	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	C2/C2_split18.sparql	1.0	warmup	5.0	22.0	251.371213238	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	L5/L5_split19.sparql	1.0	warmup	6.0	2681.0	35.87338796	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	L3/L3_split9.sparql	1.0	warmup	7.0	34.0	0.15200771	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S2/S2_split6.sparql	1.0	warmup	8.0	346.0	5.694649801000001	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S4/S4_split8.sparql	1.0	warmup	9.0	34.0	90.06443236599999	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	C2/C2_split5.sparql	1.0	warmup	10.0	22.0	251.67254048700002	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	L4/L4_split18.sparql	1.0	warmup	11.0	628.0	3.850347895	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	F5/F5_split15.sparql	1.0	warmup	12.0	55.0	0.6881170019999999	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S6/S6_split10.sparql	1.0	warmup	13.0	72.0	3.9639751469999998	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	L1/L1_split18.sparql	1.0	warmup	14.0	0.0	0.072680938	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S7/S7_split19.sparql	1.0	warmup	15.0	0.0	0.128263093	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	L2/L2_split16.sparql	1.0	warmup	16.0	1906.0	25.384001470999998	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S3/S3_split5.sparql	1.0	warmup	17.0	0.0	14.650057124000002	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	L2/L2_split18.sparql	1.0	warmup	18.0	1906.0	24.518181102	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S6/S6_split3.sparql	1.0	warmup	19.0	1.0	0.17292564300000002	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S7/S7_split1.sparql	1.0	warmup	20.0	1.0	0.036599900000000005	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S5/S5_split1.sparql	1.0	warmup	21.0	0.0	11.373950888	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	C1/C1_split18.sparql	1.0	warmup	22.0	199.0	37.316532220999996	SUCCESS	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split2.sparql	1.0	warmup	23.0	0.0	10.959568699	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	F1/F1_split0.sparql	1.0	warmup	24.0	19.0	11.483606265	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	F5/F5_split1.sparql	1.0	warmup	25.0	15.0	0.181161128	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S5/S5_split7.sparql	1.0	warmup	26.0	341.0	13.311283437	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	F1/F1_split13.sparql	1.0	warmup	27.0	0.0	7.403776866	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	L2/L2_split8.sparql	1.0	warmup	28.0	118.0	24.433089259000003	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	F2/F2_split2.sparql	1.0	warmup	29.0	124.0	10.567410858999999	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S3/S3_split4.sparql	1.0	warmup	30.0	0.0	14.124140472	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S4/S4_split10.sparql	1.0	warmup	31.0	0.0	7.823574426	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	C2/C2_split15.sparql	1.0	warmup	32.0	22.0	255.915847629	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	C2/C2_split1.sparql	1.0	warmup	33.0	22.0	255.27322455599997	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	L3/L3_split4.sparql	1.0	warmup	34.0	53.0	0.060985579000000005	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	C2/C2_split16.sparql	1.0	warmup	35.0	22.0	255.890153525	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S1/S1_split19.sparql	1.0	warmup	36.0	12.0	1.090170876	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	F3/F3_split11.sparql	1.0	warmup	37.0	29.0	0.7192859549999999	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S3/S3_split18.sparql	1.0	warmup	38.0	0.0	14.701148773000002	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	S1/S1_split5.sparql	1.0	warmup	39.0	5.0	0.31807930100000004	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	C1/C1_split3.sparql	1.0	warmup	40.0	201.0	36.360163204	SUCCESS	CORRECT
+Flu_N3_64_W100_Def	C3/C3_split2.sparql	1.0	warmup	41.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split2.sparql	1.0	warmup	42.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split18.sparql	1.0	warmup	43.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split9.sparql	1.0	warmup	44.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split11.sparql	1.0	warmup	45.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S4/S4_split9.sparql	1.0	warmup	46.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split17.sparql	1.0	warmup	47.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split9.sparql	1.0	warmup	48.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split18.sparql	1.0	warmup	49.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split11.sparql	1.0	warmup	50.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split17.sparql	1.0	warmup	51.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split3.sparql	1.0	warmup	52.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split3.sparql	1.0	warmup	53.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split2.sparql	1.0	warmup	54.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split9.sparql	1.0	warmup	55.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split7.sparql	1.0	warmup	56.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split17.sparql	1.0	warmup	57.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split14.sparql	1.0	warmup	58.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split10.sparql	1.0	warmup	59.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split8.sparql	1.0	warmup	60.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split2.sparql	1.0	warmup	61.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split7.sparql	1.0	warmup	62.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split10.sparql	1.0	warmup	63.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split15.sparql	1.0	warmup	64.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split9.sparql	1.0	warmup	65.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split19.sparql	1.0	warmup	66.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split1.sparql	1.0	warmup	67.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split18.sparql	1.0	warmup	68.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split5.sparql	1.0	warmup	69.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split13.sparql	1.0	warmup	70.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split0.sparql	1.0	warmup	71.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split17.sparql	1.0	warmup	72.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split13.sparql	1.0	warmup	73.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split10.sparql	1.0	warmup	74.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split13.sparql	1.0	warmup	75.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split3.sparql	1.0	warmup	76.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split16.sparql	1.0	warmup	77.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split12.sparql	1.0	warmup	78.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split17.sparql	1.0	warmup	79.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split16.sparql	1.0	warmup	80.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split12.sparql	1.0	warmup	81.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split14.sparql	1.0	warmup	82.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split0.sparql	1.0	warmup	83.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split10.sparql	1.0	warmup	84.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split4.sparql	1.0	warmup	85.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split9.sparql	1.0	warmup	86.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split13.sparql	1.0	warmup	87.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split14.sparql	1.0	warmup	88.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split19.sparql	1.0	warmup	89.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split14.sparql	1.0	warmup	90.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split6.sparql	1.0	warmup	91.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split6.sparql	1.0	warmup	92.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split8.sparql	1.0	warmup	93.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split19.sparql	1.0	warmup	94.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split18.sparql	1.0	warmup	95.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split19.sparql	1.0	warmup	96.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split2.sparql	1.0	warmup	97.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split4.sparql	1.0	warmup	98.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split3.sparql	1.0	warmup	99.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split13.sparql	1.0	warmup	100.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split0.sparql	1.0	warmup	101.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split14.sparql	1.0	warmup	102.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split9.sparql	1.0	warmup	103.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split6.sparql	1.0	warmup	104.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split10.sparql	1.0	warmup	105.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split0.sparql	1.0	warmup	106.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split4.sparql	1.0	warmup	107.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split12.sparql	1.0	warmup	108.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split15.sparql	1.0	warmup	109.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split4.sparql	1.0	warmup	110.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split15.sparql	1.0	warmup	111.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split15.sparql	1.0	warmup	112.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split2.sparql	1.0	warmup	113.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split3.sparql	1.0	warmup	114.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split7.sparql	1.0	warmup	115.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split6.sparql	1.0	warmup	116.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split16.sparql	1.0	warmup	117.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split10.sparql	1.0	warmup	118.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split19.sparql	1.0	warmup	119.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S4/S4_split13.sparql	1.0	warmup	120.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split2.sparql	1.0	warmup	121.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split0.sparql	1.0	warmup	122.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split19.sparql	1.0	warmup	123.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split6.sparql	1.0	warmup	124.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split11.sparql	1.0	warmup	125.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split17.sparql	1.0	warmup	126.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split15.sparql	1.0	warmup	127.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split1.sparql	1.0	warmup	128.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split10.sparql	1.0	warmup	129.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split3.sparql	1.0	warmup	130.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split14.sparql	1.0	warmup	131.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split11.sparql	1.0	warmup	132.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split5.sparql	1.0	warmup	133.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split7.sparql	1.0	warmup	134.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split6.sparql	1.0	warmup	135.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split7.sparql	1.0	warmup	136.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split11.sparql	1.0	warmup	137.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split13.sparql	1.0	warmup	138.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split6.sparql	1.0	warmup	139.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split6.sparql	1.0	warmup	140.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split15.sparql	1.0	warmup	141.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split7.sparql	1.0	warmup	142.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split9.sparql	1.0	warmup	143.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split8.sparql	1.0	warmup	144.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S4/S4_split14.sparql	1.0	warmup	145.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split19.sparql	1.0	warmup	146.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split16.sparql	1.0	warmup	147.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split6.sparql	1.0	warmup	148.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split2.sparql	1.0	warmup	149.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split5.sparql	1.0	warmup	150.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split0.sparql	1.0	warmup	151.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split4.sparql	1.0	warmup	152.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split2.sparql	1.0	warmup	153.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split6.sparql	1.0	warmup	154.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split11.sparql	1.0	warmup	155.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split2.sparql	1.0	warmup	156.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split12.sparql	1.0	warmup	157.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split13.sparql	1.0	warmup	158.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split5.sparql	1.0	warmup	159.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split8.sparql	1.0	warmup	160.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split0.sparql	1.0	warmup	161.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split2.sparql	1.0	warmup	162.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split18.sparql	1.0	warmup	163.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split11.sparql	1.0	warmup	164.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split15.sparql	1.0	warmup	165.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split9.sparql	1.0	warmup	166.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split9.sparql	1.0	warmup	167.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split16.sparql	1.0	warmup	168.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split18.sparql	1.0	warmup	169.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split0.sparql	1.0	warmup	170.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split7.sparql	1.0	warmup	171.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split11.sparql	1.0	warmup	172.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split7.sparql	1.0	warmup	173.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split4.sparql	1.0	warmup	174.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split4.sparql	1.0	warmup	175.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split10.sparql	1.0	warmup	176.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split7.sparql	1.0	warmup	177.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split9.sparql	1.0	warmup	178.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S4/S4_split1.sparql	1.0	warmup	179.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S4/S4_split5.sparql	1.0	warmup	180.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split2.sparql	1.0	warmup	181.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split7.sparql	1.0	warmup	182.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split10.sparql	1.0	warmup	183.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split11.sparql	1.0	warmup	184.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split7.sparql	1.0	warmup	185.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split14.sparql	1.0	warmup	186.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split1.sparql	1.0	warmup	187.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split12.sparql	1.0	warmup	188.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split18.sparql	1.0	warmup	189.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split2.sparql	1.0	warmup	190.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split10.sparql	1.0	warmup	191.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split4.sparql	1.0	warmup	192.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split16.sparql	1.0	warmup	193.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split10.sparql	1.0	warmup	194.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split8.sparql	1.0	warmup	195.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split15.sparql	1.0	warmup	196.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split11.sparql	1.0	warmup	197.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split16.sparql	1.0	warmup	198.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split19.sparql	1.0	warmup	199.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split15.sparql	1.0	warmup	200.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split11.sparql	1.0	warmup	201.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split7.sparql	1.0	warmup	202.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split6.sparql	1.0	warmup	203.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split17.sparql	1.0	warmup	204.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split1.sparql	1.0	warmup	205.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split8.sparql	1.0	warmup	206.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split12.sparql	1.0	warmup	207.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split15.sparql	1.0	warmup	208.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split11.sparql	1.0	warmup	209.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split12.sparql	1.0	warmup	210.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split17.sparql	1.0	warmup	211.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split13.sparql	1.0	warmup	212.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split1.sparql	1.0	warmup	213.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split12.sparql	1.0	warmup	214.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split8.sparql	1.0	warmup	215.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split14.sparql	1.0	warmup	216.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split13.sparql	1.0	warmup	217.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split6.sparql	1.0	warmup	218.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split19.sparql	1.0	warmup	219.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split8.sparql	1.0	warmup	220.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split2.sparql	1.0	warmup	221.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split8.sparql	1.0	warmup	222.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split7.sparql	1.0	warmup	223.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split0.sparql	1.0	warmup	224.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split7.sparql	1.0	warmup	225.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split3.sparql	1.0	warmup	226.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split5.sparql	1.0	warmup	227.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split9.sparql	1.0	warmup	228.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split6.sparql	1.0	warmup	229.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split8.sparql	1.0	warmup	230.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split3.sparql	1.0	warmup	231.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split9.sparql	1.0	warmup	232.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split1.sparql	1.0	warmup	233.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split17.sparql	1.0	warmup	234.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split0.sparql	1.0	warmup	235.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split8.sparql	1.0	warmup	236.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S4/S4_split7.sparql	1.0	warmup	237.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split12.sparql	1.0	warmup	238.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split14.sparql	1.0	warmup	239.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split15.sparql	1.0	warmup	240.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split19.sparql	1.0	warmup	241.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split16.sparql	1.0	warmup	242.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split17.sparql	1.0	warmup	243.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split19.sparql	1.0	warmup	244.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split16.sparql	1.0	warmup	245.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L1/L1_split13.sparql	1.0	warmup	246.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split5.sparql	1.0	warmup	247.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split3.sparql	1.0	warmup	248.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S5/S5_split14.sparql	1.0	warmup	249.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split16.sparql	1.0	warmup	250.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split12.sparql	1.0	warmup	251.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S4/S4_split6.sparql	1.0	warmup	252.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split18.sparql	1.0	warmup	253.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split12.sparql	1.0	warmup	254.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split11.sparql	1.0	warmup	255.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S6/S6_split1.sparql	1.0	warmup	256.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F5/F5_split14.sparql	1.0	warmup	257.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split13.sparql	1.0	warmup	258.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split0.sparql	1.0	warmup	259.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split1.sparql	1.0	warmup	260.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L4/L4_split0.sparql	1.0	warmup	261.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split17.sparql	1.0	warmup	262.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split14.sparql	1.0	warmup	263.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split18.sparql	1.0	warmup	264.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F3/F3_split6.sparql	1.0	warmup	265.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split4.sparql	1.0	warmup	266.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C2/C2_split17.sparql	1.0	warmup	267.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split0.sparql	1.0	warmup	268.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split13.sparql	1.0	warmup	269.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split10.sparql	1.0	warmup	270.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S4/S4_split16.sparql	1.0	warmup	271.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split5.sparql	1.0	warmup	272.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split17.sparql	1.0	warmup	273.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S1/S1_split0.sparql	1.0	warmup	274.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split6.sparql	1.0	warmup	275.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split18.sparql	1.0	warmup	276.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S7/S7_split18.sparql	1.0	warmup	277.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split9.sparql	1.0	warmup	278.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split0.sparql	1.0	warmup	279.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split8.sparql	1.0	warmup	280.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L5/L5_split5.sparql	1.0	warmup	281.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S2/S2_split3.sparql	1.0	warmup	282.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	S3/S3_split13.sparql	1.0	warmup	283.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F1/F1_split15.sparql	1.0	warmup	284.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C3/C3_split9.sparql	1.0	warmup	285.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L3/L3_split5.sparql	1.0	warmup	286.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	L2/L2_split14.sparql	1.0	warmup	287.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split19.sparql	1.0	warmup	288.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F2/F2_split1.sparql	1.0	warmup	289.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	C1/C1_split9.sparql	1.0	warmup	290.0	-1.0	300.0	TIMEOUT	INCORRECT
+Flu_N3_64_W100_Def	F4/F4_split17.sparql	1.0	warmup	291.0	-1.0	300.0	TIMEOUT	INCORRECT
+	C1/C1_split0.sparql							INCORRECT
+	C1/C1_split11.sparql							INCORRECT
+	C1/C1_split12.sparql							INCORRECT
+	C1/C1_split14.sparql							INCORRECT
+	C1/C1_split19.sparql							INCORRECT
+	C1/C1_split4.sparql							INCORRECT
+	C1/C1_split5.sparql							INCORRECT
+	F1/F1_split10.sparql							INCORRECT
+	F1/F1_split16.sparql							INCORRECT
+	F1/F1_split17.sparql							INCORRECT
+	F1/F1_split3.sparql							INCORRECT
+	F1/F1_split4.sparql							INCORRECT
+	F1/F1_split5.sparql							INCORRECT
+	F1/F1_split9.sparql							INCORRECT
+	F2/F2_split10.sparql							INCORRECT
+	F2/F2_split11.sparql							INCORRECT
+	F2/F2_split12.sparql							INCORRECT
+	F2/F2_split13.sparql							INCORRECT
+	F2/F2_split15.sparql							INCORRECT
+	F2/F2_split17.sparql							INCORRECT
+	F2/F2_split18.sparql							INCORRECT
+	F2/F2_split5.sparql							INCORRECT
+	F3/F3_split12.sparql							INCORRECT
+	F3/F3_split16.sparql							INCORRECT
+	F3/F3_split17.sparql							INCORRECT
+	F3/F3_split18.sparql							INCORRECT
+	F3/F3_split19.sparql							INCORRECT
+	F3/F3_split3.sparql							INCORRECT
+	F4/F4_split15.sparql							INCORRECT
+	F4/F4_split4.sparql							INCORRECT
+	F4/F4_split6.sparql							INCORRECT
+	F4/F4_split8.sparql							INCORRECT
+	F5/F5_split10.sparql							INCORRECT
+	F5/F5_split11.sparql							INCORRECT
+	F5/F5_split13.sparql							INCORRECT
+	F5/F5_split4.sparql							INCORRECT
+	F5/F5_split9.sparql							INCORRECT
+	L1/L1_split1.sparql							INCORRECT
+	L1/L1_split19.sparql							INCORRECT
+	L1/L1_split3.sparql							INCORRECT
+	L2/L2_split10.sparql							INCORRECT
+	L2/L2_split17.sparql							INCORRECT
+	L2/L2_split4.sparql							INCORRECT
+	L3/L3_split1.sparql							INCORRECT
+	L3/L3_split12.sparql							INCORRECT
+	L3/L3_split14.sparql							INCORRECT
+	L3/L3_split16.sparql							INCORRECT
+	L3/L3_split3.sparql							INCORRECT
+	L4/L4_split1.sparql							INCORRECT
+	L4/L4_split12.sparql							INCORRECT
+	L4/L4_split15.sparql							INCORRECT
+	L4/L4_split16.sparql							INCORRECT
+	L4/L4_split3.sparql							INCORRECT
+	L4/L4_split5.sparql							INCORRECT
+	L4/L4_split7.sparql							INCORRECT
+	L4/L4_split8.sparql							INCORRECT
+	L5/L5_split1.sparql							INCORRECT
+	L5/L5_split13.sparql							INCORRECT
+	L5/L5_split14.sparql							INCORRECT
+	L5/L5_split16.sparql							INCORRECT
+	L5/L5_split17.sparql							INCORRECT
+	S1/S1_split10.sparql							INCORRECT
+	S1/S1_split12.sparql							INCORRECT
+	S1/S1_split13.sparql							INCORRECT
+	S1/S1_split2.sparql							INCORRECT
+	S1/S1_split3.sparql							INCORRECT
+	S1/S1_split7.sparql							INCORRECT
+	S2/S2_split1.sparql							INCORRECT
+	S2/S2_split14.sparql							INCORRECT
+	S2/S2_split15.sparql							INCORRECT
+	S2/S2_split16.sparql							INCORRECT
+	S2/S2_split2.sparql							INCORRECT
+	S2/S2_split4.sparql							INCORRECT
+	S2/S2_split7.sparql							INCORRECT
+	S2/S2_split8.sparql							INCORRECT
+	S3/S3_split0.sparql							INCORRECT
+	S3/S3_split1.sparql							INCORRECT
+	S3/S3_split10.sparql							INCORRECT
+	S3/S3_split3.sparql							INCORRECT
+	S3/S3_split7.sparql							INCORRECT
+	S3/S3_split8.sparql							INCORRECT
+	S4/S4_split0.sparql							INCORRECT
+	S4/S4_split11.sparql							INCORRECT
+	S4/S4_split12.sparql							INCORRECT
+	S4/S4_split15.sparql							INCORRECT
+	S4/S4_split17.sparql							INCORRECT
+	S4/S4_split18.sparql							INCORRECT
+	S4/S4_split19.sparql							INCORRECT
+	S4/S4_split3.sparql							INCORRECT
+	S4/S4_split4.sparql							INCORRECT
+	S5/S5_split11.sparql							INCORRECT
+	S5/S5_split15.sparql							INCORRECT
+	S5/S5_split16.sparql							INCORRECT
+	S5/S5_split4.sparql							INCORRECT
+	S5/S5_split5.sparql							INCORRECT
+	S6/S6_split5.sparql							INCORRECT
+	S7/S7_split12.sparql							INCORRECT
+	S7/S7_split14.sparql							INCORRECT
+	S7/S7_split2.sparql							INCORRECT
+	S7/S7_split6.sparql							INCORRECT

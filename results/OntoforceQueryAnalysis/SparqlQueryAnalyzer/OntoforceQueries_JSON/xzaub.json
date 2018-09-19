@@ -1,0 +1,139 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    "?property",
+    "?lens",
+    "?property_rank",
+    "?renderer",
+    "?prop_label",
+    "?facet_label"
+  ],
+  "where": [
+    {
+      "type": "graph",
+      "patterns": [
+        {
+          "type": "bgp",
+          "triples": [
+            {
+              "subject": "?lens",
+              "predicate": "http://ns.ontoforce.com/2013/disqover#showProperty",
+              "object": "?property_description"
+            },
+            {
+              "subject": "?property_description",
+              "predicate": "http://ns.ontoforce.com/2013/disqover#property",
+              "object": "?property"
+            },
+            {
+              "subject": "?property_description",
+              "predicate": "http://ns.ontoforce.com/2013/disqover#rank",
+              "object": "?property_rank"
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?conf_facet",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "object": "http://ns.ontoforce.com/2013/disqover#Facet"
+                },
+                {
+                  "subject": "?conf_facet",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#property",
+                  "object": "?property"
+                },
+                {
+                  "subject": "?conf_facet",
+                  "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                  "object": "?facet_label"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?property_description",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#renderer",
+                  "object": "?renderer"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "optional",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?property",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "object": "http://www.w3.org/2002/07/owl#DatatypeProperty"
+                },
+                {
+                  "subject": "?property",
+                  "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+                  "object": "?prop_label"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "filter",
+          "expression": {
+            "type": "operation",
+            "operator": "=",
+            "args": [
+              "?lens",
+              "http://ns.ontoforce.com/configuration#geneLens"
+            ]
+          }
+        }
+      ],
+      "name": "http://ns.ontoforce.com/graphs/uploaded_configuration_graph_20160224091238086725"
+    }
+  ],
+  "group": [
+    {
+      "expression": "?property"
+    },
+    {
+      "expression": "?lens"
+    },
+    {
+      "expression": "?property_rank"
+    },
+    {
+      "expression": "?renderer"
+    },
+    {
+      "expression": "?prop_label"
+    },
+    {
+      "expression": "?facet_label"
+    }
+  ],
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "disq": "http://ns.ontoforce.com/2013/disqover#"
+  }
+}

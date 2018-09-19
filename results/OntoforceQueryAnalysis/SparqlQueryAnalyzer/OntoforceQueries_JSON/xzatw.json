@@ -1,0 +1,39 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    "?g"
+  ],
+  "where": [
+    {
+      "type": "graph",
+      "patterns": [
+        {
+          "type": "bgp",
+          "triples": [
+            {
+              "subject": "?g",
+              "predicate": "http://ns.ontoforce.com/2013/disqover#range",
+              "object": "http://ns.ontoforce.com/2013/disqover#global"
+            }
+          ]
+        }
+      ],
+      "name": "http://ns.ontoforce.com/graphs/configurations"
+    }
+  ],
+  "order": [
+    {
+      "expression": "?g",
+      "descending": true
+    }
+  ],
+  "limit": 1,
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "kind": "query",
+  "jsonSize": 4593,
+  "jsonLines": 199,
+  "count": {
+    "query": 1,
+    "triplePattern": 5,
+    "keys": 43,
+    "bgp": 5,
+    "tp_???": 3,
+    "optional": 2,
+    "tp_?p?": 2,
+    "union": 1,
+    "group": 2,
+    "filter": 8
+  },
+  "depth": 4
+}

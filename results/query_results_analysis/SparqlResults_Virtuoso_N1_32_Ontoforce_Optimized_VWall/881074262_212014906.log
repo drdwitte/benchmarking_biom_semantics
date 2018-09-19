@@ -1,0 +1,6 @@
+1403^^http://www.w3.org/2001/XMLSchema#integer,http://purl.obolibrary.org/obo/ERO_0001536,Biological target,
+237^^http://www.w3.org/2001/XMLSchema#integer,http://purl.obolibrary.org/obo/ERO_0001545,Protein target,
+14^^http://www.w3.org/2001/XMLSchema#integer,http://purl.obolibrary.org/obo/ERO_0001538,Whole organism or virus target,
+9^^http://www.w3.org/2001/XMLSchema#integer,http://purl.obolibrary.org/obo/ERO_0001540,Cell target,
+3^^http://www.w3.org/2001/XMLSchema#integer,http://purl.obolibrary.org/obo/ERO_0001537,Chemical target,
+1^^http://www.w3.org/2001/XMLSchema#integer,http://purl.obolibrary.org/obo/ERO_0001532,Antibody target,

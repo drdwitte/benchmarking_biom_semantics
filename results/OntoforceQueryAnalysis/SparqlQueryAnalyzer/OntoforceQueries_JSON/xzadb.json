@@ -1,0 +1,146 @@
+{
+  "queryType": "SELECT",
+  "variables": [
+    "?facet_key"
+  ],
+  "distinct": true,
+  "from": {
+    "default": [
+      "http://ns.ontoforce.com/graphs/uploaded_configuration_graph_20160224091238086725"
+    ],
+    "named": []
+  },
+  "where": [
+    {
+      "type": "union",
+      "patterns": [
+        {
+          "type": "group",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?facet_key",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "object": "http://ns.ontoforce.com/2013/disqover#Facet"
+                },
+                {
+                  "subject": "http://ns.ontoforce.com/2013/disqover#all",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#inTextIndex",
+                  "object": "?x"
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?x",
+                  "\"Y\""
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?facet_key",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "object": "http://ns.ontoforce.com/2013/disqover#Facet"
+                },
+                {
+                  "subject": "?facet_key",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#inTextIndex",
+                  "object": "?x"
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?x",
+                  "\"Y\""
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "group",
+          "patterns": [
+            {
+              "type": "bgp",
+              "triples": [
+                {
+                  "subject": "?facet_key",
+                  "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+                  "object": "http://ns.ontoforce.com/2013/disqover#Facet"
+                },
+                {
+                  "subject": "?facet_key",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#relatedCanonicalType",
+                  "object": "?canon"
+                },
+                {
+                  "subject": "?canon",
+                  "predicate": "http://ns.ontoforce.com/2013/disqover#inTextIndex",
+                  "object": "?x"
+                }
+              ]
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "=",
+                "args": [
+                  "?x",
+                  "\"Y\""
+                ]
+              }
+            },
+            {
+              "type": "filter",
+              "expression": {
+                "type": "operation",
+                "operator": "notexists",
+                "args": [
+                  {
+                    "type": "bgp",
+                    "triples": [
+                      {
+                        "subject": "?facet_key",
+                        "predicate": "http://ns.ontoforce.com/2013/disqover#inTextIndex",
+                        "object": "?y"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "type": "query",
+  "prefixes": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "disq": "http://ns.ontoforce.com/2013/disqover#"
+  }
+}
