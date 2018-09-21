@@ -264,35 +264,35 @@ addressref={A},
 \begin{abstract}
 \parttitle{Background} 
 %CONTEXT
-Applications in the biomedical domain rely on Linked Data spanning multiple datasets for an increasing number of use cases. %\todo{DDP: only biomedical? all biomed apps?}
-Choosing a strategy for running federated queries over Big Linked Data is however a challenging task.
+An increasing number of applications in the biomedical domain rely on Linked Data spanning multiple datasets. %\todo{DDP: only biomedical? all biomed apps?}
+Choosing a strategy for running federated queries over Big Linked Data is a challenging task:
 %Biomedisch data, federated, big data, schaal, artificiele
-
 %NEED
-\noindent Given the abundance of Linked Data storage solutions and benchmarks,
+given the abundance of Linked Data storage solutions,
 it is not straightforward to make an informed choice between platforms.
 %Hoe objectief kiezen? Snel kiezen
-
 %TASK
-\noindent This can be addressed by releasing an updated review of the state-of-the-art periodically and by providing tools and methods to make these more (easily) reproducible. 
-Running a custom benchmark tailored to a specific use case becomes more feasible by simplifying deployment, configuration, and post-processing.
-%Automatiseren van deployment en postprocessing, objectief maken = repeatable
 \parttitle{Results}
+We provide an extensive review of state-of-the-art Resource Description Framework (RDF) storage solutions. 
+%Automatiseren van deployment en postprocessing, objectief maken = repeatable
 %OBJECT
-The results in this work are obtained by performing an extensive query performance benchmark. The focus lies on comparing scalable RDF systems and iterating over different hardware options and engine configurations. Contrary to most benchmarking efforts, comparisons are made across different approaches to Linked Data querying by comparing the financial benchmark costs. Both artificial tests and a real case with queries from a biomedical search application are analyzed. To make the interpretation of the benchmark results more reproducible we relied decision trees trained on query features.
+%benchmark dimensies oplijsten: systems, hardware conf, query props, context, dataset size, artificial/realworld
+We assessed query performance of seven RDF systems: four commercial and three research prototypes.
+We explored the benchmark space, iterating over dataset sizes, query templates, and query contexts for different hardware and engine configurations. In addition to an artificial benchmark, we conducted real-life tests with queries from a biomedical search application.
+Results were interpreted with the help of decision trees trained on query features.  
 
-%FINDINGS
-\noindent In analyzing the performance results, we discovered that single-node triple stores benefit greatly from vertical scaling and proper configuration. Results show that horizontal scalability is still a real challenge to most systems. 
-Semantic Web storage solutions based on federation, compression, or Linked Data Fragments still lag by an order of magnitude in terms of performance.  
-Furthermore, we demonstrate the need for careful analysis of contextual factors influencing query runtimes: server load, availability, caching effects, and query completeness all perturb the benchmark results.
-%Horizontale schaalbaarheid, TPF, Query correctness
-%CONCLUSION
+%reproducibility/postprocessing
+\noindent To facilitate reproducibility, we release our benchmark data in a rich event format.
+Additionally, we provide post-processing scripts in the form of Jupyter notebooks and tools that facilitate deployment and configuration of benchmark components.
+
+%FINDINGS + CONCLUSION
 \parttitle{Conclusions}
-With this work we offer a reusable methodology to facilitate comparison between existing and future query performance benchmarks. We release our results in a rich event format ensuring reproducibility while also leaving room for serendipity. 
-%Objectiviteit belangrijk, TPF
+Results show that single-node triple stores benefit greatly from vertical scaling and proper configuration, while horizontal scalability is still a real challenge to most systems. 
+Research prototypes based on federation, compression, or Linked Data Fragments still lag behind by an order of magnitude in terms of performance.  
+Furthermore, we demonstrate the need for careful analysis of contextual factors influencing query runtimes: server load, availability, caching effects, and query completeness all perturb the benchmark results.
 %OUTLOOK	
-%Hopelijk wordt methodologie gevolgd. Future benchmarks fixed methodology
-This methodology facilitates the integration with future benchmark results.
+We believe that by making the full benchmarking pipeline publicly available, we facilitate
+future benchmark efforts.
 	
 \end{abstract}
 
@@ -305,11 +305,11 @@ This methodology facilitates the integration with future benchmark results.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{keyword}
-\kwd{Benchmarks}
-\kwd{Benchmarking Tools}
+\kwd{Resource Description Framework (RDF)}
+\kwd{Benchmarking Methodology}
 \kwd{Big Linked Data}
 \kwd{Distributed Querying}
-\kwd{Life Sciences}
+\kwd{Semantic Web}
 \end{keyword}
 
 % MSC classifications codes, if any

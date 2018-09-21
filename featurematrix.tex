@@ -15,12 +15,12 @@ The matrix is online \todo{(see suppl material 1)}), and end-users can freely do
 To back the scoring, we added a layer of trust to the information by always linking to the source of this information.
 
 The criteria for selection of the \emph{Vendor} systems in this work are closely related to the goal of benchmark space exploration and the requirements put forward by Ontoforce. 
-The enterprise needs are met by selecting systems that offer enterprise support and are fully SPARQL 1.1 compliant. The benchmark space exploration requires a certain flexibility: we prefer systems with a machine image, or a maintained docker image, which put no restrictions on the amount of triples that can be ingested and that can work as a multi-node system.
+The enterprise needs are met by selecting systems that offer enterprise support and are fully SPARQL 1.1 compliant. The benchmark space exploration requires a certain flexibility: we prefer systems with a machine image, or a maintained docker image, which puts no restrictions on the number of triples that can be ingested and that can work as a multi-node system.
 % allegrograph en stardog vallen hierdoor  af
 The application of the above selection criteria led to 4 \emph{Vendor} systems. 
 Later on, we added 3 additional research \emph{Prototypes} with unique approaches to handling RDF data: HDT~\cite{DBLP:journals/ws/FernandezMGPA13}, which is a queryable read-only binary compression format, FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11} often included in benchmarks for federated querying, and Triple Pattern Fragments~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} as a first implementation of the Linked Data Fragments concept.
 
-The comparison with these \emph{Prototypes} was an essential part of the research collaboration with Ontoforce as their initial goal was to build their DISQOVER search interface on top of a federated querying system. The advantage of the latter is that their interface would then provide a live view on a continuously updating Life Sciences Linked Data cloud, removing the need for an ETL process. The HDT-format is an interesting approach to provide their customers with a low-cost approach for hosting their own data.
+The comparison with these \emph{Prototypes} was an essential part of the research collaboration with Ontoforce as their initial goal was to build their DISQOVER search interface on top of a federated querying system. The advantage of the latter is that their interface would then provide a live view on a continuously updating Life Sciences Linked Data cloud, removing the need for an ETL process. \todo{Werd ETL reeds geintroduceerd?} The HDT-format is an interesting approach to provide their customers with a low-cost approach for hosting their own data.
 
 All selected stores are shown in Table~\ref{acronyms} together with their shorthand notation (prefix).
 

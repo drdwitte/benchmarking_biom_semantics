@@ -1,7 +1,13 @@
 %put back Ruben's first version
-Semantic Web technology has a lot to offer to research disciplines which are inherently multidisciplinary. The Life Sciences are an interesting example, spanning multiple domains ranging from pharmacy to genetics to clinical trials.
+%which ~ by the way moet erbij kunnen. which voor extra info, maar bij aanwijzing moet THAT
+
+\todo{3-4 zinnen om RDF Semantic Web uit te leggen e.d. te schetsen}
+Semantic Web technology has a lot to offer to multidisciplinary research domains.
+For example, Life Sciences span multiple domains ranging from pharmacy to genetics to clinical trials.
 This necessitates the runtime integration of different datasets of significant size. 
 Being able to interact with these datasets as one virtual source requires technology capable of both managing Big Linked Data as well as successfully answering complex federated queries.
+
+
 %\vfill %otherwise latex stress linespacing to fill page
 %These challenges are being addressed by:
 %\begin{itemize}
@@ -29,20 +35,20 @@ Being able to interact with these datasets as one virtual source requires techno
 Choosing an RDF database and system architecture requires making trade-offs: 
 
 \begin{itemize}
-	\item Which features are required for the system of choice given the use case at hand, which features are optional?
+	\item What features are required for the system of choice given the use case at hand, which features are optional?
 	\item What hardware is required to achieve a certain performance?
 	\item What are the risks when using research prototypes instead of mature vendor-backed solutions? 
 \end{itemize}
 
-To make matters even more complicated, database vendors are continuously improving their products making it unclear when prior results become obsolete.
-
+To make matters even more complicated, database vendors are continuously improving their products rendering previous benchmark results quickly outdated.
 The goal of this work is to give an up-to-date view on the RDF storage solution space.
-By releasing scripts for deployment and post-processing of results, we provide a~feasible approach to run benchmarks with own data and queries using only a limited time window of a couple of days.
-This work also offers a methodology to make benchmarks more reproducible and therefore the results more easily generalizable.
+By providing scripts for deployment and post-processing of results, we provide a~feasible approach to run benchmarks with own data and queries using only a limited time window of a couple of days.
+This work also offers a methodology to make benchmarks more reproducible and therefore the results more easily generally applicable.
 
 %results from prior work is mainly invalid
 \subsection{Prior Results}
-In our initial research paper~\cite{de2016big} we evaluated 4 RDF databases on WatDiv~\cite{alucc2014diversified}, with 3 different dataset sizes: 10M (10 million), 100M and 1000M triples. More details on WatDiv will be given in section~\ref{subsec:dataqueries}. These \emph{Vendor} systems were run as-is, without any configuration. 
+\todo{Prior results moet naar related work maar WatDiv introduceren!}
+In our initial research paper~\cite{de2016big} we evaluated 4 RDF databases on WatDiv~\cite{alucc2014diversified}, with 3 different dataset sizes: 10M (10 million), 100M and 1000M triples. These \emph{Vendor} systems were run as-is, without any configuration. 
 This initial work served as an inspiration to a set of additional challenges:
 
 \begin{itemize}
@@ -50,7 +56,8 @@ This initial work served as an inspiration to a set of additional challenges:
 \item How will these systems behave when configured optimally?
 \end{itemize}
 
-Ontoforce~\cite{ontoforcewebsite} provided us with a real-world Life \mbox{Sciences} dataset used in the back-end of their product \mbox{DISQOVER~\cite{disqover}}. This proprietary data and query-set was previously analyzed in our SWAT4LS 2016 research paper~\cite{dewitte_swat4ls_2016}, of which we provide a summary in the section `Datasets and Queries' on page~\pageref{subsec:dataqueries}.
+Ontoforce~\cite{ontoforcewebsite} provided us with a real-world Life \mbox{Sciences} dataset used in the back-end of their product \mbox{DISQOVER~\cite{disqover}}. This proprietary data and query-set was previously analyzed in our SWAT4LS 2016 research paper~\cite{dewitte_swat4ls_2016}, of which we provide a summary in the section `Datasets and Queries'. 
+%on page~\pageref{subsec:dataqueries}.
 In that paper we analyzed the queries according to their SPARQL keywords and structural features~\cite{DBLP:journals/corr/abs-1103-5043}, an approach we will further extend in this work. 
 
 We were also confronted with counter-intuitive results in terms of runtime. This required re-running some of the tests and extending the benchmark software to further clarify these issues. All benchmarks involving Virtuoso on the Ontoforce data in our SWAT4LS contribution have therefore been duplicated.
@@ -67,26 +74,26 @@ The work presented here is built around 4 research questions:
 %Methods hardware, configs, wrapper, hardware, amis,... query completeness diagnostics
 \item[RQ2] \emph{What are the different options and the associated trade-offs when choosing a linked data infrastructure setup in the context of Big Linked Data? How can different setups be compared?}
 %Options: Horizontal, vertical, compression, federation big data approaches, multithreading
-\item[RQ3] \emph{What is the relative influence on the the measured performance of contextual factors (for example: caching) for the different RDF solutions? Is the impact similar for all solutions?}
+\item[RQ3] \emph{What is the relative influence on the measured performance of contextual factors (for example: caching) for the different RDF solutions? Is the impact similar for all solutions?}
 %query type, context=caching and server load, query completeness
 \item[RQ4] \emph{How do the RDF systems behave in a real-world setting? Can we extract insights that might be transferred and generate unbiased insights and hypotheses to be verified in future benchmarks?}
 %query types, real world vs Watdiv, Watdiv sizes, Decisiontree = unbiased
 \end{description} 
 
-\textbf{RQ1} will be mostly addressed in the section `Benchmark Approach' , more specifically in the third subsection about the reusable benchmarking scheme. Reliability is the focus of result sections `Query Result Completeness' and `Benchmark Error Analyis', 
+\textbf{RQ1} will be mostly addressed in the section `Benchmark Approach'. Reliability is the focus of result sections `Query Result Completeness' and `Benchmark Error Analysis', 
 %\ref{subsec:completeness} and \ref{subsec:erroranalysis} 
 which deal with errors and query completeness. 
 
-The impact of dataset size and the different approaches to scaling are discussed in the section `ResultsI'.
+The impact of dataset size and the different approaches to scaling are discussed in the section `Results~I'.
 %is analyzed in section \ref{subsec:bigdata},  \ref{subsec:vscaling} - %\ref{subsec:hscaling}. 
 How all approaches can be compared, is the subject of section `Benchmark Cost', %\ref{sec:bmcost}, 
 providing an answer to \textbf{RQ2}. 
 
-In answering \textbf{RQ3}, we will show that focusing on `query runtime' alone is an oversimplification. We discuss multiple factors related to the query context in section `ResultsII'. %\ref{sec:runtimefactors}. 
+In answering \textbf{RQ3}, we will show that focusing on `query runtime' alone is an oversimplification. We discuss multiple factors related to the query context in section `Results~II'. %\ref{sec:runtimefactors}. 
 We also distinguish between \emph{average} and \emph{median} query runtimes, 
 %in section \ref{sec:tradeoffs}, 
 a distinction which can have a major impact on the perceived performance.
 
-The final research question \textbf{RQ4} is dealt with in section `ResultsIII'. 
+The final research question \textbf{RQ4} is dealt with in section `Results~III'
 %\ref{sec:realworld}, 
 where a custom Life Sciences benchmark is run in the context of federated faceted browsing. 
