@@ -44,7 +44,7 @@ An example of a federated query is the following: \\
 in their description for manufacturer `Sandoz inc'. Phases come
 from chEMBL, manufacturers come from DrugBank."} \\
 
-The corresponding query features are: Triple Patterns (11), nested select queries (3), query file size ($<1$kb), operators: \sql{optional} (1), \sql{group}(1), \sql{order}(1), \sql{count}(1), \sql{union}(1), \sql{filter}(7), \sql{filter in}(2).  \\
+The corresponding query features are: Triple Patterns (11), nested select queries (3), query file size ($<1$kB), operators: \sql{optional} (1), \sql{group}(1), \sql{order}(1), \sql{count}(1), \sql{union}(1), \sql{filter}(7), \sql{filter in}(2).  \\
 
 Note that the DISQOVER interface can be configured to interact with a SPARQL-based back-end system as well as with SOLR, which works with well-chosen aggregates. The SOLR-based approach enables low-latency faceted browsing. The logs of the system however also contain the full SPARQL queries, which are used in this benchmark. 
 The SOLR aggregates are generated in an ETL process with the queries in their most general form, stripped from most of the operators. This ETL process therefore bares resemblance to the WatDiv benchmark.

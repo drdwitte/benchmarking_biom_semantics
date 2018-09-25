@@ -46,7 +46,7 @@ An overview of the installation approaches followed for the different systems un
 	\item Manual installation: FluidOps was installed manually with FedX~\cite{saleem2016fine} 3.1.2 (provided by \mbox{FluidOps}) and Virtuoso Adapter plugin (required since \mbox{Virtuoso} no longer supports \url{ASK} queries)
 \end{itemize}
 
-Our initial results with the 4 \emph{Vendor} systems showed great differences in runtime performance~\cite{de2016big}. After consulting with the database vendors, it turned out that this can be attributed to our choice of running the systems as-is, which we coin the \emph{None} configuration. We decided to re-run these benchmarks using two strictly defined configurations: \emph{Default} and \emph{Optimized}. All configuration options are defined in Table~\ref{table:configs}. 
+Our initial results with the 4 \emph{Vendor} systems showed large differences in runtime performance~\cite{de2016big}. After consulting with the database vendors, it turned out that this can be attributed to our choice of running the systems as-is, which we name the \emph{None} configuration. We decided to re-run these benchmarks using two strictly defined configurations: \emph{Default} and \emph{Optimized}. All configuration options are defined in Table~\ref{table:configs}. 
 
 The \emph{Optimized} configuration was obtained after sending out a  Request For Information (RFI) to the commercial vendors involved. The RFI asked them to provide us with scripts or configuration files to achieve optimal performance on the WatDiv1000M benchmark. GraphDB, Virtuoso, and Blazegraph responded positively to this request. A fourth commercial vendor, ES, did not respond to our RFI. Note that this configuration is not necessarily an optimal match for the real-world benchmark, as the data and queries were not shared with the vendors.
 
@@ -75,7 +75,7 @@ The SPARQL Query Benchmarker software~\cite{sparqlquerybm} is a mature SPARQL-ov
 The choice for timeout parameters is related to practical considerations: 
 \begin{itemize}
 	\item Initial tests revealed that the WatDiv timeout is sufficient for most queries to complete.
-	\item The Ontoforce benchmark timeout was instated to keep the total benchmark execution time within affordable boundaries.
+	\item The Ontoforce benchmark timeout was set to keep the total benchmark execution time within affordable boundaries.
 \end{itemize} 
 
 \subsubsection{Reusable Post-processing and Unbiased Conclusions}

@@ -7,7 +7,7 @@ If we aggregate runtimes over \emph{different queries}, for example when we aggr
 
 As the runtime distributions can be skewed, performance differences between systems are most often reported using the median runtime of an aggregate or benchmark run. 
 
-If we consider an ETL~\cite{ETL} process, or equivalently a batch of queries, the mean runtime becomes more meaningful, as it directly translates to the total runtime of an aggregate or full run. In the following box plots we chose to report both.
+If we consider an ETL process, or equivalently a batch of queries, the mean runtime becomes more meaningful, as it directly translates to the total runtime of an aggregate or full run. In the following box plots we chose to report both.
 
 %response times
 \emph{Query response times} correspond to the lag between sending a query and receiving the first server response. 
@@ -50,7 +50,7 @@ To interpret the results in this section correctly, it is important to understan
 \end{table}
 
 %Benchmark Survival
-Finally, a subtle error can be made in query runtime comparison for benchmarks which involve a query engine that becomes unresponsive (engine failure). In the runtime comparisons we only consider the range between the first query and the last successful query. We coin this the \emph{benchmark survival interval}, this is shown in Figure~\ref{fig:Fig03_BenchmarkSurvival_Other_Watdiv_Default}.
+Finally, a subtle error can be made in query runtime comparison for benchmarks which involve a query engine that becomes unresponsive (engine failure). In the runtime comparisons we only consider the range between the first query and the last successful query. We name this the \emph{benchmark survival interval}, this is shown in Figure~\ref{fig:Fig03_BenchmarkSurvival_Other_Watdiv_Default}.
 
 In Table~\ref{table:namingconv} we introduce a naming convention to describe the different benchmark setups. 
 
@@ -66,7 +66,7 @@ In Table~\ref{table:namingconv} we introduce a naming convention to describe the
 \label{subsec:rfi}
 \input{results_optimized.tex}
 
-\subsection{Semantic Web Solutions}
+\subsection{Research Prototypes}
 \label{subsec:semweb}
 \input{results_semweb.tex}
 

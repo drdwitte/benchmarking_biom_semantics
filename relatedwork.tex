@@ -73,8 +73,11 @@ The current difficulty in selecting and evaluating RDF systems is also being add
 HOBBIT~\cite{HOBBIT}. Within LDBC a number of RDF benchmarks were developed~\cite{Boncz:2013:LBG:2513591.2527070}, one benchmark is based on social network data~\cite{erling2015ldbc} and SPB~\cite{kotsevbenchmarking} is based on a data publishing case with BBC. 
 In the HOBBIT project a platform is being built to offer industry a unified approach for running benchmarks related to their actual workloads.
 
+%results from prior work is mainly invalid
+
+
 \subsection{Positioning this work}
-\todo{Kan dit verwijderd worden? Misschien sowieso linken voorgaande eigen resultaten}
+
 %Picalausa2011 - What are real SPARQL queries like?
 %We present statistics on real world SPARQL queries that may be of interest for building SPARQL query processing engines and benchmarks. 
 %In particular, we analyze the syntactical structure of queries in a log of about 3 million queries, harvested from the DBPedia SPARQL endpoint. 
@@ -85,21 +88,42 @@ In the HOBBIT project a platform is being built to offer industry a unified appr
 %these queries satisfy certain structural restrictions that imply tractable evaluation in theory. 
 %We hope that the identiﬁcation of these restrictions can aid in the future development of practical heuristics for processing non-conjunctive SPARQL queries.
 
+%prior work
 In Table~\ref{benchmarks} we provide an overview of the most recent benchmarking results together with information on their time of release, the datasets used,
-the systems tested, and the hardware setup. Our work distinguishes itself from other effort as follows:
+the systems tested, and the hardware setup. Our work distinguishes itself from other efforts by providing an up-to-date view, by focusing on scalability, and by being comprehensive. The latter means that we test multiple setups, a broad set of query types and that we pay careful attention to the query context.
 
-\paragraph{Up-to-date view} Specifically for the Life Sciences domain BioBenchmark Toyama 2012 is the most recent report for single-node setups.
+%\paragraph{Up-to-date view} Specifically for the Life Sciences domain BioBenchmark Toyama 2012 is the most recent report for single-node setups.
+%
+%\paragraph{Scalability} We study scalability not only in terms of dataset sizes (WatDiv), but also in terms of the size of the distributed setup (horizontal scalability) and in terms of memory resources (vertical scalability).
+%
+%\paragraph{Broad set of query types} Where the WatDiv runs are diverse in the space of BGP queries, the queries of Ontoforce are complex, rich in SPARQL keywords, sub-queries are common and a large fraction consists of non-conjunctive queries, which are typically very challenging~\cite{Picalausa2011}. 
+%
+%\paragraph{Query Correctness} Just like BigRDFBench we explicitly verify query correctness before turning to runtime comparisons and demonstrate its necessity for challenging queries.
+%
+%%\paragraph{Objective and exhaustive} By considering different hardware and configuration setups our work becomes more objective. As an example the S2RDF paper compares Hadoop-based systems with Virtuoso and concludes a similar performance, but does not take into account that (as will be shown later), performance does not drop when adding multiple clients, thereby increasing Virtuoso's ETL throughput by an order of magnitude.
+%
+%\paragraph{Multi-setup} This work compares single and multi-node setups, federated querying, and compression by using benchmark cost as a unification parameter.
+%
+%\paragraph{Query-mix size} Whereas many benchmarks have a limited query-set, both the WatDiv and Ontoforce benchmark used in this evaluation can be considered stress tests with respectively 400 and 1,223 queries. 
+%
+%\paragraph{Flexibility} Any system can be tested with our approach, the only requirement is support for the SPARQL protocol. Because of this we can for example also test the Triple Pattern Fragments (TPF) system, since the TPF client can be run as an http-server.
 
-\paragraph{Scalability} We study scalability not only in terms of dataset sizes (WatDiv), but also in terms of the size of the distributed setup (horizontal scalability) and in terms of memory resources (vertical scalability).
+%\subsection{Prior Results}
+%\todo{Prior results moet naar related work maar WatDiv introduceren!}
 
-\paragraph{Broad set of query types} Where the WatDiv runs are diverse in the space of BGP queries, the queries of Ontoforce are complex, rich in SPARQL keywords, sub-queries are common and a large fraction consists of non-conjunctive queries, which are typically very challenging~\cite{Picalausa2011}. 
+In our initial research paper~\cite{de2016big} we evaluated 4 RDF databases on WatDiv~\cite{alucc2014diversified}, with 3 different dataset sizes: 10M (10 million), 100M and 1000M triples. These \emph{Vendor} systems were run as-is, without any configuration. 
+This initial work served as an inspiration to a set of additional challenges:
 
-\paragraph{Query Correctness} Just like BigRDFBench we explicitly verify query correctness before turning to runtime comparisons and demonstrate its necessity for challenging queries.
+\begin{itemize}
+	\item Will the results improve given better single-node hardware?
+	\item How will these systems behave when configured optimally?
+\end{itemize}
 
-\paragraph{Objective and exhaustive} By considering different hardware and configuration setups our work becomes more objective. As an example the S2RDF paper compares Hadoop-based systems with Virtuoso and concludes a similar performance, but does not take into account that (as will be shown later), performance does not drop when adding multiple clients, thereby increasing Virtuoso's ETL throughput by an order of magnitude.
+Ontoforce~\cite{ontoforcewebsite} provided us with a real-world Life \mbox{Sciences} dataset used in the back-end of their product \mbox{DISQOVER~\cite{disqover}}. This proprietary data and query-set was previously analyzed in our SWAT4LS 2016 research paper~\cite{dewitte_swat4ls_2016}, of which we provide a summary in the section `Datasets and Queries'. 
+%on page~\pageref{subsec:dataqueries}.
+In that paper we analyzed the queries according to their SPARQL keywords and structural features~\cite{DBLP:journals/corr/abs-1103-5043}, an approach we will further extend in this work. 
 
-\paragraph{Multi-setup} This work compares single and multi-node setups, federated querying, and compression by using benchmark cost as a unification parameter.
+We were also confronted with counter-intuitive results in terms of runtime. This required re-running some of the tests and extending the benchmark software to further clarify these issues. All benchmarks involving Virtuoso on the Ontoforce data in our SWAT4LS contribution have therefore been duplicated.
+Originally, the Ontoforce benchmark was used to study scalable RDF approaches, here we also evaluated the other \emph{Vendor} systems. Additionally, we evaluated 3 (research) \emph{Prototypes} on both Ontoforce and WatDiv benchmarks.
 
-\paragraph{Query-mix size} Whereas many benchmarks have a limited query-set, both the WatDiv and Ontoforce benchmark used in this evaluation can be considered stress tests with respectively 400 and 1,223 queries. 
-
-\paragraph{Flexibility} Any system can be tested with our approach, the only requirement is support for the SPARQL protocol. Because of this we can for example also test the Triple Pattern Fragments (TPF) system, since the TPF client can be run as an http-server.
+%that are implementations of compression, federation, %and the Linked Data Fragments %concept~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} on %WatDiv and Ontoforce data.
