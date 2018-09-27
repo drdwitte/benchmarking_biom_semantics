@@ -47,8 +47,8 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      inkscape:zoom="0.90757133"
-     inkscape:cx="339.54376"
-     inkscape:cy="592.73515"
+     inkscape:cx="519.29079"
+     inkscape:cy="250.89604"
      inkscape:window-x="1745"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -56,6 +56,34 @@
   <defs
      id="defs4"
      style="stroke-linecap:butt;stroke-linejoin:round">
+    <marker
+       inkscape:stockid="DotL"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="DotL"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path8106"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt"
+         transform="scale(0.8) translate(7.4, 1)" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker11246"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="DotL">
+      <path
+         transform="scale(0.8) translate(7.4, 1)"
+         style="fill-rule:evenodd;stroke:#ffff00;stroke-width:1pt;stroke-opacity:1;fill:#ffff00;fill-opacity:1"
+         d="M -2.5,-1.0 C -2.5,1.7600000 -4.7400000,4.0 -7.5,4.0 C -10.260000,4.0 -12.5,1.7600000 -12.5,-1.0 C -12.5,-3.7600000 -10.260000,-6.0 -7.5,-6.0 C -4.7400000,-6.0 -2.5,-3.7600000 -2.5,-1.0 z "
+         id="path11248" />
+    </marker>
     <marker
        inkscape:stockid="Arrow1Lend"
        orient="auto"
@@ -467,6 +495,47 @@
          d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
          transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+    <clipPath
+       id="p010c3f0ae9-3"
+       style="stroke-linecap:butt;stroke-linejoin:round">
+      <rect
+         height="543.59998"
+         width="1116"
+         x="49.435902"
+         y="10.7"
+         id="rect1012-6"
+         style="stroke-linecap:butt;stroke-linejoin:round" />
+    </clipPath>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-5"
+       style="overflow:visible;stroke-linecap:butt;stroke-linejoin:round"
+       inkscape:isstock="true">
+      <path
+         id="path7999-3"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend-5-6"
+       style="overflow:visible;stroke-linecap:butt;stroke-linejoin:round"
+       inkscape:isstock="true">
+      <path
+         id="path7999-3-2"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-linecap:butt;stroke-linejoin:round;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         inkscape:connector-curvature="0" />
     </marker>
   </defs>
   <defs
@@ -2353,11 +2422,11 @@
   <text
      sodipodi:linespacing="125%"
      id="text21022"
-     y="20.921839"
+     y="28.921841"
      x="412.52063"
      style="font-style:normal;font-weight:normal;font-size:19.99999809px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ff00ff;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"><tspan
-       y="20.921839"
+       y="28.921841"
        x="412.52063"
        style="fill:#ff00ff;fill-opacity:1;stroke-linecap:butt;stroke-linejoin:round"
        id="tspan21024"
@@ -2365,11 +2434,11 @@
   <text
      sodipodi:linespacing="125%"
      id="text21030"
-     y="44.921852"
+     y="52.921844"
      x="413.36047"
      style="font-style:normal;font-weight:normal;font-size:19.99999809px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"><tspan
-       y="44.921852"
+       y="52.921844"
        x="413.36047"
        style="fill:#007d00;fill-opacity:1;stroke-linecap:butt;stroke-linejoin:round"
        id="tspan21032"
@@ -2377,11 +2446,11 @@
   <text
      sodipodi:linespacing="125%"
      id="text21040"
-     y="96.798637"
+     y="104.79863"
      x="414.32727"
      style="font-style:normal;font-weight:normal;font-size:19.99999809px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"><tspan
-       y="96.798637"
+       y="104.79863"
        x="414.32727"
        style="fill:#ff7d00;fill-opacity:1;stroke-linecap:butt;stroke-linejoin:round"
        id="tspan21042"
@@ -2389,11 +2458,11 @@
   <text
      sodipodi:linespacing="125%"
      id="text21044"
-     y="72.798767"
+     y="80.798759"
      x="412.52063"
      style="font-style:normal;font-weight:normal;font-size:19.99999809px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"><tspan
-       y="72.798767"
+       y="80.798759"
        x="412.52063"
        style="fill:#0000ff;fill-opacity:1;stroke-linecap:butt;stroke-linejoin:round"
        id="tspan21046"
@@ -2401,11 +2470,11 @@
   <text
      sodipodi:linespacing="125%"
      id="text21040-3"
-     y="120.79854"
+     y="128.79854"
      x="414.32727"
      style="font-style:normal;font-weight:normal;font-size:19.99999809px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
      xml:space="preserve"><tspan
-       y="120.79854"
+       y="128.79854"
        x="414.32727"
        style="fill:#ff0000;fill-opacity:1;stroke-linecap:butt;stroke-linejoin:round"
        id="tspan21042-6"
@@ -2523,5 +2592,24 @@
      style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
      d="m 810.90606,553.46087 0,-445.96817 57.2177,0 0,446.59147"
      id="path7654"
+     inkscape:connector-curvature="0" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="10.444199"
+     y="33.049385"
+     id="text4628"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan4630"
+       style="font-size:14px;stroke-linecap:butt;stroke-linejoin:round"
+       x="10.444199"
+       y="33.049385">Timeout</tspan></text>
+  <path
+     transform="matrix(0.86251684,0,0,1,7.366929,-49.551606)"
+     clip-path="url(#p010c3f0ae9-3)"
+     d="m 49.4359,85.047143 1116,0"
+     style="fill:none;stroke:#000000;stroke-width:0.86140263;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+     id="path441-7"
      inkscape:connector-curvature="0" />
 </svg>

@@ -1,6 +1,7 @@
 %\todo{Deze intro moet gereduceerd worden tot 1 lijn}
 
-In this section we describe our benchmark methodology: we define a benchmark space and describe how it was explored, we explain how we made a pre-selection of triple stores, and we list our efforts at making the benchmark more easily reproducible. The last section describes the datasets and queries used in this work. 
+In this section we describe our benchmark methodology: we define a benchmark space and describe how it was explored. We explain how we made a pre-selection of triple stores
+and how they were configured. We describe the datasets and queries used in this work. Finally we list our efforts at making the benchmark more easily reproducible.
 
 %In this benchmark we would like to discover trends when modifying certain aspects of the benchmark setup. In the first subsection %~\ref{subsec:bmexplore} 
 %we define a \emph{benchmark space}. For every dimension in this space we try to test at test two possible values.
@@ -14,21 +15,21 @@ In this section we describe our benchmark methodology: we define a benchmark spa
 \subsection{Benchmark Space Exploration}
 \label{subsec:bmexplore}
 
-Assessing the performance of an RDF system with a given benchmark starts with the identification of the set of parameters its results depend on. 
-The actual outcome is a function of (at least) the following dimensions, for which we test multiple values:
+Following parameters are assessed:
 
 \begin{itemize}
-	\item \textbf{The choice of database engine:} We assess 7 different systems, 4 \emph{Vendors} and 3 \emph{Prototypes}.
-	\item \textbf{The server hardware---especially memory:} We distinguish between 32GB and 64GB of RAM on the server.
-	\item \textbf{The size of the (optionally) distributed system:} We run tests for single and 3-node setups when supported by the RDF database. Federated systems are configured with $N+1$ nodes, with $N$ the number of slaves (1 or 3) nodes, and 1 federator node. To clarify: $N=3$ thus corresponds to 3 instances for \emph{Vendor} systems, while $N=3$ for federated setups requires $3+1$ instances. The choice for $N=3$ is related to the fact that for one of the systems only a 3-node configuration is available.
-	\item \textbf{The query properties:} The WatDiv benchmark query-set contains BGP queries, while the Ontoforce dataset consists mainly of complex aggregation-based queries.
+	\item \textbf{The choice of database engine:} We assess 7 different systems, 4 \emph{Vendors} and 3 \emph{Prototypes}. For the \emph{Vendors} we considered Blazegraph, GraphDB, Virtuoso and a non-disclosed Enterprise System (ES), which did not give permission to disclose its name. The \emph{Prototypes} are HDT~\cite{DBLP:journals/ws/FernandezMGPA13}, FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11}, and Triple Pattern Fragments~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14}.
+	\item \textbf{The server memory:} We distinguish between 32GB and 64GB of RAM.
+	\item \textbf{The size of the (optionally) distributed system:} We run tests for single and 3-node setups when supported by the RDF database. Federated systems are configured with $N+1$ nodes, with $N$ the number of slave nodes (1 or 3), and 1 federator node. To clarify: $N=3$ thus corresponds to 3 instances for \emph{Vendor} systems, while $N=3$ for federated setups requires $3+1$ instances. The choice for $N=3$ is related to the fact that for one of the systems only a 3-node configuration is available.
+	\item \textbf{The query properties:} The WatDiv benchmark query-set contains BGP queries, while the Ontoforce dataset consists mainly of complex aggregation-based queries with many filters.
 	\item \textbf{The number of dataset triples:} We run 3 datasets of WatDiv, with 10~million, 100~million, and 1~billion triples. The Ontoforce dataset contains 2.4~billion triples.
-	\item \textbf{The way in which the RDF system is configured:} We used the recommended configuration in the store's documentation as the \emph{Default} configuration and sent out a request for information to the vendors to achieve an \emph{Optimized} setup for WatDiv1000M.
+	\item \textbf{The way in which the RDF system is configured:} We test two configurations for WatDiv1000M, namely the \emph{Documented} and the \emph{RFI-optimized} configuration, which will be defined later in this section. 
 	\item \textbf{The state of the system when the query is launched:} We distinguish between a single-threaded warm-up run and a multi-threaded stress test (5 clients). We also investigate whether caching effects play a role in the runtime behavior.
 \end{itemize} 
 
+\todo{We are here: 27/09 18u}\\
 
-Testing every possible combination of parameters is very time and resource consuming and not necessarily the most informative. Therefore we opted for a greedy exploration of this space consisting of 51 2-phase  benchmarks (incl. re-runs), each with a warm-up and a consecutive stress test. Table~\ref{bmspace} gives an overview of the benchmarks we performed.
+Testing every possible combination of parameters is very time and resource consuming and not necessarily the most informative. Therefore we opted for a greedy exploration of this space consisting of 51 2-phase  benchmarks (incl. re-runs), each with a warm-up and a consecutive stress test (see Table~\ref{bmspace}).
 
 %wordt in result intros al verwerkt
 %As a performance measure there are also a number of metrics to choose from. If we focus on runtime we have to distinguish between comparing the \emph{runtime of the median query} or its runtime distribution versus the \emph{total runtime} of a full query mix. The first is independent of extreme values while the latter is  heavily affected by the runtime on the slowest queries and a possible timeout parameter. 
@@ -38,7 +39,7 @@ Testing every possible combination of parameters is very time and resource consu
 % \usepackage{multirow}
 \begin{table}[htbp!]
 	\centering
-	\caption{Overview of benchmarks run in this study.}
+	\caption{Benchmark overview.}
 	\label{bmspace}
 	\scalebox{0.85}{
 	\begin{tabular}{l|l|cccc}

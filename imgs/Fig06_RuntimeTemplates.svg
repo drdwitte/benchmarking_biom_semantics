@@ -16,7 +16,7 @@
    width="1187.2894pt"
    id="svg2"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="runtimeTemplates.svg">
+   sodipodi:docname="Fig06_RuntimeTemplates.svg">
   <metadata
      id="metadata1293">
     <rdf:RDF>
@@ -25,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -38,8 +38,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1855"
-     inkscape:window-height="1056"
+     inkscape:window-width="1615"
+     inkscape:window-height="1026"
      id="namedview1291"
      showgrid="false"
      fit-margin-top="10"
@@ -47,8 +47,8 @@
      fit-margin-right="10"
      fit-margin-bottom="10"
      inkscape:zoom="1.3549822"
-     inkscape:cx="1307.9859"
-     inkscape:cy="284.25165"
+     inkscape:cx="237.06092"
+     inkscape:cy="454.79629"
      inkscape:window-x="65"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
@@ -3900,6 +3900,23 @@
          style="font-weight:bold;font-size:15px;stroke-linecap:butt;stroke-linejoin:round"
          id="tspan21050-6-2-5-5"
          sodipodi:role="line">(64GB, Optimized)</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.80000007px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 18.87333,46.104001 1155.55957,0"
+       id="path4868"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="0.62744594"
+       y="61.033779"
+       id="text4870"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4872"
+         style="font-size:12px;stroke-linecap:butt;stroke-linejoin:round"
+         x="0.62744594"
+         y="61.033779">Timeout</tspan></text>
   </g>
   <text
      xml:space="preserve"

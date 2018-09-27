@@ -1,15 +1,12 @@
 %put back Ruben's first version
 %which ~ by the way moet erbij kunnen. which voor extra info, maar bij aanwijzing moet THAT
 
-The vision of the \emph{Semantic Web} is to serve as a global distributed database which can be autonomously explored by intelligent agents. The Linked Open Data (LOD) project is an implementation of this vision and already contains over 1,000 interconnected datasets. 
-
+The vision of the \emph{Semantic Web} is to serve as a global distributed database which can be autonomously explored by intelligent agents. The Linked Open Data (LOD) project~\cite{bizer2007interlinking} is an implementation of this vision and already contains over 1,000 interconnected datasets in Resource Description Framework (RDF) format. 
 Semantic Web technology has a lot to offer to multidisciplinary research domains.
 For example, Life Sciences span multiple domains ranging from pharmacy to genetics to clinical trials. In the LOD cloud prominent Life Sciences datasets are 
 UniProt (protein function), Drugbank (drugs) and chEMBL (properties of molecules).
-
 %This necessitates the runtime integration of different datasets of significant size. 
 Being able to interact with these datasets as one virtual source requires technology capable of both managing Big Linked Data, as well as successfully answering complex federated queries.
-
 
 %\vfill %otherwise latex stress linespacing to fill page
 %These challenges are being addressed by:
@@ -35,49 +32,41 @@ Being able to interact with these datasets as one virtual source requires techno
 %making the queries federated in nature.
 %challenges we address: more repeatable and easier to run your own benchmarks
 \subsection{Challenges}
-Choosing an RDF database and system architecture requires making trade-offs: 
+
+Datasets on the Semantic Web can be queried using RDF database systems that (partially) support the SPARQL Protocol and Query Language (SPARQL). There is an abundance of RDF storage solutions each with their own strengths and weaknesses.
+Choosing an RDF database and system architecture therefore requires making trade-offs: 
 
 \begin{itemize}
-	\item What features are required for the system of choice given the use case at hand, which features are optional?
+	\item What features are required for the system of choice given the use case at hand, what features are optional?
 	\item What hardware is required to achieve a certain performance?
 	\item What are the risks when using research prototypes instead of mature vendor-backed solutions? 
 \end{itemize}
 
 To make matters even more complicated, database vendors are continuously improving their products rendering previous benchmark results quickly outdated.
-The goal of this work is to give an up-to-date view on the RDF storage solution space.
-By providing scripts for deployment and post-processing of results, we provide a~feasible approach to run benchmarks with own data and queries using only a limited time window of a couple of days.
+The goal of this work is to provide an up-to-date view on the RDF storage solution space.
+By providing scripts for deployment and post-processing of results, we provide a~feasible approach to run benchmarks with own data and queries within a limited time window.
 This work also offers a methodology to make benchmarks more reproducible and therefore the results more easily generally applicable.
-
 
 \subsection{Research Questions}
 
-The work presented here is built around 4 research questions:
+The work presented here is structured around 4 research questions:
 
-\begin{description}
-\item[RQ1] \emph{How to run a query performance benchmark in a reproducible and reliable way?}
+\begin{enumerate}
 %Methods hardware, configs, wrapper, hardware, amis,... query completeness diagnostics
-\item[RQ2] \emph{What are the different options and the associated trade-offs when choosing a linked data infrastructure setup in the context of Big Linked Data? How can different setups be compared?}
-%Options: Horizontal, vertical, compression, federation big data approaches, multithreading
-\item[RQ3] \emph{What is the relative influence on the measured performance of contextual factors (for example: caching) for the different RDF solutions? Is the impact similar for all solutions?}
-%query type, context=caching and server load, query completeness
-\item[RQ4] \emph{How do the RDF systems behave in a real-world setting? Can we extract insights that might be transferred and generate unbiased insights and hypotheses to be verified in future benchmarks?}
-%query types, real world vs Watdiv, Watdiv sizes, Decisiontree = unbiased
-\end{description} 
-
-\textbf{RQ1} will be mostly addressed in the section `Benchmark Approach'. Reliability is the focus of result sections `Query Result Completeness' and `Benchmark Error Analysis', 
-%\ref{subsec:completeness} and \ref{subsec:erroranalysis} 
+\item \textit{How to run a query performance benchmark in a reproducible and reliable way?}
+This will be mostly addressed in the section `Benchmark Approach'. Reliability is the focus of result sections `Query Result Completeness' and `Benchmark Error Analysis', 
 which deal with errors and query completeness. 
 
-The impact of dataset size and the different approaches to scaling are discussed in the section `Results~I'.
-%is analyzed in section \ref{subsec:bigdata},  \ref{subsec:vscaling} - %\ref{subsec:hscaling}. 
-How all approaches can be compared, is the subject of section `Benchmark Cost', %\ref{sec:bmcost}, 
-providing an answer to \textbf{RQ2}. 
+%Options: Horizontal, vertical, compression, federation big data approaches, multithreading
+\item \textit{What are the different options and the associated trade-offs when choosing a Linked Data infrastructure setup in the context of Big Linked Data? How can different setups be compared? }
+In the section `Results~I' we will demonstrate that the choice of engine depends on the size of the dataset. In `Results~II' we will investigate which engine works best for certain query types. How completely different solutions can be compared is the subject of the section `Benchmark Cost' in `Results III'.
 
-In answering \textbf{RQ3}, we will show that focusing on `query runtime' alone is an oversimplification. We discuss multiple factors related to the query context in section `Results~II'. %\ref{sec:runtimefactors}. 
-We also distinguish between \emph{average} and \emph{median} query runtimes, 
-%in section \ref{sec:tradeoffs}, 
-a distinction which can have a major impact on the perceived performance.
+%context=caching and server load, query completeness
+\item \textit{What is the relative influence on the measured performance of contextual factors for the different RDF solutions? Is the impact similar for all solutions?}
+In the section `Results II' we will demonstrate that query runtime results cannot be interpreted without taking into account the \emph{query context}: server load, availability, caching effects, etc. all have an impact on the individual runtimes.
 
-The final research question \textbf{RQ4} is dealt with in section `Results~III'
-%\ref{sec:realworld}, 
-where a custom Life Sciences benchmark is run in the context of federated faceted browsing. 
+%query types, real world vs Watdiv, Watdiv sizes, Decisiontree = unbiased
+%\item \textit{How do the RDF systems behave in a real-world setting?}
+In section `Results~III' we run a custom Life Sciences benchmark in the context of federated faceted browsing. 
+
+\end{enumerate}

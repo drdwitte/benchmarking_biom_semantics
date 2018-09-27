@@ -36,15 +36,13 @@
 %Berlin SPARQL Benchmark			BSBM		ecommerce scenario, scalable data generator, no reasoning
 %Semantic Publishing Benchmark		SPB			Arbitrarily large datasets (billions of triples), more complex query worlkload, all 1.0 operators, nesting, 
 												%high complexity
-There's an abundance of Linked Data benchmarks mainly operating on artificial datasets, the most popular ones being (chronologically) the Lehigh University Benchmark~\cite{guo2005lubm} (LUBM), the SPARQL performance benchmark~\cite{schmidt2009sp} (SP$^2$Bench), and the Berlin SPARQL benchmark~\cite{bizer2009berlin}
-(BSBM).  For real-world data and queries most commonly used are the DBpedia SPARQL benchmark~\cite{morsey2011dbpedia} (DBSB), which uses the DBPedia dataset and the  queries (mostly Basic Graph Patterns (BGPs)) extracted from the actual server logs.
+There is an abundance of Linked Data benchmarks mainly operating on \emph{artificial} datasets, the most popular ones being (chronologically) the Lehigh University Benchmark~\cite{guo2005lubm} (LUBM), the SPARQL performance benchmark~\cite{schmidt2009sp} (SP$^2$Bench), and the Berlin SPARQL benchmark~\cite{bizer2009berlin}
+(BSBM).  
 %WatDiv adresses shortcomings, Feasible more complex queries
 The shortcomings of these early benchmarks were addressed in recent work, which resulted in the Waterloo SPARQL Diversity Test
-Suite~\cite{alucc2014diversified} (WatDiv). This new benchmark focuses on \emph{diversity} both in terms of the query properties and data properties. The first is achieved by generating queries from 20 BGP query templates with different shapes. The latter affects the triple pattern selectivity and therefore reveals the ability of the internal query planning algorithms in RDF systems to make the most efficient choice to resolve a query. 
-In this work we use WatDiv to assess the current state-of-the-art of RDF storage systems.
-
+Suite~\cite{alucc2014diversified} (WatDiv). This new benchmark focuses on \emph{diversity} both in terms of the query properties and data properties. The first is achieved by generating queries from 20 Basic Graph Pattern (BGP) query templates with different shapes. The latter affects the triple pattern selectivity and therefore reveals the ability of the internal query planning algorithms in RDF systems to make the most efficient choice to resolve a query. 
 %More complex queries
-FEASIBLE~\cite{saleem2015feasible} is a benchmark generator that generates queries diverse in terms of SPARQL properties. Here, the queries are selected by first converting them to normalized feature vectors and then choosing a set of mutually distant queries. Also the Semantic Publishing Benchmark~\cite{kotsevbenchmarking} (SPB) provides more complex query workloads with nested queries and all SPARQL 1.0 operators are present.
+More diverse SPARQL queries can be generated through the FEASIBLE~\cite{saleem2015feasible} benchmark generator. The queries are selected by first converting them to normalized feature vectors and then choosing a set of mutually distant queries. Similarly, the Semantic Publishing Benchmark~\cite{kotsevbenchmarking} (SPB) provides complex nested queries and uses all SPARQL~1.0 operators.
 
 %Synthetic versus Real-World: problems
 % DuanKSU11: Apples and Oranges: A Comparison of RDF Benchmarks and Real RDF Datasets
@@ -59,38 +57,53 @@ A recurring criticism on synthetic benchmarks is that they have very little in c
 %8 billion triples.
 %We evaluated the load and query costs of five popular triple stores: 4store, Bigdata, Mulgara, Virtuoso, and OWLIM-SE. To the best of our knowledge, 
 %we evaluated the largest scale of real biological data possible on a single node.
-If we look specifically to the Life Sciences domain, BioBenchmark Toyama 2012~\cite{wu2014biobenchmark} sheds light on the capabilities of typical single-node RDF storage solutions. They evaluated 5 triple stores on 5 biological datasets (Cell Cycle Ontology~\cite{antezana2009cell}, Allie~\cite{yamamoto2011allie}, PDBj~\cite{kinjo2011protein}, UniProt~\cite{uniprot2014uniprot}, and DDBJ~\cite{tateno2002dna}), ranging from 10 million to 8 billion triples.
+%
+One of the first real-world benchmarks is the DBpedia SPARQL benchmark~\cite{morsey2011dbpedia} (DBSB) which uses mostly BGPs extracted from actual server logs.
+Specifically for the Life Sciences domain, BioBenchmark Toyama 2012~\cite{wu2014biobenchmark} evaluates 5 triple stores on 5 biological datasets (Cell Cycle Ontology~\cite{antezana2009cell}, Allie~\cite{yamamoto2011allie}, PDBj~\cite{kinjo2011protein}, UniProt~\cite{uniprot2014uniprot}, and DDBJ~\cite{tateno2002dna}), ranging from 10 million to 8 billion triples.
 
 %Multi-node + Query Correctness!!
-All benchmarks mentioned so far focus on single node RDF databases. FedBench~\cite{Schmidt2011} is a system to test query federators. They evaluate 3 federated systems using 14 real-world federated queries, of which 7 from the Life Sciences domain. In recent work, BigRDFBench~\cite{Saleem} increases the number of datasets from 11 to 13 and adds 18 new federated queries. Instead of just focusing on query runtime, other performance metrics are taken into account such as source selection and query correctness. An alternative heuristic approach for automatically generating federated queries is the SPARQL Linked Open Data Query Generator~\cite{gorlitz2012splodge} (SPLODGE).
+All benchmarks mentioned so far focus on single-node RDF databases. FedBench~\cite{Schmidt2011} is a system to test query federators. They evaluate 3 federated systems using 14 real-world federated queries, of which 7 from the Life Sciences domain. In recent work, BigRDFBench~\cite{Saleem} increases the number of datasets from 11 to 13 and adds 18 new federated queries. Instead of just focusing on query runtime, other performance metrics are taken into account such as source selection and query correctness. An alternative heuristic approach for automatically generating federated queries is the SPARQL Linked Open Data Query Generator~\cite{gorlitz2012splodge} (SPLODGE).
 
 %Niet enkel native RDF stores
 %\todo{Referenties toevoegen voor elk van die systemen? }\\
-Most benchmarking efforts reported so far focus on the performance of native RDF systems. A first generalization comes by adding other graph and relational databases as in the WikiData benchmarking effort~\cite{hernandez2016querying}, where Neo4J and PostgreSQL were added. A second generalization comes by mapping SPARQL workloads on NoSQL and Hadoop-based systems. Graux~\cite{graux2016multi} compared 3 different types of systems: (i) Standalone NoSQL based approaches such as CumulusRDF~\cite{ladwig2011cumulusrdf} (translates queries to Cassandra Query Language); (ii) HDFS-based (Hadoop Distributed Filesystem~\cite{ghemawat2003google}) approaches with a data preparation phase such as S2RDF~\cite{Schatzle:2016:SRQ:2977797.2977806} ; and (iii) HDFS-based approaches which natively store RDF, such as PigSPARQL~\cite{schatzle2011pigsparql}. This work can be viewed as an update of an earlier NoSQL for RDF benchmarking effort by Cudr{\'e}-Mauroux~\cite{cudre2013nosql}. 
-In the S2RDF research paper~\cite{Schatzle:2016:SRQ:2977797.2977806}, a comparison is made with other HDFS-based approaches and a single server instance of Virtuoso.
+The previously mentioned benchmarking efforts focus on native RDF systems. A first generalization involves adding other graph and relational databases. For example, in the WikiData benchmarking effort~\cite{hernandez2016querying}, Neo4J and PostgreSQL were added. 
+A second generalization involves mapping SPARQL workloads on NoSQL and Hadoop-based systems~\cite{cudre2013nosql, graux2016multi, Schatzle:2016:SRQ:2977797.2977806}. Graux~\cite{graux2016multi} compared 3 different types of systems: (i) Standalone NoSQL-based approaches such as CumulusRDF~\cite{ladwig2011cumulusrdf} which translates queries to the Cassandra Query Language; (ii) HDFS-based (Hadoop Distributed File System~\cite{ghemawat2003google}) approaches with a data preparation phase such as S2RDF~\cite{Schatzle:2016:SRQ:2977797.2977806}; and (iii) HDFS-based approaches which natively store RDF, such as PigSPARQL~\cite{schatzle2011pigsparql}. 
+%In the S2RDF research paper~\cite{Schatzle:2016:SRQ:2977797.2977806}, a comparison is made with other HDFS-based approaches and a single server instance of Virtuoso.}{den}
 
-The current difficulty in selecting and evaluating RDF systems is also being addressed in two European H2020 projects: LDBC~\cite{LDBC} and 
+RDF systems are also evaluated in two European H2020 projects: LDBC~\cite{LDBC} and 
 HOBBIT~\cite{HOBBIT}. Within LDBC a number of RDF benchmarks were developed~\cite{Boncz:2013:LBG:2513591.2527070}, one benchmark is based on social network data~\cite{erling2015ldbc} and SPB~\cite{kotsevbenchmarking} is based on a data publishing case with BBC. 
 In the HOBBIT project a platform is being built to offer industry a unified approach for running benchmarks related to their actual workloads.
 
-%results from prior work is mainly invalid
-
+%prior work
+In Table~\ref{benchmarks} we provide an overview of the most recent benchmarking results together with information on their time of release, the datasets used,
+the systems tested, and the hardware setup.
 
 \subsection{Positioning this work}
 
-%Picalausa2011 - What are real SPARQL queries like?
-%We present statistics on real world SPARQL queries that may be of interest for building SPARQL query processing engines and benchmarks. 
-%In particular, we analyze the syntactical structure of queries in a log of about 3 million queries, harvested from the DBPedia SPARQL endpoint. 
-%Although a sizable portion of the log is shown to consist of so-called conjunctive SPARQL queries, 
-%non-conjunctive queries that use SPARQL's union or optional operators are more than substantial. 
-%It is known, however, that query evaluation quickly becomes hard for queries including the non-conjunctive operators union or optional. 
-%We therefore drill deeper into the syntactical structure of the queries that are not conjunctive and show that in 50{\%} of the cases, 
-%these queries satisfy certain structural restrictions that imply tractable evaluation in theory. 
-%We hope that the identiﬁcation of these restrictions can aid in the future development of practical heuristics for processing non-conjunctive SPARQL queries.
+%WAT DOEN WE!
 
-%prior work
-In Table~\ref{benchmarks} we provide an overview of the most recent benchmarking results together with information on their time of release, the datasets used,
-the systems tested, and the hardware setup. Our work distinguishes itself from other efforts by providing an up-to-date view, by focusing on scalability, and by being comprehensive. The latter means that we test multiple setups, a broad set of query types and that we pay careful attention to the query context.
+\paragraph{Scalable Approaches}
+Our work distinguishes itself from other efforts by considering seven scalable approaches to handle Big Linked Data: four vendor-backed RDF databases and three research prototypes. Any system can be tested with our approach, the only requirement is support for the SPARQL protocol.
+
+\paragraph{Comprehensive}
+The benchmark is comprehensive in evaluating query performance: the dataset volume, the different hardware and engine configurations, the query properties, and the query context are all taken into account. We also explicitly analyze whether the query results are complete. 
+
+%Life Sciences / Up-to-date  / Artificial
+\paragraph{Life Sciences domain}
+We provide an up-to-date review of state-of-the-art RDF storage systems both on artificial datasets as well as on Life Sciences data. 
+
+
+%bm approach - reproduce
+\paragraph{Reproducible}
+We make it easy to reproduce our benchmark results by providing scripts and images for automatic deployment of the benchmark components as well as the notebooks for post-processing. 
+
+
+%Conclusions
+\paragraph{Unbiased Results}
+Conclusion are drawn across multiple approaches to Linked Data querying by focusing on the financial cost instead of query runtimes.
+Results are interpreted in an unbiased fashion, with the help of decision trees trained on query features.
+
+%To facilitate reproducibility, we release our benchmark data in a rich event format. Additionally, we provide post-processing scripts in the form of Jupyter notebooks and tools that facilitate deployment and configuration of benchmark components.
 
 %\paragraph{Up-to-date view} Specifically for the Life Sciences domain BioBenchmark Toyama 2012 is the most recent report for single-node setups.
 %
@@ -111,19 +124,20 @@ the systems tested, and the hardware setup. Our work distinguishes itself from o
 %\subsection{Prior Results}
 %\todo{Prior results moet naar related work maar WatDiv introduceren!}
 
-In our initial research paper~\cite{de2016big} we evaluated 4 RDF databases on WatDiv~\cite{alucc2014diversified}, with 3 different dataset sizes: 10M (10 million), 100M and 1000M triples. These \emph{Vendor} systems were run as-is, without any configuration. 
-This initial work served as an inspiration to a set of additional challenges:
+\subsection{Prior work}
 
-\begin{itemize}
-	\item Will the results improve given better single-node hardware?
-	\item How will these systems behave when configured optimally?
-\end{itemize}
+In our initial conference paper~\cite{de2016big} we evaluated 4 RDF databases on WatDiv~\cite{alucc2014diversified}, with 3 different dataset sizes: 10M (10 million), 100M and 1000M triples. These \emph{Vendor} systems were run as-is, without any configuration. 
 
-Ontoforce~\cite{ontoforcewebsite} provided us with a real-world Life \mbox{Sciences} dataset used in the back-end of their product \mbox{DISQOVER~\cite{disqover}}. This proprietary data and query-set was previously analyzed in our SWAT4LS 2016 research paper~\cite{dewitte_swat4ls_2016}, of which we provide a summary in the section `Datasets and Queries'. 
+Ontoforce~\cite{ontoforcewebsite} provided us with a real-world Life \mbox{Sciences} dataset used in the back-end of their product \mbox{DISQOVER~\cite{disqover}}. This proprietary data and query-set was previously analyzed in our SWAT4LS proceeding~\cite{dewitte_swat4ls_2016}.  of which we provide a summary in the section `Datasets and Queries'. 
 %on page~\pageref{subsec:dataqueries}.
-In that paper we analyzed the queries according to their SPARQL keywords and structural features~\cite{DBLP:journals/corr/abs-1103-5043}, an approach we will further extend in this work. 
+In this proceeding we analyzed the queries according to their SPARQL keywords and structural features~\cite{DBLP:journals/corr/abs-1103-5043}, an approach we will further extend in this work. 
 
-We were also confronted with counter-intuitive results in terms of runtime. This required re-running some of the tests and extending the benchmark software to further clarify these issues. All benchmarks involving Virtuoso on the Ontoforce data in our SWAT4LS contribution have therefore been duplicated.
-Originally, the Ontoforce benchmark was used to study scalable RDF approaches, here we also evaluated the other \emph{Vendor} systems. Additionally, we evaluated 3 (research) \emph{Prototypes} on both Ontoforce and WatDiv benchmarks.
+%how we addressed problems in prior work
+Counter-intuitive results in these conference papers motivated re-running some of the benchmarks in this work. We paid close attention to query completeness and engine configuration. For the latter we distinguish between a \emph{Documented} and an \emph{RFI-optimized} configuration (see section `Store Preselection'). 
+
+In the current work all seven systems are evaluated on both WatDiv and the Ontoforce benchmark. \todo{(this was previously not the case!)}
+
+%We were also confronted with counter-intuitive results in terms of runtime. This required re-running some of the tests and extending the benchmark software to further clarify these issues. All benchmarks involving Virtuoso on the Ontoforce data in our SWAT4LS contribution have therefore been duplicated.
+%Originally, the Ontoforce benchmark was used to study scalable RDF approaches, here we also evaluated the other \emph{Vendor} systems. Additionally, we evaluated 3 (research) \emph{Prototypes} on both Ontoforce and WatDiv benchmarks.
 
 %that are implementations of compression, federation, %and the Linked Data Fragments %concept~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} on %WatDiv and Ontoforce data.

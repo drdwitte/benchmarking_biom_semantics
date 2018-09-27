@@ -1,13 +1,24 @@
 %In order to study the effect of dataset sizes in a controlled way we ran benchmarks with WatDiv for 3 different dataset sizes. To verify
 %whether insights from WatDiv generalized to a real-world use case, we worked with the proprietary data provided by Ontoforce.
 
-%\paragraph{Datasets.} 
-Three datasets were generated using the WatDiv benchmark generator~\cite{alucc2014diversified}. 
-With this generator we created datasets of 10, 100, and 1000M (million) triples. 
-WatDiv datasets were also used in federated setups. 
-In these setups the dataset was partitioned using subject hash partitioning~\cite{Zeng, Harth} which led to 3 equally-sized datasets.
-%~\footnote{A vertical partitioning scheme is more appropriate to demonstrate the abilities of a federated querying system. The horizontal partitioning applied here does correspond to the Ontoforce workload since entities (with different URIs, but common predicates) are integrated in a central ontology.}.  
 
+We used the  WatDiv benchmark generator~\cite{alucc2014diversified} to create three artificial datasets of 10, 100, and 1000M (million) triples. 
+WatDiv datasets are also used for federated setups. 
+In these setups the dataset was partitioned using subject hash partitioning~\cite{Zeng, Harth} which led to three equally-sized datasets.
+Note that this partitioning scheme benefits star-shaped queries, as they can be resolved without inter-node communication.
+
+The WatDiv queries reveal the ability of today's triple stores to handle different types of complex join operations.
+The queries are generated from 20 query templates (BGPs) in four categories: 
+%Four different query template types exist, all are basic graph patterns : 
+\begin{itemize}
+	\item L: Linear chains (\textbf{L1} - \textbf{L3})
+	\item S: Star-shaped queries with one central node (\textbf{S1} - \textbf{S7})
+	\item F: Snowflake queries are a combination of S queries (\textbf{F1} - \textbf{F5})
+	\item C: Combinations of the above (\textbf{C1} - \textbf{C3})
+\end{itemize}
+Per query template we generated 20 queries corresponding to 400 queries in total. 
+
+%~\footnote{A vertical partitioning scheme is more appropriate to demonstrate the abilities of a federated querying system. The horizontal partitioning applied here does correspond to the Ontoforce workload since entities (with different URIs, but common predicates) are integrated in a central ontology.}.  
 % aangeven dat niet optimal: zie uitleg Laurens, kan central ontology approach van Ontoforce motivatie zijn. Volstaat het om te zeggen dat dit beter kan? FedX kan anders joins proberen pushen hier is dat moeilijker? (alle preds zitten in alle nodes)
 %Ontoforce prep queries: probeer centrale queries	
 %ETL -> aggregates adhv central ontology
@@ -17,41 +28,33 @@ In these setups the dataset was partitioned using subject hash partitioning~\cit
 %FedX extra uitleg: geen voordelen omwille van partition scheme, alles in memory joinen => GC problems
 %C3 selectivity TP selectivity in joins
 %}
-Note that this partitioning scheme benefits star-shaped queries as they can be resolved without inter-node communication.
-
-One real-world proprietary dataset was provided by Ontoforce. 
-The query and dataset properties were analyzed in prior work~\cite{dewitte_swat4ls_2016}. The actual dataset cannot be disclosed but the majority of the data is from public sources. The dataset consists of 2.4 billion triples spanning 107 graphs. 
-PubMed, ChEMBL, NCBI-Gene, DisGeNET, and EPO are the largest graphs with PubMed already making up 60\% of the data.
+A real-world proprietary dataset was provided by Ontoforce. 
+The query and dataset properties were analyzed in prior work~\cite{dewitte_swat4ls_2016}. The actual dataset cannot be disclosed but the majority of the data is from public sources. The dataset consists of 2.4 billion triples spanning 107 datasets. 
+PubMed, chEMBL, NCBI-Gene, DisGeNET, and EPO are the largest graphs with PubMed already making up 60\% of the data. \todo{biblio?}
 
 %\paragraph{Queries.} 
-The queries of the two benchmarks are very different in nature. 
-The WatDiv queries reveal the ability of today's triple stores to handle different types of complex join operations.
-The queries are generated from 20 query templates. Four different query template types exist, all are basic graph patterns (BGPs): 
-\begin{itemize}
-	\item L: Linear chains (\textbf{L1} - \textbf{L3})
-	\item S: Star-shaped queries with one central node (\textbf{S1} - \textbf{S7})
-	\item F: Snowflake queries are a combination of S queries (\textbf{F1} - \textbf{F5})
-	\item C: Combinations of the above (\textbf{C1} - \textbf{C3})
-\end{itemize}
-Per query template we generated 20 queries. In the original work we used 100 queries but to speed up the benchmarking process and to reduce the infrastructure cost we switched to 20, corresponding to 400 queries.
+%
 
-The query-mix provided by Ontoforce was extracted from the user logs of the DISQOVER search interface. Ontoforce has decided to release the query-set \todo{(see Suppl. Material)}.
-The queries are interactive federated queries associated with faceted browsing~\cite{Ferre, Oren}.
+%In the original work we used 100 queries but to speed up the benchmarking process and to reduce the infrastructure cost we switched to 20, corresponding to 400 queries.
 
-An example of a federated query is the following: \\
+The query-mix provided by Ontoforce is publicly available \todo{(see Suppl material)}
+and was extracted from the user logs of the DISQOVER search interface. 
+%Ontoforce has decided to release the query-set \todo{(see Suppl. Material)}.
+The queries are interactive federated queries associated with faceted browsing~\cite{Ferre, Oren}, for example:\\
 
 \textit{``Get the number of drugs per development phase having `migraine'
 in their description for manufacturer `Sandoz inc'. Phases come
-from chEMBL, manufacturers come from DrugBank."} \\
+from chEMBL, \\ manufacturers come from DrugBank."} \\
 
 The corresponding query features are: Triple Patterns (11), nested select queries (3), query file size ($<1$kB), operators: \sql{optional} (1), \sql{group}(1), \sql{order}(1), \sql{count}(1), \sql{union}(1), \sql{filter}(7), \sql{filter in}(2).  \\
 
-Note that the DISQOVER interface can be configured to interact with a SPARQL-based back-end system as well as with SOLR, which works with well-chosen aggregates. The SOLR-based approach enables low-latency faceted browsing. The logs of the system however also contain the full SPARQL queries, which are used in this benchmark. 
-The SOLR aggregates are generated in an ETL process with the queries in their most general form, stripped from most of the operators. This ETL process therefore bares resemblance to the WatDiv benchmark.
+%Note that the DISQOVER interface can be configured to interact with a SPARQL-based back-end system as well as with SOLR, which works with well-chosen aggregates. The SOLR-based approach enables low-latency faceted browsing. The logs of the system however also contain the full SPARQL queries, which are used in this benchmark. 
+%The SOLR aggregates are generated in an ETL process with the queries in their most general form, stripped from most of the operators. This ETL process therefore bares resemblance to the WatDiv benchmark.
 
-The 1,223 DISQOVER queries are rich in SPARQL-features and sub-queries are common. This is a stark contrast with WatDiv for which all queries are BPGs.
+The queries of the two benchmarks are very different in nature. 
+The 1,223 DISQOVER queries are rich in SPARQL-features and sub-queries are common. This is a stark contrast with WatDiv for which all queries are BGPs.
 The DISQOVER queries are automatically built by the system from more general queries to which additional \sql{filter} statements are added, while browsing the UI.
 Aggregation operators and \sql{filter} operations are therefore predominant. A large fraction of queries is also non-conjunctive~\cite{conjunctive}, making them even more challenging~\cite{Picalausa2011}.
 Queries with over 10 triple patterns are common and more specifically unbound triples, with three variables, occur often. The actual binding occurs in the additional \sql{filter} statements. Half of the queries are \sql{count distinct} queries and these are also the most time consuming to resolve. 
-
-Due to the automated way of generating queries the formulation of the queries is not optimized in terms of performance~\cite{Groth}. From the point of view of Ontoforce this optimization is considered the responsibility of the triple store.
+Due to the automated way of generating queries, their formulation is not optimized in terms of performance~\cite{Groth}. 
+%From the point of view of Ontoforce this optimization is considered the responsibility of the triple store.

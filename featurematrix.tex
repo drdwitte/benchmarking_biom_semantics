@@ -1,28 +1,25 @@
 
-We created a Feature Matrix and evaluated a number of stores on a subset of those features (a similar approach as in Stegmaier~\cite{Stegmaier_evaluationof}) to make a preselection of RDF engines we consider for in-depth analysis.
+We created a Feature Matrix and evaluated a number of stores on a subset of those features (a similar approach as in Stegmaier~\cite{Stegmaier_evaluationof}) to make a preselection of RDF engines.
 We combined two ideas to create a Feature Matrix, to simplify the RDF store selection process:
 \begin{itemize}
-\item We consulted the DB-Engines ranking~\cite{dbengines}, which orders database systems according to their data model and online popularity, to explore the currently common 
-RDF-engines.
-The latter is a non-disclosed formula that measures popularity by combining online mentions on (social) platforms such as StackOverflow, Twitter, and LinkedIn. 
+\item We consulted the DB-Engines ranking~\cite{dbengines}, which orders database systems according to their data model and online popularity, as measured by the mentions on social platforms such as StackOverflow, Twitter, and LinkedIn. 
 DB-Engines also supports comparing multiple features of different systems.
 \item WikiData selected the most appropriate RDF store to host their data by having experts assign weights to desired features~\cite{wikidataranking}.
 These weights allowed them to calculate a score per data store and rank the different systems. 
 \end{itemize}
-We made a broad selection of suitable features specific for RDF engines to allow multi-way comparisons. Ranking the engines is made possible by assigning weights to a set of features. 
-The features are grouped into a number of categories to obtain a more in-depth insight in the scoring process. 
-The matrix is online \todo{(see suppl material 1)}), and end-users can freely download it and/or extend it, change the weights, and update the scores when vendors upgrade their product. 
-To back the scoring, we added a layer of trust to the information by always linking to the source of this information.
 
-The criteria for selection of the \emph{Vendor} systems in this work are closely related to the goal of benchmark space exploration and the requirements put forward by Ontoforce. 
-The enterprise needs are met by selecting systems that offer enterprise support and are fully SPARQL 1.1 compliant. The benchmark space exploration requires a certain flexibility: we prefer systems with a machine image, or a maintained docker image, which puts no restrictions on the number of triples that can be ingested and that can work as a multi-node system.
+The feature matrix contains a broad selection of suitable features specific for RDF engines and allows for multi-way comparisons. Engines are ranked by assigning weights to these features. 
+The feature matrix is available online \todo{(see suppl material 1)}), and can be freely downloaded and extended. To back the scoring, we added a layer of trust by linking to the source of information.
+The criteria for selection of the \emph{Vendor} systems are the following:
+SPARQL 1.1 compliance, systems with a machine or maintained Docker image, no restrictions on the number of triples that can be ingested, and support for multi-node deployment.
 % allegrograph en stardog vallen hierdoor  af
-The application of the above selection criteria led to 4 \emph{Vendor} systems. 
-Later on, we added 3 additional research \emph{Prototypes} with unique approaches to handling RDF data: HDT~\cite{DBLP:journals/ws/FernandezMGPA13}, which is a queryable read-only binary compression format, FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11} often included in benchmarks for federated querying, and Triple Pattern Fragments~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} as a first implementation of the Linked Data Fragments concept.
+This led to 4 \emph{Vendor} systems: \todo{Blazegraph,...} 
+Additionally, we added 3 additional research \emph{Prototypes} with unique approaches to handling RDF data: HDT~\cite{DBLP:journals/ws/FernandezMGPA13}, which is a queryable read-only binary compression format, FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11} often included in benchmarks for federated querying, and Triple Pattern Fragments~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} as a first implementation of the Linked Data Fragments concept.
 
-The comparison with these \emph{Prototypes} was an essential part of the research collaboration with Ontoforce as their initial goal was to build their DISQOVER search interface on top of a federated querying system. The advantage of the latter is that their interface would then provide a live view on a continuously updating Life Sciences Linked Data cloud, removing the need for an ETL~\cite{ETL} process. The HDT-format is an interesting approach to provide their customers with a low-cost approach for hosting their own data.
+%The comparison with these \emph{Prototypes} was an essential part of the research collaboration with Ontoforce as their initial goal was to build their DISQOVER search interface on top of a federated querying system.
+%The advantage of the latter is that their interface would then provide a live view on a continuously updating Life Sciences Linked Data cloud, removing the need for an ETL~\cite{ETL} process. The HDT-format is an interesting approach to provide their customers with a low-cost approach for hosting their own data.
 
-All selected stores are shown in Table~\ref{acronyms} together with their shorthand notation (prefix).
+Selected stores are shown in Table~\ref{acronyms} together with their shorthand notation.
 
 \begin{table}[ht!]
 	\centering
@@ -51,3 +48,30 @@ All selected stores are shown in Table~\ref{acronyms} together with their shorth
 	%\caption*{The first four stores are \emph{Vendor} systems, the last three are \emph{SemWeb systems}}
 
 \end{table}
+
+
+%Our initial results with the 4 \emph{Vendor} systems showed large differences in runtime performance~\cite{de2016big}. After consulting with the database vendors, it turned out that this can be attributed to our choice of running the systems as-is. 
+
+We run the benchmarks using two strictly defined configurations: \emph{Documented} and \emph{RFI-optimized}.  
+
+The \emph{Documented} configuration corresponds to the recommended settings from the vendor
+documentation, which takes into account the available server memory and the dataset size.
+The \emph{RFI-Optimized} configuration was obtained after sending out a  Request For Information (RFI) to the commercial vendors involved. The RFI asked them to provide us with scripts or configuration files to achieve optimal performance on the WatDiv1000M benchmark. GraphDB, Virtuoso, and Blazegraph responded positively to this request. A fourth commercial vendor, ES, did not respond to our RFI. 
+Note that this configuration is not necessarily an optimal match for the real-world benchmark, as the data and queries were not shared with the vendors.
+
+%\begin{table}[htbp!]
+%	\centering
+%	\caption{Different configuration choices defined in this benchmark}
+%	\label{table:configs}
+%	\scalebox{0.9}{
+%		\begin{tabular}{l|l}
+%			\hline
+%			\textbf{Name} & \textbf{Description} \\
+%			\hline
+%			\emph{Recommended} & Applying the \todo{ \\
+%			\emph{Optimized} & Settings provided by the vendors, in response to our RFI.  \\
+%			\hline
+%		\end{tabular}
+%	}
+%\end{table}
+%\todo{Tot hier}

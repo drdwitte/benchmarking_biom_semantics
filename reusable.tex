@@ -1,15 +1,14 @@
 
-To make the benchmarks fully \emph{reproducible}, we pay explicit attention to the hardware setup and the database configurations. 
+%To make the benchmarks fully \emph{reproducible}, we pay explicit attention to the hardware setup and the database configurations. 
+%
+%We offer a reusable infrastructure which consists of a number of well-maintained components for deployment, 
+%to allow the end-user to test a triple store. 
+%We also release our post-processing scripts and query event data publicly, so others can reproduce the analysis of the system performance exactly as described in this paper. 
+%The Ontoforce benchmark cannot be reproduced by external parties due to the dataset being proprietary. The queries have however been released and the Ontoforce dataset mostly covers open data from Life Sciences portion of the Linked Open Data cloud.
 
-We offer a reusable infrastructure which consists of a number of well-maintained components for deployment, 
-to allow the end-user to test a triple store. 
-We also release our post-processing scripts and query event data publicly, so others can reproduce the analysis of the system performance exactly as described in this paper. 
-The Ontoforce benchmark cannot be reproduced by external parties due to the dataset being proprietary. The queries have however been released and the Ontoforce dataset mostly covers open data from Life Sciences portion of the Linked Open Data cloud.
-
-\subsubsection{Reproducible hardware}
+\subsubsection{Public Compute Infrastructure}
 
 The choice of hardware in benchmarks is often related to the availability of systems in a research group's data center.
-We opted to use instances from a cloud provider to make the choice as generic as possible. 
 We used three different types of servers on the Elastic Compute Cloud (EC2) of Amazon Web Services~\cite{ec2} (AWS), shown in Table~\ref{instances}. 
 
 \begin{table}[ht!]
@@ -29,49 +28,28 @@ We used three different types of servers on the Elastic Compute Cloud (EC2) of A
 	}
 \end{table}
 
-An additional advantage of this approach is that the benchmark financial cost can be explicitly calculated. Using financial cost as a metric allows the comparison of benchmarks with different setups. Also the cost of certain preprocessing steps such as bulk loading or compression can be included in the comparison.
+An additional advantage of this approach is that the benchmark financial cost can be explicitly provided. Using financial cost as a metric allows the comparison of benchmarks with different setups. Also the cost of certain preprocessing steps such as bulk loading or compression can be included in the comparison.
 
 \subsubsection{Reproducible installations and configurations}
 
-A very important and often not reported factor in a store's performance, is the way it was installed and configured. 
-
-A reproducible installation strategy is obtained by using Amazon Machine Images (AMIs) offered by the system vendors on the AWS Marketplace~\cite{awsmarketplace}. When no AMI is available we turned to well-maintained Docker images on Docker Hub~\cite{dockerhub}.
-The used AMIs come with a \emph{Pay-As-You-Go} (PAGO) license, i.e., a license cost per hour of usage which also depends on the choice of hardware instances.
-An overview of the installation approaches followed for the different systems under test:
+A reproducible installation strategy is obtained by using Amazon Machine Images (AMIs) offered by the system vendors on the AWS Marketplace~\cite{awsmarketplace}. When no AMI is available we turned to well-maintained Docker images~\cite{dockerhub}.
+The AMIs come with a \emph{Pay-As-You-Go} (PAGO) license.
+The following AMIs and Docker images were selected:
 
 \begin{itemize}
 	\item PAGO AMIs: Virtuoso~\cite{Virtuoso}, GraphDB~\cite{graphdb}, ES
 	\item Docker Hub: TPF server~\cite{dockerhubldfserver}, HDT-tools~\cite{hdtcpp}, \\ Virtuoso Open Source~\cite{virtuosoos} 
 	\item Self-provided Docker images: Blazegraph~\cite{dockerblazegraph}, \\ HDT-Fuseki~\cite{hdtfuseki} 
-	\item Manual installation: FluidOps was installed manually with FedX~\cite{saleem2016fine} 3.1.2 (provided by \mbox{FluidOps}) and Virtuoso Adapter plugin (required since \mbox{Virtuoso} no longer supports \url{ASK} queries)
+	\item Manual installation: FedX~\cite{saleem2016fine} 3.1.2 was installed manually with the Virtuoso Adapter plugin. %(required since \mbox{Virtuoso} no longer supports \url{ASK} queries)
 \end{itemize}
 
-Our initial results with the 4 \emph{Vendor} systems showed large differences in runtime performance~\cite{de2016big}. After consulting with the database vendors, it turned out that this can be attributed to our choice of running the systems as-is, which we name the \emph{None} configuration. We decided to re-run these benchmarks using two strictly defined configurations: \emph{Default} and \emph{Optimized}. All configuration options are defined in Table~\ref{table:configs}. 
+The different configuration settings (\emph{Default} and \emph{Optimized}) for the Vendor systems are publicly available \todo{(see Supp material)}.
 
-The \emph{Optimized} configuration was obtained after sending out a  Request For Information (RFI) to the commercial vendors involved. The RFI asked them to provide us with scripts or configuration files to achieve optimal performance on the WatDiv1000M benchmark. GraphDB, Virtuoso, and Blazegraph responded positively to this request. A fourth commercial vendor, ES, did not respond to our RFI. Note that this configuration is not necessarily an optimal match for the real-world benchmark, as the data and queries were not shared with the vendors.
 
-\begin{table}[htbp!]
-	\centering
-	\caption{Different configuration choices defined in this benchmark}
-	\label{table:configs}
-	\scalebox{0.9}{
-		\begin{tabular}{l|l}
-			\hline
-			\textbf{Name} & \textbf{Description} \\
-			\hline
-			\emph{None}    & Results reported in initial work were obtained \\
-			&  modifying none of the preset configurations. \\
-			\emph{Default} & Applying the recommended settings from the vendor \\
-			& documentation: mostly taking into account the available  \\
-			& server memory and the dataset size. \\
-			\emph{Optimized} & Settings provided by the vendors, in response to our RFI.  \\
-			\hline
-		\end{tabular}
-	}
-\end{table}
+
 
 \subsubsection{Reusable Benchmark Components}
-The SPARQL Query Benchmarker software~\cite{sparqlquerybm} is a mature SPARQL-over-HTTP benchmarking tool which is highly customizable. We ran the software in \emph{benchmark} mode where it can operate given a SPARQL endpoint URI and a list of SPARQL query files. The software was run with a timeout parameter of 300s for the WatDiv benchmarks and 1200s for the Ontoforce benchmark and with 1 single-threaded warm-up run and a multi-threaded (5 threads) stress test run where 5 clients each execute a full query mix independently and in randomized order. Note that we left a time gap of 2 hours in between the ingest phase and the warm-up run to ensure all processes related to ingest have finished.
+The SPARQL Query Benchmarker software~\cite{sparqlquerybm} is a mature SPARQL-over-HTTP benchmarking tool which is highly customizable. We ran the software in \emph{benchmark} mode where it can operate given a SPARQL endpoint URI and a list of SPARQL query files. The software was run with a timeout parameter of 300s for the WatDiv benchmarks and 1200s for the Ontoforce benchmark and with 1 single-threaded warm-up run and a multi-threaded (5 threads) stress test run where 5 clients each execute a full query mix independently and in randomized order. Note that we left a 2-hour time gap in between the ingest phase and the warm-up run to ensure all processes related to ingest had finished.
 The choice for timeout parameters is related to practical considerations: 
 \begin{itemize}
 	\item Initial tests revealed that the WatDiv timeout is sufficient for most queries to complete.
@@ -80,17 +58,16 @@ The choice for timeout parameters is related to practical considerations:
 
 \subsubsection{Reusable Post-processing and Unbiased Conclusions}
 
-
-When the benchmark successfully terminates, a CSV-file is generated containing the summary results per query: median runtime, median response time,...
+When the benchmark successfully terminates, a CSV-file is generated containing the summary results per query: median runtime, median response time, etc.
 In our initial benchmarks~\cite{de2016big} this CSV-file was used, but with the Ontoforce dataset several issues surfaced:
 
 \begin{itemize}
 	\item The summary results (number of results per query and query runtimes) are not correct in benchmarks where many problems arise. 
 	For example, in the calculation of the average runtime, results where the query was unsuccessfully resolved are also taken into account for the calculation of the average. 
 	It also makes it hard to verify the number of results per query. For example, a query with 10 results which is executed twice and of which one execution fails, is reported as having 5 results .
-	\item If the benchmarker software fails the CSV-file is not generated and the results are lost.
+	\item If the benchmarker software fails, the CSV-file is not generated and the results are lost.
 	\item A posteriori it is not possible to verify if a query was solved correctly.
-	\item While the CSV-file contains useful results, it is still a summarization of the results whereby much information about the flow of the benchmarking process is lost. 
+	\item While the CSV-file contains useful results, it is still a summarization and much information about the flow of the benchmarking process is lost. 
 \end{itemize}
 
 These issues could be addressed by working with the raw benchmarker log files which contain more details.
