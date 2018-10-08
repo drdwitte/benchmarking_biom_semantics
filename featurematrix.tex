@@ -9,11 +9,11 @@ These weights allowed them to calculate a score per data store and rank the diff
 \end{itemize}
 
 The feature matrix contains a broad selection of suitable features specific for RDF engines and allows for multi-way comparisons. Engines are ranked by assigning weights to these features. 
-The feature matrix is available online \todo{(see suppl material 1)}), and can be freely downloaded and extended. To back the scoring, we added a layer of trust by linking to the source of information.
+The feature matrix is available online (see \textbf{Additional File 1 -- Feature Matrix}), and can be freely downloaded and extended. To back the scoring, we added a layer of trust by linking to the source of information.
 The criteria for selection of the \emph{Vendor} systems are the following:
 SPARQL 1.1 compliance, systems with a machine or maintained Docker image, no restrictions on the number of triples that can be ingested, and support for multi-node deployment.
 % allegrograph en stardog vallen hierdoor  af
-This led to 4 \emph{Vendor} systems: \todo{Blazegraph,...} 
+This led to 4 \emph{Vendor} systems: Blazegraph, GraphDB, ES and Virtuoso.
 Additionally, we added 3 additional research \emph{Prototypes} with unique approaches to handling RDF data: HDT~\cite{DBLP:journals/ws/FernandezMGPA13}, which is a queryable read-only binary compression format, FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11} often included in benchmarks for federated querying, and Triple Pattern Fragments~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} as a first implementation of the Linked Data Fragments concept.
 
 %The comparison with these \emph{Prototypes} was an essential part of the research collaboration with Ontoforce as their initial goal was to build their DISQOVER search interface on top of a federated querying system.

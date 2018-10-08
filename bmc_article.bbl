@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{80}
+\begin{thebibliography}{79}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -43,105 +43,20 @@
 \csname PreBibitemsHook\endcsname
 
 %%% 1
-\bibitem{de2016big}
+\bibitem{bizer2007interlinking}
 \begin{bchapter}
-\bauthor{\bsnm{De~Witte}, \binits{D.}},
-\bauthor{\bsnm{De~Vocht}, \binits{L.}},
-\bauthor{\bsnm{Verborgh}, \binits{R.}},
-\bauthor{\bsnm{Mannens}, \binits{E.}}, \betal:
-\bctitle{Big linked data etl benchmark on cloud commodity hardware}.
-In: \bbtitle{Proceedings of the International Workshop on Semantic Big Data},
-p. \bfpage{12}
-(\byear{2016}).
-\bcomment{ACM}
+\bauthor{\bsnm{Bizer}, \binits{C.}},
+\bauthor{\bsnm{Heath}, \binits{T.}},
+\bauthor{\bsnm{Ayers}, \binits{D.}},
+\bauthor{\bsnm{Raimond}, \binits{Y.}}:
+\bctitle{Interlinking open data on the web}.
+In: \bbtitle{Demonstrations Track, 4th European Semantic Web Conference,
+  Innsbruck, Austria}
+(\byear{2007})
 \end{bchapter}
 \endbibitem
 
 %%% 2
-\bibitem{alucc2014diversified}
-\begin{bchapter}
-\bauthor{\bsnm{Alu{\c{c}}}, \binits{G.}},
-\bauthor{\bsnm{Hartig}, \binits{O.}},
-\bauthor{\bsnm{{\"O}zsu}, \binits{M.T.}},
-\bauthor{\bsnm{Daudjee}, \binits{K.}}:
-\bctitle{Diversified stress testing of rdf data management systems}.
-In: \bbtitle{International Semantic Web Conference},
-pp. \bfpage{197}--\blpage{212}
-(\byear{2014}).
-\bcomment{Springer}
-\end{bchapter}
-\endbibitem
-
-%%% 3
-\bibitem{ontoforcewebsite}
-\begin{botherref}
-Ontoforce - Powering Citizen Data Science.
-(Accessed August 31, 2018).
-\url{http://www.ontoforce.com}
-\end{botherref}
-\endbibitem
-
-%%% 4
-\bibitem{disqover}
-\begin{botherref}
-DISQOVER.
-(Accessed August 31, 2018).
-\url{https://www.disqover.com/}
-\end{botherref}
-\endbibitem
-
-%%% 5
-\bibitem{dewitte_swat4ls_2016}
-\begin{bchapter}
-\bauthor{\bsnm{De~Witte}, \binits{D.}},
-\bauthor{\bsnm{De~Vocht}, \binits{L.}},
-\bauthor{\bsnm{Knecht}, \binits{K.}},
-\bauthor{\bsnm{Pattyn}, \binits{F.}},
-\bauthor{\bsnm{Constandt}, \binits{H.}},
-\bauthor{\bsnm{Mannens}, \binits{E.}},
-\bauthor{\bsnm{Verborgh}, \binits{R.}}:
-\bctitle{Scaling out federated queries for life science data in production}.
-In: \bbtitle{Proceedings of the 9th International Conference on Semantic Web
-  Applications and Tools for Life Sciences}
-(\byear{2016})
-\end{bchapter}
-\endbibitem
-
-%%% 6
-\bibitem{DBLP:journals/corr/abs-1103-5043}
-\begin{bchapter}
-\bauthor{\bsnm{Gallego}, \binits{M.A.}},
-\bauthor{\bsnm{Fern{\'a}ndez}, \binits{J.D.}},
-\bauthor{\bsnm{Mart{\'\i}nez-Prieto}, \binits{M.A.}},
-\bauthor{\bparticle{de~la} \bsnm{Fuente}, \binits{P.}}:
-\bctitle{An empirical study of real-world sparql queries}.
-In: \bbtitle{USEWOD Workshop}
-(\byear{2011})
-\end{bchapter}
-\endbibitem
-
-%%% 7
-\bibitem{DBLP:conf/semweb/VerborghHMHVSCCMW14}
-\begin{bchapter}
-\bauthor{\bsnm{Verborgh}, \binits{R.}},
-\bauthor{\bsnm{Hartig}, \binits{O.}},
-\bauthor{\bsnm{De~Meester}, \binits{B.}},
-\bauthor{\bsnm{Haesendonck}, \binits{G.}},
-\bauthor{\bsnm{De~Vocht}, \binits{L.}},
-\bauthor{\bsnm{Vander~Sande}, \binits{M.}},
-\bauthor{\bsnm{Cyganiak}, \binits{R.}},
-\bauthor{\bsnm{Colpaert}, \binits{P.}},
-\bauthor{\bsnm{Mannens}, \binits{E.}},
-\bauthor{\bparticle{Van~de} \bsnm{Walle}, \binits{R.}}:
-\bctitle{Querying datasets on the web with high availability}.
-In: \bbtitle{International Semantic Web Conference},
-pp. \bfpage{180}--\blpage{196}
-(\byear{2014}).
-\bcomment{Springer}
-\end{bchapter}
-\endbibitem
-
-%%% 8
 \bibitem{graux2016multi}
 \begin{botherref}
 \oauthor{\bsnm{Graux}, \binits{D.}},
@@ -153,7 +68,7 @@ A multi-criteria experimental ranking of distributed {SPARQL} evaluators
 \end{botherref}
 \endbibitem
 
-%%% 9
+%%% 3
 \bibitem{ladwig2011cumulusrdf}
 \begin{bchapter}
 \bauthor{\bsnm{Ladwig}, \binits{G.}},
@@ -166,7 +81,7 @@ p. \bfpage{30}
 \end{bchapter}
 \endbibitem
 
-%%% 10
+%%% 4
 \bibitem{Schatzle:2016:SRQ:2977797.2977806}
 \begin{barticle}
 \bauthor{\bsnm{Sch\"{a}tzle}, \binits{A.}},
@@ -181,7 +96,7 @@ p. \bfpage{30}
 \end{barticle}
 \endbibitem
 
-%%% 11
+%%% 5
 \bibitem{schatzle2011pigsparql}
 \begin{bchapter}
 \bauthor{\bsnm{Sch{\"a}tzle}, \binits{A.}},
@@ -196,7 +111,7 @@ p. \bfpage{4}
 \end{bchapter}
 \endbibitem
 
-%%% 12
+%%% 6
 \bibitem{kotsevbenchmarking}
 \begin{botherref}
 \oauthor{\bsnm{Kotsev}, \binits{V.}},
@@ -209,7 +124,7 @@ Benchmarking {RDF} query engines: The {LDBC} semantic publishing benchmark
 \end{botherref}
 \endbibitem
 
-%%% 13
+%%% 7
 \bibitem{hernandez2016querying}
 \begin{bchapter}
 \bauthor{\bsnm{Hern{\'a}ndez}, \binits{D.}},
@@ -226,7 +141,7 @@ pp. \bfpage{88}--\blpage{103}
 \end{bchapter}
 \endbibitem
 
-%%% 14
+%%% 8
 \bibitem{harris20094store}
 \begin{bchapter}
 \bauthor{\bsnm{Harris}, \binits{S.}},
@@ -240,7 +155,7 @@ pp. \bfpage{94}--\blpage{109}
 \end{bchapter}
 \endbibitem
 
-%%% 15
+%%% 9
 \bibitem{papailiou2013h}
 \begin{bchapter}
 \bauthor{\bsnm{Papailiou}, \binits{N.}},
@@ -257,7 +172,7 @@ pp. \bfpage{255}--\blpage{263}
 \end{bchapter}
 \endbibitem
 
-%%% 16
+%%% 10
 \bibitem{schatzle2014sempala}
 \begin{bchapter}
 \bauthor{\bsnm{Sch{\"a}tzle}, \binits{A.}},
@@ -272,7 +187,7 @@ pp. \bfpage{164}--\blpage{179}
 \end{bchapter}
 \endbibitem
 
-%%% 17
+%%% 11
 \bibitem{rohloff2010high}
 \begin{bchapter}
 \bauthor{\bsnm{Rohloff}, \binits{K.}},
@@ -287,7 +202,7 @@ p. \bfpage{4}
 \end{bchapter}
 \endbibitem
 
-%%% 18
+%%% 12
 \bibitem{Saleem}
 \begin{botherref}
 \oauthor{\bsnm{Saleem}, \binits{M.}},
@@ -297,7 +212,7 @@ Big{RDFB}ench: A billion triples benchmark for {SPARQL} endpoint federation
 \end{botherref}
 \endbibitem
 
-%%% 19
+%%% 13
 \bibitem{DBLP:conf/semweb/SchwarteHHSS11}
 \begin{bchapter}
 \bauthor{\bsnm{Schwarte}, \binits{A.}},
@@ -313,7 +228,7 @@ pp. \bfpage{601}--\blpage{616}
 \end{bchapter}
 \endbibitem
 
-%%% 20
+%%% 14
 \bibitem{gorlitz2011splendid}
 \begin{bchapter}
 \bauthor{\bsnm{G{\"o}rlitz}, \binits{O.}},
@@ -327,7 +242,7 @@ pp. \bfpage{13}--\blpage{24}
 \end{bchapter}
 \endbibitem
 
-%%% 21
+%%% 15
 \bibitem{Acosta2011}
 \begin{bbook}
 \bauthor{\bsnm{Acosta}, \binits{M.}},
@@ -351,7 +266,7 @@ pp. \bfpage{18}--\blpage{34}.
 \end{bbook}
 \endbibitem
 
-%%% 22
+%%% 16
 \bibitem{saleem2014hibiscus}
 \begin{bchapter}
 \bauthor{\bsnm{Saleem}, \binits{M.}},
@@ -365,7 +280,7 @@ pp. \bfpage{176}--\blpage{191}
 \end{bchapter}
 \endbibitem
 
-%%% 23
+%%% 17
 \bibitem{saleem2015feasible}
 \begin{bchapter}
 \bauthor{\bsnm{Saleem}, \binits{M.}},
@@ -379,7 +294,22 @@ pp. \bfpage{52}--\blpage{69}
 \end{bchapter}
 \endbibitem
 
-%%% 24
+%%% 18
+\bibitem{alucc2014diversified}
+\begin{bchapter}
+\bauthor{\bsnm{Alu{\c{c}}}, \binits{G.}},
+\bauthor{\bsnm{Hartig}, \binits{O.}},
+\bauthor{\bsnm{{\"O}zsu}, \binits{M.T.}},
+\bauthor{\bsnm{Daudjee}, \binits{K.}}:
+\bctitle{Diversified stress testing of rdf data management systems}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{197}--\blpage{212}
+(\byear{2014}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 19
 \bibitem{boncz2005monetdb}
 \begin{bchapter}
 \bauthor{\bsnm{Boncz}, \binits{P.A.}},
@@ -393,7 +323,7 @@ pp. \bfpage{225}--\blpage{237}
 \end{bchapter}
 \endbibitem
 
-%%% 25
+%%% 20
 \bibitem{neumann2010rdf}
 \begin{barticle}
 \bauthor{\bsnm{Neumann}, \binits{T.}},
@@ -406,7 +336,7 @@ pp. \bfpage{225}--\blpage{237}
 \end{barticle}
 \endbibitem
 
-%%% 26
+%%% 21
 \bibitem{zou2011gstore}
 \begin{barticle}
 \bauthor{\bsnm{Zou}, \binits{L.}},
@@ -422,7 +352,7 @@ pp. \bfpage{225}--\blpage{237}
 \end{barticle}
 \endbibitem
 
-%%% 27
+%%% 22
 \bibitem{cudre2013nosql}
 \begin{bchapter}
 \bauthor{\bsnm{Cudr{\'e}-Mauroux}, \binits{P.}},
@@ -443,7 +373,7 @@ pp. \bfpage{310}--\blpage{325}
 \end{bchapter}
 \endbibitem
 
-%%% 28
+%%% 23
 \bibitem{khadilkar2012jena}
 \begin{bchapter}
 \bauthor{\bsnm{Khadilkar}, \binits{V.}},
@@ -460,7 +390,7 @@ pp. \bfpage{85}--\blpage{88}
 \end{bchapter}
 \endbibitem
 
-%%% 29
+%%% 24
 \bibitem{wu2014biobenchmark}
 \begin{barticle}
 \bauthor{\bsnm{Wu}, \binits{H.}},
@@ -477,7 +407,7 @@ pp. \bfpage{85}--\blpage{88}
 \end{barticle}
 \endbibitem
 
-%%% 30
+%%% 25
 \bibitem{Schmidt2011}
 \begin{bchapter}
 \bauthor{\bsnm{Schmidt}, \binits{M.}},
@@ -495,7 +425,7 @@ pp. \bfpage{585}--\blpage{600}
 \end{bchapter}
 \endbibitem
 
-%%% 31
+%%% 26
 \bibitem{guo2005lubm}
 \begin{barticle}
 \bauthor{\bsnm{Guo}, \binits{Y.}},
@@ -509,7 +439,7 @@ pp. \bfpage{585}--\blpage{600}
 \end{barticle}
 \endbibitem
 
-%%% 32
+%%% 27
 \bibitem{schmidt2009sp}
 \begin{bchapter}
 \bauthor{\bsnm{Schmidt}, \binits{M.}},
@@ -525,7 +455,7 @@ pp. \bfpage{222}--\blpage{233}
 \end{bchapter}
 \endbibitem
 
-%%% 33
+%%% 28
 \bibitem{bizer2009berlin}
 \begin{barticle}
 \bauthor{\bsnm{Bizer}, \binits{C.}},
@@ -539,22 +469,7 @@ pp. \bfpage{222}--\blpage{233}
 \end{barticle}
 \endbibitem
 
-%%% 34
-\bibitem{morsey2011dbpedia}
-\begin{botherref}
-\oauthor{\bsnm{Morsey}, \binits{M.}},
-\oauthor{\bsnm{Lehmann}, \binits{J.}},
-\oauthor{\bsnm{Auer}, \binits{S.}},
-\oauthor{\bsnm{Ngonga~Ngomo}, \binits{A.-C.}}:
-{DBpedia SPARQL benchmark--performance assessment with real queries on real
-  data}.
-The Semantic Web--ISWC 2011,
-454--469
-(2011)
-\end{botherref}
-\endbibitem
-
-%%% 35
+%%% 29
 \bibitem{DBLP:conf/sigmod/DuanKSU11}
 \begin{bchapter}
 \bauthor{\bsnm{Duan}, \binits{S.}},
@@ -570,7 +485,22 @@ pp. \bfpage{145}--\blpage{156}
 \end{bchapter}
 \endbibitem
 
-%%% 36
+%%% 30
+\bibitem{morsey2011dbpedia}
+\begin{botherref}
+\oauthor{\bsnm{Morsey}, \binits{M.}},
+\oauthor{\bsnm{Lehmann}, \binits{J.}},
+\oauthor{\bsnm{Auer}, \binits{S.}},
+\oauthor{\bsnm{Ngonga~Ngomo}, \binits{A.-C.}}:
+{DBpedia SPARQL benchmark--performance assessment with real queries on real
+  data}.
+The Semantic Web--ISWC 2011,
+454--469
+(2011)
+\end{botherref}
+\endbibitem
+
+%%% 31
 \bibitem{antezana2009cell}
 \begin{barticle}
 \bauthor{\bsnm{Antezana}, \binits{E.}},
@@ -591,7 +521,7 @@ pp. \bfpage{145}--\blpage{156}
 \end{barticle}
 \endbibitem
 
-%%% 37
+%%% 32
 \bibitem{yamamoto2011allie}
 \begin{botherref}
 \oauthor{\bsnm{Yamamoto}, \binits{Y.}},
@@ -605,7 +535,7 @@ Database
 \end{botherref}
 \endbibitem
 
-%%% 38
+%%% 33
 \bibitem{kinjo2011protein}
 \begin{botherref}
 \oauthor{\bsnm{Kinjo}, \binits{A.R.}},
@@ -625,7 +555,7 @@ Nucleic acids research
 \end{botherref}
 \endbibitem
 
-%%% 39
+%%% 34
 \bibitem{uniprot2014uniprot}
 \begin{botherref}
 \oauthor{\bsnm{Consortium}, \binits{U.}}, et al.:
@@ -635,7 +565,7 @@ Nucleic acids research
 \end{botherref}
 \endbibitem
 
-%%% 40
+%%% 35
 \bibitem{tateno2002dna}
 \begin{barticle}
 \bauthor{\bsnm{Tateno}, \binits{Y.}},
@@ -654,7 +584,7 @@ Nucleic acids research
 \end{barticle}
 \endbibitem
 
-%%% 41
+%%% 36
 \bibitem{gorlitz2012splodge}
 \begin{bchapter}
 \bauthor{\bsnm{G{\"o}rlitz}, \binits{O.}},
@@ -669,7 +599,7 @@ pp. \bfpage{116}--\blpage{132}
 \end{bchapter}
 \endbibitem
 
-%%% 42
+%%% 37
 \bibitem{ghemawat2003google}
 \begin{bchapter}
 \bauthor{\bsnm{Ghemawat}, \binits{S.}},
@@ -684,7 +614,7 @@ pp. \bfpage{29}--\blpage{43}
 \end{bchapter}
 \endbibitem
 
-%%% 43
+%%% 38
 \bibitem{LDBC}
 \begin{barticle}
 \bauthor{\bsnm{Angles}, \binits{R.}},
@@ -703,7 +633,7 @@ pp. \bfpage{29}--\blpage{43}
 \end{barticle}
 \endbibitem
 
-%%% 44
+%%% 39
 \bibitem{HOBBIT}
 \begin{botherref}
 \oauthor{\bsnm{Ngomo}, \binits{A.-C.N.}},
@@ -712,7 +642,7 @@ pp. \bfpage{29}--\blpage{43}
 \end{botherref}
 \endbibitem
 
-%%% 45
+%%% 40
 \bibitem{Boncz:2013:LBG:2513591.2527070}
 \begin{bchapter}
 \bauthor{\bsnm{Boncz}, \binits{P.}}:
@@ -727,7 +657,7 @@ pp. \bfpage{1}--\blpage{2}.
 \end{bchapter}
 \endbibitem
 
-%%% 46
+%%% 41
 \bibitem{erling2015ldbc}
 \begin{bchapter}
 \bauthor{\bsnm{Erling}, \binits{O.}},
@@ -747,20 +677,107 @@ pp. \bfpage{619}--\blpage{630}
 \end{bchapter}
 \endbibitem
 
-%%% 47
-\bibitem{Picalausa2011}
+%%% 42
+\bibitem{de2016big}
+\begin{bchapter}
+\bauthor{\bsnm{De~Witte}, \binits{D.}},
+\bauthor{\bsnm{De~Vocht}, \binits{L.}},
+\bauthor{\bsnm{Verborgh}, \binits{R.}},
+\bauthor{\bsnm{Mannens}, \binits{E.}}, \betal:
+\bctitle{Big linked data etl benchmark on cloud commodity hardware}.
+In: \bbtitle{Proceedings of the International Workshop on Semantic Big Data},
+p. \bfpage{12}
+(\byear{2016}).
+\bcomment{ACM}
+\end{bchapter}
+\endbibitem
+
+%%% 43
+\bibitem{ontoforcewebsite}
 \begin{botherref}
-\oauthor{\bsnm{Picalausa}, \binits{F.}},
-\oauthor{\bsnm{Vansummeren}, \binits{S.}}:
-{What are real {SPARQL} queries like?}
-Proceedings of the International Workshop on Semantic Web Information
-  Management - SWIM '11,
-1--6
-(2011)
+Ontoforce - Powering Citizen Data Science.
+(Accessed August 31, 2018).
+\url{http://www.ontoforce.com}
 \end{botherref}
 \endbibitem
 
+%%% 44
+\bibitem{disqover}
+\begin{botherref}
+DISQOVER.
+(Accessed August 31, 2018).
+\url{https://www.disqover.com/}
+\end{botherref}
+\endbibitem
+
+%%% 45
+\bibitem{dewitte_swat4ls_2016}
+\begin{bchapter}
+\bauthor{\bsnm{De~Witte}, \binits{D.}},
+\bauthor{\bsnm{De~Vocht}, \binits{L.}},
+\bauthor{\bsnm{Knecht}, \binits{K.}},
+\bauthor{\bsnm{Pattyn}, \binits{F.}},
+\bauthor{\bsnm{Constandt}, \binits{H.}},
+\bauthor{\bsnm{Mannens}, \binits{E.}},
+\bauthor{\bsnm{Verborgh}, \binits{R.}}:
+\bctitle{Scaling out federated queries for life science data in production}.
+In: \bbtitle{Proceedings of the 9th International Conference on Semantic Web
+  Applications and Tools for Life Sciences}
+(\byear{2016})
+\end{bchapter}
+\endbibitem
+
+%%% 46
+\bibitem{DBLP:journals/corr/abs-1103-5043}
+\begin{bchapter}
+\bauthor{\bsnm{Gallego}, \binits{M.A.}},
+\bauthor{\bsnm{Fern{\'a}ndez}, \binits{J.D.}},
+\bauthor{\bsnm{Mart{\'\i}nez-Prieto}, \binits{M.A.}},
+\bauthor{\bparticle{de~la} \bsnm{Fuente}, \binits{P.}}:
+\bctitle{An empirical study of real-world sparql queries}.
+In: \bbtitle{USEWOD Workshop}
+(\byear{2011})
+\end{bchapter}
+\endbibitem
+
+%%% 47
+\bibitem{DBLP:journals/ws/FernandezMGPA13}
+\begin{barticle}
+\bauthor{\bsnm{Fern{\'{a}}ndez}, \binits{J.D.}},
+\bauthor{\bsnm{Mart{\'{\i}}nez{-}Prieto}, \binits{M.A.}},
+\bauthor{\bsnm{Guti{\'{e}}rrez}, \binits{C.}},
+\bauthor{\bsnm{Polleres}, \binits{A.}},
+\bauthor{\bsnm{Arias}, \binits{M.}}:
+\batitle{{Binary {RDF} representation for publication and exchange {(HDT)}}}.
+\bjtitle{Journal of Web Semantics}
+\bvolume{19},
+\bfpage{22}--\blpage{41}
+(\byear{2013})
+\end{barticle}
+\endbibitem
+
 %%% 48
+\bibitem{DBLP:conf/semweb/VerborghHMHVSCCMW14}
+\begin{bchapter}
+\bauthor{\bsnm{Verborgh}, \binits{R.}},
+\bauthor{\bsnm{Hartig}, \binits{O.}},
+\bauthor{\bsnm{De~Meester}, \binits{B.}},
+\bauthor{\bsnm{Haesendonck}, \binits{G.}},
+\bauthor{\bsnm{De~Vocht}, \binits{L.}},
+\bauthor{\bsnm{Vander~Sande}, \binits{M.}},
+\bauthor{\bsnm{Cyganiak}, \binits{R.}},
+\bauthor{\bsnm{Colpaert}, \binits{P.}},
+\bauthor{\bsnm{Mannens}, \binits{E.}},
+\bauthor{\bparticle{Van~de} \bsnm{Walle}, \binits{R.}}:
+\bctitle{Querying datasets on the web with high availability}.
+In: \bbtitle{International Semantic Web Conference},
+pp. \bfpage{180}--\blpage{196}
+(\byear{2014}).
+\bcomment{Springer}
+\end{bchapter}
+\endbibitem
+
+%%% 49
 \bibitem{Stegmaier_evaluationof}
 \begin{bchapter}
 \bauthor{\bsnm{Stegmaier}, \binits{F.}},
@@ -778,7 +795,7 @@ pp. \bfpage{39}--\blpage{55}
 \end{bchapter}
 \endbibitem
 
-%%% 49
+%%% 50
 \bibitem{dbengines}
 \begin{botherref}
 DB-Engines Ranking - Popularity Ranking of Database Management Systems.
@@ -787,29 +804,13 @@ DB-Engines Ranking - Popularity Ranking of Database Management Systems.
 \end{botherref}
 \endbibitem
 
-%%% 50
+%%% 51
 \bibitem{wikidataranking}
 \begin{botherref}
 Confirm Selection of Blazegraph for Wikidata Query.
 (Accessed August 31, 2018).
 \url{https://phabricator.wikimedia.org/T90101}
 \end{botherref}
-\endbibitem
-
-%%% 51
-\bibitem{DBLP:journals/ws/FernandezMGPA13}
-\begin{barticle}
-\bauthor{\bsnm{Fern{\'{a}}ndez}, \binits{J.D.}},
-\bauthor{\bsnm{Mart{\'{\i}}nez{-}Prieto}, \binits{M.A.}},
-\bauthor{\bsnm{Guti{\'{e}}rrez}, \binits{C.}},
-\bauthor{\bsnm{Polleres}, \binits{A.}},
-\bauthor{\bsnm{Arias}, \binits{M.}}:
-\batitle{{Binary {RDF} representation for publication and exchange {(HDT)}}}.
-\bjtitle{Journal of Web Semantics}
-\bvolume{19},
-\bfpage{22}--\blpage{41}
-(\byear{2013})
-\end{barticle}
 \endbibitem
 
 %%% 52
@@ -853,140 +854,6 @@ Github - LinkedDataFragments/Client.js A JavaScript Client for Triple Pattern
 \endbibitem
 
 %%% 56
-\bibitem{ec2}
-\begin{botherref}
-Amazon EC2 Instance Types.
-(Accessed August 31, 2018).
-\url{https://aws.amazon.com/ec2/instance-types/}
-\end{botherref}
-\endbibitem
-
-%%% 57
-\bibitem{awsmarketplace}
-\begin{botherref}
-AWS Marketplace.
-(Accessed August 31, 2018).
-\url{https://aws.amazon.com/marketplace/}
-\end{botherref}
-\endbibitem
-
-%%% 58
-\bibitem{dockerhub}
-\begin{botherref}
-Docker Hub.
-(Accessed August 31, 2018).
-\url{https://hub.docker.com/}
-\end{botherref}
-\endbibitem
-
-%%% 59
-\bibitem{Virtuoso}
-\begin{botherref}
-AWS Marketplace - Virtuoso Universal Server 7.x (Enterprise -- Cloud PAGO
-  Edition).
-(Accessed August 31, 2018).
-\url{https://aws.amazon.com/marketplace/pp/B011VMCZ8K}
-\end{botherref}
-\endbibitem
-
-%%% 60
-\bibitem{graphdb}
-\begin{botherref}
-AWS Marketplace - GraphDB Cloud V7.0.1.
-(Accessed August 31, 2018).
-\url{https://aws.amazon.com/marketplace/pp/B00OM7VXGW}
-\end{botherref}
-\endbibitem
-
-%%% 61
-\bibitem{dockerhubldfserver}
-\begin{botherref}
-Linkeddatafragments/server.js - Docker Hub.
-(Accessed August 31, 2018).
-\url{https://hub.docker.com/r/linkeddatafragments/server.js/}
-\end{botherref}
-\endbibitem
-
-%%% 62
-\bibitem{hdtcpp}
-\begin{botherref}
-Rfdhdt/hdt-cpp - Docker Hub.
-(Accessed August 31, 2018).
-\url{https://hub.docker.com/r/rfdhdt/hdt-cpp/builds/}
-\end{botherref}
-\endbibitem
-
-%%% 63
-\bibitem{virtuosoos}
-\begin{botherref}
-Tenforce/virtuoso - Docker Hub.
-(Accessed August 31, 2018).
-\url{https://hub.docker.com/r/tenforce/virtuoso/}
-\end{botherref}
-\endbibitem
-
-%%% 64
-\bibitem{dockerblazegraph}
-\begin{botherref}
-Laurensdv/docker-blazegraph.
-(Accessed August 31, 2018).
-\url{https://github.com/laurensdv/docker-blazegraph/tree/master/2.1.2}
-\end{botherref}
-\endbibitem
-
-%%% 65
-\bibitem{saleem2016fine}
-\begin{barticle}
-\bauthor{\bsnm{Saleem}, \binits{M.}},
-\bauthor{\bsnm{Khan}, \binits{Y.}},
-\bauthor{\bsnm{Hasnain}, \binits{A.}},
-\bauthor{\bsnm{Ermilov}, \binits{I.}},
-\bauthor{\bsnm{Ngonga~Ngomo}, \binits{A.-C.}}:
-\batitle{A fine-grained evaluation of {SPARQL} endpoint federation systems}.
-\bjtitle{Semantic Web}
-\bvolume{7}(\bissue{5}),
-\bfpage{493}--\blpage{518}
-(\byear{2016})
-\end{barticle}
-\endbibitem
-
-%%% 66
-\bibitem{sparqlquerybm}
-\begin{botherref}
-SPARQL Query Benchmarker - Sourceforge.
-(Accessed August 31, 2018).
-\url{https://sourceforge.net/projects/sparql-query-bm/}
-\end{botherref}
-\endbibitem
-
-%%% 67
-\bibitem{bmresults}
-\begin{botherref}
-Detailed Overview All Benchmarks.
-(Accessed August 31, 2018).
-\url{http://users.elis.ugent.be/drdwitte/resultscsv.html}
-\end{botherref}
-\endbibitem
-
-%%% 68
-\bibitem{jupyter}
-\begin{botherref}
-Project Jupyter.
-(Accessed August 31, 2018).
-\url{http://jupyter.org/}
-\end{botherref}
-\endbibitem
-
-%%% 69
-\bibitem{bmpostprocessing}
-\begin{botherref}
-Postprocessing: Jupyter Notebooks.
-(Accessed August 31, 2018).
-\url{http://users.elis.ugent.be/drdwitte/postprocessing.html}
-\end{botherref}
-\endbibitem
-
-%%% 70
 \bibitem{Zeng}
 \begin{barticle}
 \bauthor{\bsnm{Zeng}, \binits{K.}},
@@ -1002,7 +869,7 @@ Postprocessing: Jupyter Notebooks.
 \end{barticle}
 \endbibitem
 
-%%% 71
+%%% 57
 \bibitem{Harth}
 \begin{bbook}
 \bauthor{\bsnm{Harth}, \binits{A.}},
@@ -1030,7 +897,7 @@ pp. \bfpage{211}--\blpage{224}.
 \end{bbook}
 \endbibitem
 
-%%% 72
+%%% 58
 \bibitem{Ferre}
 \begin{botherref}
 \oauthor{\bsnm{Ferr{\'e}}, \binits{S.}},
@@ -1043,7 +910,7 @@ Research Report PI 1964
 \end{botherref}
 \endbibitem
 
-%%% 73
+%%% 59
 \bibitem{Oren}
 \begin{bbook}
 \bauthor{\bsnm{Oren}, \binits{E.}},
@@ -1065,7 +932,7 @@ pp. \bfpage{559}--\blpage{572}.
 \end{bbook}
 \endbibitem
 
-%%% 74
+%%% 60
 \bibitem{conjunctive}
 \begin{botherref}
 Conjunctive Query - Wikipedia.
@@ -1074,7 +941,20 @@ Conjunctive Query - Wikipedia.
 \end{botherref}
 \endbibitem
 
-%%% 75
+%%% 61
+\bibitem{Picalausa2011}
+\begin{botherref}
+\oauthor{\bsnm{Picalausa}, \binits{F.}},
+\oauthor{\bsnm{Vansummeren}, \binits{S.}}:
+{What are real {SPARQL} queries like?}
+Proceedings of the International Workshop on Semantic Web Information
+  Management - SWIM '11,
+1--6
+(2011)
+\end{botherref}
+\endbibitem
+
+%%% 62
 \bibitem{Groth}
 \begin{barticle}
 \bauthor{\bsnm{Loizou}, \binits{A.}},
@@ -1088,26 +968,123 @@ Conjunctive Query - Wikipedia.
 \end{barticle}
 \endbibitem
 
-%%% 76
-\bibitem{ETL}
+%%% 63
+\bibitem{ec2}
 \begin{botherref}
-Extract-Transform-Load - Wikipedia.
+Amazon EC2 Instance Types.
 (Accessed August 31, 2018).
-\url{https://en.wikipedia.org/wiki/Extract,_transform,_load}
+\url{https://aws.amazon.com/ec2/instance-types/}
 \end{botherref}
 \endbibitem
 
-%%% 77
-\bibitem{blazegraphgpu}
+%%% 64
+\bibitem{awsmarketplace}
 \begin{botherref}
-\oauthor{\bsnm{Howard}, \binits{P.}}:
-Blazegraph GPU.
+AWS Marketplace.
 (Accessed August 31, 2018).
-\url{https://www.blazegraph.com/whitepapers/Blazegraph-gpu_InDetail_BloorResearch.pdf}
+\url{https://aws.amazon.com/marketplace/}
 \end{botherref}
 \endbibitem
 
-%%% 78
+%%% 65
+\bibitem{dockerhub}
+\begin{botherref}
+Docker Hub.
+(Accessed August 31, 2018).
+\url{https://hub.docker.com/}
+\end{botherref}
+\endbibitem
+
+%%% 66
+\bibitem{Virtuoso}
+\begin{botherref}
+AWS Marketplace - Virtuoso Universal Server 7.x (Enterprise -- Cloud PAGO
+  Edition).
+(Accessed August 31, 2018).
+\url{https://aws.amazon.com/marketplace/pp/B011VMCZ8K}
+\end{botherref}
+\endbibitem
+
+%%% 67
+\bibitem{graphdb}
+\begin{botherref}
+AWS Marketplace - GraphDB Cloud V7.0.1.
+(Accessed August 31, 2018).
+\url{https://aws.amazon.com/marketplace/pp/B00OM7VXGW}
+\end{botherref}
+\endbibitem
+
+%%% 68
+\bibitem{dockerhubldfserver}
+\begin{botherref}
+Linkeddatafragments/server.js - Docker Hub.
+(Accessed August 31, 2018).
+\url{https://hub.docker.com/r/linkeddatafragments/server.js/}
+\end{botherref}
+\endbibitem
+
+%%% 69
+\bibitem{hdtcpp}
+\begin{botherref}
+Rfdhdt/hdt-cpp - Docker Hub.
+(Accessed August 31, 2018).
+\url{https://hub.docker.com/r/rfdhdt/hdt-cpp/builds/}
+\end{botherref}
+\endbibitem
+
+%%% 70
+\bibitem{virtuosoos}
+\begin{botherref}
+Tenforce/virtuoso - Docker Hub.
+(Accessed August 31, 2018).
+\url{https://hub.docker.com/r/tenforce/virtuoso/}
+\end{botherref}
+\endbibitem
+
+%%% 71
+\bibitem{dockerblazegraph}
+\begin{botherref}
+Laurensdv/docker-blazegraph.
+(Accessed August 31, 2018).
+\url{https://github.com/laurensdv/docker-blazegraph/tree/master/2.1.2}
+\end{botherref}
+\endbibitem
+
+%%% 72
+\bibitem{saleem2016fine}
+\begin{barticle}
+\bauthor{\bsnm{Saleem}, \binits{M.}},
+\bauthor{\bsnm{Khan}, \binits{Y.}},
+\bauthor{\bsnm{Hasnain}, \binits{A.}},
+\bauthor{\bsnm{Ermilov}, \binits{I.}},
+\bauthor{\bsnm{Ngonga~Ngomo}, \binits{A.-C.}}:
+\batitle{A fine-grained evaluation of {SPARQL} endpoint federation systems}.
+\bjtitle{Semantic Web}
+\bvolume{7}(\bissue{5}),
+\bfpage{493}--\blpage{518}
+(\byear{2016})
+\end{barticle}
+\endbibitem
+
+%%% 73
+\bibitem{sparqlquerybm}
+\begin{botherref}
+SPARQL Query Benchmarker - Sourceforge.
+(Accessed August 31, 2018).
+\url{https://sourceforge.net/projects/sparql-query-bm/}
+\end{botherref}
+\endbibitem
+
+%%% 74
+\bibitem{jupyter}
+\begin{botherref}
+Project Jupyter.
+(Accessed August 31, 2018).
+\url{http://jupyter.org/}
+\end{botherref}
+\endbibitem
+
+%%% 75
 \bibitem{cure2015evaluation}
 \begin{botherref}
 \oauthor{\bsnm{Cur{\'e}}, \binits{O.}},
@@ -1120,7 +1097,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 \end{botherref}
 \endbibitem
 
-%%% 79
+%%% 76
 \bibitem{nginx}
 \begin{botherref}
 NGINX - High Performance Load Balancer, Web Server and Reverse Proxy.
@@ -1129,12 +1106,30 @@ NGINX - High Performance Load Balancer, Web Server and Reverse Proxy.
 \end{botherref}
 \endbibitem
 
-%%% 80
+%%% 77
 \bibitem{sklearndtree}
 \begin{botherref}
 Decision Trees - Scikit-Learn.
 (Accessed August 31, 2018).
 \url{http://scikit-learn.org/stable/modules/tree.html}
+\end{botherref}
+\endbibitem
+
+%%% 78
+\bibitem{bmresults}
+\begin{botherref}
+Detailed Overview All Benchmarks.
+(Accessed August 31, 2018).
+\url{http://users.elis.ugent.be/drdwitte/resultscsv.html}
+\end{botherref}
+\endbibitem
+
+%%% 79
+\bibitem{bmpostprocessing}
+\begin{botherref}
+Postprocessing: Jupyter Notebooks.
+(Accessed August 31, 2018).
+\url{http://users.elis.ugent.be/drdwitte/postprocessing.html}
 \end{botherref}
 \endbibitem
 
@@ -1147,98 +1142,19 @@ Decision Trees - Scikit-Learn.
 <refgrp>
 
 <bibl id="B1">
-  <title><p>Big linked data ETL benchmark on cloud commodity
-  hardware</p></title>
+  <title><p>Interlinking open data on the web</p></title>
   <aug>
-    <au><snm>De Witte</snm><fnm>D</fnm></au>
-    <au><snm>De Vocht</snm><fnm>L</fnm></au>
-    <au><snm>Verborgh</snm><fnm>R</fnm></au>
-    <au><snm>Mannens</snm><fnm>E</fnm></au>
-    <au><cnm>others</cnm></au>
+    <au><snm>Bizer</snm><fnm>C</fnm></au>
+    <au><snm>Heath</snm><fnm>T</fnm></au>
+    <au><snm>Ayers</snm><fnm>D</fnm></au>
+    <au><snm>Raimond</snm><fnm>Y</fnm></au>
   </aug>
-  <source>Proceedings of the International Workshop on Semantic Big
-  Data</source>
-  <pubdate>2016</pubdate>
-  <fpage>12</fpage>
+  <source>Demonstrations track, 4th european semantic web conference,
+  innsbruck, austria</source>
+  <pubdate>2007</pubdate>
 </bibl>
 
 <bibl id="B2">
-  <title><p>Diversified stress testing of RDF data management
-  systems</p></title>
-  <aug>
-    <au><snm>Alu{\c{c}}</snm><fnm>G</fnm></au>
-    <au><snm>Hartig</snm><fnm>O</fnm></au>
-    <au><snm>{\"O}zsu</snm><fnm>MT</fnm></au>
-    <au><snm>Daudjee</snm><fnm>K</fnm></au>
-  </aug>
-  <source>International Semantic Web Conference</source>
-  <pubdate>2014</pubdate>
-  <fpage>197</fpage>
-  <lpage>-212</lpage>
-</bibl>
-
-<bibl id="B3">
-  <title><p>Ontoforce - Powering Citizen Data Science</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>http://www.ontoforce.com</url>
-</bibl>
-
-<bibl id="B4">
-  <title><p>DISQOVER</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://www.disqover.com/</url>
-</bibl>
-
-<bibl id="B5">
-  <title><p>Scaling out federated queries for life science data in
-  production</p></title>
-  <aug>
-    <au><snm>De Witte</snm><fnm>D</fnm></au>
-    <au><snm>De Vocht</snm><fnm>L</fnm></au>
-    <au><snm>Knecht</snm><fnm>K</fnm></au>
-    <au><snm>Pattyn</snm><fnm>F</fnm></au>
-    <au><snm>Constandt</snm><fnm>H</fnm></au>
-    <au><snm>Mannens</snm><fnm>E</fnm></au>
-    <au><snm>Verborgh</snm><fnm>R</fnm></au>
-  </aug>
-  <source>Proceedings of the 9th International Conference on Semantic Web
-  Applications and Tools for Life Sciences</source>
-  <pubdate>2016</pubdate>
-</bibl>
-
-<bibl id="B6">
-  <title><p>An empirical study of real-world SPARQL queries</p></title>
-  <aug>
-    <au><snm>Gallego</snm><fnm>MA</fnm></au>
-    <au><snm>Fern{\'a}ndez</snm><fnm>JD</fnm></au>
-    <au><snm>Mart{\'\i}nez Prieto</snm><fnm>MA</fnm></au>
-    <au><snm>Fuente</snm><fnm>P</fnm></au>
-  </aug>
-  <source>USEWOD workshop</source>
-  <pubdate>2011</pubdate>
-</bibl>
-
-<bibl id="B7">
-  <title><p>Querying datasets on the web with high availability</p></title>
-  <aug>
-    <au><snm>Verborgh</snm><fnm>R</fnm></au>
-    <au><snm>Hartig</snm><fnm>O</fnm></au>
-    <au><snm>De Meester</snm><fnm>B</fnm></au>
-    <au><snm>Haesendonck</snm><fnm>G</fnm></au>
-    <au><snm>De Vocht</snm><fnm>L</fnm></au>
-    <au><snm>Vander Sande</snm><fnm>M</fnm></au>
-    <au><snm>Cyganiak</snm><fnm>R</fnm></au>
-    <au><snm>Colpaert</snm><fnm>P</fnm></au>
-    <au><snm>Mannens</snm><fnm>E</fnm></au>
-    <au><snm>Walle</snm><fnm>R</fnm></au>
-  </aug>
-  <source>International Semantic Web Conference</source>
-  <pubdate>2014</pubdate>
-  <fpage>180</fpage>
-  <lpage>-196</lpage>
-</bibl>
-
-<bibl id="B8">
   <title><p>A Multi-Criteria Experimental Ranking of Distributed {SPARQL}
   Evaluators</p></title>
   <aug>
@@ -1250,7 +1166,7 @@ Decision Trees - Scikit-Learn.
   <pubdate>2016</pubdate>
 </bibl>
 
-<bibl id="B9">
+<bibl id="B3">
   <title><p>{CumulusRDF}: linked data management on nested key-value
   stores</p></title>
   <aug>
@@ -1263,7 +1179,7 @@ Decision Trees - Scikit-Learn.
   <fpage>30</fpage>
 </bibl>
 
-<bibl id="B10">
+<bibl id="B4">
   <title><p>{S2RDF}: {RDF} Querying with {SPARQL} on Spark</p></title>
   <aug>
     <au><snm>Sch\"{a}tzle</snm><fnm>A</fnm></au>
@@ -1280,7 +1196,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-815</lpage>
 </bibl>
 
-<bibl id="B11">
+<bibl id="B5">
   <title><p>{PigSPARQL}: Mapping {SPARQL} to pig latin</p></title>
   <aug>
     <au><snm>Sch{\"a}tzle</snm><fnm>A</fnm></au>
@@ -1293,7 +1209,7 @@ Decision Trees - Scikit-Learn.
   <fpage>4</fpage>
 </bibl>
 
-<bibl id="B12">
+<bibl id="B6">
   <title><p>Benchmarking {RDF} Query Engines: The {LDBC} Semantic Publishing
   Benchmark</p></title>
   <aug>
@@ -1306,7 +1222,7 @@ Decision Trees - Scikit-Learn.
   </aug>
 </bibl>
 
-<bibl id="B13">
+<bibl id="B7">
   <title><p>Querying Wikidata: Comparing {SPARQL}, Relational and Graph
   Databases</p></title>
   <aug>
@@ -1322,7 +1238,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-103</lpage>
 </bibl>
 
-<bibl id="B14">
+<bibl id="B8">
   <title><p>4store: The design and implementation of a clustered {RDF}
   store</p></title>
   <aug>
@@ -1337,7 +1253,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-109</lpage>
 </bibl>
 
-<bibl id="B15">
+<bibl id="B9">
   <title><p>H2RDF+: High-performance distributed joins over large-scale {RDF}
   graphs</p></title>
   <aug>
@@ -1353,7 +1269,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-263</lpage>
 </bibl>
 
-<bibl id="B16">
+<bibl id="B10">
   <title><p>Sempala: interactive {SPARQL} query processing on
   hadoop</p></title>
   <aug>
@@ -1368,7 +1284,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-179</lpage>
 </bibl>
 
-<bibl id="B17">
+<bibl id="B11">
   <title><p>High-performance, massively scalable distributed systems using the
   MapReduce software framework: the SHARD triple-store</p></title>
   <aug>
@@ -1381,7 +1297,7 @@ Decision Trees - Scikit-Learn.
   <fpage>4</fpage>
 </bibl>
 
-<bibl id="B18">
+<bibl id="B12">
   <title><p>Big{RDFB}ench: A Billion Triples Benchmark for {SPARQL} Endpoint
   Federation</p></title>
   <aug>
@@ -1392,7 +1308,7 @@ Decision Trees - Scikit-Learn.
   <publisher>Citeseer</publisher>
 </bibl>
 
-<bibl id="B19">
+<bibl id="B13">
   <title><p>{FedX: Optimization Techniques for Federated Query Processing on
   Linked Data}</p></title>
   <aug>
@@ -1408,7 +1324,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-616</lpage>
 </bibl>
 
-<bibl id="B20">
+<bibl id="B14">
   <title><p>Splendid: {SPARQL} endpoint federation exploiting void
   descriptions</p></title>
   <aug>
@@ -1422,7 +1338,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-24</lpage>
 </bibl>
 
-<bibl id="B21">
+<bibl id="B15">
   <title><p>ANAPSID: An Adaptive Query Processing Engine for {SPARQL}
   Endpoints</p></title>
   <aug>
@@ -1443,7 +1359,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-34</lpage>
 </bibl>
 
-<bibl id="B22">
+<bibl id="B16">
   <title><p>Hibiscus: Hypergraph-based source selection for {SPARQL} endpoint
   federation</p></title>
   <aug>
@@ -1456,7 +1372,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-191</lpage>
 </bibl>
 
-<bibl id="B23">
+<bibl id="B17">
   <title><p>FEASIBLE: a feature-based {SPARQL} benchmark generation
   framework</p></title>
   <aug>
@@ -1470,7 +1386,22 @@ Decision Trees - Scikit-Learn.
   <lpage>-69</lpage>
 </bibl>
 
-<bibl id="B24">
+<bibl id="B18">
+  <title><p>Diversified stress testing of RDF data management
+  systems</p></title>
+  <aug>
+    <au><snm>Alu{\c{c}}</snm><fnm>G</fnm></au>
+    <au><snm>Hartig</snm><fnm>O</fnm></au>
+    <au><snm>{\"O}zsu</snm><fnm>MT</fnm></au>
+    <au><snm>Daudjee</snm><fnm>K</fnm></au>
+  </aug>
+  <source>International Semantic Web Conference</source>
+  <pubdate>2014</pubdate>
+  <fpage>197</fpage>
+  <lpage>-212</lpage>
+</bibl>
+
+<bibl id="B19">
   <title><p>Monet{DB/X}100: Hyper-Pipelining Query Execution.</p></title>
   <aug>
     <au><snm>Boncz</snm><fnm>PA</fnm></au>
@@ -1484,7 +1415,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-237</lpage>
 </bibl>
 
-<bibl id="B25">
+<bibl id="B20">
   <title><p>The {RDF-3X} engine for scalable management of {RDF}
   data</p></title>
   <aug>
@@ -1501,7 +1432,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-113</lpage>
 </bibl>
 
-<bibl id="B26">
+<bibl id="B21">
   <title><p>gStore: answering {SPARQL} queries via subgraph
   matching</p></title>
   <aug>
@@ -1520,7 +1451,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-493</lpage>
 </bibl>
 
-<bibl id="B27">
+<bibl id="B22">
   <title><p>{NoSQL} databases for {RDF}: an empirical evaluation</p></title>
   <aug>
     <au><snm>Cudr{\'e} Mauroux</snm><fnm>P</fnm></au>
@@ -1540,7 +1471,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-325</lpage>
 </bibl>
 
-<bibl id="B28">
+<bibl id="B23">
   <title><p>{Jena-HBase:} A distributed, scalable and efficient {RDF} triple
   store</p></title>
   <aug>
@@ -1556,7 +1487,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-88</lpage>
 </bibl>
 
-<bibl id="B29">
+<bibl id="B24">
   <title><p>{BioBenchmark Toyama 2012: an evaluation of the performance of
   triple stores on biological data}</p></title>
   <aug>
@@ -1574,7 +1505,7 @@ Decision Trees - Scikit-Learn.
   <fpage>1</fpage>
 </bibl>
 
-<bibl id="B30">
+<bibl id="B25">
   <title><p>Fedbench: A benchmark suite for federated semantic data query
   processing</p></title>
   <aug>
@@ -1591,7 +1522,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-600</lpage>
 </bibl>
 
-<bibl id="B31">
+<bibl id="B26">
   <title><p>{LUBM: A benchmark for OWL knowledge base systems}</p></title>
   <aug>
     <au><snm>Guo</snm><fnm>Y</fnm></au>
@@ -1608,7 +1539,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-182</lpage>
 </bibl>
 
-<bibl id="B32">
+<bibl id="B27">
   <title><p>{SP\^{} 2Bench: a SPARQL performance benchmark}</p></title>
   <aug>
     <au><snm>Schmidt</snm><fnm>M</fnm></au>
@@ -1623,7 +1554,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-233</lpage>
 </bibl>
 
-<bibl id="B33">
+<bibl id="B28">
   <title><p>{The Berlin SPARQL Benchmark}</p></title>
   <aug>
     <au><snm>Bizer</snm><fnm>C</fnm></au>
@@ -1639,23 +1570,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-24</lpage>
 </bibl>
 
-<bibl id="B34">
-  <title><p>{DBpedia SPARQL benchmark--performance assessment with real queries
-  on real data}</p></title>
-  <aug>
-    <au><snm>Morsey</snm><fnm>M</fnm></au>
-    <au><snm>Lehmann</snm><fnm>J</fnm></au>
-    <au><snm>Auer</snm><fnm>S</fnm></au>
-    <au><snm>Ngonga Ngomo</snm><fnm>AC</fnm></au>
-  </aug>
-  <source>The Semantic Web--ISWC 2011</source>
-  <publisher>Springer</publisher>
-  <pubdate>2011</pubdate>
-  <fpage>454</fpage>
-  <lpage>-469</lpage>
-</bibl>
-
-<bibl id="B35">
+<bibl id="B29">
   <title><p>{Apples and oranges: a comparison of {RDF} benchmarks and real
   {RDF}} datasets</p></title>
   <aug>
@@ -1671,7 +1586,23 @@ Decision Trees - Scikit-Learn.
   <lpage>-156</lpage>
 </bibl>
 
-<bibl id="B36">
+<bibl id="B30">
+  <title><p>{DBpedia SPARQL benchmark--performance assessment with real queries
+  on real data}</p></title>
+  <aug>
+    <au><snm>Morsey</snm><fnm>M</fnm></au>
+    <au><snm>Lehmann</snm><fnm>J</fnm></au>
+    <au><snm>Auer</snm><fnm>S</fnm></au>
+    <au><snm>Ngonga Ngomo</snm><fnm>AC</fnm></au>
+  </aug>
+  <source>The Semantic Web--ISWC 2011</source>
+  <publisher>Springer</publisher>
+  <pubdate>2011</pubdate>
+  <fpage>454</fpage>
+  <lpage>-469</lpage>
+</bibl>
+
+<bibl id="B31">
   <title><p>The Cell Cycle Ontology: an application ontology for the
   representation and integrated analysis of the cell cycle process</p></title>
   <aug>
@@ -1693,7 +1624,7 @@ Decision Trees - Scikit-Learn.
   <fpage>R58</fpage>
 </bibl>
 
-<bibl id="B37">
+<bibl id="B32">
   <title><p>Allie: a database and a search service of abbreviations and long
   forms</p></title>
   <aug>
@@ -1708,7 +1639,7 @@ Decision Trees - Scikit-Learn.
   <volume>2011</volume>
 </bibl>
 
-<bibl id="B38">
+<bibl id="B33">
   <title><p>Protein Data Bank Japan (PDBj): maintaining a structural data
   archive and resource description framework format</p></title>
   <aug>
@@ -1729,7 +1660,7 @@ Decision Trees - Scikit-Learn.
   <pubdate>2011</pubdate>
 </bibl>
 
-<bibl id="B39">
+<bibl id="B34">
   <title><p>UniProt: a hub for protein information</p></title>
   <aug>
     <au><snm>Consortium</snm><fnm>U</fnm></au>
@@ -1740,7 +1671,7 @@ Decision Trees - Scikit-Learn.
   <pubdate>2014</pubdate>
 </bibl>
 
-<bibl id="B40">
+<bibl id="B35">
   <title><p>DNA Data Bank of Japan (DDBJ) for genome scale research in life
   science</p></title>
   <aug>
@@ -1761,7 +1692,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-30</lpage>
 </bibl>
 
-<bibl id="B41">
+<bibl id="B36">
   <title><p>SPLODGE: systematic generation of {SPARQL} benchmark queries for
   linked open data</p></title>
   <aug>
@@ -1775,7 +1706,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-132</lpage>
 </bibl>
 
-<bibl id="B42">
+<bibl id="B37">
   <title><p>The Google file system</p></title>
   <aug>
     <au><snm>Ghemawat</snm><fnm>S</fnm></au>
@@ -1790,7 +1721,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-43</lpage>
 </bibl>
 
-<bibl id="B43">
+<bibl id="B38">
   <title><p>The Linked Data Benchmark Council: A Graph and {RDF} Industry
   Benchmarking Effort</p></title>
   <aug>
@@ -1812,7 +1743,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-31</lpage>
 </bibl>
 
-<bibl id="B44">
+<bibl id="B39">
   <title><p>{HOBBIT}: Holistic benchmarking for big linked data</p></title>
   <aug>
     <au><snm>Ngomo</snm><fnm>ACN</fnm></au>
@@ -1820,7 +1751,7 @@ Decision Trees - Scikit-Learn.
   </aug>
 </bibl>
 
-<bibl id="B45">
+<bibl id="B40">
   <title><p>{LDBC}: Benchmarks for Graph and {RDF} Data Management</p></title>
   <aug>
     <au><snm>Boncz</snm><fnm>P</fnm></au>
@@ -1834,7 +1765,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-2</lpage>
 </bibl>
 
-<bibl id="B46">
+<bibl id="B41">
   <title><p>The {LDBC} social network benchmark: Interactive
   workload</p></title>
   <aug>
@@ -1854,20 +1785,101 @@ Decision Trees - Scikit-Learn.
   <lpage>-630</lpage>
 </bibl>
 
-<bibl id="B47">
-  <title><p>{What are real {SPARQL} queries like?}</p></title>
+<bibl id="B42">
+  <title><p>Big linked data ETL benchmark on cloud commodity
+  hardware</p></title>
   <aug>
-    <au><snm>Picalausa</snm><fnm>F</fnm></au>
-    <au><snm>Vansummeren</snm><fnm>S</fnm></au>
+    <au><snm>De Witte</snm><fnm>D</fnm></au>
+    <au><snm>De Vocht</snm><fnm>L</fnm></au>
+    <au><snm>Verborgh</snm><fnm>R</fnm></au>
+    <au><snm>Mannens</snm><fnm>E</fnm></au>
+    <au><cnm>others</cnm></au>
   </aug>
-  <source>Proceedings of the International Workshop on Semantic Web Information
-  Management - SWIM '11</source>
+  <source>Proceedings of the International Workshop on Semantic Big
+  Data</source>
+  <pubdate>2016</pubdate>
+  <fpage>12</fpage>
+</bibl>
+
+<bibl id="B43">
+  <title><p>Ontoforce - Powering Citizen Data Science</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://www.ontoforce.com</url>
+</bibl>
+
+<bibl id="B44">
+  <title><p>DISQOVER</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://www.disqover.com/</url>
+</bibl>
+
+<bibl id="B45">
+  <title><p>Scaling out federated queries for life science data in
+  production</p></title>
+  <aug>
+    <au><snm>De Witte</snm><fnm>D</fnm></au>
+    <au><snm>De Vocht</snm><fnm>L</fnm></au>
+    <au><snm>Knecht</snm><fnm>K</fnm></au>
+    <au><snm>Pattyn</snm><fnm>F</fnm></au>
+    <au><snm>Constandt</snm><fnm>H</fnm></au>
+    <au><snm>Mannens</snm><fnm>E</fnm></au>
+    <au><snm>Verborgh</snm><fnm>R</fnm></au>
+  </aug>
+  <source>Proceedings of the 9th International Conference on Semantic Web
+  Applications and Tools for Life Sciences</source>
+  <pubdate>2016</pubdate>
+</bibl>
+
+<bibl id="B46">
+  <title><p>An empirical study of real-world SPARQL queries</p></title>
+  <aug>
+    <au><snm>Gallego</snm><fnm>MA</fnm></au>
+    <au><snm>Fern{\'a}ndez</snm><fnm>JD</fnm></au>
+    <au><snm>Mart{\'\i}nez Prieto</snm><fnm>MA</fnm></au>
+    <au><snm>Fuente</snm><fnm>P</fnm></au>
+  </aug>
+  <source>USEWOD workshop</source>
   <pubdate>2011</pubdate>
-  <fpage>1</fpage>
-  <lpage>-6</lpage>
+</bibl>
+
+<bibl id="B47">
+  <title><p>{Binary {RDF} representation for publication and exchange
+  {(HDT)}}</p></title>
+  <aug>
+    <au><snm>Fern{\'{a}}ndez</snm><fnm>JD</fnm></au>
+    <au><snm>Mart{\'{\i}}nez{-}Prieto</snm><fnm>MA</fnm></au>
+    <au><snm>Guti{\'{e}}rrez</snm><fnm>C</fnm></au>
+    <au><snm>Polleres</snm><fnm>A</fnm></au>
+    <au><snm>Arias</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Journal of Web Semantics</source>
+  <pubdate>2013</pubdate>
+  <volume>19</volume>
+  <fpage>22</fpage>
+  <lpage>-41</lpage>
 </bibl>
 
 <bibl id="B48">
+  <title><p>Querying datasets on the web with high availability</p></title>
+  <aug>
+    <au><snm>Verborgh</snm><fnm>R</fnm></au>
+    <au><snm>Hartig</snm><fnm>O</fnm></au>
+    <au><snm>De Meester</snm><fnm>B</fnm></au>
+    <au><snm>Haesendonck</snm><fnm>G</fnm></au>
+    <au><snm>De Vocht</snm><fnm>L</fnm></au>
+    <au><snm>Vander Sande</snm><fnm>M</fnm></au>
+    <au><snm>Cyganiak</snm><fnm>R</fnm></au>
+    <au><snm>Colpaert</snm><fnm>P</fnm></au>
+    <au><snm>Mannens</snm><fnm>E</fnm></au>
+    <au><snm>Walle</snm><fnm>R</fnm></au>
+  </aug>
+  <source>International Semantic Web Conference</source>
+  <pubdate>2014</pubdate>
+  <fpage>180</fpage>
+  <lpage>-196</lpage>
+</bibl>
+
+<bibl id="B49">
   <title><p>Evaluation of current {RDF} database solutions</p></title>
   <aug>
     <au><snm>Stegmaier</snm><fnm>F</fnm></au>
@@ -1884,34 +1896,17 @@ Decision Trees - Scikit-Learn.
   <lpage>-55</lpage>
 </bibl>
 
-<bibl id="B49">
+<bibl id="B50">
   <title><p>DB-Engines Ranking - popularity ranking of database management
   systems.</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>http://db-engines.com/en/ranking</url>
 </bibl>
 
-<bibl id="B50">
+<bibl id="B51">
   <title><p>Confirm selection of Blazegraph for wikidata query</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://phabricator.wikimedia.org/T90101</url>
-</bibl>
-
-<bibl id="B51">
-  <title><p>{Binary {RDF} representation for publication and exchange
-  {(HDT)}}</p></title>
-  <aug>
-    <au><snm>Fern{\'{a}}ndez</snm><fnm>JD</fnm></au>
-    <au><snm>Mart{\'{\i}}nez{-}Prieto</snm><fnm>MA</fnm></au>
-    <au><snm>Guti{\'{e}}rrez</snm><fnm>C</fnm></au>
-    <au><snm>Polleres</snm><fnm>A</fnm></au>
-    <au><snm>Arias</snm><fnm>M</fnm></au>
-  </aug>
-  <source>Journal of Web Semantics</source>
-  <pubdate>2013</pubdate>
-  <volume>19</volume>
-  <fpage>22</fpage>
-  <lpage>-41</lpage>
 </bibl>
 
 <bibl id="B52">
@@ -1947,104 +1942,6 @@ Decision Trees - Scikit-Learn.
 </bibl>
 
 <bibl id="B56">
-  <title><p>Amazon EC2 Instance Types</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://aws.amazon.com/ec2/instance-types/</url>
-</bibl>
-
-<bibl id="B57">
-  <title><p>AWS Marketplace</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://aws.amazon.com/marketplace/</url>
-</bibl>
-
-<bibl id="B58">
-  <title><p>Docker Hub</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://hub.docker.com/</url>
-</bibl>
-
-<bibl id="B59">
-  <title><p>AWS Marketplace - Virtuoso Universal Server 7.x (Enterprise --
-  Cloud PAGO Edition)</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://aws.amazon.com/marketplace/pp/B011VMCZ8K</url>
-</bibl>
-
-<bibl id="B60">
-  <title><p>AWS Marketplace - GraphDB Cloud v7.0.1</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://aws.amazon.com/marketplace/pp/B00OM7VXGW</url>
-</bibl>
-
-<bibl id="B61">
-  <title><p>linkeddatafragments/server.js - Docker Hub</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://hub.docker.com/r/linkeddatafragments/server.js/</url>
-</bibl>
-
-<bibl id="B62">
-  <title><p>rfdhdt/hdt-cpp - Docker Hub</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://hub.docker.com/r/rfdhdt/hdt-cpp/builds/</url>
-</bibl>
-
-<bibl id="B63">
-  <title><p>tenforce/virtuoso - Docker Hub</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://hub.docker.com/r/tenforce/virtuoso/</url>
-</bibl>
-
-<bibl id="B64">
-  <title><p>laurensdv/docker-blazegraph</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://github.com/laurensdv/docker-blazegraph/tree/master/2.1.2</url>
-</bibl>
-
-<bibl id="B65">
-  <title><p>A fine-grained evaluation of {SPARQL} endpoint federation
-  systems</p></title>
-  <aug>
-    <au><snm>Saleem</snm><fnm>M</fnm></au>
-    <au><snm>Khan</snm><fnm>Y</fnm></au>
-    <au><snm>Hasnain</snm><fnm>A</fnm></au>
-    <au><snm>Ermilov</snm><fnm>I</fnm></au>
-    <au><snm>Ngonga Ngomo</snm><fnm>AC</fnm></au>
-  </aug>
-  <source>Semantic Web</source>
-  <publisher>IOS Press</publisher>
-  <pubdate>2016</pubdate>
-  <volume>7</volume>
-  <issue>5</issue>
-  <fpage>493</fpage>
-  <lpage>-518</lpage>
-</bibl>
-
-<bibl id="B66">
-  <title><p>SPARQL Query Benchmarker - Sourceforge</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://sourceforge.net/projects/sparql-query-bm/</url>
-</bibl>
-
-<bibl id="B67">
-  <title><p>Detailed overview all benchmarks</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>http://users.elis.ugent.be/drdwitte/resultscsv.html</url>
-</bibl>
-
-<bibl id="B68">
-  <title><p>Project Jupyter</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>http://jupyter.org/</url>
-</bibl>
-
-<bibl id="B69">
-  <title><p>Postprocessing: Jupyter notebooks</p></title>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>http://users.elis.ugent.be/drdwitte/postprocessing.html</url>
-</bibl>
-
-<bibl id="B70">
   <title><p>A Distributed Graph Engine for Web Scale {RDF} Data</p></title>
   <aug>
     <au><snm>Zeng</snm><fnm>K</fnm></au>
@@ -2062,7 +1959,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-276</lpage>
 </bibl>
 
-<bibl id="B71">
+<bibl id="B57">
   <title><p>YARS2: A Federated Repository for Querying Graph Structured Data
   from the Web</p></title>
   <aug>
@@ -2084,7 +1981,7 @@ Decision Trees - Scikit-Learn.
   <lpage>-224</lpage>
 </bibl>
 
-<bibl id="B72">
+<bibl id="B58">
   <title><p>{Semantic Faceted Search: Safe and Expressive Navigation in {RDF}
   Graphs}</p></title>
   <aug>
@@ -2099,7 +1996,7 @@ Decision Trees - Scikit-Learn.
   <url>https://hal.inria.fr/inria-00554093</url>
 </bibl>
 
-<bibl id="B73">
+<bibl id="B59">
   <title><p>Extending Faceted Navigation for {RDF} Data</p></title>
   <aug>
     <au><snm>Oren</snm><fnm>E</fnm></au>
@@ -2118,13 +2015,26 @@ Decision Trees - Scikit-Learn.
   <lpage>-572</lpage>
 </bibl>
 
-<bibl id="B74">
+<bibl id="B60">
   <title><p>Conjunctive Query - Wikipedia</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://en.wikipedia.org/wiki/Conjunctive_query#Relationship_to_other_query_languages</url>
 </bibl>
 
-<bibl id="B75">
+<bibl id="B61">
+  <title><p>{What are real {SPARQL} queries like?}</p></title>
+  <aug>
+    <au><snm>Picalausa</snm><fnm>F</fnm></au>
+    <au><snm>Vansummeren</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Proceedings of the International Workshop on Semantic Web Information
+  Management - SWIM '11</source>
+  <pubdate>2011</pubdate>
+  <fpage>1</fpage>
+  <lpage>-6</lpage>
+</bibl>
+
+<bibl id="B62">
   <title><p>On the formulation of performant \{SPARQL\} queries</p></title>
   <aug>
     <au><snm>Loizou</snm><fnm>A</fnm></au>
@@ -2140,22 +2050,93 @@ Decision Trees - Scikit-Learn.
   <url>http://www.sciencedirect.com/science/article/pii/S1570826814001061</url>
 </bibl>
 
-<bibl id="B76">
-  <title><p>Extract-Transform-Load - Wikipedia</p></title>
+<bibl id="B63">
+  <title><p>Amazon EC2 Instance Types</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://en.wikipedia.org/wiki/Extract,_transform,_load</url>
+  <url>https://aws.amazon.com/ec2/instance-types/</url>
 </bibl>
 
-<bibl id="B77">
-  <title><p>Blazegraph GPU</p></title>
+<bibl id="B64">
+  <title><p>AWS Marketplace</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://aws.amazon.com/marketplace/</url>
+</bibl>
+
+<bibl id="B65">
+  <title><p>Docker Hub</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://hub.docker.com/</url>
+</bibl>
+
+<bibl id="B66">
+  <title><p>AWS Marketplace - Virtuoso Universal Server 7.x (Enterprise --
+  Cloud PAGO Edition)</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://aws.amazon.com/marketplace/pp/B011VMCZ8K</url>
+</bibl>
+
+<bibl id="B67">
+  <title><p>AWS Marketplace - GraphDB Cloud v7.0.1</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://aws.amazon.com/marketplace/pp/B00OM7VXGW</url>
+</bibl>
+
+<bibl id="B68">
+  <title><p>linkeddatafragments/server.js - Docker Hub</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://hub.docker.com/r/linkeddatafragments/server.js/</url>
+</bibl>
+
+<bibl id="B69">
+  <title><p>rfdhdt/hdt-cpp - Docker Hub</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://hub.docker.com/r/rfdhdt/hdt-cpp/builds/</url>
+</bibl>
+
+<bibl id="B70">
+  <title><p>tenforce/virtuoso - Docker Hub</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://hub.docker.com/r/tenforce/virtuoso/</url>
+</bibl>
+
+<bibl id="B71">
+  <title><p>laurensdv/docker-blazegraph</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://github.com/laurensdv/docker-blazegraph/tree/master/2.1.2</url>
+</bibl>
+
+<bibl id="B72">
+  <title><p>A fine-grained evaluation of {SPARQL} endpoint federation
+  systems</p></title>
   <aug>
-    <au><snm>Howard</snm><fnm>P</fnm></au>
+    <au><snm>Saleem</snm><fnm>M</fnm></au>
+    <au><snm>Khan</snm><fnm>Y</fnm></au>
+    <au><snm>Hasnain</snm><fnm>A</fnm></au>
+    <au><snm>Ermilov</snm><fnm>I</fnm></au>
+    <au><snm>Ngonga Ngomo</snm><fnm>AC</fnm></au>
   </aug>
-  <pubdate>Accessed August 31, 2018</pubdate>
-  <url>https://www.blazegraph.com/whitepapers/Blazegraph-gpu_InDetail_BloorResearch.pdf</url>
+  <source>Semantic Web</source>
+  <publisher>IOS Press</publisher>
+  <pubdate>2016</pubdate>
+  <volume>7</volume>
+  <issue>5</issue>
+  <fpage>493</fpage>
+  <lpage>-518</lpage>
 </bibl>
 
-<bibl id="B78">
+<bibl id="B73">
+  <title><p>SPARQL Query Benchmarker - Sourceforge</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://sourceforge.net/projects/sparql-query-bm/</url>
+</bibl>
+
+<bibl id="B74">
+  <title><p>Project Jupyter</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://jupyter.org/</url>
+</bibl>
+
+<bibl id="B75">
   <title><p>On the Evaluation of {RDF} Distribution Algorithms Implemented over
   Apache Spark</p></title>
   <aug>
@@ -2168,17 +2149,29 @@ Decision Trees - Scikit-Learn.
   <pubdate>2015</pubdate>
 </bibl>
 
-<bibl id="B79">
+<bibl id="B76">
   <title><p>NGINX - High Performance Load Balancer, Web Server and Reverse
   Proxy</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://www.nginx.com/</url>
 </bibl>
 
-<bibl id="B80">
+<bibl id="B77">
   <title><p>Decision Trees - Scikit-Learn</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>http://scikit-learn.org/stable/modules/tree.html</url>
+</bibl>
+
+<bibl id="B78">
+  <title><p>Detailed overview all benchmarks</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://users.elis.ugent.be/drdwitte/resultscsv.html</url>
+</bibl>
+
+<bibl id="B79">
+  <title><p>Postprocessing: Jupyter notebooks</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>http://users.elis.ugent.be/drdwitte/postprocessing.html</url>
 </bibl>
 
 </refgrp>

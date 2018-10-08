@@ -1,9 +1,10 @@
 Only comparing query runtimes might be an oversimplification in benchmark analysis. 
-When comparing the average runtimes of a batch of queries the slow tail of the distributions dominates have the largest impact on the result. In the first subsection
+When comparing the average runtimes of a batch of queries, the tail of the distributions dominates the result. 
+\todo{Single sentence summary} \\
+In the first subsection
 %~\ref{subsec:templates} 
-we investigate whether certain query templates dominate the average runtimes.
+we investigate the impact of different query templates on the average runtimes.
 Query execution times depend on the state of the database, which motivates studying the query context. Previous results are still valid as all queries are executed 5 times and each time the median is taken to calculate average runtimes.
-
 The next subsection
 %~\ref{subsec:load} 
 studies the effect of the server load on the query runtimes by comparing a single-client benchmark with a stress test with 5 clients. In the following subsection we investigate the context of a query by studying caching effects. 

@@ -4,9 +4,9 @@
 %
 %RESULTS Rev1: Notebook Rev1_13 - B Errors & Timeout percentage
 %
-In the previous section we saw that the amount of memory is a critical parameter for benchmark performance. 
-In this section we study the effect on the query runtimes of increasing the amount of memory to 64GB.
-The two leftmost panels of Figure~\ref{fig:Fig02_WatdivVerticalScaling} study the effect of vertical scaling. 
+In the previous section we observed that the amount of memory is a critical parameter for benchmark performance. 
+In this section we study the effect on query runtimes by increasing memory to 64GB.
+The two leftmost panels of Fig.~\ref{fig:Fig02_WatdivVerticalScaling} study the effect of vertical scaling. 
 %median / mean
 %Bla_N1_32_W1000_Def     8.858862	56.437824
 %Gra_N1_32_W1000_Def    47.932701	74.927924
@@ -24,13 +24,10 @@ The two leftmost panels of Figure~\ref{fig:Fig02_WatdivVerticalScaling} study th
 %Vir_N1_64_W1000_Def     1
 
 \begin{itemize}
-	\item \textbf{Memory is no magic solution:} Especially for \textbf{Gra1\_64\_Def} and \textbf{Vir1\_64\_Def} hardly any improvement can be seen. Blazegraph takes full advantage of the additional memory, with a large shift in both median and mean runtimes. The strong hardware dependence of Blazegraph could be a motivation to also study the performance in a GPU setting~\cite{blazegraphgpu}, which is outside the scope of this work.
-	\item \textbf{Speedups:} \textbf{Bla1\_64\_Def} has a speedup of 8.4 for its average runtime and 3.1 for its median runtime. From the other stores only \textbf{ES1\_64\_Def} benefits with a speedup of 1.8 for its average runtime.
-	\item \textbf{Benefits for fast queries:} The most outspoken positive effect is the lowering of the lower boundary of the box plots.  
+	\item \textbf{Memory is no magic solution:} Especially for \textbf{Gra1\_64\_Def} and \textbf{Vir1\_64\_Def} hardly any improvement can be observed. Blazegraph takes full advantage of the additional memory, with a large shift in both median and mean runtimes. %The strong hardware dependence of Blazegraph could be a motivation to also study the performance in a GPU setting~\cite{blazegraphgpu}, which is outside the scope of this work.
+	\item \textbf{Speedups:} \textbf{Bla1\_64\_Def} has a speedup of 8.4 for its average runtime and 3.1 for its median runtime. For the other stores only \textbf{ES1\_64\_Def} benefits with a speedup of 1.8 for its average runtime.
+	%\item \textbf{Benefits for fast queries:} The most outspoken positive effect is the lowering of the lower boundary of the box plots.  
 \end{itemize}
-
-
-
 
 %FIGURES ORIGAL PAPER
 %FIG_BenchmarkSurvival

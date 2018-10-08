@@ -64,7 +64,7 @@
 An alternative to increasing the memory in a single-node server is to increase the overall resources by 
 adding more nodes, thus creating a distributed system. 
 
-All 4 commercial RDF solutions support multi-node setups. GraphDB however, works only as a HA-solution (High-Availability): We did not evaluate this approach since 
+All 4 commercial RDF solutions support multi-node setups. GraphDB however, works only as a HA-solution (High-Availability): we did not evaluate this approach since 
 it requires all data to be replicated on every node and does not support data partitioning, which is required to scale beyond the single-node resource limits.
 The performance can however be estimated since it is equivalent to a setup with N identical databases with a load balancer equally distributing the queries between
 the database replicas. The effect is a linear speedup in terms of completing a full query-mix. 
@@ -72,17 +72,17 @@ Virtuoso also supports a similar setup.
 The effect on the individual query runtimes should be limited, but not completely absent since the database load on the individual nodes will be smaller. The effect of database load on the query runtimes will be studied in the next section.
 
 
-For Blazegraph support is required for setting up the multi-node system. This support was requested via the RFI but not fulfilled, which limited our comparison to \textbf{Vir3\_32\_Def}, \textbf{ES3\_32\_Def}, and \textbf{TPF3\_64\_Def}.
+For Blazegraph, support was required for setting up the multi-node system. This support was requested via the RFI but not fulfilled, which limited our comparison to \textbf{Vir3\_32\_Def}, \textbf{ES3\_32\_Def}, and \textbf{TPF3\_64\_Def}.
 
-In Figure~\ref{fig:Fig04_WatdivHorizontalScaling} we show pairwise comparisons of the three setups for which we have both a single and a 3-node benchmark. 
+Fig.~\ref{fig:Fig04_WatdivHorizontalScaling} shows pairwise comparisons of the three setups for which we have both a single and a 3-node benchmark. 
 
 \begin{itemize}
 	\item \textbf{Benchmark survival interval:} %[('ES_N3_32_W1000_Def', 8684), ('Vir_N3_32_W1000_Def', 12000)]
-	\textbf{Vir3\_32\_Def} and \textbf{TPF3\_64\_Def} managed to stay online during the entire Watdiv1000M benchmark, \\ \textbf{ES3\_32\_Def} stopped responding after having completed 67\% of the multi-threaded run. 
+	\textbf{Vir3\_32\_Def} and \textbf{TPF3\_64\_Def} managed to stay online during the entire Watdiv1000M benchmark, whereas \textbf{ES3\_32\_Def} stopped responding after having completed 67\% of the multi-threaded run. 
 	%Es_N3_32_W1000_Def:	Success: 34.8	Error: 65.1	Timeout: 0.0
 	%Vir_N3_32_W1000_Def:	Success: 100.	Error: 0.0	Timeout: 0.0
 	\item \textbf{Errors \& Timeouts:} 65\% of the queries of \textbf{ES3\_32\_Def} resulted in an HTTP 504 error, mentioning \textit{Gateway Timeout}. Further study revealed that this timeout was due to an internal configuration parameter in the ES distributed setup, unfortunately we did not receive any feedback on this issue. \textbf{Vir3\_32} successfully completed all queries. 70.6\% of the queries result in a timeout for \textbf{TPF3\_64\_Def}.
-	\item \textbf{Multi-node overhead:} For all setups additional nodes lead to overhead instead of runtime speedup. Runtime multiplication factors are 1.9 and 1.5 for \textbf{Vir} and \textbf{ES}. \textbf{TPF} has a negligible overhead but is already very close to the query timeout.
+	\item \textbf{Multi-node overhead:} For all setups additional nodes lead to overhead instead of speedup. Runtime MFs are 1.9 and 1.5 for \textbf{Vir} and \textbf{ES}. \textbf{TPF} has a negligible overhead but is already very close to the query timeout.
 \end{itemize}
 %query_events_correct => double check on crash!
 %Es: (Virtuoso 12k = all, TPF_64 also all)
@@ -98,8 +98,9 @@ In Figure~\ref{fig:Fig04_WatdivHorizontalScaling} we show pairwise comparisons o
 %LdF_N1_64_W1000_Def    300.0 		219.935204
 %LdF_N3_64_W1000_Def    300.0		216.525390
 
-In a discussion with OpenLink it was clarified that Virtuoso Cluster acts as a \emph{distributed memory solution}. This implies that adding nodes does not lead to a speedup in the query runtimes, but the total of memory pool in the system increases, allowing it to handle larger datasets for which a single node instance might not be suited. Since the single node benchmark did not exhaust the memory, there is no advantage to be expected from a multi-node setup. As an indication, according to support a 32GB machine should be able to manage up to 3 billion triples (10GB per 1B triples). 
-This observation, together with the lack of feedback on the issues with \textbf{ES3\_32\_Def} and the high timeout percentage for \textbf{TPF3\_64\_Def} motivated our decision to not run any additional benchmarks with this approach for WatDiv1000M.
+In a discussion with OpenLink it was clarified that Virtuoso Cluster acts as a \emph{distributed memory solution}. This implies that adding nodes does not lead to a speedup in the query runtimes, but the total of memory pool in the system increases, allowing it to handle larger datasets. Since the single node benchmark did not exhaust the memory, there is no advantage to be expected from a multi-node setup. As an indication, according to support a 32GB machine should be able to manage up to 3 billion triples (10GB per 1B triples). 
+This observation, together with the lack of feedback on the issues with \textbf{ES3\_32\_Def} and the high timeout percentage for \textbf{TPF3\_64\_Def} motivated our decision to not run any further multi-node benchmarks..
 
-Systems translating SPARQL queries to distributed platforms such as Hadoop~\cite{cure2015evaluation, graux2016multi} are an alternative approach we did not test. Although these approaches are usually not recommended in a context with low-latency requirements they are specifically designed to operate in an ETL-setting. 
-Results for S2RDF~\cite{Schatzle:2016:SRQ:2977797.2977806}, which uses Apache Spark underneath, on Watdiv1000M indicate that a 10-node setup can be close to 10 times faster than a single-node Virtuoso server. Since these SPARQL-on-Hadoop solutions are not sufficiently mature and for example cannot be tested using a SPARQL endpoint definite conclusions can currently not be drawn. One observation to motivate this caution is the fact that Virtuoso is hardly affected when running multiple benchmark clients at once, as will be shown in section~\ref{subsec:load}. The operational cost for these Hadoop setups can also not immediately be deduced.
+Systems translating SPARQL queries to distributed platforms such as Hadoop~\cite{cure2015evaluation, graux2016multi} are an alternative approach we did not test. Although these approaches are usually not recommended in a context with low-latency requirements, they are specifically designed to operate in an ETL-setting. 
+Results for S2RDF~\cite{Schatzle:2016:SRQ:2977797.2977806}, which uses Apache Spark on Watdiv1000M indicate that a 10-node setup can be close to 10 times faster than a single-node Virtuoso server. Since these SPARQL-on-Hadoop solutions are not sufficiently mature and for example cannot be tested using a SPARQL endpoint, definite conclusions currently can not be drawn. 
+%One observation to motivate this caution is the fact that Virtuoso is hardly affected when running multiple benchmark clients at once, as will be shown in section~\ref{subsec:load}. The operational cost for these Hadoop setups can also not immediately be deduced.

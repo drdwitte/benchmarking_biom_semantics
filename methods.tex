@@ -23,11 +23,9 @@ Following parameters are assessed:
 	\item \textbf{The size of the (optionally) distributed system:} We run tests for single and 3-node setups when supported by the RDF database. Federated systems are configured with $N+1$ nodes, with $N$ the number of slave nodes (1 or 3), and 1 federator node. To clarify: $N=3$ thus corresponds to 3 instances for \emph{Vendor} systems, while $N=3$ for federated setups requires $3+1$ instances. The choice for $N=3$ is related to the fact that for one of the systems only a 3-node configuration is available.
 	\item \textbf{The query properties:} The WatDiv benchmark query-set contains BGP queries, while the Ontoforce dataset consists mainly of complex aggregation-based queries with many filters.
 	\item \textbf{The number of dataset triples:} We run 3 datasets of WatDiv, with 10~million, 100~million, and 1~billion triples. The Ontoforce dataset contains 2.4~billion triples.
-	\item \textbf{The way in which the RDF system is configured:} We test two configurations for WatDiv1000M, namely the \emph{Documented} and the \emph{RFI-optimized} configuration, which will be defined later in this section. 
+	\item \textbf{The way in which the RDF system is configured:} We test two configurations for WatDiv1000M, namely the \emph{Documented} and the \emph{RFI-Optimized} configuration, which will be defined later in this section. 
 	\item \textbf{The state of the system when the query is launched:} We distinguish between a single-threaded warm-up run and a multi-threaded stress test (5 clients). We also investigate whether caching effects play a role in the runtime behavior.
 \end{itemize} 
-
-\todo{We are here: 27/09 18u}\\
 
 Testing every possible combination of parameters is very time and resource consuming and not necessarily the most informative. Therefore we opted for a greedy exploration of this space consisting of 51 2-phase  benchmarks (incl. re-runs), each with a warm-up and a consecutive stress test (see Table~\ref{bmspace}).
 
@@ -47,17 +45,17 @@ Testing every possible combination of parameters is very time and resource consu
 		\hline
 			
 		\textbf{Systems} & \textbf{Setup} & \multicolumn{3}{l}{\textbf{WatDiv}} &   \multicolumn{1}{l}{\textbf{Onto-}} \\
-		\; & \; & \textbf{10M} & \textbf{100M} & \textbf{1000M} & \textbf{force} \\
+		\; & N x RAM/Conf & \textbf{10M} & \textbf{100M} & \textbf{1000M} & \textbf{force} \\
 
 		\hline
 
-		\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Vendors \\ (4)\end{tabular}}    & 32             & \checkmark                                & \checkmark                                 & \checkmark                                  &                                    \\
-		& 64             &                                  &                                   & \checkmark                                  &                                    \\
-		& 64/Opt         &                                  &                                   & \checkmark                                  & \checkmark                                  \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Multi-\\ Node (2)\end{tabular}} & 3 x 32         &                                  &                                   & \checkmark                                  &                                    \\
-		& 3 x 64/Opt     &                                  &                                   &                                    & \checkmark                                  \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Prototypes  (3)\end{tabular}} & 64  &   & \checkmark  & \checkmark  & \checkmark \\
-		& 3 x 64 &  & \checkmark  & \checkmark  & \checkmark    \\ \hline                             
+		\multirow{3}{*}{\begin{tabular}[c]{@{}l@{}}Vendors (4) \\ \end{tabular}}    & 1 x 32/Doc             & \checkmark                                & \checkmark                                 & \checkmark                                  &                                    \\
+		& 1 x 64/Doc             &                                  &                                   & \checkmark                                  &                                    \\
+		& 1 x 64/RFI         &                                  &                                   & \checkmark                                  & \checkmark                                  \\ 
+		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}} Multi-Node (2)\\ \end{tabular}} & 3 x 32/Doc         &                                  &                                   & \checkmark                                  &                                    \\
+		& 3 x 64/RFI     &                                  &                                   &                                    & \checkmark                                  \\ \hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Prototypes  (3)\end{tabular}} & 1 x 64/Doc  &   & \checkmark  & \checkmark  & \checkmark \\
+		& 3 x 64/Doc &  & \checkmark  & \checkmark  & \checkmark    \\ \hline                             
 	\end{tabular}
 	}
 \end{table}

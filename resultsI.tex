@@ -1,31 +1,14 @@
 %runtimes: median - mean - response
-In this section we will study the query runtime distributions of different approaches for dealing with Linked Data at scale. To summarize runtime results we rely on mean and median values. 
+In this section we study the query runtime distributions of different Linked Data systems. 
+In Table~\ref{table:namingconv} we introduce a naming convention to describe the different benchmark setups. 
 
-Queries are typically executed multiple times. The \emph{query runtime} is defined as the median value of the different query executions in a run. 
+Each query is executed six times: once as a warmup run and five times as a stress test. The \emph{query runtime} is defined as the median value of these five different measurements.
+When aggregating runtimes over \emph{different queries}, for example when aggregating per query template, we report both the \emph{median} and \emph{mean query runtimes}. 
 
-If we aggregate runtimes over \emph{different queries}, for example when we aggregate per query template, we report both the \emph{median} and \emph{mean query runtimes}. 
+%As the runtime distributions can be skewed, performance differences between systems are most often reported using the median runtime of an aggregate or benchmark run. 
+%If we consider an ETL process, or equivalently a batch of queries, the mean runtime becomes more meaningful, as it directly translates to the total runtime of an aggregate or full run. In the following box plots we chose to report both.
 
-As the runtime distributions can be skewed, performance differences between systems are most often reported using the median runtime of an aggregate or benchmark run. 
 
-If we consider an ETL process, or equivalently a batch of queries, the mean runtime becomes more meaningful, as it directly translates to the total runtime of an aggregate or full run. In the following box plots we chose to report both.
-
-%response times
-\emph{Query response times} correspond to the lag between sending a query and receiving the first server response. 
-Some of the stores provide query results in a streaming fashion, 
-therefore response times can be different from query runtimes.
-Response times are not captured in the current query event format but are captured in the SPARQL benchmarker summary CSV-files. For GraphDB and Blazegraph the response times are respectively 27\% and 21\% lower than the mean runtimes on WatDiv1000M. For the other engines the difference was close to zero.
-%N1_64_Opt WatDiv 1000M: 
-%Store 			Avg Mix Response 	Avg Mix Runtime
-%Blazegraph: 	7436.614781577 		9361.074445217   	=> 1925 sneller = 21% lager
-%Es 			45543.319632289	    45548.207560219  	=> coincide
-%GraphDB   		6095.473343756 		8377.37145798 		=> 2282 sneller = 27% lager
-%Virtuoso       1984.603994124	    2021.146539186		=> coincide
-% LdF1 en LDF3 											=> coincide
-
-%errors excluded
-A major concern when comparing query runtimes between different engines is \emph{query completeness}. The current query event format, shown in Table~\ref{table:queryevents}, explicitly reports whether a query was solved correctly, meaning it has retrieved the complete set of results. In the sections `Results III' query completeness is the topic of of the first subsection.
-%~\ref{subsec:completeness} 
-To interpret the results in this section correctly, it is important to understand that queries, which have incomplete results for at least one benchmark, are completely discarded in the runtime comparisons.
 
 \begin{table}[ht!]
 	\centering
@@ -37,24 +20,22 @@ To interpret the results in this section correctly, it is important to understan
 			\textbf{Shorthand} & \textbf{Full Description} \\
 			\textbf{Notation}	& \; \\
 			\hline
-			\textbf{Vir1\_32\_Def}                  & Virtuoso - single node - 32GB RAM - \\
-			& Default Configuration\\
-			\textbf{TPF3\_64\_Def}                  & Triple Pattern Fragments - 3 slave nodes - 64GB RAM - \\
-			& Default Configuration\\
-			\textbf{Gra1\_64\_Opt}                  & GraphDB - single node - 64GB RAM - \\
-			& Optimized (RFI) Configuration\\
+			\textbf{Vir1\_32\_Doc}                  & Virtuoso - single node - 32GB RAM - \\
+			& Documented Configuration\\
+			\textbf{TPF3\_64\_Doc}                  & Triple Pattern Fragments - 3 slave nodes - 64GB RAM - \\
+			& Documented Configuration\\
+			\textbf{Gra1\_64\_RFI}                  & GraphDB - single node - 64GB RAM - \\
+			& RFI-Optimized Configuration\\
 			\hline
 		\end{tabular}
 	}
 	 \caption*{A description consists of a 3-character prefix describing the RDF storage solution, the number of nodes, the amount of memory and the configuration.}
 \end{table}
 
-%Benchmark Survival
-Finally, a subtle error can be made in query runtime comparison for benchmarks which involve a query engine that becomes unresponsive (engine failure). In the runtime comparisons we only consider the range between the first query and the last successful query. We name this the \emph{benchmark survival interval}, this is shown in Figure~\ref{fig:Fig03_BenchmarkSurvival_Other_Watdiv_Default}.
 
-In Table~\ref{table:namingconv} we introduce a naming convention to describe the different benchmark setups. 
 
-\subsection{Increasingly Large Datasets}
+
+\subsection{Runtime Performance for Different Dataset Scales}
 \label{subsec:bigdata}
 \input{results_datasetsize.tex}
 
@@ -62,7 +43,7 @@ In Table~\ref{table:namingconv} we introduce a naming convention to describe the
 \label{subsec:vscaling}
 \input{results_verticalscaling.tex}
 
-\subsection{RFI: Optimized Configurations}
+\subsection{RFI-Optimized Configuration}
 \label{subsec:rfi}
 \input{results_optimized.tex}
 
@@ -74,8 +55,19 @@ In Table~\ref{table:namingconv} we introduce a naming convention to describe the
 \label{subsec:hscaling}
 \input{results_horizontalscaling.tex}
 
-
-
+\subsection{Query Response Times}
+%response times
+Query response times correspond to the lag between sending a query and receiving the first server response. Some of the stores provide query results in a streaming fashion, 
+therefore response times can be different from query runtimes.
+%Response times are not captured in the current query event format but are captured in the SPARQL benchmarker summary CSV-files. 
+For GraphDB and Blazegraph the response times are respectively 27\% and 21\% lower than the mean runtimes on WatDiv1000M. For the other engines the difference was close to zero.
+%N1_64_Opt WatDiv 1000M: 
+%Store 			Avg Mix Response 	Avg Mix Runtime
+%Blazegraph: 	7436.614781577 		9361.074445217   	=> 1925 sneller = 21% lager
+%Es 			45543.319632289	    45548.207560219  	=> coincide
+%GraphDB   		6095.473343756 		8377.37145798 		=> 2282 sneller = 27% lager
+%Virtuoso       1984.603994124	    2021.146539186		=> coincide
+% LdF1 en LDF3 	
 
 
 

@@ -574,7 +574,7 @@ We would also like to express our gratitude for the support provided by the staf
  	%\includegraphics[width=0.9\linewidth]{imgs/Fig06_WatdivTemplateTypes}
  	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
  	\caption{\csentence{Average runtime per query template for different engine hardware and configurations.}
- 		For every engine and for every template category the effect of improving hardware and configuration is consistent and uniform. The only exception being Virtuoso for which the \emph{Optimized} setting performs worse as compared to the \emph{Default} setting.
+ 		For every engine and for every template category the effect of improving hardware and configuration is consistent and uniform. The only exception being Virtuoso for which the \emph{RFI-Optimized} setting performs worse as compared to the \emph{Documented} setting.
  		}
  	\label{fig:Fig06_TemplatesVSHardware}
 \end{figure}
@@ -606,7 +606,7 @@ We would also like to express our gratitude for the support provided by the staf
 	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
 	\caption{\csentence{Overview of successes and errors per query (Y-axis) and thread (X-axis) on the Ontoforce benchmark.}
 		Queries are sorted per system in order to group error behavior and are not consistent between simulations!
-		Blazegraph has a short benchmark survival interval. \textbf{ES1}, \textbf{Gra1} and \textbf{Vir3} Cluster setups have a lot of errors but most queries execute successfully at least once, which allows runtime comparisons. \textbf{Vir3\_64} was re-run multiple times and labeled with an additional index: \textbf{Vir3\_64\_Opt\_0} is the most successful Virtuoso cluster run as query completeness analysis revealed that \textbf{Vir3\_64\_Opt\_2} has unreported errors for 37\% of the queries.
+		Blazegraph has a short benchmark survival interval. \textbf{ES1}, \textbf{Gra1} and \textbf{Vir3} Cluster setups have a lot of errors but most queries execute successfully at least once, which allows runtime comparisons. \textbf{Vir3\_64} was re-run six times, we show the two most successful runs sim1 and sim2: sim1 is the most successful Virtuoso cluster run as query completeness analysis revealed that sim2 has unreported errors for 37\% of the queries.
 	}
 	\label{fig:Fig09_FailuresOntoforceBM}
 \end{figure}   
@@ -663,13 +663,17 @@ We would also like to express our gratitude for the support provided by the staf
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section*{Additional Files}
-  \subsection*{Sequel Project Website}
-    The website links to all material related to this manuscript: datasets, notebooks with analysis, raw log files,\ldots can be found here: \url{http://users.elis.ugent.be/~drdwitte/index.html}
 
-  \subsection*{Feature Matrix}
-  Overview om Semantic Databases considered in this benchmark with together with a set of
-  features and links where this information was found:   \url{http://users.elis.ugent.be/~drdwitte/featurematrix.html}
-  \subsection*{Notebooks and CSV files for postprocessing}
-  All CSV files with different views on the benchmark output together with the Jupyter notebook files showing the original analysis of the data can be found here: \url{http://users.elis.ugent.be/~drdwitte/postprocessing.html}
+\begin{itemize}
+	\item \textbf{Additional file 1: Feature Matrix.} \todo{Feature matrix as URL in biblio}
+	SPARQL queries that we used in our evaluations [26].
+	\item \textbf{Additional file 2: Ontoforce Query Mix.} \todo{Provide as add file}
+	\item \textbf{Additional file 3: Engine Configurations.} \todo{Link to Github}
+	\item \textbf{Additional file 4: Query Event Files} \todo{Github link EN zip}	  ~\cite{bmresults}.
+	\item \textbf{Additional file 4: Jupyter Notebooks} \todo{Link to Github EN zip}	~\cite{bmpostprocessing}
+	\item \textbf{Additional file 5: Project Website} \todo{Link} met biblio	
+\end{itemize}
+
+
 \end{backmatter}
 \end{document}

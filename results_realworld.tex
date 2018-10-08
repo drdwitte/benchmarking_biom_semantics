@@ -44,24 +44,24 @@ The \emph{Prototypes} and \textbf{Vir*} have been tested on the Ontoforce benchm
 The Figure also shows that only Virtuoso simulations had a sufficiently wide benchmark survival interval to enable further analysis.
 
 \begin{itemize}
-	\item \textbf{Bla1\_64\_Opt:} One major difference with the results on the WatDiv benchmark is Blazegraph's inability to handle the complexity of the Ontoforce queries, resulting in very short benchmark survival interval: it contains only 55 queries, of which 18 are timeouts.
+	\item \textbf{Bla1\_64\_RFI:} One major difference with the results on the WatDiv benchmark is Blazegraph's inability to handle the complexity of the Ontoforce queries, resulting in very short benchmark survival interval: it contains only 55 queries, of which 18 are timeouts.
 	
-	\item \textbf{Gra1\_64\_Opt:} GraphDB also did not survive the entire benchmark, but managed to stay up for 21\% of the stress run. During the stress run it solved 40\% of the queries successfully, the other queries resulted in a timeout. For 38\% of the queries, at least one successful run is available in the stress run.
+	\item \textbf{Gra1\_64\_RFI:} GraphDB also did not survive the entire benchmark, but managed to stay up for 21\% of the stress run. During the stress run it solved 40\% of the queries successfully, the other queries resulted in a timeout. For 38\% of the queries, at least one successful run is available in the stress run.
 
-	\item \textbf{ES1\_64\_Def:} ES was definitely the least successful on the WatDiv benchmarks, but is the only store, apart from Virtuoso, for which the benchmark survival interval spans the entire benchmark. 58\% of the queries were executed successfully. The remainder consists of 25\% HTTP errors and 17\% timeouts. 
+	\item \textbf{ES1\_64\_Doc:} ES was definitely the least successful on the WatDiv benchmarks, but is the only store, apart from Virtuoso, for which the benchmark survival interval spans the entire benchmark. 58\% of the queries were executed successfully. The remainder consists of 25\% HTTP errors and 17\% timeouts. 
 %%Vir_N1_64_Ont_Opt 	7069	120			60			41		48		ALL 		
-	\item \textbf{Vir1\_*\_Opt:} Virtuoso is both consistent and successful on this benchmark with only 1\% of queries consistently failing, overall the success rate is 98\%. These failures correspond mainly to queries which contain \emph{property paths}. None of the other stores could handle these queries. 
-	It should be noted that during the creation of the DISQOVER product, Virtuoso was frequently used as a back-end system, which partially implies a certain favorable bias in the Ontoforce results.The \textbf{Vir1\_32\_Opt} in the SWAT4LS~\cite{dewitte_swat4ls_2016} paper had 41\% incomplete queries. This re-run however, achieves the same figures as the 64GB run.
+	\item \textbf{Vir1\_*\_RFI:} Virtuoso is both consistent and successful on this benchmark with only 1\% of queries consistently failing, overall the success rate is 98\%. These failures correspond mainly to queries which contain \emph{property paths}. None of the other stores could handle these queries. 
+	It should be noted that during the creation of the DISQOVER product, Virtuoso was frequently used as a back-end system, which partially implies a certain favorable bias in the Ontoforce results.The \textbf{Vir1\_32\_RFI} in the SWAT4LS~\cite{dewitte_swat4ls_2016} paper had 41\% incomplete queries. This re-run however, achieves the same figures as the 64GB run.
 	
-	\item \textbf{Vir3\_64\_Opt\_*:} The  \textbf{Vir3\_64\_Opt} setup was re-run multiple times, the different runs are identified with an additional sequence number 0-2:
-	Although the success rate of \textbf{Vir3\_64\_Opt\_0} is only 55\%, 92\% of the queries are successfully executed at least once, which makes it possible to make runtime comparisons. \textbf{Vir3\_64\_Opt\_2} has far less reported errors. Post-processing revealed issues with query completeness (orange) for 37\% of the queries.
+	\item \textbf{Vir3\_64\_RFI\_*:} The  \textbf{Vir3\_64\_RFI} setup was re-run multiple times, the different runs are identified with an additional sequence number 0-2:
+	Although the success rate of \textbf{Vir3\_64\_RFI\_0} is only 55\%, 92\% of the queries are successfully executed at least once, which makes it possible to make runtime comparisons. \textbf{Vir3\_64\_RFI\_2} has far less reported errors. Post-processing revealed issues with query completeness (orange) for 37\% of the queries.
 \end{itemize}
-
 
  
 \paragraph{Query Correctness.}
 
-Previously published results~\cite{dewitte_swat4ls_2016} had counter-intuitive runtime results:  \textbf{ Vir1\_32} and \textbf{Vir3\_64\_Opt\_2} executed much faster than \textbf{Vir1\_64}. 
+\todo{Query Correctness sectie maar ook eentje over Query completeness}
+Previously published results~\cite{dewitte_swat4ls_2016} had counter-intuitive runtime results:  \textbf{ Vir1\_32} and \textbf{Vir3\_64\_RFI\_2} executed much faster than \textbf{Vir1\_64}. 
 Consequently, we studied the number of results per query:
 
  

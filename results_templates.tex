@@ -36,12 +36,12 @@
 %\caption{Average Runtime per query template for 5 single-node setups. \textbf{TPF1\_64} has only 5 templates which do not coincide with the timeout of 300s, for \textbf{ES1\_64\_Def} this is alread 15 templates.
 %\textbf{Vir1\_64\_Opt} is the fastest engine for 13 templates, \textbf{Gra1\_64\_Opt} for and \textbf{Bla1\_64\_Opt} for 3 templates each. Template \textbf{C3} was omitted due to query completeness issues. Blazegraph was the only engine to retrieve all results. } 
 The queries of the WatDiv benchmarks are all BGPs but have different shapes and selectivity properties. The benchmark generator has 20 templates which can be further organized into 4 template categories (shapes). 
-n Figure~\ref{fig:Fig05_WatdivTemplates} we show the average runtime per template for 5 stores on WatDiv1000M.
+Fig.~\ref{fig:Fig05_WatdivTemplates} shows the average runtime per template for 5 stores on WatDiv1000M.
 \begin{itemize}
-	\item \textbf{Template timeouts:} For \textbf{TPF1\_64} 11 runtime averages coincide with the benchmark timeout (300s). Successful queries are spread out over the different types: \textbf{F}:3, \textbf{L}:2 and \textbf{S}:3 .
-	\textbf{ES1\_64\_Def} has timeouts for the 2 \textbf{C} queries,  2 \textbf{F} queries, and 1 \textbf{S} query. The other stores have no averages close to timeout.
-	\item  \textbf{Template winners:} \textbf{Vir1\_64\_Opt} is the fastest engine for 12 templates. These are divided as: \textbf{C}:1, \textbf{F}:2, \textbf{S}:4, and all 5 \textbf{L}-templates.
-	\textbf{Gra1\_64\_Opt} performs best for 2 \textbf{S}-templates, \textbf{Bla1\_64\_Opt} wins on 1 \textbf{C}-,  2 \textbf{F}-  and 1 S-template.
+	\item \textbf{Template timeouts:} For \textbf{TPF1\_64} 11 runtime averages coincide with the benchmark timeout (300s). Successful queries are spread out over the different types: \textbf{F}:3, \textbf{L}:2 and \textbf{S}:3.
+	\textbf{ES1\_64\_Doc} has timeouts for the 2 \textbf{C} queries,  2 \textbf{F} queries, and 1 \textbf{S} query. The other stores have no averages close to timeout.
+	\item  \textbf{Template winners:} \textbf{Vir1\_64\_RFI} is the fastest engine for 12 templates. These are divided as: \textbf{C}:1, \textbf{F}:2, \textbf{S}:4, and all 5 \textbf{L}-templates.
+	\textbf{Gra1\_64\_RFI} performs best for 2 \textbf{S}-templates, \textbf{Bla1\_64\_RFI} wins on 1 \textbf{C}-,  2 \textbf{F}-  and 1 S-template.
 	Template \textbf{C3} was omitted due to query completeness issues. Blazegraph was the only engine to retrieve all results within the timeout boundary.
 	\item \textbf{ETL winner:} The most important for the total benchmark time is the \textbf{C1}-template which explains why Blazegraph is the fastest in the full ETL-run.
 \end{itemize}
@@ -52,4 +52,4 @@ n Figure~\ref{fig:Fig05_WatdivTemplates} we show the average runtime per templat
 %	\item \textbf{Engine specialties:} For Blazegraph the \textbf{C}, \textbf{F}, and \textbf{S}-templates result in similar runtimes. GraphDB has a small preference for \textbf{S}-templates. Virtuoso is much better than the competition for \textbf{L}- and \textbf{S}-queries. For the \textbf{F}-template all three engines perform similarly.
 %\end{itemize}
 
-In Figure~\ref{fig:Fig06_TemplatesVSHardware} we demonstrate the impact of different hardware and engine configuration impact the runtime of the individual query runtimes. The improvement in average query runtime is rather homogeneous across the different query categories for all stores. The results in the \emph{Optimized} setting are worse for Virtuoso as configuration was more conservative as compared to the \emph{Default} configuration.
+Fig.~\ref{fig:Fig06_TemplatesVSHardware} we demonstrate the impact of different hardware and engine configuration impact the runtime of the individual query runtimes. The improvement in average query runtime is rather homogeneous across the different query categories for all stores. The results in the \emph{RFI-Optimized} setting are worse for Virtuoso as configuration was more conservative as compared to the \emph{Documented} configuration.
