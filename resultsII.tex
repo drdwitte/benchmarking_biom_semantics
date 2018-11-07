@@ -1,17 +1,24 @@
-Only comparing query runtimes might be an oversimplification in benchmark analysis. 
-When comparing the average runtimes of a batch of queries, the tail of the distributions dominates the result. 
-\todo{Single sentence summary} \\
-In the first subsection
-%~\ref{subsec:templates} 
-we investigate the impact of different query templates on the average runtimes.
-Query execution times depend on the state of the database, which motivates studying the query context. Previous results are still valid as all queries are executed 5 times and each time the median is taken to calculate average runtimes.
-The next subsection
-%~\ref{subsec:load} 
-studies the effect of the server load on the query runtimes by comparing a single-client benchmark with a stress test with 5 clients. In the following subsection we investigate the context of a query by studying caching effects. 
 
-%This will be explored in section~\ref{subsec:caching}. 
-We conclude by studying an often unreported effect: result completeness can have a big impact on the query runtimes and should always be verified.
-%as we will discuss in section~\ref{subsec:completeness}.
+The comparison of query runtimes alone, might be an oversimplification in benchmark analysis. 
+In this part we take our analysis one step further by studying query runtimes for different query templates, by analyzing the impact of the server load and caching. We also pay careful attention to result completeness, which can have a big impact on benchmark performance results.
+
+
+%In this part we study the impact of different query templates, the role of the server load
+%
+%Only comparing query runtimes might be an oversimplification in benchmark analysis. 
+%When comparing the average runtimes of a batch of queries, the tail of the distributions dominates the result. 
+%\todo{Single sentence summary} \\
+%In the first subsection
+%%~\ref{subsec:templates} 
+%we investigate the impact of different query templates on the average runtimes.
+%Query execution times depend on the state of the database, which motivates studying the query context. Previous results are still valid as all queries are executed 5 times and each time the median is taken to calculate average runtimes.
+%The next subsection
+%%~\ref{subsec:load} 
+%studies the effect of the server load on the query runtimes by comparing a single-client benchmark with a stress test with 5 clients. In the following subsection we investigate the context of a query by studying caching effects. 
+%
+%%This will be explored in section~\ref{subsec:caching}. 
+%We conclude by studying an often unreported effect: result completeness can have a big impact on the query runtimes and should always be verified.
+%%as we will discuss in section~\ref{subsec:completeness}.
 
 \subsection{Query runtimes for different template types}
 \label{subsec:templates}
@@ -24,10 +31,6 @@ We conclude by studying an often unreported effect: result completeness can have
 \subsection{The Role of Caching in Query Runtime Results}
 \label{subsec:caching}
 \input{results_caching.tex}
-
-
-
-
 
 \subsection{Query Result Completeness}
 \label{subsec:completeness}
