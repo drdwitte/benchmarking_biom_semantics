@@ -1,0 +1,17 @@
+storeUnderTest: "VirtuosoVirtualWallTest"
+
+totalRuns: 1
+timeInterval: 7200
+endpoint: "http://193.190.127.237:8890/sparql/"
+requiresAuth: False
+timeout: 30
+
+user: "dba"
+pwd: "dba"
+
+queryListName: "listfiles.txt"
+  
+runs: 5
+outliers: 1
+warmups: 1
+parallell: 8

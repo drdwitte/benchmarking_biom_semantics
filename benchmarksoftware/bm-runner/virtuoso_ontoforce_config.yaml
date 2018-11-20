@@ -1,0 +1,30 @@
+storeUnderTest      : "Virtuoso_Ontoforce_DDW"
+
+totalRuns           : 1
+timeInterval       : 7200
+endpoint            : "http://ec2-54-89-75-190.compute-1.amazonaws.com:80/sparql"
+
+requiresAuth     : False
+
+user                     : "dba"
+pwd                      : "dba"
+
+check_data_loaded : False
+
+firstTriple:
+  - "<http://db.uwaterloo.ca/~galuc/wsdbm/User0>"
+  - "<http://schema.org/email>"
+  - "\"Maggie's serialization's Brunhilde blunderers urinalyses\""
+lastTriple:
+  - "<http://db.uwaterloo.ca/~galuc/wsdbm/Review14999999>"
+  - "<http://purl.org/stuff/rev#reviewer>"
+  - "<http://db.uwaterloo.ca/~galuc/wsdbm/User9776014>"
+
+queryListName   : "listfiles.txt"
+queriesName      : "templated"
+queryListSource : "https://s3.amazonaws.com/ontoforce-bm/queries/"
+
+runs                       : 5
+outliers                   : 1
+warmups                    : 1
+parallell                  : 8

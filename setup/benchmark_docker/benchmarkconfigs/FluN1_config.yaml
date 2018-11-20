@@ -1,0 +1,16 @@
+storeUnderTest: "FluN1_Watdiv_VWall"
+
+totalRuns: 1
+endpoint: "http://193.190.127.244:50080/sparql?repository=federated"
+
+requiresAuth: False
+timeout: 300
+
+queryListName: "listfiles.txt"
+  
+runs: 5
+outliers: 1
+warmups: 1
+parallell: 8
+
+results_dir: "SparqlResults"

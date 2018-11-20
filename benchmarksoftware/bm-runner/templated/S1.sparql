@@ -1,0 +1,240 @@
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer24599> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer97154> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer34613> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer17897> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer82511> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer37769> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer24599> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer97154> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer113938> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer79507> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer82328> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer97880> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer17897> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer24599> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer17897> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer79507> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer11705> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer34613> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer40481> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+
+SELECT ?v0 ?v1 ?v3 ?v4 ?v5 ?v6 ?v7 ?v8 ?v9 WHERE {
+	?v0 <http://purl.org/goodrelations/includes> ?v1 .
+	<http://db.uwaterloo.ca/~galuc/wsdbm/Retailer82511> <http://purl.org/goodrelations/offers> ?v0 .
+	?v0 <http://purl.org/goodrelations/price> ?v3 .
+	?v0 <http://purl.org/goodrelations/serialNumber> ?v4 .
+	?v0 <http://purl.org/goodrelations/validFrom> ?v5 .
+	?v0 <http://purl.org/goodrelations/validThrough> ?v6 .
+	?v0 <http://schema.org/eligibleQuantity> ?v7 .
+	?v0 <http://schema.org/eligibleRegion> ?v8 .
+	?v0 <http://schema.org/priceValidUntil> ?v9 .
+}
+

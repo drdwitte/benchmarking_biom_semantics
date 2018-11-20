@@ -1,0 +1,45 @@
+
+		Mon Jan 09 2017
+11:00:25 OpenLink Virtuoso Universal Server
+11:00:25 Version 07.20.3217-pthreads for Linux as of Apr 12 2016
+11:00:25 uses parts of OpenSSL, PCRE, Html Tidy
+11:00:25 Registered to Virtuoso-AWS-Cloud-Edition-User
+11:00:25 Personal Edition license for 10 connections
+11:00:25 Issued by OpenLink Software
+11:00:25 Enabled Cluster Extension
+11:00:25 Enabled Column Store Extension
+11:00:32 SQL Optimizer enabled (max 1000 layouts)
+11:00:32 Compiler unit is timed at 0.000137 msec
+11:00:35 Checkpoint started
+11:00:36 Roll forward started
+11:00:36 Roll forward complete
+11:00:36 Checkpoint started
+11:00:36 Checkpoint finished, log reused
+11:00:38 Server online at 12202 (pid 1507)
+11:01:03 Checkpoint started
+11:01:03 Checkpoint finished, log reused
+11:01:03  RARE Host 2: transact of w_id 1:3036 when the w_id of the branch here is 2:3052
+11:01:03  RARE Host 2: transact of w_id 1:3036 when the w_id of the branch here is 2:3052
+11:01:03  RARE Host 2: transact of w_id 1:3040 when the w_id of the branch here is 2:3057
+11:01:03  RARE Host 2: transact of w_id 1:3040 when the w_id of the branch here is 2:3057
+11:01:04  RARE Host 2: transact of w_id 1:3042 when the w_id of the branch here is 2:3059
+11:01:04  RARE Host 2: transact of w_id 1:3042 when the w_id of the branch here is 2:3059
+11:01:05 Checkpoint started
+11:01:05 Checkpoint finished, log reused
+11:01:09 Checkpoint started
+11:01:09 Checkpoint finished, log reused
+11:01:11 Checkpoint started
+11:01:12 Checkpoint finished, log reused
+11:01:13 Checkpoint started
+11:01:14 Checkpoint finished, log reused
+11:01:14 host 2 cancel of qf agg 31899 while running -1 trx 4294967308
+11:01:14  Host 2: op attempted on cancelled  cl lt 1:3332 rollback by 1 0 ago
+11:01:14 host 2 cancel of qf agg 41423 while running -1 trx 4294967308
+11:01:20 * Monitor: Locks are held for a long time
+11:01:22 host 2 cancel of qf agg 42918 while running -1 trx 4294967308
+11:01:24 Checkpoint started
+11:01:24 Checkpoint finished, log reused
+11:01:53 Error compiling stored procedure 'CONDUCTOR.DBA.VAD_GET_AVAILABLE_VADS' S0022 : SQ200: No column dir.
+11:01:54 Checkpoint started
+11:01:54 Checkpoint finished, log reused
+

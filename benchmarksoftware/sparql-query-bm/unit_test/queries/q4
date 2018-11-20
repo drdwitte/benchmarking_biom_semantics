@@ -1,0 +1,1 @@
+SELECT (COUNT(distinct ?p) as ?distpredicates) { ?s ?p ?o }

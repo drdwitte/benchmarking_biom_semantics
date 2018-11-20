@@ -1,0 +1,1447 @@
+# Licensed under the terms of http://www.apache.org/licenses/LICENSE-2.0
+
+## Basic Fuseki configuration file for HDT files.
+## 
+## Remember that you need hdt-java.jar and hdt-jena.jar when you launch Fuseki.
+##
+
+@prefix :        <#> .
+@prefix fuseki:  <http://jena.apache.org/fuseki#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tdb:     <http://jena.hpl.hp.com/2008/tdb#> .
+@prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
+@prefix hdt:      <http://www.rdfhdt.org/fuseki#> .
+
+[] rdf:type fuseki:Server ;
+   # Timeout - server-wide default: milliseconds.
+   # Format 1: "1000" -- 1 second timeout
+   # Format 2: "10000,60000" -- 10s timeout to first result, then 60s timeout for the rest of query.
+   # See java doc for ARQ.queryTimeout
+   ja:context [ ja:cxtName "arq:queryTimeout" ;  ja:cxtValue "301000" ] ;
+
+   # IMPORTANT: Import the HDT Assembler
+   ja:loadClass "org.rdfhdt.hdtjena.HDTGraphAssembler" ;
+
+   fuseki:services (
+     <#service1>
+   ) .
+
+# HDT Classes
+hdt:HDTGraph rdfs:subClassOf ja:Graph .
+
+## ---------------------------------------------------------------
+## Create a Read-Only Dataset composed by many RDF Graphs, each from an HDT File.
+
+<#service1> rdf:type fuseki:Service ;
+    fuseki:name                     "hdtservice" ;
+    fuseki:serviceQuery             "query" ;
+    fuseki:serviceReadGraphStore    "get" ;
+    fuseki:dataset                   <#dataset> ;
+    .
+    
+#to address ambiguity exception: https://mail-archives.apache.org/mod_mbox/jena-users/201605.mbox/%3C5738DFDB.8080200@apache.org%3E
+hdt:HDTGraph rdfs:subClassOf  ja:Model .
+
+<#dataset> rdf:type ja:RDFDataset ;
+    	 rdfs:label "Dataset" ;
+    	 ja:defaultGraph <#graph0> ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://localhost:8890/DAV/> ;
+    	   ja:graph      <http://localhost:8890/DAV/> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/antibody_registry> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/antibody_registry> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/antibody_registry> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/antibody_registry> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/atc> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/atc> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/atc> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/atc> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/chembl> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/chembl> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/chembl> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/chembl> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/clinical_trial> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/clinical_trial> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/clinical_trial> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/clinical_trial> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/configurations> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/configurations> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/countries> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/countries> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/CPC> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/CPC> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/CPC> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/CPC> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/disgenet> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/disgenet> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/disgenet> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/disgenet> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/do> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/do> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/do> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/do> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/drugbank> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/drugbank> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/drugbank> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/drugbank> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/eagle-i> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/eagle-i> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_alaska> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_alaska> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_cau> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_cau> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_ccny-cuny> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_ccny-cuny> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_cdrewu> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_cdrewu> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_dartmouth> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_dartmouth> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_famu> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_famu> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_global> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_global> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_harvard> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_harvard> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_hawaii> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_hawaii> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_howard> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_howard> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_hunter-cuny> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_hunter-cuny> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_immunology_harvard> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_immunology_harvard> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_iths> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_iths> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_itmat> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_itmat> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_jsu.eagle-i> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_jsu.eagle-i> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_meharry> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_meharry> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_montana> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_montana> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_msm> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_msm> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_ohsu> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_ohsu> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_psm> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_psm> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_special_collection> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_special_collection> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_tsu> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_tsu> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_tuskegee> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_tuskegee> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_uccaribe> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_uccaribe> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_upr> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_upr> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_utep> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_utep> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_utsa> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_utsa> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#eaglei_xula> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#eaglei_xula> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eagle-i#ontologies> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eagle-i#ontologies> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/eco#ontologies> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/eco#ontologies> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/enzyme> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/enzyme> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/enzyme> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/enzyme> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/epo> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/epo> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/epo> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/epo> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/geneontology> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/geneontology> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/geneontology> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/geneontology> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/generif> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/generif> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/generif> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/generif> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/hgnc> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/hgnc> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/hgnc> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/hgnc> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/homologene> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/homologene> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/homologene> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/homologene> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/hsdb> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/hsdb> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/hsdb> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/hsdb> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/icd10> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/icd10> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/icd10> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/icd10> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/icd9> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/icd9> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/icd9> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/icd9> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/interpro> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/interpro> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/interpro> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/interpro> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/meddra> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/meddra> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/meddra> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/meddra> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/mesh> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/mesh> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/mesh> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/mesh> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/miriam> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/miriam> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/ncbi-gene> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/ncbi-gene> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/ncbi-gene> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/ncbi-gene> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/ndc> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/ndc> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/ndc> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/ndc> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/orphanet> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/orphanet> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/orphanet> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/orphanet> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://www.w3.org/2002/07/owl#> ;
+    	   ja:graph      <http://www.w3.org/2002/07/owl#> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/provenance> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/provenance> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/provenance> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/provenance> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/pubmed> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/pubmed> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/pubmed> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/pubmed> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/reactome> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/reactome> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/reactome> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/reactome> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/ontoforce_inferences/ontoforce/reactome> ;
+    	   ja:graph      <http://ns.ontoforce.com/ontoforce_inferences/ontoforce/reactome> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/sio#ontologies> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/sio#ontologies> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://localhost:8890/sparql> ;
+    	   ja:graph      <http://localhost:8890/sparql> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/taxonomy> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/taxonomy> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/taxonomy> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/taxonomy> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/uberon> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/uberon> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/uberon> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/uberon> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/umls> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/umls> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/umls> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/umls> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/unii> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/unii> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/unii> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/unii> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/uniprot> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/uniprot> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/uniprot> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/uniprot> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/uploaded_configuration_graph_20160224134741237621> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/uploaded_configuration_graph_20160224134741237621> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/who> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/who> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/who> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/who> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/graphs/wikipathways> ;
+    	   ja:graph      <http://ns.ontoforce.com/graphs/wikipathways> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/inferences/wikipathways> ;
+    	   ja:graph      <http://ns.ontoforce.com/inferences/wikipathways> ] ;
+
+	 ja:namedGraph
+		 [ ja:graphName  <http://ns.ontoforce.com/ontoforce_inferences/ontoforce/wikipathways> ;
+    	   ja:graph      <http://ns.ontoforce.com/ontoforce_inferences/ontoforce/wikipathways> ] ;
+
+. 
+
+<#graph0> rdfs:label "RDF Union Graph" ;
+        			 rdf:type ja:UnionModel ;
+
+	 ja:subModel <http://localhost:8890/DAV/>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/antibody_registry>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/antibody_registry>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/atc>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/atc>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/chembl>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/chembl>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/clinical_trial>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/clinical_trial>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/configurations>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/countries>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/CPC>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/CPC>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/disgenet>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/disgenet>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/do>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/do>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/drugbank>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/drugbank>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/eagle-i>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_alaska>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_cau>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_ccny-cuny>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_cdrewu>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_dartmouth>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_famu>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_global>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_harvard>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_hawaii>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_howard>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_hunter-cuny>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_immunology_harvard>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_iths>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_itmat>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_jsu.eagle-i>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_meharry>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_montana>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_msm>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_ohsu>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_psm>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_special_collection>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_tsu>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_tuskegee>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_uccaribe>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_upr>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_utep>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_utsa>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#eaglei_xula>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eagle-i#ontologies>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/eco#ontologies>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/enzyme>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/enzyme>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/epo>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/epo>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/geneontology>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/geneontology>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/generif>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/generif>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/hgnc>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/hgnc>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/homologene>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/homologene>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/hsdb>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/hsdb>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/icd10>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/icd10>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/icd9>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/icd9>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/interpro>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/interpro>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/meddra>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/meddra>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/mesh>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/mesh>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/miriam>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/ncbi-gene>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/ncbi-gene>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/ndc>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/ndc>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/orphanet>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/orphanet>  ;
+
+	 ja:subModel <http://www.w3.org/2002/07/owl#>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/provenance>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/provenance>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/pubmed>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/pubmed>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/reactome>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/reactome>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/ontoforce_inferences/ontoforce/reactome>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/sio#ontologies>  ;
+
+	 ja:subModel <http://localhost:8890/sparql>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/taxonomy>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/taxonomy>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/uberon>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/uberon>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/umls>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/umls>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/unii>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/unii>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/uniprot>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/uniprot>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/uploaded_configuration_graph_20160224134741237621>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/who>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/who>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/graphs/wikipathways>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/inferences/wikipathways>  ;
+
+	 ja:subModel <http://ns.ontoforce.com/ontoforce_inferences/ontoforce/wikipathways>  ;
+
+.
+
+<http://localhost:8890/DAV/> rdfs:label "Graph _http___localhost_8890_DAV___..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___localhost_8890_DAV___..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/antibody_registry> rdfs:label "Graph _http___ns.ontoforce.com_graphs_antibody_registry__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_antibody_registry__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/antibody_registry> rdfs:label "Graph _http___ns.ontoforce.com_inferences_antibody_registry__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_antibody_registry__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/atc> rdfs:label "Graph _http___ns.ontoforce.com_graphs_atc__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_atc__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/atc> rdfs:label "Graph _http___ns.ontoforce.com_inferences_atc__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_atc__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/chembl> rdfs:label "Graph _http___ns.ontoforce.com_graphs_chembl__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_chembl__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/chembl> rdfs:label "Graph _http___ns.ontoforce.com_inferences_chembl__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_chembl__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/clinical_trial> rdfs:label "Graph _http___ns.ontoforce.com_graphs_clinical_trial__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_clinical_trial__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/clinical_trial> rdfs:label "Graph _http___ns.ontoforce.com_inferences_clinical_trial__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_clinical_trial__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/configurations> rdfs:label "Graph _http___ns.ontoforce.com_graphs_configurations__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_configurations__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/countries> rdfs:label "Graph _http___ns.ontoforce.com_graphs_countries__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_countries__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/CPC> rdfs:label "Graph _http___ns.ontoforce.com_graphs_CPC__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_CPC__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/CPC> rdfs:label "Graph _http___ns.ontoforce.com_inferences_CPC__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_CPC__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/disgenet> rdfs:label "Graph _http___ns.ontoforce.com_graphs_disgenet__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_disgenet__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/disgenet> rdfs:label "Graph _http___ns.ontoforce.com_inferences_disgenet__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_disgenet__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/do> rdfs:label "Graph _http___ns.ontoforce.com_graphs_do__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_do__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/do> rdfs:label "Graph _http___ns.ontoforce.com_inferences_do__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_do__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/drugbank> rdfs:label "Graph _http___ns.ontoforce.com_graphs_drugbank__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_drugbank__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/drugbank> rdfs:label "Graph _http___ns.ontoforce.com_inferences_drugbank__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_drugbank__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/eagle-i> rdfs:label "Graph _http___ns.ontoforce.com_inferences_eagle-i__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_eagle-i__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_alaska> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_alaska__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_alaska__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_cau> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_cau__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_cau__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_ccny-cuny> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_ccny-cuny__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_ccny-cuny__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_cdrewu> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_cdrewu__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_cdrewu__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_dartmouth> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_dartmouth__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_dartmouth__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_famu> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_famu__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_famu__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_global> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_global__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_global__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_harvard> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_harvard__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_harvard__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_hawaii> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_hawaii__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_hawaii__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_howard> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_howard__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_howard__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_hunter-cuny> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_hunter-cuny__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_hunter-cuny__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_immunology_harvard> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_immunology_harvard__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_immunology_harvard__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_iths> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_iths__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_iths__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_itmat> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_itmat__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_itmat__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_jsu.eagle-i> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_jsu.eagle-i__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_jsu.eagle-i__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_meharry> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_meharry__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_meharry__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_montana> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_montana__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_montana__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_msm> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_msm__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_msm__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_ohsu> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_ohsu__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_ohsu__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_psm> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_psm__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_psm__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_special_collection> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_special_collection__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_special_collection__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_tsu> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_tsu__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_tsu__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_tuskegee> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_tuskegee__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_tuskegee__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_uccaribe> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_uccaribe__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_uccaribe__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_upr> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_upr__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_upr__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_utep> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_utep__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_utep__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_utsa> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_utsa__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_utsa__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#eaglei_xula> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#eaglei_xula__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#eaglei_xula__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eagle-i#ontologies> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eagle-i#ontologies__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eagle-i#ontologies__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/eco#ontologies> rdfs:label "Graph _http___ns.ontoforce.com_graphs_eco#ontologies__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_eco#ontologies__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/enzyme> rdfs:label "Graph _http___ns.ontoforce.com_graphs_enzyme__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_enzyme__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/enzyme> rdfs:label "Graph _http___ns.ontoforce.com_inferences_enzyme__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_enzyme__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/epo> rdfs:label "Graph _http___ns.ontoforce.com_graphs_epo__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_epo__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/epo> rdfs:label "Graph _http___ns.ontoforce.com_inferences_epo__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_epo__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/geneontology> rdfs:label "Graph _http___ns.ontoforce.com_graphs_geneontology__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_geneontology__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/geneontology> rdfs:label "Graph _http___ns.ontoforce.com_inferences_geneontology__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_geneontology__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/generif> rdfs:label "Graph _http___ns.ontoforce.com_inferences_generif__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_generif__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/generif> rdfs:label "Graph _http___ns.ontoforce.com_graphs_generif__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_generif__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/hgnc> rdfs:label "Graph _http___ns.ontoforce.com_graphs_hgnc__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_hgnc__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/hgnc> rdfs:label "Graph _http___ns.ontoforce.com_inferences_hgnc__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_hgnc__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/homologene> rdfs:label "Graph _http___ns.ontoforce.com_graphs_homologene__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_homologene__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/homologene> rdfs:label "Graph _http___ns.ontoforce.com_inferences_homologene__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_homologene__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/hsdb> rdfs:label "Graph _http___ns.ontoforce.com_graphs_hsdb__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_hsdb__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/hsdb> rdfs:label "Graph _http___ns.ontoforce.com_inferences_hsdb__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_hsdb__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/icd10> rdfs:label "Graph _http___ns.ontoforce.com_inferences_icd10__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_icd10__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/icd10> rdfs:label "Graph _http___ns.ontoforce.com_graphs_icd10__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_icd10__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/icd9> rdfs:label "Graph _http___ns.ontoforce.com_inferences_icd9__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_icd9__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/icd9> rdfs:label "Graph _http___ns.ontoforce.com_graphs_icd9__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_icd9__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/interpro> rdfs:label "Graph _http___ns.ontoforce.com_graphs_interpro__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_interpro__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/interpro> rdfs:label "Graph _http___ns.ontoforce.com_inferences_interpro__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_interpro__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/meddra> rdfs:label "Graph _http___ns.ontoforce.com_inferences_meddra__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_meddra__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/meddra> rdfs:label "Graph _http___ns.ontoforce.com_graphs_meddra__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_meddra__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/mesh> rdfs:label "Graph _http___ns.ontoforce.com_inferences_mesh__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_mesh__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/mesh> rdfs:label "Graph _http___ns.ontoforce.com_graphs_mesh__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_mesh__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/miriam> rdfs:label "Graph _http___ns.ontoforce.com_graphs_miriam__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_miriam__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/ncbi-gene> rdfs:label "Graph _http___ns.ontoforce.com_graphs_ncbi-gene__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_ncbi-gene__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/ncbi-gene> rdfs:label "Graph _http___ns.ontoforce.com_inferences_ncbi-gene__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_ncbi-gene__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/ndc> rdfs:label "Graph _http___ns.ontoforce.com_graphs_ndc__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_ndc__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/ndc> rdfs:label "Graph _http___ns.ontoforce.com_inferences_ndc__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_ndc__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/orphanet> rdfs:label "Graph _http___ns.ontoforce.com_graphs_orphanet__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_orphanet__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/orphanet> rdfs:label "Graph _http___ns.ontoforce.com_inferences_orphanet__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_orphanet__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://www.w3.org/2002/07/owl#> rdfs:label "Graph _http___www.w3.org_2002_07_owl#__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___www.w3.org_2002_07_owl#__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/provenance> rdfs:label "Graph _http___ns.ontoforce.com_graphs_provenance__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_provenance__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/provenance> rdfs:label "Graph _http___ns.ontoforce.com_inferences_provenance__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_provenance__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/pubmed> rdfs:label "Graph _http___ns.ontoforce.com_graphs_pubmed__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_pubmed__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/pubmed> rdfs:label "Graph _http___ns.ontoforce.com_inferences_pubmed__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_pubmed__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/reactome> rdfs:label "Graph _http___ns.ontoforce.com_graphs_reactome__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_reactome__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/reactome> rdfs:label "Graph _http___ns.ontoforce.com_inferences_reactome__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_reactome__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/ontoforce_inferences/ontoforce/reactome> rdfs:label "Graph _http___ns.ontoforce.com_ontoforce_inferences_ontoforce_reactome__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_ontoforce_inferences_ontoforce_reactome__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/sio#ontologies> rdfs:label "Graph _http___ns.ontoforce.com_graphs_sio#ontologies__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_sio#ontologies__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://localhost:8890/sparql> rdfs:label "Graph _http___localhost_8890_sparql__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___localhost_8890_sparql__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/taxonomy> rdfs:label "Graph _http___ns.ontoforce.com_graphs_taxonomy__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_taxonomy__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/taxonomy> rdfs:label "Graph _http___ns.ontoforce.com_inferences_taxonomy__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_taxonomy__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/uberon> rdfs:label "Graph _http___ns.ontoforce.com_graphs_uberon__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_uberon__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/uberon> rdfs:label "Graph _http___ns.ontoforce.com_inferences_uberon__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_uberon__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/umls> rdfs:label "Graph _http___ns.ontoforce.com_inferences_umls__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_umls__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/umls> rdfs:label "Graph _http___ns.ontoforce.com_graphs_umls__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_umls__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/unii> rdfs:label "Graph _http___ns.ontoforce.com_graphs_unii__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_unii__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/unii> rdfs:label "Graph _http___ns.ontoforce.com_inferences_unii__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_unii__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/uniprot> rdfs:label "Graph _http___ns.ontoforce.com_graphs_uniprot__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_uniprot__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/uniprot> rdfs:label "Graph _http___ns.ontoforce.com_inferences_uniprot__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_uniprot__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/uploaded_configuration_graph_20160224134741237621> rdfs:label "Graph _http___ns.ontoforce.com_graphs_uploaded_configuration_graph_20160224134741237621__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_uploaded_configuration_graph_20160224134741237621__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/who> rdfs:label "Graph _http___ns.ontoforce.com_graphs_who__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_who__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/who> rdfs:label "Graph _http___ns.ontoforce.com_inferences_who__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_who__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/graphs/wikipathways> rdfs:label "Graph _http___ns.ontoforce.com_graphs_wikipathways__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_graphs_wikipathways__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/inferences/wikipathways> rdfs:label "Graph _http___ns.ontoforce.com_inferences_wikipathways__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_inferences_wikipathways__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.
+
+<http://ns.ontoforce.com/ontoforce_inferences/ontoforce/wikipathways> rdfs:label "Graph _http___ns.ontoforce.com_ontoforce_inferences_ontoforce_wikipathways__..nq.hdt" ;
+	        	 	  rdf:type hdt:HDTGraph ;
+	        	    hdt:fileName "_http___ns.ontoforce.com_ontoforce_inferences_ontoforce_wikipathways__..nq.hdt" ;
+				    hdt:keepInMemory "true" ;
+
+.

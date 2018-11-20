@@ -1,0 +1,31 @@
+{
+  "title": "My Linked Data Fragments server",
+
+  "datasources": {
+    "watdiv1": {
+      "title": "watdiv333M_1",
+      "type": "HdtDatasource",
+      "description": "Part 1 of Watdiv1000M compressed into HDT back-end",
+      "settings": { "file": "/data/watdiv.333M_1.hdt" }
+    },
+    "watdiv2": {
+      "title": "watdiv333M_2",
+      "type": "HdtDatasource",
+      "description": "Part 2 of Watdiv1000M compressed into HDT back-end",
+      "settings": { "file": "/data/watdiv.333M_2.hdt" }
+	
+    },
+    "watdiv3": {
+      "title": "watdiv333M_3",
+      "type": "HdtDatasource",
+      "description": "Part 3 of Watdiv1000M compressed into HDT back-end",
+      "settings": { "file": "/data/watdiv.333M_3.hdt" }
+
+    }
+
+
+
+  }
+
+}
+

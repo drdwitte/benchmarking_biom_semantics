@@ -1,0 +1,27 @@
+storeUnderTest      : "Virtuoso_Watdiv1000M64"
+
+totalRuns           : 1
+timeInterval       : 7200
+endpoint            : "http://ec2-54-174-198-211.compute-1.amazonaws.com:80/sparql/"
+requiresAuth     : False
+
+user                     : "dba"
+pwd                      : "i-ef80cb66"
+
+firstTriple:
+  - "<http://db.uwaterloo.ca/~galuc/wsdbm/User0>"
+  - "<http://schema.org/email>"
+  - "\"Maggie's serialization's Brunhilde blunderers urinalyses\""
+lastTriple:
+  - "<http://db.uwaterloo.ca/~galuc/wsdbm/Review14999999>"
+  - "<http://purl.org/stuff/rev#reviewer>"
+  - "<http://db.uwaterloo.ca/~galuc/wsdbm/User9776014>"
+  
+queryListName   : "listfiles.txt"
+queriesName      : "templated"
+queryListSource : "https://s3.amazonaws.com/watdiv/queries1000M-20/"
+
+runs                        : 5
+outliers                  : 1
+warmups                : 1
+parallell                  : 8

@@ -1,0 +1,12 @@
+queries/q1
+queries/q2
+queries/q3
+queries/q4
+queries/q5
+queries/q6
+queries/q7
+queries/q8
+queries/q9
+queries/q10
+queries/q11
+queries/q12

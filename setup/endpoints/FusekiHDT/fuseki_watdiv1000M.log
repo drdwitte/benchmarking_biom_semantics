@@ -1,0 +1,11 @@
+Count predicates in 3 min 24 sec 439 ms 510 us
+Count Objects in 16 sec 396 ms 123 us Max was: 1950008
+Bitmap in 236 ms 886 us
+Object references in 2 min 40 sec 987 ms 980 us
+Sort object sublists in 33 sec 67 ms 759 us
+Count predicates in 1 sec 910 ms 136 us
+Index generated in 3 min 32 sec 599 ms 691 us
+18:46:32 INFO  Dataset path = /hdtservice
+18:46:32 INFO  Fuseki 1.3.0 2015-07-25T17:11:28+0000
+18:46:32 INFO  Started 2016/12/30 18:46:32 UTC on port 3030
+

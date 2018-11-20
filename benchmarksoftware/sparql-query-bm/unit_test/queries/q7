@@ -1,0 +1,2 @@
+SELECT DISTINCT ?type { ?s a ?type }
+

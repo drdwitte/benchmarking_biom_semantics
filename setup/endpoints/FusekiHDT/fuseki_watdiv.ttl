@@ -1,0 +1,99 @@
+# Licensed under the terms of http://www.apache.org/licenses/LICENSE-2.0
+
+## Basic Fuseki configuration file for HDT files.
+## 
+## Remember that you need hdt-java.jar and hdt-jena.jar when you launch Fuseki.
+##
+
+@prefix :        <#> .
+@prefix fuseki:  <http://jena.apache.org/fuseki#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tdb:     <http://jena.hpl.hp.com/2008/tdb#> .
+@prefix ja:      <http://jena.hpl.hp.com/2005/11/Assembler#> .
+@prefix hdt:      <http://www.rdfhdt.org/fuseki#> .
+
+[] rdf:type fuseki:Server ;
+   # Timeout - server-wide default: milliseconds.
+   # Format 1: "1000" -- 1 second timeout
+   # Format 2: "10000,60000" -- 10s timeout to first result, then 60s timeout for the rest of query.
+   # See java doc for ARQ.queryTimeout
+   # ja:context [ ja:cxtName "arq:queryTimeout" ;  ja:cxtValue "301000" ] ;
+
+   # IMPORTANT: Import the HDT Assembler
+   ja:loadClass "org.rdfhdt.hdtjena.HDTGraphAssembler" ;
+
+   fuseki:services (
+     <#service1>
+   ) .
+
+# HDT Classes
+hdt:HDTGraph rdfs:subClassOf ja:Graph .
+
+## ---------------------------------------------------------------
+## Create a Read-Only Dataset composed by many RDF Graphs, each from an HDT File.
+
+<#service1> rdf:type fuseki:Service ;
+    fuseki:name                     "hdtservice" ;
+    fuseki:serviceQuery             "query" ;
+    fuseki:serviceReadGraphStore    "get" ;
+    fuseki:dataset                   <#dataset> ;
+    .
+    
+#to address ambiguity exception: https://mail-archives.apache.org/mod_mbox/jena-users/201605.mbox/%3C5738DFDB.8080200@apache.org%3E
+hdt:HDTGraph rdfs:subClassOf  ja:Model .
+
+
+<#dataset> rdf:type ja:RDFDataset ;
+    rdfs:label "Dataset" ;
+    ja:defaultGraph <#graph0> ;
+    ja:namedGraph 
+	[ ja:graphName  <http://example.org/watdiv333_1> ;
+          ja:graph      <#graph1> ] ;
+    ja:namedGraph 
+	[ ja:graphName  <http://example.org/watdiv333_2> ;
+          ja:graph      <#graph2> ] ;
+    ja:namedGraph 
+	[ ja:graphName  <http://example.org/watdiv333_3> ;
+          ja:graph      <#graph3> ] ;
+        
+    .
+
+#approach for working with Union graphs found here: http://stackoverflow.com/questions/26121947/query-multiple-tdb-datasets
+
+<#graph0> rdfs:label "RDF Union Graph" ;
+        rdf:type ja:UnionModel ;
+		ja:subModel <#graph1>  ;	
+		ja:subModel <#graph2>  ;	
+		ja:subModel <#graph3>  ;	
+	.
+
+<#graph1> rdfs:label "Watdiv part I" ;
+        rdf:type hdt:HDTGraph ;
+        hdt:fileName "/data/watdiv.333M_1.hdt" ;
+	hdt:keepInMemory "true" ;
+
+    .
+
+<#graph2> rdfs:label "Watdiv part II" ;
+        rdf:type hdt:HDTGraph ;
+        hdt:fileName "/data/watdiv.333M_2.hdt" ;
+	hdt:keepInMemory "true" ;
+    .
+
+
+<#graph3> rdfs:label "Watdiv part III" ;
+        rdf:type hdt:HDTGraph ;
+        hdt:fileName "/data/watdiv.333M_3.hdt" ;
+	hdt:keepInMemory "true" ;
+	
+    .
+
+
+
+
+
+
+
+

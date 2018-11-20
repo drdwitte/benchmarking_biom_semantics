@@ -1,0 +1,100 @@
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic109> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic52> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic163> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic149> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic209> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic64> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic136> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic213> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic214> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic149> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic209> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic192> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic136> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic163> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic214> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic209> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic188> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic208> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic64> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+
+SELECT ?v0 ?v2 WHERE {
+	?v0 <http://ogp.me/ns#tag> <http://db.uwaterloo.ca/~galuc/wsdbm/Topic208> .
+	?v0 <http://schema.org/caption> ?v2 .
+}
+

@@ -1,0 +1,48 @@
+05:54:33 PL LOG: Loader started
+12:32:04 PL LOG: No more files to load. Loader has finished,
+12:39:04 Checkpoint started
+12:39:15 Checkpoint finished, log reused
+
+
+sudo bin/isql 12201 dba dba exec="status ('cluster_d');"
+Connected to OpenLink Virtuoso
+Driver: 07.20.3217 OpenLink Virtuoso ODBC Driver
+OpenLink Interactive SQL (Virtuoso), version 07.20.3217.
+Type HELP; for help and EXIT; to exit.
+REPORT
+VARCHAR
+_______________________________________________________________________________
+
+Cluster 3 nodes, 30106 s. 18 m/s 13914 KB/s  884% cpu 3%  read 11% clw threads 1r 0w 0i buffers 10429563 204779 d 0 w 13 pfs
+cl 1: 6 m/s 4518 KB/s  293% cpu 0%  read 3% clw threads 1r 0w 0i buffers 3461494 76687 d 0 w 3 pfs
+cl 2: 6 m/s 4729 KB/s  296% cpu 1%  read 3% clw threads 0r 0w 0i buffers 3489832 64347 d 0 w 3 pfs
+cl 3: 6 m/s 4666 KB/s  294% cpu 1%  read 4% clw threads 0r 0w 0i buffers 3478237 63745 d 0 w 7 pfs
+
+4 Rows. -- 50 msec.
+
+Node 1 logs after crash
+
+18:08:40 Host 1: Answer of txn query of host 2 for 27787879 is rollback
+18:08:41 * Monitor: Should read for update because lock escalation from shared to exclusive fails frequently (1)
+
+Node 2 logs after crash
+
+18:08:35 Host 2: lt gets a batch req with new w_id while having locks.  lt_w_id 1:27787879, new 1:27796269.  This can in principle be if rollback was missed or overtaken by this batch req. It can be that the lt was an existence or prefetch whose cancel or rb was lost.  Anyway, this is rare but not dangerous.  Making a new lt and leaving this lt hanging, so that it will do a branch still wanted query to finish itself.
+18:27:21 A disconnect of a cluster peer was noticed while in atomic or non logged write mode.  Exiting host 2
+18:27:21 Server shutdown complete
+18:27:21 Host 2: Network error in cluster write to host 1, errno=104
+18:27:21 Host 2: Network error in cluster write to host 1, errno=32
+18:27:21 Host 2: Network error in cluster write to host 1, errno=32
+18:27:21 Host 2: Network error in cluster write to host 1, errno=104
+
+
+Node 3 logs after crash
+
+18:27:21 Host 3: Network error in cluster write to host 1, errno=104
+18:27:21 A disconnect of a cluster peer was noticed while in atomic or non logged write mode.  Exiting host 3
+18:27:21 Server shutdown complete
+18:27:21 Write timeout in clt_flush
+
+
+
+

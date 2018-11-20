@@ -1,0 +1,417 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Readme Information Workbench & eCloudManager</title>
+	</head>
+<body>
+	<div style="width: 800px">
+		<h1 align="center">Information Workbench & eCloudManager Readme</h1>
+
+		<br />
+		<ol>
+			<li><a href="#compatibility">Installation Requirements</a></li>
+			<li><a href="#installation">Installation</a></li>
+			<ol>
+				<li><a href="#installation_windows">Windows</a></li>
+				<li><a href="#installation_linux">Linux</a></li>
+				<li><a href="#installation_osx">Mac OS X</a></li>
+			</ol>
+			<li><a href="#upgrade">Upgrade Notes</a></li>
+			<li><a href="#getting_started">Getting Started</a></li>
+			<li><a href="#help">Getting Help</a></li>
+			<li><a href="#trouble_shooting">Troubleshooting</a></li>
+			<li><a href="#features">New Features</a></li>
+			<li><a href="#issues">Known Issues</a></li>
+		</ol>
+
+		<a name="compatibility"><h2>Installation Requirements</h2></a>
+		<h3>Server</h3>
+		<p>Operating System</p>
+		<ul>
+			<li>Windows (64-bit only): Windows 7, Windows Server 2012</li>
+			<li>Linux (64-bit only): Ubuntu 14.04, openSUSE 12.1</li>
+		</ul>
+		<p>Java Runtime Environment</p>
+		<ul>
+			<li>JRE &gt;=1.8.0_60 64 bit</li>
+		</ul>
+		<p>Other Linux Distributions, different versions of Windows or OS X systems may also work, 
+		however have not been tested extensively.</p> 
+		<h3>Client</h3>
+		<p>Browsers</p>
+		<ul>
+			<li>Firefox &gt;=31.x (ESR) & 38.x (ESR), limited support for older versions</li>
+			<li>Internet Explorer 10 or higher, limited support for IE8 and IE9</li>
+			<li>Chrome</li>
+			<li>Safari</li>
+			<li>Optional: Silverlight (for PivotView)</li>
+		</ul>
+		<p>Other browsers may also work, however have not been tested extensively.</p>
+		
+		<b>eCloudManager Supported Provider Versions/Firmwares:</b>
+		<br><br>
+		See 
+		<a href="http://help.fluidops.com/resource/Help:ECMSupportMatrix">http://help.fluidops.com/resource/Help:ECMSupportMatrix</a>
+		for the current support matrix
+		<a name="installation"><h2>Installation</h2></a>
+		
+		<p>The Information Workbench supports both Windows and Linux based
+			operating systems.</p>
+				
+		<a name="installation_windows"><h3>Windows</h3></a>
+		
+		<h4>Installation with the Windows Installer</h4>
+		
+		<p>Installing the Information Workbench on Windows can be done easily 
+		using the Windows installer. During the installation one optionally
+		can select to activate the bundled eDataCenterAnalyzer or eCloudManager App. 
+		Note that the installation requires administrator privileges.</p> 
+		<p>
+			You can start/stop the application using the
+			Windows <i>services</i> configuration tool (i.e.
+			Start-&gt;Run-&gt;services.msc). The Information Workbench service is
+			called <i>fluidOps Platform</i>.
+		</p>
+		
+		<h4>Installation from the zip-distribution</h4>
+		
+		<p>
+			It is recommended to use a 64bit Windows operating system with a
+			64Bit Java SE Runtime Environment in version 1.8 (taken from the
+			JDK). The reference version shipped with the installer is JRE SE <i>1.8.0_60
+				64bit</i>. This is also the version used in steps a) and b) below.
+		</p>
+		<p>Unpack the distribution into a directory of your choice  
+		(e.g. C:\IWB). In the following, we will refer to the absolute
+		pathname of this directory by &lt;IWB_HOME_DIRECTORY&gt;.</p>
+		
+		<b>Running the Information Workbench as executable</b>
+		<p>Execute <code>&lt;IWB_HOME_DIRECTORY&gt;/start.cmd</code></p>			
+		
+
+		<a name="installation_osx"><h3>Mac OS X</h3></a>
+		<p>Please note that, while we have successfully installed and run Information Workbench on OS X,
+		this platform is not officially supported.
+
+		For OS X, we assume a manual mode of operation by a single user.
+		This means that the software needs to be started and stopped manually from the terminal.
+		Also, in case of multi-user systems, starting and stopping must always be performed by the same user who runs the installation.
+		</p>
+		
+		<p>
+		To run the Information Workbench on Mac OS X you need
+		<ul>
+		<li>A compatible version of the Java runtime  (ideally, version 1.8).
+		OS X may ask you whether to install a Java runtime automatically if it detects that one is needed but missing.</li>
+		<li>The distribution of the fluidOps Suite (.zip file).</li>
+		</ul>
+		</p>
+		
+		<p>
+		To get started, proceed as follows:
+		<ul>
+		<li>Unpack the distribution .zip file in a folder of your choice.
+		<li>Open the terminal application and cd into the unpacked distribution (e.g., <code>cd Desktop/fluidOps-Suite</code> [ENTER])</li>
+		<li>Run mac-install.sh as a shell script (<code>sh mac-install.sh</code> [ENTER])</li>
+		<li>To start, type <code>./start.sh</code> [ENTER]</li>
+		<li>After a few seconds, you should be able to access Information Workbench in you browser locally
+		under the address <a href="https://localhost:50443">https://localhost:50443</a></li>
+		</ul>
+		</p>
+		
+		<a name="installation_linux"><h3>Linux</h3></a>
+
+		<p>To run the Information Workbench under Linux a Java SE Runtime
+			Environment version 1.8 (taken from the JDK) must be installed. Note
+			that the Information Workbench does not ship a reference version
+			bundled with the release.</p>
+		<p>Unpack the distribution into a directory of your choice  
+		(e.g. /opt/fluidOps/IWB). In the following, we will refer to the absolute
+		pathname of this directory by &lt;IWB_HOME_DIRECTORY&gt;.</p>
+
+		<ul>
+			<li>Download and install Java SE 64-Bit JDK version 1.8
+				(<a
+				href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">http://www.oracle.com/technetwork/java/javase/downloads/index.html</a>).</li>
+			<li>Make sure the java command is added to the command-path of the user root.</li>
+		</ul>
+		<p>
+			<b>Installing and Running as service</b>
+		</p>
+		<ul>
+			<li>Create a user under which the iwb shall run, e.g. "fluid" (in the following we will refer to this user as &lt;IWB_USER&gt;).</li>
+			<li>Execute the script linux-install.sh in &lt;IWB_HOME_DIRECTORY&gt; as user root, like follows: 
+			<br><code>bash -eu linux-install.sh &lt;IWB_USER&gt;</code>
+			</li> 
+		</ul>
+		
+		<p>This installs an init-script as <code>/etc/init.d/fops</code>, sets the ownership of the files to the user 
+		&lt;IWB_USER&gt;, puts a file <code>fluidops</code> to the config folder <code>/etc/sysconfig/</code> (for 
+		SUSE-like systems, <code>/etc/default</code> for debian-like systems and <code>/etc/</code> for others) that 
+		holds system wide configuration parameters for the startup process and then starts the application.
+		To make sure this script is executed on reboot create corresponding links in the run-level specific directories.
+		Depending on your distribution, this can be done with: 
+		<code>chkconfig -a fops</code> or with <code>insserv fops</code>
+		
+		<p>
+		The application can be started with the following command:
+		</p>
+		
+		<ul>
+			<li>Run <i>/etc/init.d/fops start</i></li>
+		</ul>
+
+		
+		
+		<h2><a name="upgrade">Upgrade Notes</a></h2>
+		
+		<p>The following listing contains noteworthy changes in the 7.1 release</p>
+
+		<ul>
+			<li>
+				It is recommended to use a recent Java 1.8 runtime environment to run
+				an Information Workbench or eCloudManager installation. Particularly,
+				various Java 8 JVM configuration settings are supplied to the JVM 
+				(e.g. GC and Metaspace settings). Note that an appropriate Java 8 runtime
+				environment is bundled with the Windows Installer already since a few releases.
+			</li>
+			<li>
+				In the Web-Server the caching of static resources (e.g., images and 
+				java scripts) has been increased from 1h to 24. In addition, all
+				java scripts are now gzip compressed.
+			</li>
+			<li>
+				The certificate used by the Jetty HTTP(s) webserver has been
+				updated to use a stronger hash algorithm. Note that this is only
+				applied in fresh installations as the keystore is copied over
+				from the previous installation during upgrade. If no custom
+				certificate is used, the keystore from <i>/etc/keystore</i>
+				can simply be replaced with the new version.
+			</li>
+			<li>
+				The default JVM memory is set to 5GB to adhere the requirements
+				of common installations. If required, this value can be adjusted
+				in the <i>backend-user.conf</i> file. Note that even if the OS
+				does only offer less memory, the JVM has some intelligent behavior
+				to deal with this.
+			</li>
+		</ul>
+		
+		<a name="getting_started"><h2>Opening the Information Workbench</h2></a>
+
+		<p>
+			Once the Information Workbench is running (startup may take up to a few minutes), it can be accessed at <b><a
+				href="https://localhost:50443">https://localhost:50443</a>
+			</b>. On the default start page you can find a tutorial with some first
+			steps as well as links to important pages (such as the detailed user
+			documentation).
+		</p>
+
+		<p>
+			By default, an administrator account with credentials <b>admin/iwb</b>
+			is created. It is highly recommended to change the password in the
+			Admin area after the first login.
+		</p>
+
+		<h3>Shutting down the Information Workbench</h3>
+		<ul>
+			<li><b>Windows Service:</b> Go to the Services configuration
+				tool and stop the service</li>
+			<li><b>Linux Daemon:</b> Invoke /etc/init.d/fops stop</li>
+			<li><b>Commandline:</b> Exit the Information Workbench by
+				clicking in the command line window and pressing Ctrl + c.</li>
+			<li><b>IMPORTANT:</b> Never exit the Information Workbench by
+				closing the command line window without proper shutdown. This can
+				result in corrupting the data store and loss of data.</li>
+		</ul>
+
+		<h3>Enabling HTTP</h3>
+		
+		<p>By default the system is configured to use the confidential mode (i.e. HTTPS):
+		The application server will automatically redirect each request to the secure confidential HTTPS handler.</p>
+		
+		<p>Support for HTTP can be enabled by means of the system configuration setting "enableHttp".</p>
+		
+		<h3>Using the Information Workbench SDK in Eclipse</h3>
+    
+    	<p>Details about the fluidOps SDK can be found on the <i>Help:PlatformSDK</i> page in a running system.</p>
+
+		<a name="help"><h2>Getting Help</h2></a>
+		<ul>
+			<li>Online help: <a
+				href="http://help.fluidops.com">http://help.fluidops.com</a>
+			</li>
+			<li>Information Workbench mailing list: iwb-discussion (at)
+				googlegroups.com (<a
+				href="https://groups.google.com/group/iwb-discussion">https://groups.google.com/group/iwb-discussion</a>)
+			</li>
+			<li>Help: <a href="https://localhost:50443/resource/Help:Help">https://localhost:50443/resource/Help:Help</a>
+				(accessible once the Information Workbench has been started)</li>
+		</ul>
+		
+		<a name="trouble_shooting"><h2>Troubleshooting</h2></a>
+				
+		<p>	<b>Where can I find additional information</b> </p>
+		
+		<p>The Information Workbench is configured to write logging output to <i>&lt;IWB_HOME_DIRECTORY&gt;/logs/</i>. 
+		Runtime logs of the Information Workbench can be found in service.log, while output
+		of the wrapper is written to <i>wrapper.log</i>. Please consider these files as a first source
+		for further information. Note that the logging level can be configured in <i>&lt;IWB_HOME_DIRECTORY&gt;/etc/log4j.properties</i>.</p>
+
+		<p>If you have any questions, please do not hesitate to contact
+			us.</p>
+			
+		<h2><a name="features">New Features</a></h2>
+		<h3>7.1</h3>
+		<b>eCloudManager</b>
+		<ul>
+			<li>Landscape Mastering [<a href="http://help.fluidops.com/resource/Help:LandscapeMastering" target="_BLANK">docs</a>]</li>
+			<li>Hybrid cloud improvements (e.g. Amazon Provider, Azure Resource Manager)</li>
+			<li>Automated password rotation</li>
+			<li>Graphical editor for VLM firewall configuration [<a href="http://help.fluidops.com/resource/Help:LandscapeMastering#VLM_Firewall_Configuration" target="_BLANK">docs</a>]</li>
+			<li>Service-Retention (When resources such as VMs are deleted, they are kept for a configurable amount of time)</li>
+			<li>Improvements to market place setup and out-of-the-box behavior [<a href="http://help.fluidops.com/resource/Help:UserManagementSetup" target="_BLANK">docs</a>]</li>
+			<li>Service oriented restructuring of main menu bar + redesign of start page</li>
+			<li>ITSM improvements [<a href="http://help.fluidops.com/resource/Help:ITSM" target="_BLANK">docs</a>]</li>
+		</ul>
+		<b>Data Management</b>
+		<ul>
+			<li>Polyglot for Query Result Widget</li>
+			<li>Support to skip JDBC metadata extraction for large databases</li>
+			<li>Improvements to the data provider framework (e.g. write strategies)</li>
+			<li>Introduce SparqlPostProcessor for modifying provider results [<a href="http://help.fluidops.com/resource/Help:SparqlPostProcessor" target="_BLANK">docs</a>]</li>
+		</ul>
+		<b>Reporting</b>
+		<ul>
+			<li>Send PDF report documents via Email [<a href="http://help.fluidops.com/resource/Help:Reporting" target="_BLANK">docs</a>]</li>
+			<li>Fix scaling issues of A4 PDF reports on different platforms (e.g. zoom factor for high DPI systems)</li>
+		</ul>
+		<b>Usability Improvements</b>
+		<ul>
+			<li>Documentation improvements (with a particular focus on the eCloudManager documentation)</li>
+			<li>Further setup pages (e.g., SSL and certificate configuration [<a href="http://help.fluidops.com/resource/Help:SSL_HowTo" target="_BLANK">docs</a>, <a href="http://www.fluidops.com/de/blog/post?s=2016-08-18-configuring-ssl-certificates" target="_BLANK">blog</a>])</li>
+			<li>Improvements to the Apps dashboard</li>
+		</ul>
+		<b>Platform (For Developers)</b>
+		<ul>
+			<li>Support remoting in code execution widget using dynamic service infrastructure.</li>
+			<li>Pass contextual information as part of service invocation (e.g. the initiating user for audit logs)</li>
+			<li>Partial reloading of wiki page content [<a href="http://help.fluidops.com/resource/Help:CodeExecution" target="_BLANK">docs</a>]</li>
+			<li>Support to hide row actions in ActionableResultWidget based on query values [<a href="http://www.fluidops.com/de/blog/post?s=2016-08-09-hide-actions-in-the-actionable-result" target="_BLANK">blog</a>]</li>
+			<li>Improvements to the value resolver framework (e.g. support for rendering lists) [<a href="http://help.fluidops.com/resource/Help:ValueResolvers" target="_BLANK">docs</a>]</li>
+		</ul>
+		<b>Misc</b>
+		<ul>
+			<li>Data Center simulator as bundled app</li>
+			<li>Internationalization of frontend service pages</li>
+			<li>Performance improvements (e.g. w.r.t label caching)</li>
+			<li>Improvements and fixes to the provider and task scheduling mechanism</li>
+		</ul>
+		
+		<h3>7.0</h3>
+		<b>New UI</b>
+		<ul>
+			<li>Fresh and modern UI design with restructured standard dashboards</li>
+			<li>Graphical wiki editor for composing wiki pages from existing fragments</li>
+			<li>New visualization and styling widgets (e.g., the Collapsible Widget, Tab Widget or Wiki Popup Widget)</li>
+			<li>Navigation functionality using quickjump anchors</li>
+			<li>Alternative visualizations of tabular results as one-click operation (e.g. table as bar chart)</li>
+			<li>Column filters for tabular results</li>
+			<li>Customizability by configuring a color scheme</li>
+		</ul>
+		<b>Reporting</b>
+		<ul>
+			<li>Wiki pages and dashboards can be exported as PDF reports</li>
+			<li>Printable rendering of any wiki page</li>
+			<li>Parameterizable reports (e.g., for a customer, VM)</li>
+			<li>Automatic scheduling of report generation and export as PDF</li>
+		</ul>
+		<b>Platform</b>
+		<ul>
+			<li>Task manager framework for executing regular task, including tasks for standard purposes (reports, email task, ...))</li>
+			<li>Improvements to the amcharts integration and revisit of the existing settings files</li>
+			<li>Unified cron-based scheduling for tasks, data providers and infrastructure providers</li>
+		</ul>
+		<b>eCloudManager</b>
+		<ul>
+			<li>Enhanced identity management for maintenance of groups, users and rights in eCloudManager or via
+				Active Directory (including automatic synchronization of users and groups)</li>
+			<li>Self-Service Marketplace as a highly flexible concept for offering services (of any kind) to any
+				group of customers.
+			</li>
+			<li>Attributes for tagging objects
+				<ul>
+					<li>Assignment attributes can for instance be used in deployment 
+					workflows to select a deployment zone for VMs</li>
+					<li>Information attributes can be used to characterize VMs /VLs to be used
+					in any kind of workflow (e.g., patching, start-/stop ordering ..)</li>
+				</ul>
+			</li>
+			<li>Device management functionality for security and access control via two factor authentication
+				<ul>
+					<li>Definition of device types (e.g., pc, smartphone, terminal server)</li>
+					<li>Lifecycle management of devices</li>
+					<li>Rollout of certificates to devices</li>
+				</ul>
+			</li>
+			<li>Integration of vCloud Director & vCloud Air</li>
+		</ul>
+		<b>Data Management</b>
+		<ul>
+			<li>Additional Post processors</li>
+			<ul>
+				<li>Simplified entity merging post processor based on equality of a property</li>
+				<li>Post processor for transforming dates to xsd:datetime literals using format patterns</li>
+				<li>Post processor to avoid RDF duplicates</li>
+				<li>Regular expression based post processor</li>
+			</ul>
+			<li>Performance and functional improvements to XML provider</li>
+			<li>Improvements to historical data management (e.g., deletion of historical snapshots)</li>
+			<li>Improve Virtuoso support as managed repository</li>
+		</ul>
+		<b>Usability Improvements</b>
+		<ul>
+			<li>Improvements to setup pages </li>
+			<li>Configuration page for the color scheme (see Setup:UICustomization)</li>
+			<li>Integration of analysis tools into the diag tool (e.g. GC analyzer)</li>
+			<li>Improvements to session state handling (wiki view is not the default view)</li>
+			<li>Usability improvements in the form input widgets (handling of suggestions, URI vs. literal rendering)</li>
+			<li>Improvements to the R2RML editor (e.g., improved suggestions)</li>
+			<li>Usability improvements to the query catalog and the SPARQL editor</li>
+			<li>Documentation improvements</li>
+		</ul>
+		<b>Misc</b>
+		<ul>
+			<li>CRON scheduling now available for tasks, data providers and infrastructure providers</li>
+			<li>Improved multi tenancy support (semantic ACLs, service catalog and marketplaces)</li>
+			<li>Data center simulator</li>
+			<li>Switch from vijava to VMware API</li>
+		</ul>
+				
+					
+		<h2><a name="issues">Known Issues</a></h2>
+		<ul>
+			<li>Version 6.0</li>
+			<ul>
+				<li>Bug 13292: Database Bootstrap: two apps providing the same dbBootstrap file name. This causes the second app to override the first app's bootstrap data.</li>
+			</ul>
+		</ul>
+		<ul>
+			<li>Version 5.5</li>
+			<ul>
+				<li>Bug 12914: Data Source creation: CSV upload does not work in native IE8</li>
+				<li>Bug 12394: Legacy widget notation with a space in front of colon ("#widget :") does not correctly render for restricted users</li>
+				<li>Bug 11732: Timeline Widget does not work in IE8</li>
+				<li>Bug 11521: Advanced SPARQL editor does not work in IE8, fallback to simple version</li>
+				<li>Bug 9252: Links in Pivot View do not work in Safari under Windows</li>
+				<li>Bug 5307: Widgets with query evaluation not working if query contains || in Filter, workaround using {{Pipe}} including UI support</li>
+				<li>Bug 6270: It is impossible to log out from a user session if ACLs are improperly configured</li>
+				<li>Bug 7511: WikiFileStorage maps URI containing * to those containing _ potentially overwriting existing wiki pages</li>
+				<li>Bug 7548: WikiExport and Bootstrap cannot deal with different capitalization in a wiki page</li>
+				<li>Bug 9335: TripleEditor: delete operation deletes duplicate statements, if they occur in different contexts</li>
+				<li>Bug 8265: Input fields occasionally disappear in Triple Editor in IE8</li>   
+			</ul>
+		</ul>
+	</div>
+</body>

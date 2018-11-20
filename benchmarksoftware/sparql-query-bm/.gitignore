@@ -1,0 +1,18 @@
+# Eclipse Project
+.project
+.settings/
+.classpath
+
+# Build Artifacts
+target/
+*.tar
+*.tar.*
+dependency-reduced-pom.xml
+
+# Misc
+ensure-licenses.bat
+
+# Benchmarker Artifacts
+results.xml
+results.csv
+log.txt

@@ -1,0 +1,14 @@
+{
+  "title": "LDF1",
+
+  "datasources": {
+    "watdiv1": {
+      "title": "watdiv33M_1",
+      "type": "HdtDatasource",
+      "description": "Part 1 of Watdiv100M compressed into HDT back-end",
+      "settings": { "file": "/data/watdiv.33M_1.hdt" }
+    }
+  }
+
+}
+

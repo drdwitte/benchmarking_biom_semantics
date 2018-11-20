@@ -1,0 +1,25 @@
+		Mon Jan 09 2017
+11:00:15 OpenLink Virtuoso Universal Server
+11:00:15 Version 07.20.3217-pthreads for Linux as of Apr 12 2016
+11:00:15 uses parts of OpenSSL, PCRE, Html Tidy
+11:00:15 Registered to Virtuoso-AWS-Cloud-Edition-User
+11:00:15 Personal Edition license for 10 connections
+11:00:15 Issued by OpenLink Software
+11:00:15 Enabled Cluster Extension
+11:00:15 Enabled Column Store Extension
+11:00:22 SQL Optimizer enabled (max 1000 layouts)
+11:00:22 Compiler unit is timed at 0.000137 msec
+11:00:26 Checkpoint started
+11:00:26 Roll forward started
+11:00:26 Roll forward complete
+11:00:26 Checkpoint started
+11:00:26 Checkpoint finished, log reused
+11:00:28 Server online at 12203 (pid 1638)
+11:01:03 Checkpoint started
+11:01:03 Checkpoint finished, log reused
+11:01:03  RARE Host 3: transact of w_id 1:3036 when the w_id of the branch here is 3:3053
+11:01:03  RARE Host 3: transact of w_id 1:3036 when the w_id of the branch here is 3:3053
+11:01:03  RARE Host 3: transact of w_id 1:3040 when the w_id of the branch here is 3:3058
+11:01:03  RARE Host 3: transact of w_id 1:3040 when the w_id of the branch here is 3:3058
+11:01:04  RARE Host 3: transact of w_id 1:3042 when the w_id of the branch here is 3:3060
+11:01:04  RARE Host 3: transact of w_id 1:3042 when the w_id of the branch here is 3:3060

@@ -1,0 +1,1520 @@
+Running in verbose mode, run with --quiet to disable
+
+[Thread 1] General Options
+[Thread 1] ---------------
+[Thread 1] 
+[Thread 1] Query Endpoint = http://sparql.org/books/sparql
+[Thread 1] Update Endpoint = not specified
+[Thread 1] Graph Store Protocol Endpoint = not specified
+[Thread 1] Sanity Checking Level = 2
+[Thread 1] Random Operation Order = On
+[Thread 1] Setup Mix = disabled
+[Thread 1] Teardown Mix = disabled
+[Thread 1] Timeout = 10 seconds
+[Thread 1] Max Delay between Operations = 1000 milliseconds
+[Thread 1] Halt on Timeout = false
+[Thread 1] Halt on Error = false
+[Thread 1] Halt Any = false
+[Thread 1] Result Limit = Query Specified
+[Thread 1] Result Counting Limit = Disabled
+[Thread 1] Result Counting = Enabled
+[Thread 1] ASK Results Format = application/sparql-results+xml
+[Thread 1] Graph Results Format = application/rdf+xml
+[Thread 1] SELECT Results Format = application/sparql-results+xml
+[Thread 1] Compression = disabled
+[Thread 1] Parallel Threads = 8
+[Thread 1] Authentication = disabled
+[Thread 1] 
+[Thread 1] Benchmark Options
+[Thread 1] ---------------
+[Thread 1] 
+[Thread 1] Warmups = 1
+[Thread 1] Runs = 10
+[Thread 1] Outliers = 1
+[Thread 1] CSV Results File = ./unit_test/results.csv
+[Thread 1] XML Results File = disabled
+[Thread 1] 
+[Thread 1] 
+[Thread 1] Sanity checking the user specified remote endpoint/in-memory dataset...
+[Thread 1] Sanity Check 1 of 3...
+[Thread 10] logged results to: unit_test/SparqlResults/1014691700_160750704.log
+
+[Thread 1] OK
+[Thread 1] Sanity Check 2 of 3...
+[Thread 10] logged results to: unit_test/SparqlResults/551215625_160750911.log
+[Thread 10] started responding in 0.022807455999999997s...
+
+[Thread 1] OK
+[Thread 1] Sanity Check 3 of 3...
+[Thread 10] logged results to: unit_test/SparqlResults/511815799_160750936.log
+[Thread 10] started responding in 0.022100466s...
+
+[Thread 1] OK
+[Thread 1] Sanity Checks passed required sanity level...
+[Thread 1] 
+[Thread 1] Starting Benchmarking...
+[Thread 1] 12 operations were loaded:
+[Thread 1] Operation ID 0 of type Remote SPARQL Query (queries/q1)
+[Thread 1] SELECT (COUNT(*) AS ?numtriples) { ?s ?p ?o  }
+
+[Thread 1] 
+[Thread 1] Operation ID 1 of type Remote SPARQL Query (queries/q2)
+[Thread 1] SELECT (COUNT(distinct ?s) AS ?numsubjects) { ?s a []  }
+
+[Thread 1] 
+[Thread 1] Operation ID 2 of type Remote SPARQL Query (queries/q3)
+[Thread 1] PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+SELECT (COUNT(distinct ?o) AS ?distinctclasses) { ?s rdf:type ?o }
+
+[Thread 1] 
+[Thread 1] Operation ID 3 of type Remote SPARQL Query (queries/q4)
+[Thread 1] SELECT (COUNT(distinct ?p) as ?distpredicates) { ?s ?p ?o }
+
+[Thread 1] 
+[Thread 1] Operation ID 4 of type Remote SPARQL Query (queries/q5)
+[Thread 1] SELECT (COUNT(DISTINCT ?s ) AS ?distsubjects) {  ?s ?p ?o   } 
+
+[Thread 1] 
+[Thread 1] Operation ID 5 of type Remote SPARQL Query (queries/q6)
+[Thread 1] SELECT (COUNT(DISTINCT ?o ) AS ?distobjects) {  ?s ?p ?o  filter(!isLiteral(?o)) } 
+
+
+[Thread 1] 
+[Thread 1] Operation ID 6 of type Remote SPARQL Query (queries/q7)
+[Thread 1] SELECT DISTINCT ?type { ?s a ?type }
+
+
+[Thread 1] 
+[Thread 1] Operation ID 7 of type Remote SPARQL Query (queries/q8)
+[Thread 1] SELECT DISTINCT ?p { ?s ?p ?o }
+
+
+[Thread 1] 
+[Thread 1] Operation ID 8 of type Remote SPARQL Query (queries/q9)
+[Thread 1] SELECT  ?class (COUNT(?s) AS ?count ) { ?s a ?class } GROUP BY ?class ORDER BY ?count
+
+
+[Thread 1] 
+[Thread 1] Operation ID 9 of type Remote SPARQL Query (queries/q10)
+[Thread 1] SELECT  ?p (COUNT(?s) AS ?count ) { ?s ?p ?o } GROUP BY ?p ORDER BY ?count
+
+
+[Thread 1] 
+[Thread 1] Operation ID 10 of type Remote SPARQL Query (queries/q11)
+[Thread 1] SELECT  ?p (COUNT(DISTINCT ?s ) AS ?count ) { ?s ?p ?o } GROUP BY ?p ORDER BY ?count
+
+
+[Thread 1] 
+[Thread 1] Operation ID 11 of type Remote SPARQL Query (queries/q12)
+[Thread 1] SELECT  ?p (COUNT(DISTINCT ?o ) AS ?count ) { ?s ?p ?o } GROUP BY ?p ORDER BY ?count
+
+
+[Thread 1] 
+[Thread 1] Running Warmups...
+[Thread 1] 
+[Thread 1] Warmup Run 1 of 1
+[Thread 1] Operation Order for this Run is 8, 5, 4, 10, 3, 7, 9, 2, 11, 0, 6, 1
+[Thread 1] Running Operation queries/q9...
+[Thread 10] logged results to: unit_test/SparqlResults/570296487_160750963.log
+[Thread 10] started responding in 0.018124058999999998s...
+
+[Thread 1] got 1 result(s) in 0.020673320000000002s
+[Thread 1] Sleeping for 0.64s before next operation
+[Thread 1] Running Operation queries/q6...
+[Thread 10] logged results to: unit_test/SparqlResults/1823859998_160751631.log
+[Thread 10] started responding in 0.020357696s...
+
+[Thread 1] got 1 result(s) in 0.02095459s
+[Thread 1] Sleeping for 0.906s before next operation
+[Thread 1] Running Operation queries/q5...
+[Thread 10] logged results to: unit_test/SparqlResults/983855559_160752560.log
+[Thread 10] started responding in 0.025889883000000002s...
+
+[Thread 1] got 1 result(s) in 0.027124034s
+[Thread 1] Sleeping for 0.589s before next operation
+[Thread 1] Running Operation queries/q11...
+[Thread 10] logged results to: unit_test/SparqlResults/1833161562_160753179.log
+[Thread 10] started responding in 0.025147607000000002s...
+
+[Thread 1] got 6 result(s) in 0.027045984000000002s
+[Thread 1] Sleeping for 0.952s before next operation
+[Thread 1] Running Operation queries/q4...
+[Thread 10] logged results to: unit_test/SparqlResults/2022166027_160754160.log
+[Thread 10] started responding in 0.018675723s...
+
+[Thread 1] got 1 result(s) in 0.019106616s
+[Thread 1] Sleeping for 0.597s before next operation
+[Thread 1] Running Operation queries/q8...
+[Thread 10] logged results to: unit_test/SparqlResults/1238948297_160754777.log
+[Thread 10] started responding in 0.019277445s...
+
+[Thread 1] got 6 result(s) in 0.020480524s
+[Thread 1] Sleeping for 0.152s before next operation
+[Thread 1] Running Operation queries/q10...
+[Thread 10] logged results to: unit_test/SparqlResults/1222792350_160754951.log
+[Thread 10] started responding in 0.024774197s...
+
+[Thread 1] got 6 result(s) in 0.026708583s
+[Thread 1] Sleeping for 0.659s before next operation
+[Thread 1] Running Operation queries/q3...
+[Thread 10] logged results to: unit_test/SparqlResults/552891695_160755639.log
+[Thread 10] started responding in 0.020277777s...
+
+[Thread 1] got 1 result(s) in 0.020836304s
+[Thread 1] Sleeping for 0.405s before next operation
+[Thread 1] Running Operation queries/q12...
+[Thread 10] logged results to: unit_test/SparqlResults/1539198114_160756066.log
+[Thread 10] started responding in 0.023830663999999998s...
+
+[Thread 1] got 6 result(s) in 0.025567563s
+[Thread 1] Sleeping for 0.318s before next operation
+[Thread 1] Running Operation queries/q1...
+[Thread 10] logged results to: unit_test/SparqlResults/151788013_160756411.log
+[Thread 10] started responding in 0.020370907s...
+
+[Thread 1] got 1 result(s) in 0.021246502s
+[Thread 1] Sleeping for 0.833s before next operation
+[Thread 1] Running Operation queries/q7...
+[Thread 10] logged results to: unit_test/SparqlResults/1703397600_160757267.log
+[Thread 10] started responding in 0.022518568s...
+
+[Thread 1] got 0 result(s) in 0.022782029999999998s
+[Thread 1] Sleeping for 0.03s before next operation
+[Thread 1] Running Operation queries/q2...
+[Thread 10] logged results to: unit_test/SparqlResults/1963744938_160757323.log
+[Thread 10] started responding in 0.019069432s...
+
+[Thread 1] got 1 result(s) in 0.019752423s
+[Thread 1] Sleeping for 0.67s before next operation
+[Thread 1] 
+[Thread 1] Total Response Time: 0,258314 seconds
+[Thread 1] Total Runtime: 0,272278 seconds
+[Thread 1] Minimum Operation Runtime: 0,019107 seconds (Operation queries/q4)
+[Thread 1] Maximum Operation Runtime: 0,027124 seconds (Operation queries/q5)
+[Thread 1] 
+[Thread 1] Running Benchmarks...
+[Thread 1] 
+[Thread 1] Start Time: 12/12/2016 15:07:58 +0000
+
+[Thread 10] Parallel Client manager starting...
+[Thread 10] Created Parallel Client ID 1
+[Thread 10] Created Parallel Client ID 2
+[Thread 10] Created Parallel Client ID 3
+[Thread 10] Created Parallel Client ID 4
+[Thread 10] Created Parallel Client ID 5
+[Thread 10] Created Parallel Client ID 6
+[Thread 10] Created Parallel Client ID 7
+[Thread 10] Created Parallel Client ID 8
+[Thread 10] Parallel Client manager is starting clients...
+
+[Thread 11] Client 1 starting new operation mix run
+[Thread 11] Current Time: 12/12/2016 15:07:58 +0000
+
+[Thread 12] Client 2 starting new operation mix run
+
+[Thread 13] Client 3 starting new operation mix run
+
+[Thread 12] Current Time: 12/12/2016 15:07:58 +0000
+
+[Thread 13] Current Time: 12/12/2016 15:07:58 +0000
+
+[Thread 19] Operation Order for this Run is 1, 2, 10, 4, 8, 11, 0, 3, 7, 9, 5, 6
+
+[Thread 21] Operation Order for this Run is 8, 6, 10, 7, 0, 4, 3, 2, 1, 11, 9, 5
+
+[Thread 20] Operation Order for this Run is 5, 1, 10, 3, 7, 11, 8, 9, 6, 2, 0, 4
+
+[Thread 21] Running Operation queries/q9...
+[Thread 19] Running Operation queries/q2...
+[Thread 20] Running Operation queries/q6...
+[Thread 24] logged results to: unit_test/SparqlResults/1823859998_160758106.log
+
+[Thread 22] logged results to: unit_test/SparqlResults/570296487_160758106.log
+
+[Thread 23] logged results to: unit_test/SparqlResults/1963744938_160758106.log
+
+[Thread 16] Client 6 starting new operation mix run
+
+[Thread 18] Client 8 starting new operation mix run
+[Thread 18] Current Time: 12/12/2016 15:07:58 +0000
+
+[Thread 17] Client 7 starting new operation mix run
+
+[Thread 14] Client 4 starting new operation mix run
+
+[Thread 15] Client 5 starting new operation mix run
+
+[Thread 16] Current Time: 12/12/2016 15:07:58 +0000
+
+[Thread 15] Current Time: 12/12/2016 15:07:58 +0000
+
+[Thread 14] Current Time: 12/12/2016 15:07:58 +0000
+
+[Thread 17] Current Time: 12/12/2016 15:07:58 +0000
+
+[Thread 25] Operation Order for this Run is 5, 0, 4, 10, 6, 7, 8, 9, 3, 2, 11, 1
+
+[Thread 26] Operation Order for this Run is 7, 9, 11, 10, 6, 3, 2, 4, 5, 1, 0, 8
+
+[Thread 24] started responding in 0.020395648000000002s...
+
+[Thread 27] Operation Order for this Run is 3, 6, 7, 2, 4, 1, 11, 0, 10, 8, 5, 9
+[Thread 27] Running Operation queries/q4...
+[Thread 29] Operation Order for this Run is 3, 1, 7, 6, 2, 8, 9, 11, 10, 5, 4, 0
+[Thread 29] Running Operation queries/q4...
+[Thread 28] Operation Order for this Run is 0, 11, 6, 5, 4, 10, 3, 2, 7, 9, 8, 1
+
+[Thread 25] Running Operation queries/q6...
+[Thread 28] Running Operation queries/q1...
+[Thread 26] Running Operation queries/q8...
+[Thread 31] logged results to: unit_test/SparqlResults/2022166027_160758129.log
+
+[Thread 30] logged results to: unit_test/SparqlResults/2022166027_160758129.log
+
+[Thread 23] started responding in 0.022714061s...
+
+[Thread 20] got 1 result(s) in 0.021244s
+[Thread 20] Sleeping for 0.506s before next operation
+
+[Thread 24] logged results to: unit_test/SparqlResults/1823859998_160758129.log
+
+[Thread 22] started responding in 0.023628043s...
+
+[Thread 19] got 1 result(s) in 0.02316501s
+[Thread 19] Sleeping for 0.245s before next operation
+
+[Thread 21] got 1 result(s) in 0.024068291999999998s
+[Thread 21] Sleeping for 0.987s before next operation
+
+[Thread 33] logged results to: unit_test/SparqlResults/1238948297_160758136.log
+
+[Thread 32] logged results to: unit_test/SparqlResults/151788013_160758137.log
+
+[Thread 31] started responding in 0.017464287s...
+
+[Thread 29] got 1 result(s) in 0.018005561s
+[Thread 29] Sleeping for 0.553s before next operation
+
+[Thread 24] started responding in 0.017503322s...
+
+[Thread 25] got 1 result(s) in 0.017877373s
+[Thread 25] Sleeping for 0.681s before next operation
+
+[Thread 30] started responding in 0.021182469000000002s...
+
+[Thread 27] got 1 result(s) in 0.021704270999999997s
+[Thread 27] Sleeping for 0.103s before next operation
+
+[Thread 33] started responding in 0.017457028s...
+
+[Thread 26] got 6 result(s) in 0.018313842s
+[Thread 26] Sleeping for 0.887s before next operation
+
+[Thread 32] started responding in 0.022600269s...
+
+[Thread 28] got 1 result(s) in 0.023130505s
+[Thread 28] Sleeping for 0.812s before next operation
+
+[Thread 27] Running Operation queries/q7...
+[Thread 32] logged results to: unit_test/SparqlResults/1703397600_160758256.log
+[Thread 32] started responding in 0.018477855s...
+
+[Thread 27] got 0 result(s) in 0.018677908s
+[Thread 27] Sleeping for 0.932s before next operation
+
+[Thread 19] Running Operation queries/q3...
+[Thread 32] logged results to: unit_test/SparqlResults/552891695_160758378.log
+[Thread 32] started responding in 0.018640557000000002s...
+
+[Thread 19] got 1 result(s) in 0.019022485s
+[Thread 19] Sleeping for 0.88s before next operation
+
+[Thread 20] Running Operation queries/q2...
+[Thread 32] logged results to: unit_test/SparqlResults/1963744938_160758638.log
+[Thread 32] started responding in 0.023497919s...
+
+[Thread 20] got 1 result(s) in 0.023997807000000003s
+[Thread 20] Sleeping for 0.184s before next operation
+
+[Thread 29] Running Operation queries/q2...
+[Thread 32] logged results to: unit_test/SparqlResults/1963744938_160758702.log
+[Thread 32] started responding in 0.017599534s...
+
+[Thread 29] got 1 result(s) in 0.018022679s
+[Thread 29] Sleeping for 0.566s before next operation
+
+[Thread 25] Running Operation queries/q1...
+[Thread 32] logged results to: unit_test/SparqlResults/151788013_160758831.log
+
+[Thread 20] Running Operation queries/q11...
+[Thread 33] logged results to: unit_test/SparqlResults/1833161562_160758847.log
+
+[Thread 32] started responding in 0.022939869s...
+
+[Thread 25] got 1 result(s) in 0.023433142s
+[Thread 25] Sleeping for 0.487s before next operation
+
+[Thread 33] started responding in 0.022636782s...
+
+[Thread 20] got 6 result(s) in 0.024016518s
+[Thread 20] Sleeping for 0.651s before next operation
+
+[Thread 28] Running Operation queries/q12...
+[Thread 33] logged results to: unit_test/SparqlResults/1539198114_160758973.log
+[Thread 33] started responding in 0.023711018s...
+
+[Thread 28] got 6 result(s) in 0.024998556s
+[Thread 28] Sleeping for 0.351s before next operation
+
+[Thread 26] Running Operation queries/q10...
+[Thread 33] logged results to: unit_test/SparqlResults/1222792350_160759042.log
+[Thread 33] started responding in 0.018942549s...
+
+[Thread 26] got 6 result(s) in 0.020262350999999998s
+[Thread 26] Sleeping for 0.455s before next operation
+
+[Thread 21] Running Operation queries/q7...
+[Thread 33] logged results to: unit_test/SparqlResults/1703397600_160759123.log
+[Thread 33] started responding in 0.022113149s...
+
+[Thread 21] got 0 result(s) in 0.02237115s
+[Thread 21] Sleeping for 0.206s before next operation
+
+[Thread 27] Running Operation queries/q8...
+[Thread 33] logged results to: unit_test/SparqlResults/1238948297_160759207.log
+[Thread 33] started responding in 0.018433592999999998s...
+
+[Thread 27] got 6 result(s) in 0.018966225s
+[Thread 27] Sleeping for 0.521s before next operation
+
+[Thread 19] Running Operation queries/q11...
+[Thread 33] logged results to: unit_test/SparqlResults/1833161562_160759278.log
+
+[Thread 29] Running Operation queries/q8...
+[Thread 32] logged results to: unit_test/SparqlResults/1238948297_160759287.log
+
+[Thread 33] started responding in 0.022647575s...
+
+[Thread 19] got 6 result(s) in 0.023961608s
+[Thread 19] Sleeping for 0.221s before next operation
+
+[Thread 32] started responding in 0.021294258s...
+
+[Thread 29] got 6 result(s) in 0.021905809000000002s
+[Thread 29] Sleeping for 0.182s before next operation
+
+[Thread 25] Running Operation queries/q5...
+[Thread 32] logged results to: unit_test/SparqlResults/983855559_160759342.log
+
+[Thread 28] Running Operation queries/q7...
+[Thread 33] logged results to: unit_test/SparqlResults/1703397600_160759351.log
+
+[Thread 21] Running Operation queries/q11...
+[Thread 30] logged results to: unit_test/SparqlResults/1833161562_160759353.log
+
+[Thread 32] started responding in 0.017413966s...
+
+[Thread 25] got 1 result(s) in 0.017922603999999998s
+[Thread 25] Sleeping for 0.218s before next operation
+
+[Thread 33] started responding in 0.020652926000000002s...
+
+[Thread 28] got 0 result(s) in 0.020875533999999998s
+[Thread 28] Sleeping for 0.018s before next operation
+
+[Thread 30] started responding in 0.024249843s...
+
+[Thread 21] got 6 result(s) in 0.025178738s
+[Thread 21] Sleeping for 0.38s before next operation
+
+[Thread 28] Running Operation queries/q6...
+[Thread 30] logged results to: unit_test/SparqlResults/1823859998_160759391.log
+[Thread 30] started responding in 0.023757534s...
+
+[Thread 28] got 1 result(s) in 0.024167846s
+[Thread 28] Sleeping for 0.297s before next operation
+
+[Thread 29] Running Operation queries/q7...
+[Thread 30] logged results to: unit_test/SparqlResults/1703397600_160759493.log
+[Thread 30] started responding in 0.021887162s...
+
+[Thread 29] got 0 result(s) in 0.022063124s
+[Thread 29] Sleeping for 0.078s before next operation
+
+[Thread 26] Running Operation queries/q12...
+[Thread 30] logged results to: unit_test/SparqlResults/1539198114_160759518.log
+
+[Thread 20] Running Operation queries/q4...
+[Thread 33] logged results to: unit_test/SparqlResults/2022166027_160759523.log
+
+[Thread 19] Running Operation queries/q5...
+[Thread 32] logged results to: unit_test/SparqlResults/983855559_160759524.log
+
+[Thread 30] started responding in 0.021720815s...
+
+[Thread 33] started responding in 0.017095783s...
+
+[Thread 20] got 1 result(s) in 0.017380905999999998s
+
+[Thread 26] got 6 result(s) in 0.022615046s
+
+[Thread 20] Sleeping for 0.639s before next operation
+
+[Thread 26] Sleeping for 0.647s before next operation
+
+[Thread 32] started responding in 0.021042770000000002s...
+
+[Thread 19] got 1 result(s) in 0.021401765s
+[Thread 19] Sleeping for 0.358s before next operation
+
+[Thread 25] Running Operation queries/q11...
+[Thread 32] logged results to: unit_test/SparqlResults/1833161562_160759579.log
+
+[Thread 29] Running Operation queries/q3...
+[Thread 33] logged results to: unit_test/SparqlResults/552891695_160759594.log
+
+[Thread 32] started responding in 0.018005945s...
+
+[Thread 25] got 6 result(s) in 0.018845339s
+[Thread 25] Sleeping for 0.343s before next operation
+
+[Thread 33] started responding in 0.021604762s...
+
+[Thread 29] got 1 result(s) in 0.021944409s
+[Thread 29] Sleeping for 0.883s before next operation
+
+[Thread 28] Running Operation queries/q5...
+[Thread 33] logged results to: unit_test/SparqlResults/983855559_160759713.log
+[Thread 33] started responding in 0.02152388s...
+
+[Thread 28] got 1 result(s) in 0.021928117s
+[Thread 28] Sleeping for 0.555s before next operation
+
+[Thread 27] Running Operation queries/q3...
+[Thread 33] logged results to: unit_test/SparqlResults/552891695_160759748.log
+
+[Thread 21] Running Operation queries/q8...
+[Thread 32] logged results to: unit_test/SparqlResults/1238948297_160759759.log
+
+[Thread 33] started responding in 0.02233006s...
+
+[Thread 27] got 1 result(s) in 0.022679092s
+[Thread 27] Sleeping for 0.799s before next operation
+
+[Thread 32] started responding in 0.016702372s...
+
+[Thread 21] got 6 result(s) in 0.017057267s
+[Thread 21] Sleeping for 0.295s before next operation
+
+[Thread 19] Running Operation queries/q9...
+[Thread 32] logged results to: unit_test/SparqlResults/570296487_160759905.log
+[Thread 32] started responding in 0.017302806s...
+
+[Thread 19] got 1 result(s) in 0.017621134s
+[Thread 19] Sleeping for 0.88s before next operation
+
+[Thread 25] Running Operation queries/q7...
+[Thread 32] logged results to: unit_test/SparqlResults/1703397600_160759942.log
+[Thread 32] started responding in 0.017700399999999998s...
+
+[Thread 25] got 0 result(s) in 0.017882036s
+[Thread 25] Sleeping for 0.805s before next operation
+
+[Thread 21] Running Operation queries/q1...
+[Thread 32] logged results to: unit_test/SparqlResults/151788013_160800072.log
+[Thread 32] started responding in 0.024192098999999998s...
+
+[Thread 21] got 1 result(s) in 0.02464556s
+[Thread 21] Sleeping for 0.897s before next operation
+
+[Thread 20] Running Operation queries/q8...
+[Thread 32] logged results to: unit_test/SparqlResults/1238948297_160800181.log
+
+[Thread 26] Running Operation queries/q11...
+[Thread 33] logged results to: unit_test/SparqlResults/1833161562_160800189.log
+
+[Thread 32] started responding in 0.017600650000000002s...
+
+[Thread 20] got 6 result(s) in 0.018438234999999997s
+[Thread 20] Sleeping for 0.047s before next operation
+
+[Thread 33] started responding in 0.021772200000000002s...
+
+[Thread 26] got 6 result(s) in 0.022695782s
+[Thread 26] Sleeping for 0.45s before next operation
+
+[Thread 20] Running Operation queries/q12...
+[Thread 33] logged results to: unit_test/SparqlResults/1539198114_160800247.log
+[Thread 33] started responding in 0.022359570000000002s...
+
+[Thread 20] got 6 result(s) in 0.023379004s
+[Thread 20] Sleeping for 0.844s before next operation
+
+[Thread 28] Running Operation queries/q11...
+[Thread 33] logged results to: unit_test/SparqlResults/1833161562_160800291.log
+[Thread 33] started responding in 0.017899804s...
+
+[Thread 28] got 6 result(s) in 0.018975374s
+[Thread 28] Sleeping for 0.789s before next operation
+
+[Thread 29] Running Operation queries/q9...
+[Thread 33] logged results to: unit_test/SparqlResults/570296487_160800500.log
+[Thread 33] started responding in 0.018635004s...
+
+[Thread 29] got 1 result(s) in 0.019025332s
+[Thread 29] Sleeping for 0.416s before next operation
+
+[Thread 27] Running Operation queries/q5...
+[Thread 33] logged results to: unit_test/SparqlResults/983855559_160800571.log
+[Thread 33] started responding in 0.018897459000000002s...
+
+[Thread 27] got 1 result(s) in 0.019261649999999998s
+[Thread 27] Sleeping for 0.971s before next operation
+
+[Thread 26] Running Operation queries/q7...
+[Thread 33] logged results to: unit_test/SparqlResults/1703397600_160800663.log
+[Thread 33] started responding in 0.017886617s...
+
+[Thread 26] got 0 result(s) in 0.018059628s
+[Thread 26] Sleeping for 0.102s before next operation
+
+[Thread 25] Running Operation queries/q8...
+[Thread 33] logged results to: unit_test/SparqlResults/1238948297_160800766.log
+
+[Thread 26] Running Operation queries/q4...
+[Thread 33] started responding in 0.01753224s...
+
+[Thread 32] logged results to: unit_test/SparqlResults/2022166027_160800784.log
+
+[Thread 25] got 6 result(s) in 0.017937367s
+[Thread 25] Sleeping for 0.391s before next operation
+
+[Thread 32] started responding in 0.017441845s...
+
+[Thread 26] got 1 result(s) in 0.017757843000000002s
+[Thread 26] Sleeping for 0.761s before next operation
+
+[Thread 19] Running Operation queries/q12...
+[Thread 32] logged results to: unit_test/SparqlResults/1539198114_160800803.log
+[Thread 32] started responding in 0.023053136s...
+
+[Thread 19] got 6 result(s) in 0.023843112000000003s
+[Thread 19] Sleeping for 0.996s before next operation
+
+[Thread 29] Running Operation queries/q10...
+[Thread 32] logged results to: unit_test/SparqlResults/1222792350_160800936.log
+[Thread 32] started responding in 0.019496184s...
+
+[Thread 29] got 6 result(s) in 0.020170937s
+[Thread 29] Sleeping for 0.916s before next operation
+
+[Thread 21] Running Operation queries/q5...
+[Thread 32] logged results to: unit_test/SparqlResults/983855559_160800995.log
+[Thread 32] started responding in 0.017884650000000002s...
+
+[Thread 21] got 1 result(s) in 0.018197915999999998s
+[Thread 21] Sleeping for 0.411s before next operation
+
+[Thread 28] Running Operation queries/q4...
+[Thread 32] logged results to: unit_test/SparqlResults/2022166027_160801100.log
+
+[Thread 20] Running Operation queries/q9...
+[Thread 33] logged results to: unit_test/SparqlResults/570296487_160801116.log
+
+[Thread 32] started responding in 0.018921997s...
+
+[Thread 28] got 1 result(s) in 0.019287943999999998s
+[Thread 28] Sleeping for 0.448s before next operation
+
+[Thread 33] started responding in 0.02235287s...
+
+[Thread 20] got 1 result(s) in 0.022666298s
+[Thread 20] Sleeping for 0.932s before next operation
+
+[Thread 25] Running Operation queries/q9...
+[Thread 33] logged results to: unit_test/SparqlResults/570296487_160801176.log
+[Thread 33] started responding in 0.01766912s...
+
+[Thread 25] got 1 result(s) in 0.01802678s
+[Thread 25] Sleeping for 0.846s before next operation
+
+[Thread 21] Running Operation queries/q4...
+[Thread 33] logged results to: unit_test/SparqlResults/2022166027_160801425.log
+[Thread 33] started responding in 0.01793014s...
+
+[Thread 21] got 1 result(s) in 0.018270657s
+[Thread 21] Sleeping for 0.406s before next operation
+
+[Thread 27] Running Operation queries/q2...
+[Thread 33] logged results to: unit_test/SparqlResults/1963744938_160801562.log
+
+[Thread 26] Running Operation queries/q3...
+[Thread 32] logged results to: unit_test/SparqlResults/552891695_160801564.log
+
+[Thread 28] Running Operation queries/q3...
+[Thread 30] logged results to: unit_test/SparqlResults/552891695_160801568.log
+
+[Thread 33] started responding in 0.018090074999999997s...
+
+[Thread 27] got 1 result(s) in 0.018511328s
+[Thread 27] Sleeping for 0.723s before next operation
+
+[Thread 32] started responding in 0.017599488s...
+
+[Thread 26] got 1 result(s) in 0.01785482s
+[Thread 26] Sleeping for 0.425s before next operation
+
+[Thread 30] started responding in 0.018699658s...
+
+[Thread 28] got 1 result(s) in 0.019068335000000002s
+[Thread 28] Sleeping for 0.902s before next operation
+
+[Thread 19] Running Operation queries/q1...
+[Thread 30] logged results to: unit_test/SparqlResults/151788013_160801824.log
+[Thread 30] started responding in 0.023634631s...
+
+[Thread 19] got 1 result(s) in 0.023977841000000003s
+[Thread 19] Sleeping for 0.935s before next operation
+
+[Thread 21] Running Operation queries/q3...
+[Thread 30] logged results to: unit_test/SparqlResults/552891695_160801850.log
+[Thread 30] started responding in 0.021952977000000002s...
+
+[Thread 21] got 1 result(s) in 0.022315867s
+[Thread 21] Sleeping for 0.549s before next operation
+
+[Thread 29] Running Operation queries/q12...
+[Thread 30] logged results to: unit_test/SparqlResults/1539198114_160801873.log
+[Thread 30] started responding in 0.017941475000000002s...
+
+[Thread 29] got 6 result(s) in 0.018690793s
+[Thread 29] Sleeping for 0.322s before next operation
+
+[Thread 26] Running Operation queries/q5...
+[Thread 30] logged results to: unit_test/SparqlResults/983855559_160802007.log
+[Thread 30] started responding in 0.021880697s...
+
+[Thread 26] got 1 result(s) in 0.022198124s
+[Thread 26] Sleeping for 0.207s before next operation
+
+[Thread 25] Running Operation queries/q10...
+[Thread 30] logged results to: unit_test/SparqlResults/1222792350_160802041.log
+[Thread 30] started responding in 0.021937777000000002s...
+
+[Thread 25] got 6 result(s) in 0.022633188000000002s
+[Thread 25] Sleeping for 0.466s before next operation
+
+[Thread 20] Running Operation queries/q10...
+[Thread 30] logged results to: unit_test/SparqlResults/1222792350_160802072.log
+[Thread 30] started responding in 0.018799675000000002s...
+
+[Thread 20] got 6 result(s) in 0.01952149s
+[Thread 20] Sleeping for 0.418s before next operation
+
+[Thread 29] Running Operation queries/q11...
+[Thread 30] logged results to: unit_test/SparqlResults/1833161562_160802215.log
+[Thread 30] started responding in 0.018880707s...
+
+[Thread 29] got 6 result(s) in 0.019784844s
+[Thread 29] Sleeping for 0.202s before next operation
+
+[Thread 26] Running Operation queries/q6...
+[Thread 30] logged results to: unit_test/SparqlResults/1823859998_160802238.log
+[Thread 30] started responding in 0.017307422s...
+
+[Thread 26] got 1 result(s) in 0.017638851s
+[Thread 26] Sleeping for 0.733s before next operation
+
+[Thread 27] Running Operation queries/q12...
+[Thread 30] logged results to: unit_test/SparqlResults/1539198114_160802305.log
+[Thread 30] started responding in 0.021957136999999998s...
+
+[Thread 27] got 6 result(s) in 0.022717815000000002s
+[Thread 27] Sleeping for 0.605s before next operation
+
+[Thread 21] Running Operation queries/q2...
+[Thread 30] logged results to: unit_test/SparqlResults/1963744938_160802422.log
+
+[Thread 29] Running Operation queries/q6...
+[Thread 32] logged results to: unit_test/SparqlResults/1823859998_160802437.log
+
+[Thread 30] started responding in 0.017846788s...
+
+[Thread 21] got 1 result(s) in 0.018158154s
+[Thread 21] Sleeping for 0.216s before next operation
+
+[Thread 32] started responding in 0.017487021s...
+
+[Thread 29] got 1 result(s) in 0.017768891s
+[Thread 29] Sleeping for 0.51s before next operation
+
+[Thread 28] Running Operation queries/q8...
+[Thread 32] logged results to: unit_test/SparqlResults/1238948297_160802490.log
+[Thread 32] started responding in 0.017085836s...
+
+[Thread 28] got 6 result(s) in 0.017533197s
+[Thread 28] Sleeping for 0.045s before next operation
+
+[Thread 20] Running Operation queries/q7...
+[Thread 32] logged results to: unit_test/SparqlResults/1703397600_160802510.log
+[Thread 32] started responding in 0.017202456s...
+
+[Thread 20] got 0 result(s) in 0.017359211s
+[Thread 20] Sleeping for 0.616s before next operation
+
+[Thread 25] Running Operation queries/q4...
+[Thread 32] logged results to: unit_test/SparqlResults/2022166027_160802531.log
+[Thread 32] started responding in 0.016895529s...
+
+[Thread 25] got 1 result(s) in 0.017184187s
+[Thread 25] Sleeping for 0.964s before next operation
+
+[Thread 28] Running Operation queries/q10...
+[Thread 32] logged results to: unit_test/SparqlResults/1222792350_160802554.log
+[Thread 32] started responding in 0.018147105s...
+
+[Thread 28] got 6 result(s) in 0.018745999000000003s
+[Thread 28] Sleeping for 0.272s before next operation
+
+[Thread 21] Running Operation queries/q12...
+[Thread 32] logged results to: unit_test/SparqlResults/1539198114_160802658.log
+[Thread 32] started responding in 0.02269929s...
+
+[Thread 21] got 6 result(s) in 0.023343461000000003s
+[Thread 21] Sleeping for 0.467s before next operation
+
+[Thread 19] Running Operation queries/q4...
+[Thread 32] logged results to: unit_test/SparqlResults/2022166027_160802784.log
+[Thread 32] started responding in 0.021544429s...
+
+[Thread 19] got 1 result(s) in 0.021822716s
+[Thread 19] Sleeping for 0.944s before next operation
+
+[Thread 28] Running Operation queries/q9...
+[Thread 32] logged results to: unit_test/SparqlResults/570296487_160802846.log
+[Thread 32] started responding in 0.021575828000000002s...
+
+[Thread 28] got 1 result(s) in 0.021916932s
+[Thread 28] Sleeping for 0.703s before next operation
+
+[Thread 27] Running Operation queries/q1...
+[Thread 32] logged results to: unit_test/SparqlResults/151788013_160802933.log
+[Thread 32] started responding in 0.01792181s...
+
+[Thread 27] got 1 result(s) in 0.018268307s
+[Thread 27] Sleeping for 0.208s before next operation
+
+[Thread 29] Running Operation queries/q5...
+[Thread 32] logged results to: unit_test/SparqlResults/983855559_160802966.log
+[Thread 32] started responding in 0.017358721s...
+
+[Thread 29] got 1 result(s) in 0.017647068000000002s
+[Thread 29] Sleeping for 0.638s before next operation
+
+[Thread 26] Running Operation queries/q2...
+[Thread 32] logged results to: unit_test/SparqlResults/1963744938_160802989.log
+[Thread 32] started responding in 0.021088974s...
+
+[Thread 26] got 1 result(s) in 0.021356278s
+[Thread 26] Sleeping for 0.642s before next operation
+
+[Thread 20] Running Operation queries/q3...
+[Thread 32] logged results to: unit_test/SparqlResults/552891695_160803145.log
+
+[Thread 21] Running Operation queries/q10...
+[Thread 30] logged results to: unit_test/SparqlResults/1222792350_160803149.log
+
+[Thread 27] Running Operation queries/q11...
+[Thread 33] logged results to: unit_test/SparqlResults/1833161562_160803160.log
+
+[Thread 32] started responding in 0.017778454s...
+
+[Thread 20] got 1 result(s) in 0.018044305s
+[Thread 20] Sleeping for 0.781s before next operation
+
+[Thread 30] started responding in 0.022293651s...
+
+[Thread 21] got 6 result(s) in 0.022929079999999998s
+[Thread 21] Sleeping for 0.832s before next operation
+
+[Thread 33] started responding in 0.0218745s...
+
+[Thread 27] got 6 result(s) in 0.022629967s
+[Thread 27] Sleeping for 0.24s before next operation
+[Thread 27] Running Operation queries/q9...
+[Thread 33] logged results to: unit_test/SparqlResults/570296487_160803424.log
+[Thread 33] started responding in 0.02228712s...
+
+[Thread 27] got 1 result(s) in 0.022604373s
+[Thread 27] Sleeping for 0.198s before next operation
+
+[Thread 25] Running Operation queries/q3...
+[Thread 33] logged results to: unit_test/SparqlResults/552891695_160803513.log
+[Thread 33] started responding in 0.022561834s...
+
+[Thread 25] got 1 result(s) in 0.02294801s
+[Thread 25] Sleeping for 0.593s before next operation
+
+[Thread 28] Running Operation queries/q2...
+[Thread 33] logged results to: unit_test/SparqlResults/1963744938_160803572.log
+[Thread 33] started responding in 0.020987552s...
+
+[Thread 28] got 1 result(s) in 0.021233139s
+[Thread 28] Sleeping for 0.76s before next operation
+
+[Thread 29] Running Operation queries/q1...
+[Thread 33] logged results to: unit_test/SparqlResults/151788013_160803622.log
+[Thread 33] started responding in 0.021041057s...
+
+[Thread 29] got 1 result(s) in 0.021315854000000002s
+[Thread 29] Sleeping for 0.573s before next operation
+
+[Thread 27] Running Operation queries/q6...
+[Thread 33] logged results to: unit_test/SparqlResults/1823859998_160803646.log
+
+[Thread 26] Running Operation queries/q1...
+[Thread 30] logged results to: unit_test/SparqlResults/151788013_160803653.log
+
+[Thread 33] started responding in 0.021525896s...
+
+[Thread 27] got 1 result(s) in 0.021804083s
+[Thread 27] Sleeping for 0.22s before next operation
+
+[Thread 30] started responding in 0.017253789000000002s...
+
+[Thread 26] got 1 result(s) in 0.017612324999999998s
+[Thread 26] Sleeping for 0.128s before next operation
+
+[Thread 19] Running Operation queries/q8...
+[Thread 30] logged results to: unit_test/SparqlResults/1238948297_160803751.log
+[Thread 30] started responding in 0.022187863s...
+
+[Thread 19] got 6 result(s) in 0.022549238s
+[Thread 19] Sleeping for 0.062s before next operation
+
+[Thread 26] Running Operation queries/q9...
+[Thread 30] logged results to: unit_test/SparqlResults/570296487_160803800.log
+[Thread 30] started responding in 0.017785779999999998s...
+
+[Thread 26] got 1 result(s) in 0.01806694s
+[Thread 26] Sleeping for 0.726s before next operation
+
+[Thread 19] Running Operation queries/q10...
+[Thread 30] logged results to: unit_test/SparqlResults/1222792350_160803836.log
+[Thread 30] started responding in 0.024060643s...
+
+[Thread 19] got 6 result(s) in 0.024870845s
+[Thread 19] Sleeping for 0.847s before next operation
+
+[Thread 27] Running Operation queries/q10...
+[Thread 30] logged results to: unit_test/SparqlResults/1222792350_160803888.log
+[Thread 30] started responding in 0.022866209000000002s...
+
+[Thread 27] got 6 result(s) in 0.023660799s
+[Thread 27] Sleeping for 0.756s before next operation
+
+[Thread 20] Running Operation queries/q1...
+[Thread 30] logged results to: unit_test/SparqlResults/151788013_160803945.log
+[Thread 30] started responding in 0.017780627s...
+
+[Thread 20] got 1 result(s) in 0.018041107s
+[Thread 20] Sleeping for 0.908s before next operation
+
+[Thread 21] Running Operation queries/q6...
+[Thread 30] logged results to: unit_test/SparqlResults/1823859998_160804005.log
+[Thread 30] started responding in 0.0179801s...
+
+[Thread 21] got 1 result(s) in 0.018246261s
+[Thread 21] Sleeping for 0.33s before next operation
+
+[Thread 25] Running Operation queries/q12...
+[Thread 30] logged results to: unit_test/SparqlResults/1539198114_160804130.log
+[Thread 30] started responding in 0.022051348999999998s...
+
+[Thread 25] got 6 result(s) in 0.022583977999999998s
+[Thread 25] Sleeping for 0.574s before next operation
+
+[Thread 16] Operation Mix Run 1 by Client 6
+[Thread 16] 
+[Thread 16] Total Response Time: 0,230690 seconds
+[Thread 16] Total Runtime: 0,236345 seconds
+[Thread 16] Minimum Operation Runtime: 0,017647 seconds (Operation queries/q5)
+[Thread 16] Maximum Operation Runtime: 0,022063 seconds (Operation queries/q7)
+[Thread 16] 
+[Thread 16] Client 6 starting new operation mix run
+[Thread 16] Current Time: 12/12/2016 15:08:04 +0000
+
+[Thread 29] Operation Order for this Run is 4, 2, 3, 6, 1, 0, 7, 9, 11, 8, 5, 10
+[Thread 29] Running Operation queries/q5...
+[Thread 30] logged results to: unit_test/SparqlResults/983855559_160804218.log
+[Thread 30] started responding in 0.022243848s...
+
+[Thread 29] got 1 result(s) in 0.022496508s
+[Thread 29] Sleeping for 0.074s before next operation
+[Thread 29] Running Operation queries/q3...
+[Thread 30] logged results to: unit_test/SparqlResults/552891695_160804316.log
+[Thread 30] started responding in 0.018877339s...
+
+[Thread 29] got 1 result(s) in 0.019221369s
+[Thread 29] Sleeping for 0.227s before next operation
+
+[Thread 13] Operation Mix Run 2 by Client 3
+
+[Thread 15] Operation Mix Run 3 by Client 5
+
+[Thread 13] 
+
+[Thread 15] 
+
+[Thread 13] Total Response Time: 0,249473 seconds
+
+[Thread 15] Total Response Time: 0,245563 seconds
+
+[Thread 13] Total Runtime: 0,254782 seconds
+
+[Thread 15] Total Runtime: 0,251861 seconds
+
+[Thread 13] Minimum Operation Runtime: 0,017057 seconds (Operation queries/q8)
+
+[Thread 15] Minimum Operation Runtime: 0,017533 seconds (Operation queries/q8)
+
+[Thread 13] Maximum Operation Runtime: 0,025179 seconds (Operation queries/q11)
+[Thread 13] 
+[Thread 13] Client 3 starting new operation mix run
+
+[Thread 15] Maximum Operation Runtime: 0,024999 seconds (Operation queries/q12)
+[Thread 15] 
+
+[Thread 13] Current Time: 12/12/2016 15:08:04 +0000
+
+[Thread 15] Operation Order for this Run is 4, 2, 5, 0, 3, 7, 1, 8, 11, 6, 9, 10
+[Thread 15] Running Operation queries/q5...
+[Thread 28] logged results to: unit_test/SparqlResults/983855559_160804355.log
+[Thread 28] started responding in 0.021986749s...
+
+[Thread 15] got 1 result(s) in 0.02233634s
+[Thread 15] Sleeping for 0.739s before next operation
+
+[Thread 17] Operation Mix Run 4 by Client 7
+[Thread 17] 
+[Thread 17] Total Response Time: 0,228137 seconds
+[Thread 17] Total Runtime: 0,234432 seconds
+[Thread 17] Minimum Operation Runtime: 0,017612 seconds (Operation queries/q1)
+[Thread 17] Maximum Operation Runtime: 0,022696 seconds (Operation queries/q11)
+[Thread 17] 
+
+[Thread 29] Running Operation queries/q4...
+[Thread 17] logged results to: unit_test/SparqlResults/2022166027_160804563.log
+[Thread 17] started responding in 0.019463519999999998s...
+
+[Thread 29] got 1 result(s) in 0.019718224s
+[Thread 29] Sleeping for 0.036s before next operation
+[Thread 29] Running Operation queries/q7...
+[Thread 17] logged results to: unit_test/SparqlResults/1703397600_160804619.log
+[Thread 17] started responding in 0.016663103s...
+
+[Thread 29] got 0 result(s) in 0.016819194s
+[Thread 29] Sleeping for 0.64s before next operation
+
+[Thread 14] Operation Mix Run 5 by Client 4
+[Thread 14] 
+[Thread 14] Total Response Time: 0,245844 seconds
+[Thread 14] Total Runtime: 0,251486 seconds
+[Thread 14] Minimum Operation Runtime: 0,018268 seconds (Operation queries/q1)
+[Thread 14] Maximum Operation Runtime: 0,023661 seconds (Operation queries/q10)
+[Thread 14] 
+
+[Thread 19] Running Operation queries/q6...
+[Thread 14] logged results to: unit_test/SparqlResults/1823859998_160804709.log
+
+[Thread 25] Running Operation queries/q2...
+[Thread 27] logged results to: unit_test/SparqlResults/1963744938_160804727.log
+
+[Thread 14] started responding in 0.019844242999999998s...
+
+[Thread 19] got 1 result(s) in 0.020098531000000003s
+[Thread 19] Sleeping for 0.852s before next operation
+
+[Thread 27] started responding in 0.018098541s...
+
+[Thread 25] got 1 result(s) in 0.018458492s
+[Thread 25] Sleeping for 0.821s before next operation
+
+[Thread 20] Running Operation queries/q5...
+[Thread 27] logged results to: unit_test/SparqlResults/983855559_160804872.log
+[Thread 27] started responding in 0.018110235s...
+
+[Thread 20] got 1 result(s) in 0.018372847s
+[Thread 20] Sleeping for 0.649s before next operation
+
+[Thread 15] Running Operation queries/q3...
+[Thread 27] logged results to: unit_test/SparqlResults/552891695_160805117.log
+[Thread 27] started responding in 0.021941006000000002s...
+
+[Thread 15] got 1 result(s) in 0.022192692s
+[Thread 15] Sleeping for 0.181s before next operation
+
+[Thread 29] Running Operation queries/q2...
+[Thread 27] logged results to: unit_test/SparqlResults/1963744938_160805277.log
+[Thread 27] started responding in 0.022021692000000002s...
+
+[Thread 29] got 1 result(s) in 0.02227125s
+[Thread 29] Sleeping for 0.712s before next operation
+
+[Thread 15] Running Operation queries/q6...
+[Thread 27] logged results to: unit_test/SparqlResults/1823859998_160805321.log
+[Thread 27] started responding in 0.017282901s...
+
+[Thread 15] got 1 result(s) in 0.017544311s
+[Thread 15] Sleeping for 0.461s before next operation
+
+[Thread 11] Operation Mix Run 6 by Client 1
+[Thread 11] 
+[Thread 11] Total Response Time: 0,235611 seconds
+[Thread 11] Total Runtime: 0,242462 seconds
+[Thread 11] Minimum Operation Runtime: 0,017359 seconds (Operation queries/q7)
+[Thread 11] Maximum Operation Runtime: 0,024017 seconds (Operation queries/q11)
+[Thread 11] 
+
+[Thread 18] Operation Mix Run 7 by Client 8
+[Thread 18] 
+[Thread 18] Total Response Time: 0,230310 seconds
+[Thread 18] Total Runtime: 0,235732 seconds
+[Thread 18] Minimum Operation Runtime: 0,017184 seconds (Operation queries/q4)
+[Thread 18] Maximum Operation Runtime: 0,023433 seconds (Operation queries/q1)
+[Thread 18] 
+
+[Thread 19] Running Operation queries/q7...
+[Thread 18] logged results to: unit_test/SparqlResults/1703397600_160805582.log
+[Thread 18] started responding in 0.021623601s...
+
+[Thread 19] got 0 result(s) in 0.021788768s
+[Thread 19] Sleeping for 0.222s before next operation
+
+[Thread 15] Running Operation queries/q1...
+[Thread 18] logged results to: unit_test/SparqlResults/151788013_160805800.log
+[Thread 18] started responding in 0.017497s...
+
+[Thread 15] got 1 result(s) in 0.017783096s
+[Thread 15] Sleeping for 0.34s before next operation
+
+[Thread 12] Operation Mix Run 8 by Client 2
+[Thread 12] 
+[Thread 12] Total Response Time: 0,258296 seconds
+[Thread 12] Total Runtime: 0,264123 seconds
+[Thread 12] Minimum Operation Runtime: 0,017621 seconds (Operation queries/q9)
+[Thread 12] Maximum Operation Runtime: 0,024871 seconds (Operation queries/q10)
+[Thread 12] 
+
+[Thread 29] Running Operation queries/q1...
+[Thread 12] logged results to: unit_test/SparqlResults/151788013_160806012.log
+[Thread 12] started responding in 0.018038547999999998s...
+
+[Thread 29] got 1 result(s) in 0.018288933s
+[Thread 29] Sleeping for 0.74s before next operation
+
+[Thread 15] Running Operation queries/q4...
+[Thread 12] logged results to: unit_test/SparqlResults/2022166027_160806159.log
+[Thread 12] started responding in 0.018360024s...
+
+[Thread 15] got 1 result(s) in 0.018690682s
+[Thread 15] Sleeping for 0.436s before next operation
+[Thread 15] Running Operation queries/q8...
+[Thread 12] logged results to: unit_test/SparqlResults/1238948297_160806614.log
+[Thread 12] started responding in 0.023418046s...
+
+[Thread 15] got 6 result(s) in 0.02373784s
+[Thread 15] Sleeping for 0.363s before next operation
+
+[Thread 29] Running Operation queries/q8...
+[Thread 12] logged results to: unit_test/SparqlResults/1238948297_160806772.log
+[Thread 12] started responding in 0.023054216s...
+
+[Thread 29] got 6 result(s) in 0.023546596s
+[Thread 29] Sleeping for 0.096s before next operation
+[Thread 29] Running Operation queries/q10...
+[Thread 12] logged results to: unit_test/SparqlResults/1222792350_160806893.log
+[Thread 12] started responding in 0.024107738s...
+
+[Thread 29] got 6 result(s) in 0.02581326s
+[Thread 29] Sleeping for 0.782s before next operation
+
+[Thread 15] Running Operation queries/q2...
+[Thread 12] logged results to: unit_test/SparqlResults/1963744938_160807002.log
+[Thread 12] started responding in 0.024706216s...
+
+[Thread 15] got 1 result(s) in 0.025176575s
+[Thread 15] Sleeping for 0.901s before next operation
+
+[Thread 29] Running Operation queries/q12...
+[Thread 12] logged results to: unit_test/SparqlResults/1539198114_160807703.log
+[Thread 12] started responding in 0.021022508999999998s...
+
+[Thread 29] got 6 result(s) in 0.023036043s
+[Thread 29] Sleeping for 0.617s before next operation
+
+[Thread 15] Running Operation queries/q9...
+[Thread 12] logged results to: unit_test/SparqlResults/570296487_160807932.log
+[Thread 12] started responding in 0.022487289s...
+
+[Thread 15] got 1 result(s) in 0.023003672000000003s
+[Thread 15] Sleeping for 0.989s before next operation
+
+[Thread 29] Running Operation queries/q9...
+[Thread 12] logged results to: unit_test/SparqlResults/570296487_160808344.log
+[Thread 12] started responding in 0.018670014999999998s...
+
+[Thread 29] got 1 result(s) in 0.018886748999999998s
+[Thread 29] Sleeping for 0.786s before next operation
+
+[Thread 15] Running Operation queries/q12...
+[Thread 12] logged results to: unit_test/SparqlResults/1539198114_160808946.log
+[Thread 12] started responding in 0.020234351s...
+
+[Thread 15] got 6 result(s) in 0.022104467s
+[Thread 15] Sleeping for 0.592s before next operation
+
+[Thread 29] Running Operation queries/q6...
+[Thread 12] logged results to: unit_test/SparqlResults/1823859998_160809150.log
+[Thread 12] started responding in 0.018359838s...
+
+[Thread 29] got 1 result(s) in 0.018617381000000002s
+[Thread 29] Sleeping for 0.705s before next operation
+
+[Thread 15] Running Operation queries/q7...
+[Thread 12] logged results to: unit_test/SparqlResults/1703397600_160809561.log
+[Thread 12] started responding in 0.020337142s...
+
+[Thread 15] got 0 result(s) in 0.020484666000000002s
+[Thread 15] Sleeping for 0.798s before next operation
+
+[Thread 29] Running Operation queries/q11...
+[Thread 12] logged results to: unit_test/SparqlResults/1833161562_160809874.log
+[Thread 12] started responding in 0.018505781s...
+
+[Thread 29] got 6 result(s) in 0.019293078999999998s
+[Thread 29] Sleeping for 0.88s before next operation
+
+[Thread 15] Running Operation queries/q10...
+[Thread 12] logged results to: unit_test/SparqlResults/1222792350_160810381.log
+[Thread 12] started responding in 0.018912133s...
+
+[Thread 15] got 6 result(s) in 0.019431740000000003s
+[Thread 15] Sleeping for 0.607s before next operation
+
+[Thread 16] Operation Mix Run 9 by Client 6
+[Thread 16] 
+[Thread 16] Total Response Time: 0,241028 seconds
+[Thread 16] Total Runtime: 0,248009 seconds
+[Thread 16] Minimum Operation Runtime: 0,016819 seconds (Operation queries/q7)
+[Thread 16] Maximum Operation Runtime: 0,025813 seconds (Operation queries/q10)
+[Thread 16] 
+
+[Thread 15] Running Operation queries/q11...
+[Thread 16] logged results to: unit_test/SparqlResults/1833161562_160811008.log
+[Thread 16] started responding in 0.02152734s...
+
+[Thread 15] got 6 result(s) in 0.023071723s
+[Thread 15] Sleeping for 0.699s before next operation
+
+[Thread 13] Operation Mix Run 10 by Client 3
+[Thread 13] 
+[Thread 13] Total Response Time: 0,248690 seconds
+[Thread 13] Total Runtime: 0,255558 seconds
+[Thread 13] Minimum Operation Runtime: 0,017544 seconds (Operation queries/q6)
+[Thread 13] Maximum Operation Runtime: 0,025177 seconds (Operation queries/q2)
+[Thread 13] 
+
+[Thread 1] Finished Benchmarking...
+[Thread 1] 
+[Thread 1] Operation Summary
+[Thread 1] -----------------
+[Thread 1] 
+[Thread 1] Operation ID 0 of type Remote SPARQL Query (queries/q1)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 9
+[Thread 1] Average Results: 1
+[Thread 1] Total Response Time: 0,181825 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,020203 seconds
+[Thread 1] Total Runtime: 0,185485 seconds
+[Thread 1] Actual Runtime: 0,241215 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,020609 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,026802 seconds
+[Thread 1] Average Runtime (Geometric): 0,020470 seconds
+[Thread 1] Minimum Runtime: 0,017783 seconds
+[Thread 1] Maximum Runtime: 0,023978 seconds
+[Thread 1] Runtime Variance: 0,000007 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,002550 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 48,521369
+[Thread 1] Actual Operations per Second: 37,311119
+[Thread 1] Operations per Hour: 174.676,930166
+[Thread 1] Actual Operations per Hour: 134.320,028362
+[Thread 1] 
+[Thread 1] Operation ID 1 of type Remote SPARQL Query (queries/q2)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 9
+[Thread 1] Average Results: 1
+[Thread 1] Total Response Time: 0,183415 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,020379 seconds
+[Thread 1] Total Runtime: 0,186904 seconds
+[Thread 1] Actual Runtime: 0,245245 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,020767 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,027249 seconds
+[Thread 1] Average Runtime (Geometric): 0,020668 seconds
+[Thread 1] Minimum Runtime: 0,018158 seconds
+[Thread 1] Maximum Runtime: 0,023998 seconds
+[Thread 1] Runtime Variance: 0,000005 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,002158 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 48,153095
+[Thread 1] Actual Operations per Second: 36,697988
+[Thread 1] Operations per Hour: 173.351,142916
+[Thread 1] Actual Operations per Hour: 132.112,758239
+[Thread 1] 
+[Thread 1] Operation ID 2 of type Remote SPARQL Query (queries/q3)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 9
+[Thread 1] Average Results: 1
+[Thread 1] Total Response Time: 0,182103 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,020234 seconds
+[Thread 1] Total Runtime: 0,185325 seconds
+[Thread 1] Actual Runtime: 0,220783 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,020592 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,024531 seconds
+[Thread 1] Average Runtime (Geometric): 0,020524 seconds
+[Thread 1] Minimum Runtime: 0,018044 seconds
+[Thread 1] Maximum Runtime: 0,022679 seconds
+[Thread 1] Runtime Variance: 0,000003 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,001765 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 48,563374
+[Thread 1] Actual Operations per Second: 40,763984
+[Thread 1] Operations per Hour: 174.828,146360
+[Thread 1] Actual Operations per Hour: 146.750,342081
+[Thread 1] 
+[Thread 1] Operation ID 3 of type Remote SPARQL Query (queries/q4)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 9
+[Thread 1] Average Results: 1
+[Thread 1] Total Response Time: 0,166536 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,018504 seconds
+[Thread 1] Total Runtime: 0,169923 seconds
+[Thread 1] Actual Runtime: 0,198037 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,018880 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,022004 seconds
+[Thread 1] Average Runtime (Geometric): 0,018842 seconds
+[Thread 1] Minimum Runtime: 0,017381 seconds
+[Thread 1] Maximum Runtime: 0,021704 seconds
+[Thread 1] Runtime Variance: 0,000002 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,001303 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 52,965260
+[Thread 1] Actual Operations per Second: 45,445950
+[Thread 1] Operations per Hour: 190.674,936309
+[Thread 1] Actual Operations per Hour: 163.605,419902
+[Thread 1] 
+[Thread 1] Operation ID 4 of type Remote SPARQL Query (queries/q5)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 9
+[Thread 1] Average Results: 1
+[Thread 1] Total Response Time: 0,180984 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,020109 seconds
+[Thread 1] Total Runtime: 0,184116 seconds
+[Thread 1] Actual Runtime: 0,236232 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,020457 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,026248 seconds
+[Thread 1] Average Runtime (Geometric): 0,020371 seconds
+[Thread 1] Minimum Runtime: 0,017923 seconds
+[Thread 1] Maximum Runtime: 0,022497 seconds
+[Thread 1] Runtime Variance: 0,000004 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,001971 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 48,882261
+[Thread 1] Actual Operations per Second: 38,098150
+[Thread 1] Operations per Hour: 175.976,138418
+[Thread 1] Actual Operations per Hour: 137.153,338270
+[Thread 1] 
+[Thread 1] Operation ID 5 of type Remote SPARQL Query (queries/q6)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 9
+[Thread 1] Average Results: 1
+[Thread 1] Total Response Time: 0,170761 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,018973 seconds
+[Thread 1] Total Runtime: 0,174250 seconds
+[Thread 1] Actual Runtime: 0,226623 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,019361 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,025180 seconds
+[Thread 1] Average Runtime (Geometric): 0,019299 seconds
+[Thread 1] Minimum Runtime: 0,017639 seconds
+[Thread 1] Maximum Runtime: 0,021804 seconds
+[Thread 1] Runtime Variance: 0,000003 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,001662 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 51,649942
+[Thread 1] Actual Operations per Second: 39,713448
+[Thread 1] Operations per Hour: 185.939,790836
+[Thread 1] Actual Operations per Hour: 142.968,414266
+[Thread 1] 
+[Thread 1] Operation ID 6 of type Remote SPARQL Query (queries/q7)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 0
+[Thread 1] Average Results: 0
+[Thread 1] Total Response Time: 0,177881 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,019765 seconds
+[Thread 1] Total Runtime: 0,179562 seconds
+[Thread 1] Actual Runtime: 0,229539 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,019951 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,025504 seconds
+[Thread 1] Average Runtime (Geometric): 0,019864 seconds
+[Thread 1] Minimum Runtime: 0,017359 seconds
+[Thread 1] Maximum Runtime: 0,022371 seconds
+[Thread 1] Runtime Variance: 0,000004 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,001969 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 50,121957
+[Thread 1] Actual Operations per Second: 39,209099
+[Thread 1] Operations per Hour: 180.439,044283
+[Thread 1] Actual Operations per Hour: 141.152,756925
+[Thread 1] 
+[Thread 1] Operation ID 7 of type Remote SPARQL Query (queries/q8)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 54
+[Thread 1] Average Results: 6
+[Thread 1] Total Response Time: 0,173923 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,019325 seconds
+[Thread 1] Total Runtime: 0,179671 seconds
+[Thread 1] Actual Runtime: 0,232319 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,019963 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,025813 seconds
+[Thread 1] Average Runtime (Geometric): 0,019856 seconds
+[Thread 1] Minimum Runtime: 0,017533 seconds
+[Thread 1] Maximum Runtime: 0,023547 seconds
+[Thread 1] Runtime Variance: 0,000005 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,002225 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 50,091547
+[Thread 1] Actual Operations per Second: 38,739877
+[Thread 1] Operations per Hour: 180.329,570323
+[Thread 1] Actual Operations per Hour: 139.463,557301
+[Thread 1] 
+[Thread 1] Operation ID 8 of type Remote SPARQL Query (queries/q9)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 9
+[Thread 1] Average Results: 1
+[Thread 1] Total Response Time: 0,179587 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,019954 seconds
+[Thread 1] Total Runtime: 0,184870 seconds
+[Thread 1] Actual Runtime: 0,243781 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,020541 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,027087 seconds
+[Thread 1] Average Runtime (Geometric): 0,020448 seconds
+[Thread 1] Minimum Runtime: 0,018027 seconds
+[Thread 1] Maximum Runtime: 0,023004 seconds
+[Thread 1] Runtime Variance: 0,000004 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,002068 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 48,682754
+[Thread 1] Actual Operations per Second: 36,918414
+[Thread 1] Operations per Hour: 175.257,915146
+[Thread 1] Actual Operations per Hour: 132.906,290654
+[Thread 1] 
+[Thread 1] Operation ID 9 of type Remote SPARQL Query (queries/q10)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 54
+[Thread 1] Average Results: 6
+[Thread 1] Total Response Time: 0,191417 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,021269 seconds
+[Thread 1] Total Runtime: 0,199294 seconds
+[Thread 1] Actual Runtime: 0,252616 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,022144 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,028068 seconds
+[Thread 1] Average Runtime (Geometric): 0,022030 seconds
+[Thread 1] Minimum Runtime: 0,019432 seconds
+[Thread 1] Maximum Runtime: 0,025813 seconds
+[Thread 1] Runtime Variance: 0,000006 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,002391 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 45,159484
+[Thread 1] Actual Operations per Second: 35,627264
+[Thread 1] Operations per Hour: 162.574,141147
+[Thread 1] Actual Operations per Hour: 128.258,148881
+[Thread 1] 
+[Thread 1] Operation ID 10 of type Remote SPARQL Query (queries/q11)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 54
+[Thread 1] Average Results: 6
+[Thread 1] Total Response Time: 0,189995 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,021111 seconds
+[Thread 1] Total Runtime: 0,199608 seconds
+[Thread 1] Actual Runtime: 0,253227 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,022179 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,028136 seconds
+[Thread 1] Average Runtime (Geometric): 0,022073 seconds
+[Thread 1] Minimum Runtime: 0,018975 seconds
+[Thread 1] Maximum Runtime: 0,025179 seconds
+[Thread 1] Runtime Variance: 0,000005 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,002268 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 45,088458
+[Thread 1] Actual Operations per Second: 35,541259
+[Thread 1] Operations per Hour: 162.318,448506
+[Thread 1] Actual Operations per Hour: 127.948,533982
+[Thread 1] 
+[Thread 1] Operation ID 11 of type Remote SPARQL Query (queries/q12)
+[Thread 1] Total Runs: 9
+[Thread 1] Total Errors: 0
+[Thread 1] Total Results: 54
+[Thread 1] Average Results: 6
+[Thread 1] Total Response Time: 0,198809 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,022090 seconds
+[Thread 1] Total Runtime: 0,208621 seconds
+[Thread 1] Actual Runtime: 0,259646 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,023180 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,028850 seconds
+[Thread 1] Average Runtime (Geometric): 0,023166 seconds
+[Thread 1] Minimum Runtime: 0,022104 seconds
+[Thread 1] Maximum Runtime: 0,024999 seconds
+[Thread 1] Runtime Variance: 0,000001 seconds squared
+[Thread 1] Runtime Standard Deviation: 0,000857 seconds
+[Thread 1] 
+[Thread 1] Operations per Second: 43,140333
+[Thread 1] Actual Operations per Second: 34,662613
+[Thread 1] Operations per Hour: 155.305,199739
+[Thread 1] Actual Operations per Hour: 124.785,408094
+[Thread 1] 
+[Thread 1] Operation Mix Summary
+[Thread 1] ---------------------
+[Thread 1] 
+[Thread 1] Total Mix Runs: 10
+[Thread 1] Total Operation Runs: 96
+[Thread 1] Start Time: 12/12/2016 15:07:58 +0000
+[Thread 1] End Time: 12/12/2016 15:08:11 +0000
+[Thread 1] 
+[Thread 1] Total Errors: 0
+[Thread 1] 
+[Thread 1] Total Response Time: 1,927210 seconds
+[Thread 1] Average Response Time (Arithmetic): 0,240901 seconds
+[Thread 1] Total Runtime: 1,976236 seconds
+[Thread 1] Actual Runtime: 2,527541 seconds
+[Thread 1] Average Runtime (Arithmetic): 0,247029 seconds
+[Thread 1] Actual Average Runtime (Arithmetic): 0,315943 seconds
+[Thread 1] Average Runtime (Geometric): 0,246917 seconds
+[Thread 1] Minimum Mix Runtime: 0,235732 seconds
+[Thread 1] Maximum Mix Runtime: 0,255558 seconds
+[Thread 1] Mix Runtime Variance: 0,000063 seconds squared
+[Thread 1] Mix Runtime Standard Deviation: 0,007925 seconds
+[Thread 1] Operation Mixes per Hour: 14.573,161157
+[Thread 1] Actual Operation Mixes per Hour: 11.394,474603
+[Thread 1] 

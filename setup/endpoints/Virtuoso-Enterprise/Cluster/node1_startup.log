@@ -1,0 +1,71 @@
+		Mon Jan 09 2017
+11:00:51 { Loading plugin 1: Type `plain', file `wikiv' in `../hosting'
+11:00:51   WikiV version 0.6 from OpenLink Software
+11:00:51   Support functions for WikiV collaboration tool
+11:00:51   SUCCESS plugin 1: loaded from ../hosting/wikiv.so }
+11:00:51 { Loading plugin 2: Type `plain', file `mediawiki' in `../hosting'
+11:00:51   MediaWiki version 0.1 from OpenLink Software
+11:00:51   Support functions for MediaWiki collaboration tool
+11:00:51   SUCCESS plugin 2: loaded from ../hosting/mediawiki.so }
+11:00:51 { Loading plugin 3: Type `plain', file `creolewiki' in `../hosting'
+11:00:51   CreoleWiki version 0.1 from OpenLink Software
+11:00:51   Support functions for CreoleWiki collaboration tool
+11:00:51   SUCCESS plugin 3: loaded from ../hosting/creolewiki.so }
+11:00:51 { Loading plugin 4: Type `plain', file `im' in `../hosting'
+11:00:51   IM version 0.62 from OpenLink Software
+11:00:51   Support functions for Image Magick 6.9.1
+11:00:51   SUCCESS plugin 4: loaded from ../hosting/im.so }
+11:00:51 { Loading plugin 5: Type `plain', file `wbxml2' in `../hosting'
+11:00:51   WBXML2 version 0.9 from OpenLink Software
+11:00:51   Support functions for WBXML2 0.9.2 Library
+11:00:51   SUCCESS plugin 5: loaded from ../hosting/wbxml2.so }
+11:00:51 { Loading plugin 6: Type `attach', file `libphp5.so' in `../hosting'
+11:00:51   SUCCESS plugin 6: loaded from ../hosting/libphp5.so }
+11:00:51 { Loading plugin 7: Type `Hosting', file `hosting_php.so' in `../hosting'
+11:00:51   Hosting version 3217 from OpenLink Software
+11:00:51   PHP engine version 5.3.29
+11:00:51   SUCCESS plugin 7: loaded from ../hosting/hosting_php.so }
+11:00:51 { Loading plugin 8: Type `plain', file `qrcode' in `../hosting'
+11:00:51   QRcode version 0.1 from OpenLink Software
+11:00:51   Support functions for ISO/IEC 18004:2006, using QR Code encoder (C) 2006 Kentaro Fukuchi <fukichi@megaui.net>
+11:00:51   SUCCESS plugin 8: loaded from ../hosting/qrcode.so }
+11:00:51 OpenLink Virtuoso Universal Server
+11:00:51 Version 07.20.3217-pthreads for Linux as of Apr 12 2016
+11:00:51 uses parts of OpenSSL, PCRE, Html Tidy
+11:00:51 Registered to Virtuoso-AWS-Cloud-Edition-User
+11:00:51 Personal Edition license for 10 connections
+11:00:51 Issued by OpenLink Software
+11:00:51 Enabled Cluster Extension
+11:00:51 Enabled Column Store Extension
+11:00:58 SQL Optimizer enabled (max 1000 layouts)
+11:00:58 Compiler unit is timed at 0.000137 msec
+11:01:02 Checkpoint started
+11:01:02 Roll forward started
+11:01:02 Roll forward complete
+11:01:02 PL LOG: Elastic cluster setup
+11:01:03 Checkpoint started
+11:01:03 Checkpoint finished, log reused
+11:01:04 Checkpoint started
+11:01:05 Checkpoint finished, log reused
+11:01:05 PL LOG: new clustered database:Init of RDF
+11:01:08 Checkpoint started
+11:01:09 Checkpoint finished, log reused
+11:01:10 PL LOG: RDF metadata version: 2015-12-09 0001v7
+11:01:11 Checkpoint started
+11:01:12 Checkpoint finished, log reused
+11:01:13 Checkpoint started
+11:01:14 Checkpoint finished, log reused
+11:01:23 PL LOG: Installing Virtuoso Conductor version 1.00.8749 (DAV)
+11:01:23 PL LOG: Installing with dependencies Virtuoso Conductor version 1.00.8749/2016-04-12 15:10 (DAV)
+11:01:24 Checkpoint started
+11:01:24 Checkpoint finished, log reused
+11:01:54 Checkpoint started
+11:01:54 Checkpoint finished, log reused
+11:01:54 PL LOG: Installation with dependencies complete
+11:01:55 Checkpoint started
+11:01:55 Checkpoint finished, log reused
+11:01:58 * Monitor: Locks are held for a long time
+11:01:58 HTTP/WebDAV server online at 8890
+11:01:58 Server online at 12201 (pid 1925)
+11:01:58 ZeroConfig registration CLUSTER (IP-172-31-53-17)
+

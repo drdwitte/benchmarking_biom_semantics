@@ -1,0 +1,1 @@
+SELECT (COUNT(DISTINCT ?s ) AS ?distsubjects) {  ?s ?p ?o   } 
