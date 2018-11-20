@@ -1,0 +1,120 @@
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre7> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre41> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre144> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre136> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre41> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre8> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre16> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre132> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre79> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre8> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre69> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre7> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre80> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre7> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre90> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre132> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre95> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre79> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre41> .
+}
+
+SELECT ?v0 ?v1 ?v2 WHERE {
+	?v0 <http://purl.org/ontology/mo/conductor> ?v1 .
+	?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?v2 .
+	?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/hasGenre> <http://db.uwaterloo.ca/~galuc/wsdbm/SubGenre136> .
+}
+

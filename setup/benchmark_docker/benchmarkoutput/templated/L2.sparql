@@ -1,0 +1,120 @@
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City94> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City94> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City94> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City98> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City113> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City62> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City81> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City165> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City48> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City175> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City120> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City175> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City169> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City98> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City169> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City2> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City81> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City48> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City146> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
+SELECT ?v1 ?v2 WHERE {
+	<http://db.uwaterloo.ca/~galuc/wsdbm/City111> <http://www.geonames.org/ontology#parentCountry> ?v1 .
+	?v2 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/Product0> .
+	?v2 <http://schema.org/nationality> ?v1 .
+}
+
