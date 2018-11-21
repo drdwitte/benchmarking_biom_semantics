@@ -20,7 +20,7 @@
 %
 
 %As the initial goal of the research collaboration with Ontoforce was to find a solution to work with federated querying on top of live data sources on the Semantic Web, 
-In this section we discuss the results of \textbf{Fus1\_64}, \textbf{FedX3\_64}, \textbf{TPF1\_64} and \textbf{TPF3\_64}. 
+In this section we discuss the results of \textbf{Fus1\_64}, \textbf{FedX3\_64}, \textbf{TPF1\_64}, and \textbf{TPF3\_64}. 
 For these 3 systems engine failure and query errors are very common with only the \textbf{TPF*\_64} systems surviving the entire benchmark.
 Fig.~\ref{fig:Fig03_BenchmarkSurvival_Other_Watdiv_Default} shows the \emph{Benchmark Survival Interval}, defined as the range between the first and the last successful query. 
 Given the high degree of failures we do not show the query runtime results.
@@ -31,7 +31,7 @@ Given the high degree of failures we do not show the query runtime results.
 %Finally, a subtle error can be made in query runtime comparison for benchmarks which involve a query engine that becomes unresponsive (engine failure). In the runtime comparisons we only consider  We name this the \emph{benchmark survival interval}, this is shown in Figure~\ref{fig:Fig03_BenchmarkSurvival_Other_Watdiv_Default}.
 
 \begin{itemize}
-	\item \textbf{FedX1\_64:} This single-node setup is tested to verify whether FedX manages to parse the queries. As the queries have the same form for WatDiv100M we only tested this in the 1000M setting.
+	\item \textbf{FedX1\_64:} This single-node setup is tested to verify whether FedX manages to parse the queries. As the queries have the same form for WatDiv100M, we only tested this in the 1000M setting.
 	\item \textbf{Specific Templates cause crashes:} Where \\ \textbf{TPF*\_64} systems more gracefully timeout on the \textbf{C} templates, \textbf{C2} causes a crash in \textbf{Fus1\_64} and \textbf{C3} in \textbf{FedX3\_64}, upon their first occurrence in warm-up or stress run. \textbf{C3} is a query with very low triple pattern selectivity leading to large in-memory joins.
 	\item \textbf{Crash investigation:} For \textbf{FedX3\_64} the benchmark was terminated after running into constant timeouts for 8 hours. Inspection of the slave nodes showed them to be idle, while the federator node had its entire memory pool saturated, with the CPU load close to zero. This might be related to issues with garbage collection.
 	For \textbf{Fus1\_64} after a number of queries a continuous timeout sequence sets in. The specific HDT implementation for Fuseki ignores the timeout parameter. This might explain why the server became unresponsive.

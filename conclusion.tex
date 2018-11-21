@@ -9,19 +9,19 @@ The methods to arrive at certain research visualizations should be made availabl
 
 In order to learn from challenging benchmarks, the benchmark approach should anticipate the occurrence of all sorts of errors. The information in these incomplete benchmark runs is in fact very valuable. 
 
-What are the trade-offs associated with certain setups (\textbf{RQ2})? For every store we show the effect in terms of throughput and cost for vertical and horizontal scaling. 
+What are the trade-offs associated with certain \mbox{setups} (\textbf{RQ2})? For every store we show the effect in terms of throughput and cost for vertical and horizontal scaling. 
 Overall, the low-end setup \textbf{Vir1\_32} yielded the best results. For the other stores the best results are achieved with more memory and with \emph{RFI-Optimized} configurations provided by the vendors.
 
-Benchmark cost allows the comparison of a heterogeneous mix of RDF storage approaches. Research \emph{Prototypes}, of which \textbf{TPF*\_64} performed best in this study, still lag by an order of magnitude in terms of performance with the \emph{Vendor} systems. The research community would benefit from more realistic and challenging benchmarks, as it might stimulate the further development of current prototypes up to a level where they can compete with existing \emph{Vendor} systems.
+Benchmark cost allows the comparison of a heterogeneous mix of RDF storage approaches. Research \emph{Prototypes}, of which \textbf{TPF*\_64} performed best in this study, still lag by an order of magnitude in terms of performance with the \emph{Vendor} systems. The research community would benefit from more realistic and challenging benchmarks, as it might stimulate the further \mbox{development} of current prototypes up to a level where they can compete with existing \emph{Vendor} systems.
 
 Future benchmarking efforts should consider, at least locally, scanning a benchmark space. This necessity was demonstrated in this work by showing the effect of dataset size and by modifying the amount of server memory. An interesting result in this aspect is that the performance of the different \emph{Vendor} systems converged as they were given better hardware and configurations.
 
 In answering \textbf{RQ3} we demonstrated that query runtimes are an oversimplified representation of performance. Many contextual factors influence the runtime comparisons: certain query types might completely dominate the runtime averages, server load and caching effects have a different impact on the systems tested. Adding query completeness analysis, makes benchmark runtime results more trustworthy. Ignoring this aspect would have led to very different conclusions in this work.
 
-The ranking of the different systems is not consistent if we change from artificial to real-world benchmarks (\textbf{RQ4}). This supports the advice to try and run use case specific benchmarks before deciding on a system architecture. Although it was difficult to extract transferable insights from the Ontoforce benchmark, the decision tree approach in fact shed some light on certain SPARQL query features which pose more problems to one system than another, giving the vendors some direction in optimizing their RDF storage solution. Due to the automated way of inferring these insights they can be more easily compared to other benchmarking efforts.
+The ranking of the different systems is not consistent if we change from artificial to real-world benchmarks. This supports the advice to try and run use case specific benchmarks before deciding on a system architecture. Although it was difficult to extract transferable insights from the Ontoforce benchmark, the decision tree approach in fact shed some light on certain SPARQL query features which pose more problems to one system than another, giving the vendors some direction in optimizing their RDF storage solution. Due to the automated way of inferring these insights they can be more easily compared to other benchmarking efforts.
 
 %future work
-As for the future work, the results in this work definitely indicate a lot of room for improvement in multi-node RDF storage solutions. While Virtuoso's offering is the most advanced, it is not yet as stable as its single-node counterpart. 
+As for future work, the results in this work definitely indicate a lot of room for improvement in multi-node RDF storage solutions. While Virtuoso's offering is the most advanced, it is not yet as stable as its single-node counterpart. 
 
 %Raw event data => serendipity
 %Query Completeness affects query runtime!

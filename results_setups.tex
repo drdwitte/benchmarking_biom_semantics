@@ -6,7 +6,7 @@ In this section we aim to get a satellite view on the entire set of benchmarks c
 All financial costs per store and for all benchmarks are shown in Figure~\ref{fig:Fig11_AllSims_Correct}. 
 Costs stem from an hourly price for servers on Amazon EC2, together with an hourly license cost for the AMIs.
 
-The instance cost of the AWS hardware was \\ \mbox{\$0.333 /hr} for the 32GB server instances and \\\$0.667 /hr for the 64GB instances. The licensing costs for the PAGO instances can be found on AWS marketplace and typically scale with the amount of memory per instance. For the 64GB instances, GraphDB's license cost is \$1.4 /hr, for ES \$2 /hr and for Virtuoso \$0.80 /hr. Other systems tested have no licensing cost.
+The instance cost of the AWS hardware was \mbox{\$0.333 /hr} for the 32GB server instances and \$0.667 /hr for the 64GB instances. The licensing costs for the PAGO instances can be found on AWS marketplace and typically scale with the amount of memory per instance. For the 64GB instances, GraphDB's license cost is \$1.4 /hr, for ES \$2 /hr and for Virtuoso \$0.80 /hr. Other systems tested have no licensing cost.
 
 Additionally, before running a benchmark the data has to be ingested in the system. This cost is stacked on top of the query cost in Figure~\ref{fig:Fig11_AllSims_Correct}. For some cases the ingest cost is unimportant as reloading the data is required only rarely.
 

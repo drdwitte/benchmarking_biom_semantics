@@ -13,11 +13,10 @@ In Figure~\ref{fig:Fig08_Watdiv_caching} however, the speedup with respect to th
 %no caching all dots are expected on the X and Y-axis, the latter because of the noise on small query runtimes. If we focus on speedups > 2,
 %especially ES1 and TPF* seem to have the highest benefit.
 \begin{itemize}
-	\item \textbf{Stores with clear caching advantage:} The \textbf{TPF} server instances have NGINX~\cite{nginx} cache enabled. The similarity in results with other stores strengthens the idea that Figure~\ref{fig:Fig08_Watdiv_caching} in fact shows caching behavior for 
-	\textbf{TPF*\_64}, \textbf{ES1\_64\_Doc}, and \\ \textbf{Gra1\_64\_RFI}.
+	\item \textbf{Stores with a clear caching advantage:} The \textbf{TPF} server instances have NGINX~\cite{nginx} cache enabled. The similarity in results with other stores strengthens the idea that Figure~\ref{fig:Fig08_Watdiv_caching} in fact shows caching behavior for \textbf{TPF*\_64}, \textbf{ES1\_64\_Doc}, and \textbf{Gra1\_64\_RFI}.
 	
 	\item \textbf{Caching differences per template type:} For \textbf{ES1\_64\_Doc} and \textbf{Gra1\_64\_RFI} the \textbf{F}-templates (blue) dots correspond to the highest speedups. For \textbf{TPF*\_64} query execution is in general slower than for the other systems, therefore \textbf{L} and \textbf{S}-queries, shift to the right and their speedups become more prominent. Small speedups for \textbf{Bla1\_64} and \textbf{Vir1\_64} are mostly limited to the \textbf{C}-template queries.
-	\item \textbf{TPF1 vs TPF3:} As a result of the horizontal data partitioning scheme \textbf{S} and \textbf{F}-queries can be resolved locally for \textbf{TPF3\_64} which explain the higher prevalence in the plot.
+	\item \textbf{TPF1 vs TPF3:} As a result of the horizontal data partitioning scheme \textbf{S} and \textbf{F}-queries can be resolved locally for \textbf{TPF3\_64}, which explain the higher prevalence in the plot.
 \end{itemize}
 
 

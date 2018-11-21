@@ -62,7 +62,7 @@ When the benchmark successfully terminates, a CSV-file is generated containing t
 In our initial benchmarks~\cite{de2016big} this CSV-file was used, but with the Ontoforce dataset several issues surfaced:
 
 \begin{itemize}
-	\item The summary results (number of results per query and query runtimes) are not correct in benchmarks where many problems arise. 
+	\item The summary results (number of results per query and query runtimes) are not correct in benchmarks where many problems arose. 
 	For example, in the calculation of the average runtime, results where the query was unsuccessfully resolved are also taken into account for the calculation of the average. 
 	It also makes it hard to verify the number of results per query. For example, a query with 10 results which is executed twice and of which one execution fails, is reported as having 5 results .
 	\item If the benchmarker software fails, the CSV-file is not generated and the results are lost.
@@ -139,7 +139,7 @@ Jupyter notebooks~\cite{jupyter} were used for the postprocessing. All notebooks
 %
 %\end{enumerate}
 
-Practice has shown that the event format leaves room for unanticipated analysis. For example: dealing with incorrect queries, taking into account server load or caching effects, studying the reason behind one of the query engines crashing,...
+Practice has shown that the event format leaves room for unanticipated analysis. For example: dealing with incorrect queries, taking into account server load or caching effects, studying the reason behind one of the query engines crashing, etc.
 
 Finally, also part of the conclusions drawn from the data are automated by using a machine learning approach to find the relation between certain \emph{query features} and performance parameters. This ensures that the conclusions are not the result of the author's insights or biases. 
 

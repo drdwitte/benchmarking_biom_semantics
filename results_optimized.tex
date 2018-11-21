@@ -22,9 +22,9 @@ In Fig.~\ref{fig:Fig02_WatdivVerticalScaling}, the rightmost panel corresponds t
 %
 \begin{itemize}
 	\item \textbf{Sensitivity to configuration:} \textbf{Vir1\_64} did not benefit from the RFI settings file. For \textbf{Bla1\_64} the only improvement was to explicitly configure the timeout parameter on the server side. This avoids unnecessary overhead while the client is already disconnected. It leads to a speedup of approximately 3.5 for both runtime measurements. \textbf{Gra1\_64} benefits most from proper configurations: The provided scripts yielded a speedup of 9.4 for the average runtime and 62 for the median runtime.
-	\item \textbf{32\_Doc to 64\_RFI:} From Fig.~\ref{fig:Fig02_WatdivVerticalScaling} it follows that, given sufficient memory and proper configuration, all stores have similar performance.
+	\item \textbf{32\_Doc to 64\_RFI:} From Fig.~\ref{fig:Fig02_WatdivVerticalScaling} follows that, given sufficient memory and proper configuration, all stores have similar performance.
 		%Moving from the left panel to the right in , we clearly see results converging in the rightmost window with the \textbf{64\_Opt} measurements. 
-	\item \textbf{Average vs.\ median runtime:} \textbf{Bla1\_64} has an average runtime of 1.95s per query, whereas the measurements of \textbf{Vir1\_64} and \textbf{Gra1\_64} are 4.05s and 6.32s for  respectively. The median runtimes for \textbf{Vir1\_64} are the lowest at 0.17s where \textbf{Gra1\_64} and \textbf{Bla1\_64} have runtimes of 0.65s and 0.74s respectively.
+	\item \textbf{Average vs.\ median runtime:} \textbf{Bla1\_64} has an average runtime of 1.95s per query, whereas the measurements of \textbf{Vir1\_64} and \textbf{Gra1\_64} are 4.05s and 6.32s respectively. The median runtimes for \textbf{Vir1\_64} are the lowest at 0.17s where \textbf{Gra1\_64} and \textbf{Bla1\_64} have runtimes of 0.65s and 0.74s respectively.
 %Bla_N1_32_W100_Def   0.191359		0.461707	=> x5
 %Gra_N1_32_W100_Def   0.047812		0.417214 	=> x15
 %Vir_N1_32_W100_Def   0.046707		0.301350	=> x15

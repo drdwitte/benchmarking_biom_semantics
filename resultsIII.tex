@@ -1,19 +1,42 @@
 
+In this section we study the results of the different RDF systems on a real-world Life Sciences dataset provided by Ontoforce. 
+%very challenging queries => reeds beschreven in sectie dataset en queries
+The Ontoforce benchmark has a very challenging query set. Therefore the focus of this section will be far less on query runtimes but more on trying to extract insights which are generalizable to other use cases.
+First, we have a look at the different types of errors that occur during this benchmark, as they are much higher in numbers. Especially query completeness is a subtle error in this case as it can lead to wrong conclusions when looking at query runtimes. 
+In the section on `Decision Tree Analysis' we come up with a reproducible, unbiased approach for inferring the cause of slow-running queries, query failures, or certain error types. 
+In the final section we compare the results of all benchmarks in this research using \emph{Benchmark Cost} as a unification parameter. 
+
+
+%\todo{nog wat details over de verschillende secties}
+%%not totally unrelated
+%
+%%In this benchmark run the response times consistently coincide with the query runtimes.  
+%%More challenging => meer errors => besproken in aparte sectie
+%In subsection title `Benchmark Error Analysis' %~\ref{subsec:erroranalysis} 
+%we give more detailed insights in the behavior of the different systems on the Ontoforce benchmark. We pay special attention to query failures and query completeness.
+%In the following subsection
+%%~\ref{subsec:dtrees} 
+%we try to automatically infer the reasons behind query success, failure, different error types, and slow versus fast running queries. This automation is achieved by making use of decision tree analysis which should circumvent bias introduced by human interpretation.
+%In the final section we compare the results of all benchmarks in this research using \emph{Benchmark Cost} as a unification parameter. This allows to make comparisons between setups which are very different in nature and see whether the trends into the benchmark results are consistent. This approach also takes into account the financial cost for data ingestion and the different licensing fees.
+%This allows to make comparisons between setups which are very different in nature and see whether the trends into the benchmark results are consistent. This approach also takes into account the financial cost for data ingestion and the different licensing fees.
+
 %errors excluded
-\todo{Moet naar III} \\
-A major concern when comparing query runtimes between different engines is \emph{query completeness}. The current query event format, shown in Table~\ref{table:queryevents}, explicitly reports whether a query was solved correctly, meaning it has retrieved the complete set of results. In the sections `Results III' query completeness is the topic of of the first subsection.
-%~\ref{subsec:completeness} 
-To interpret the results in this section correctly, it is important to understand that queries, which have incomplete results for at least one benchmark, are completely discarded in the runtime comparisons.
-\todo{TOT HIER}
-\todo{Dit moet ook tot een paar zinnen gereduceerd worden!}
+%\todo{nog iets over completeness?} \\
+%A major concern when comparing query runtimes between different engines is \emph{query completeness}. The current query event format, shown in Table~\ref{table:queryevents}, explicitly reports whether a query was solved correctly, meaning it has retrieved the complete set of results. In the sections `Results III' query completeness is the topic of of the first subsection.
+%%~\ref{subsec:completeness} 
+%To interpret the results in this section correctly, it is important to understand that queries, which have incomplete results for at least one benchmark, are completely discarded in the runtime comparisons.
+%\todo{TOT HIER}
+%\todo{Dit moet ook tot een paar zinnen gereduceerd worden!}
 %waarom uitleggen
 % in store preselection staat het volgende:
 %The comparison with these SemWeb systems was an essential part of the research collaboration with Onto-
 %force as their initial goal was to build their DISQOVER search interface on top of a federated querying system.
 %The advantage of the latter is that their interface would then provide a live view on a continuously updating
 %Life Sciences Linked Data cloud, removing the need for an ETL process.
-The WatDiv benchmark can serve as an initial testing procedure when selecting an appropriate triple store for a certain use case. The ETL case for Ontoforce bears some similarity to the WatDiv benchmark. 
-The Ontoforce benchmark consists of interactive federated queries which are extracted from the user logs of the DISQOVER product. These queries are currently solved by combining an ETL preprocessing step, which integrates the different Life Sciences datasets offline using Ontoforce's own central ontology. This ETL step bears a lot of similarity with the WatDiv benchmark as it consists of mostly BGP queries. The queries of the Ontoforce benchmark are the result of faceted browsing, whereby, in practice, the facet filters are performed by a distributed search system (SOLR), but their product can also run with a SPARQL-based back-end. In this section we evaluate the ability of \emph{Vendor} systems to work with these types of queries and therefore serve as an alternative to a search system.
+
+
+%The WatDiv benchmark can serve as an initial testing procedure when selecting an appropriate triple store for a certain use case. The ETL case for Ontoforce bears some similarity to the WatDiv benchmark. 
+%The Ontoforce benchmark consists of interactive federated queries which are extracted from the user logs of the DISQOVER product. These queries are currently solved by combining an ETL preprocessing step, which integrates the different Life Sciences datasets offline using Ontoforce's own central ontology. This ETL step bears a lot of similarity with the WatDiv benchmark as it consists of mostly BGP queries. The queries of the Ontoforce benchmark are the result of faceted browsing, whereby, in practice, the facet filters are performed by a distributed search system (SOLR), but their product can also run with a SPARQL-based back-end. In this section we evaluate the ability of \emph{Vendor} systems to work with these types of queries and therefore serve as an alternative to a search system.
 
 %Runtimes - minder belangrijk, meer focus op waarom
 %N1_64_Opt Ontoforce => for both ES and Virtuoso no response time <> runtime
@@ -21,19 +44,10 @@ The Ontoforce benchmark consists of interactive federated queries which are extr
 %Es 380848.276950983	380849.972397525				=> coincide
 %GraphDB crashed
 %23258.549703492	23261.613780134						=> coincide
-The Ontoforce benchmark has a very challenging query set. Therefore the focus of section~\ref{sec:realworld} will be far less on query runtimes but more on trying to extract insights which are generalizable. In this benchmark run the response times consistently coincide with the query runtimes.  
-%More challenging => meer errors => besproken in aparte sectie
-In subsection title `Benchmark Error Analysis' %~\ref{subsec:erroranalysis} 
-we give more detailed insights in the behavior of the different systems on the Ontoforce benchmark. We pay special attention to query failures and query completeness.
-In the following subsection
-%~\ref{subsec:dtrees} 
-we try to automatically infer the reasons behind query success, failure, different error types, and slow versus fast running queries. This automation is achieved by making use of decision tree analysis which should circumvent bias introduced by human interpretation.
-In the final section we compare the results of all benchmarks in this research using \emph{Benchmark Cost} as a unification parameter. This allows to make comparisons between setups which are very different in nature and see whether the trends into the benchmark results are consistent. This approach also takes into account the financial cost for data ingestion and the different licensing fees.
 
 \subsection{Benchmark Error Analysis}
 \label{subsec:erroranalysis}
 \input{results_realworld.tex}
-
 
 
 \subsection{Decision Tree Analysis of Query Features}

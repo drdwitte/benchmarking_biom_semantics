@@ -3,7 +3,7 @@
 %RESULTS Rev1: Notebook Rev1_13 - B Errors & Timeout percentage
 %
 In this section we use the \emph{Documented} configuration of the \emph{Vendor} systems.
-Figure~\ref{fig:Fig01_WatdivNoSQLDataScaling} shows query runtime distributions for the four \emph{Vendor} systems for three different dataset sizes of the WatDiv benchmark: 10M, 100M, and 1000M (million) triples. These benchmarks were run on node with 32 GB of memory.
+Figure~\ref{fig:Fig01_WatdivNoSQLDataScaling} shows query runtime distributions for the four \emph{Vendor} systems for three different dataset sizes of the WatDiv benchmark: 10M, 100M, and 1000M (million) triples. These benchmarks were run on a node with 32 GB of memory.
 %
 %median/mean
 %Bla_N1_32_W10_Def    0.033637		0.058546
@@ -40,6 +40,6 @@ Figure~\ref{fig:Fig01_WatdivNoSQLDataScaling} shows query runtime distributions 
 
 \item \textbf{Blazegraph vs.\ GraphDB:} \textbf{Bla1\_32} competes with \textbf{Gra1\_32} in terms of average runtimes but not in terms of median runtimes.
 
-\item \textbf{ES consistently slowest:} \textbf{ES1\_32}, even on WatDiv10M, lags by a factor of at least 5 to the other systems. For WatDiv100M already the nonlinear scaling behavior sets in, making it the only engine to experience problems with the 100M dataset. 
+\item \textbf{ES is consistently slowest:} \textbf{ES1\_32}, even on WatDiv10M, lags by a factor of at least 5 to the other systems. For WatDiv100M already the nonlinear scaling behavior sets in, making it the only engine to experience problems with the 100M dataset. 
 \end{itemize}
 %

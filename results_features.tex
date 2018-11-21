@@ -37,7 +37,7 @@ Ontoforce has released the queries for this benchmark run. However, the queries 
 By adding `Query Engine' as an additional feature we can train the decision tree on all the available query event data for the Ontoforce Benchmark for all RDF solutions at the same time. 
 \begin{itemize}
 	\item \textbf{Dominant Feature:} The `Query Engine' is the most important factor to segment the data in all 3 cases. The absence of this feature would in fact indicate that all systems have similar behavior. We tested without this feature but the decision trees were not informative. \textbf{Vir1} thus is very different: it has fewer errors and query runtimes are significantly smaller.
-	\item \textbf{Feature Importance:} If we take the number of node occurrences as a feature as a measure for feature importance then we see 3 features which occur in 5 nodes: TP, \sql{filter in}, \sql{filter}. The \sql{filters} mainly play a role in the decision tree for runtime regression. In predicting failures and error types \sql{optional}, \sql{graph} and Q have the highest occurrences.
+	\item \textbf{Feature Importance:} If we take the number of node occurrences as a measure for feature importance, then we see three features which occur in five nodes: TP, \sql{filter in}, and \sql{filter}. The \sql{filters} mainly play a role in the decision tree for runtime regression. In predicting failures and error types \sql{optional}, \sql{graph} and Q have the highest occurrences.
 	%Fail: Engine:4    Q:1 TP:2, OPT:2, GRA:1, FILIN:1, FIL:0
 	%Error: Engine:3   Q:2 TP:1, OPT:1, GRA:1, FILIN:1, FIL:1
 	%SUBTOTAL: Engine:7  Q:3 TP:3, OPT:3, GRA:3, FILIN:2, FIL:1, ORD:0, GRP:0  
@@ -48,4 +48,4 @@ By adding `Query Engine' as an additional feature we can train the decision tree
 	\item \textbf{Queries with high runtimes:} For \textbf{Vir1} and \textbf{ES1} the \sql{filter in} operators are the main cause for high runtimes. For \textbf{Gra1} the presense of \sql{filter}s pushes runtimes above 100s. 
 \end{itemize}
 
-Finally we also investigate if the incorrect queries in the \textbf{Vir3} benchmarks had specific query features. Curiously, the problematic queries correspond to the most simple queries: $TP \leq 2$.	
+Finally we also investigated if the incorrect queries in the \textbf{Vir3} benchmarks had specific query features. Curiously, the problematic queries correspond to the most simple queries: $TP \leq 2$.	

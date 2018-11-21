@@ -4,7 +4,7 @@
 The vision of the \emph{Semantic Web} is to serve as a global distributed database which can be autonomously explored by intelligent agents. The Linked Open Data (LOD) project~\cite{bizer2007interlinking} is an implementation of this vision and already contains over 1,000 interconnected datasets in Resource Description Framework (RDF) format. 
 Semantic Web technology has a lot to offer to multidisciplinary research domains.
 For example, Life Sciences span multiple domains ranging from pharmacy to genetics to clinical trials. In the LOD cloud prominent Life Sciences datasets are 
-UniProt (protein function), Drugbank (drugs) and chEMBL (properties of molecules).
+UniProt (protein function), Drugbank (drugs), and chEMBL (properties of molecules).
 %This necessitates the runtime integration of different datasets of significant size. 
 Being able to interact with these datasets as one virtual source requires technology capable of both managing Big Linked Data, as well as successfully answering complex federated queries.
 
@@ -49,7 +49,7 @@ This work also offers a methodology to make benchmarks more reproducible and the
 
 \subsection{Research Questions}
 
-The work presented here is structured around 4 research questions:
+The work presented here is structured around 3 research questions (\textbf{RQs}):
 
 \begin{enumerate}
 %Methods hardware, configs, wrapper, hardware, amis,... query completeness diagnostics
@@ -59,7 +59,7 @@ which deal with errors and query completeness.
 
 %Options: Horizontal, vertical, compression, federation big data approaches, multithreading
 \item \textit{What are the different options and the associated trade-offs when choosing a Linked Data infrastructure setup in the context of Big Linked Data? How can different setups be compared? }
-In the section `Results~I' we will demonstrate that the choice of engine depends on the size of the dataset. In `Results~II' we will investigate which engine works best for certain query types. How completely different solutions can be compared is the subject of the section `Benchmark Cost' in `Results III'.
+In the section `Results~I' we will demonstrate that the choice of engine depends on the size of the dataset. In `Results~II' we will investigate which engine works best for certain query types. How completely different solutions can be compared is the subject of the section `Benchmark Cost' in `Results III'. There we also compare the results on artificial data with a real-world dataset.
 
 %context=caching and server load, query completeness
 \item \textit{What is the relative influence on the measured performance of contextual factors for the different RDF solutions? Is the impact similar for all solutions?}
@@ -67,6 +67,6 @@ In the section `Results II' we will demonstrate that query runtime results canno
 
 %query types, real world vs Watdiv, Watdiv sizes, Decisiontree = unbiased
 %\item \textit{How do the RDF systems behave in a real-world setting?}
-In section `Results~III' we run a custom Life Sciences benchmark in the context of federated faceted browsing. 
+%In section `Results~III' we run a custom Life Sciences benchmark in the %context of federated faceted browsing. 
 
 \end{enumerate}

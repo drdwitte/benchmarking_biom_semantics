@@ -419,17 +419,14 @@ Not applicable
 
 \section*{Availability of data and materials}
 
-\todo{onderstaande wat tunen}
-All data generated or analysed during this study are included in this published article [and its supplementary information files].
-
-The data that support the findings of this study are available from Ontoforce but restrictions apply to the availability of these data, which were used under license for the current study, and so are not publicly available. Data are however available from the authors upon reasonable request and with permission of [third party name].
+The data in this work comprises three versions of the WatDiv benchmark dataset which are generated via the project website. The queries used in the Ontoforce
+benchmark are available in \textbf{additional file 2}. The dataset itself is mostly public data but the Ontoforce ontology linking some of the concepts together is proprietary. 
 
 \section*{Competing interests}
-Some of the co-authors in this research paper have contributed to the TPF implementation. (LDV and RV) Te other authors have no competing interests.
+Some of the co-authors in this research paper have contributed to the TPF implementation. (LDV and RV) The other authors have no competing interests.
 
 \section*{Funding}
-The research activities were funded by VLAIO (the Agency for Innovation and
-Entrepreneurship in Flanders) in an R\&D project called SEQUEL with Ontoforce, Ghent University and imec (iMinds). 
+The research activities were funded by VLAIO (the Agency for Innovation and Entrepreneurship in Flanders) in an R\&D project called SEQUEL with Ontoforce, Ghent University, and imec (iMinds). 
 
 \section*{Author's contributions}
 The work presented in this paper was conducted in collaboration between all authors. DDW and
@@ -606,7 +603,7 @@ We would also like to express our gratitude for the support provided by the staf
 	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
 	\caption{\csentence{Overview of successes and errors per query (Y-axis) and thread (X-axis) on the Ontoforce benchmark.}
 		Queries are sorted per system in order to group error behavior and are not consistent between simulations!
-		Blazegraph has a short benchmark survival interval. \textbf{ES1}, \textbf{Gra1} and \textbf{Vir3} Cluster setups have a lot of errors but most queries execute successfully at least once, which allows runtime comparisons. \textbf{Vir3\_64} was re-run six times, we show the two most successful runs sim1 and sim2: sim1 is the most successful Virtuoso cluster run as query completeness analysis revealed that sim2 has unreported errors for 37\% of the queries.
+		Blazegraph has a short benchmark survival interval. \textbf{ES1}, \textbf{Gra1}, and \textbf{Vir3} Cluster setups have a lot of errors but most queries execute successfully at least once, which allows runtime comparisons. \textbf{Vir3\_64} was re-run six times, we show the two most successful runs sim1 and sim2: sim1 is the most successful Virtuoso cluster run as query completeness analysis revealed that sim2 has unreported errors for 37\% of the queries.
 	}
 	\label{fig:Fig09_FailuresOntoforceBM}
 \end{figure}   
@@ -618,7 +615,7 @@ We would also like to express our gratitude for the support provided by the staf
 	\captionsetup{skip=10pt, font={footnotesize}, labelfont={bf}, width=0.4\textwidth, margin=1cm}
 	\caption{\csentence{Decision Tree Analysis to identify the reason for query failure, certain error types, and high/low query runtimes.} Input for all trees are feature vectors, also the query engine is added as a categorical feature. Rules in the decision trees are shown in red, sample sizes are encoded as the width of the bottom bar and the value is added inside the bars in bold. For each separate part the class distribution or the average runtime is reported below the bar. 
 		\newline \hspace{\linewidth} 	
-		\underline{\smash{Top:}} Classification into query success (blue) and failure (red) and incomplete. The query engine is an important decision rule, which demonstrates that Virtuoso behaves very different from the other systems.  
+		\underline{\smash{Top:}} Classification into query success (blue) and failure (red). The query engine is an important decision rule, which demonstrates that Virtuoso behaves very different from the other systems.  
 		\newline \hspace{\linewidth} 	
 		\underline{\smash{Center:}} Classification of query failures into classes incomplete (orange), server error (green), and timeout (purple). 
 		\newline \hspace{\linewidth} 	
@@ -665,10 +662,10 @@ We would also like to express our gratitude for the support provided by the staf
 \section*{Additional Files}
 
 \begin{itemize}
-	\item \textbf{Additional file 1: Feature Matrix.} \todo{Feature matrix as URL in biblio}
+	\item \textbf{Additional file 1: Feature Matrix is on project websitex~\cite{fmatrix}.} 
 	SPARQL queries that we used in our evaluations [26].
-	\item \textbf{Additional file 2: Ontoforce Query Mix.} \todo{Provide as add file}
-	\item \textbf{Additional file 3: Engine Configurations.} \todo{Link to Github}
+	\item \textbf{Additional file 2: Ontoforce Query Mix. Provides as a zip-file.} 
+	\item \textbf{Additional file 3: Engine Configurations. Available on Github~\cite{}} 
 	\item \textbf{Additional file 4: Query Event Files} \todo{Github link EN zip}	  ~\cite{bmresults}.
 	\item \textbf{Additional file 4: Jupyter Notebooks} \todo{Link to Github EN zip}	~\cite{bmpostprocessing}
 	\item \textbf{Additional file 5: Project Website} \todo{Link} met biblio	
