@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{79}
+\begin{thebibliography}{80}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -1116,15 +1116,24 @@ Decision Trees - Scikit-Learn.
 \endbibitem
 
 %%% 78
-\bibitem{bmresults}
+\bibitem{fmatrix}
 \begin{botherref}
-Detailed Overview All Benchmarks.
+Feature Matrix.
 (Accessed August 31, 2018).
-\url{http://users.elis.ugent.be/drdwitte/resultscsv.html}
+\url{https://users.elis.ugent.be/drdwitte/featurematrix.html}
 \end{botherref}
 \endbibitem
 
 %%% 79
+\bibitem{deploy}
+\begin{botherref}
+Deployment Info.
+(Accessed August 31, 2018).
+\url{https://users.elis.ugent.be/drdwitte/deployment.html}
+\end{botherref}
+\endbibitem
+
+%%% 80
 \bibitem{bmpostprocessing}
 \begin{botherref}
 Postprocessing: Jupyter Notebooks.
@@ -2163,12 +2172,18 @@ Postprocessing: Jupyter Notebooks.
 </bibl>
 
 <bibl id="B78">
-  <title><p>Detailed overview all benchmarks</p></title>
+  <title><p>Feature Matrix</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
-  <url>http://users.elis.ugent.be/drdwitte/resultscsv.html</url>
+  <url>https://users.elis.ugent.be/drdwitte/featurematrix.html</url>
 </bibl>
 
 <bibl id="B79">
+  <title><p>Deployment Info</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://users.elis.ugent.be/drdwitte/deployment.html</url>
+</bibl>
+
+<bibl id="B80">
   <title><p>Postprocessing: Jupyter notebooks</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>http://users.elis.ugent.be/drdwitte/postprocessing.html</url>
