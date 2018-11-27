@@ -1,0 +1,1530 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+     <!-- Le styles -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+
+    <style type="text/css">
+
+      /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+
+
+
+
+      /* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
+
+      #wrap > .container {
+        padding-top: 60px;
+      }
+      .container .credit {
+        margin: 20px 0;
+      }
+
+      code {
+        font-size: 80%;
+      }
+
+      .resizedTextbox {width: 20px; height: 20px}
+
+      .clicked {
+        background-color: grey;
+      }
+
+      .fitWindow {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+    
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"> </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.4.0/d3.js"></script>
+  </head>
+
+
+  
+  <body>
+
+    
+    
+    <div id="wrap">
+      <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+
+          <ul class="nav">
+            <li>
+                <a href="./index.html">Project</a>
+            </li>
+            <li>
+                <a href="./featurematrix.html">Feature Matrix</a>
+            </li>
+            <li>
+                <a href="./deployment.html">Deployment</a>
+            </li>
+            <li>
+                <a href="./resultscsv.html">Benchmark Logs</a>
+            </li>
+            <li>
+                <a href="./postprocessing.html">Postprocessing</a>
+            </li>
+            <li>
+                <a href="http://www.ugent.be/ea/idlab/en">IDLab </a>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        
+        <h2>
+          Feature matrix 
+        </h2>
+
+
+<p> <b>Show/Hide columns (click on store/column name to toggle visibility):</b> </p>
+        <p> Info columns:  
+          <a href="#" class="toggle_category" data-column="0"> Category</a>,  
+          <a href="#" class="toggle_category" data-column="1"> Feature</a>, 
+          <a href="#" class="toggle_category" data-column="2"> Description</a>,  
+          <a href="#" class="toggle_category" data-column="3"> User Weight</a>  
+        </p>
+        <p> Stores: 
+          <a href="#" class="toggle_category clicked" data-column="4"> VOS </a>,  
+          <a href="#" class="toggle_category clicked" data-column="5"> Virtuoso Enterprise  </a>,  
+          <a href="#" class="toggle_category clicked" data-column="6"> 4store </a>,  
+          <a href="#" class="toggle_category clicked" data-column="7"> Jena Fuseki HDT </a>,  
+          <a href="#" class="toggle_category clicked" data-column="8"> Marklogic</a>,  
+          <a href="#" class="toggle_category clicked" data-column="9"> GraphDB </a>,  
+          <a href="#" class="toggle_category clicked" data-column="10"> Blazegraph </a>,  
+          <a href="#" class="toggle_category clicked" data-column="11"> Allegrograph </a>, 
+          <a href="#" class="toggle_category clicked" data-column="12"> fluidOps </a>, 
+          <a href="#" class="toggle_category clicked" data-column="13"> Stardog </a>, 
+          <a href="#" class="toggle_category clicked" data-column="14"> LDF </a>, 
+
+        </p>
+
+
+        
+        <p>  </p>
+	<table id="featurematrix" class="display">
+	<thead>
+            <tr>
+              <th>Category</th>
+              <th>Feature</th>
+              <th>Description</th>
+              <th>User weight</th>
+
+              <th>Virtuoso Open Source 7.2.4</th>
+              <th>Virtuoso Enterprise 7.2.4 </th>
+              <th>4store </th>
+              <th> Jena Fuseki (HDT) </th>
+              <th>Marklogic Enterprise 8</th>
+              <th>GraphDB Cloud 7.0.1</th>
+              <th>Blazegraph 2.1</th>
+              <th>Allegrograph 6.1</th>
+              <th>fluidOps FedX 3.2</th>
+              <th>Stardog 4.2.1</th>
+              <th>LDF </th>
+
+
+
+            </tr>
+          </thead>
+          <tbody>
+          
+            <tr>
+              <td class="category"> RDF Store </td>
+              <td class="feature"> SPARQL 1.1</td>
+              <td> <a href="https://www.w3.org/TR/sparql11-query/">W3C spec</a> </td>
+              <td> <input type="text" id="i1" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtTipsAndTricksSPARQL11FeaturesExamplesCollection">SPARQL 1.1 documentation</a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtTipsAndTricksSPARQL11FeaturesExamplesCollection">SPARQL 1.1 documentation</a> </td>
+              <td> <a href="http://stackoverflow.com/questions/10148899/sparql-1-1-support-in-4store">Stackoverflow post: No</a> </td>
+              <td> <a href="https://jena.apache.org/documentation/serving_data/"> yes (Jena Documentation) </a>  </td>
+              <td> <a href="https://docs.marklogic.com/guide/semantics/semantic-searches">  yes </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/standard/sparql-compliance.html">yes</a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/SPARQL_Update"> yes </a> </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/sparql-reference.html"> yes (documentation) </a> </td>
+              <td> <a href="http://localhost:50080/resource/Help:SPARQLEndpoint"> Help:SPARQLEndpoint </a>: yes </td>
+              <td> <a href="https://docs.stardog.com/#_querying"> yes </a> </td>
+              <td> BGP queries only </td>
+
+            
+            </tr>
+
+            <tr>
+              <td class="category"> Database </td>
+              <td class="feature">CRUD</td>
+              <td> <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete"> CRUD</a></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtTipsAndTricksSPARQL11Update"> yes </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtTipsAndTricksSPARQL11Update"> yes </a> </td>
+              <td> <a href="https://groups.google.com/forum/#!topic/4store-support/6HMR_eivT5g"> yes (SPARQL operators and update endpoint) </td>
+              <td> <a href="http://www.rdfhdt.org/what-is-hdt/">HDT is read-only</a> </td>
+              <td> <a href="https://docs.marklogic.com/guide/semantics/sparql-update"> yes </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/6.6/standard/quick-start-guide.html#querying-data"> yes </a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/SPARQL_Update"> yes </a> </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/sparql-reference.html#header2-43"> yes </a> </td>
+              <td> <a href="http://localhost:50080/resource/Help:SPARQLEndpoint"> FluidOps supports local endpoint with CRUD</a>, FedX is federator </td>
+              <td> <a href="https://docs.stardog.com/#_updating">yes</a> </td>
+              <td> <a href="http://www.rdfhdt.org/what-is-hdt/">HDT is read-only</a> </td>
+
+            </tr>
+
+            <tr>
+              <td class="category"> RDF Store </td>
+              <td class="feature">Nested SELECT</td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtTipsAndTricksSPARQL11Subquery"> yes </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtTipsAndTricksSPARQL11Subquery"> yes </a> </td>
+              <td> No </td>
+              <td> <a href="https://jena.apache.org/documentation/query/sub-select.html"> yes </a> </td>
+              <td> <a href="https://docs.marklogic.com/guide/semantics/semantic-searches#id_50340"> yes (example query) </a> </td>
+              <td> <a href="http://bulgariana.eu/display/GraphDB63/GraphDB-SE+Query+Behaviour"> yes </a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/NamedSubquery"> yes (+ extension named subquery)</a> </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/sparql-reference.html"> yes </a> </td>
+              <td> yes (tested) </td>
+              <td> <a href="https://docs.stardog.com/#_querying"> yes?</a> </td>
+              <td>No </td>
+
+
+            </tr>
+
+            <tr>
+              <td class="category"> RDF Store </td>
+              <td class="feature"> Property Paths </td>
+              <td> <a href="https://www.w3.org/TR/sparql11-property-paths/#path-language"> W3C Property paths</a></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtTipsAndTricksSPARQL11PropertyPaths"> Property paths in Virtuoso </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtTipsAndTricksSPARQL11PropertyPaths"> Property paths in Virtuoso </a> </td>
+              <td> No </td>
+              <td> <a href="https://jena.apache.org/documentation/query/property_paths.html"> yes </a>  </td>
+              <td> <a href="https://docs.marklogic.com/guide/semantics/semantic-searches#id_68138"> Property path expressions </a> </td>
+              <td> <a href="http://bulgariana.eu/display/GraphDB63/GraphDB-SE+Query+Behaviour"> yes </a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/PropertyPaths"> yes</a> </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/sparql-reference.html"> yes </a> </td>
+              <td> ? </td>
+              <td> <a href="https://docs.stardog.com/#_query_plan_operators">yes </a> </td>
+              <td>No </td>
+
+            </tr>
+
+            <tr>
+              <td class="category"> Database</td>
+              <td class="feature"> Transactions </td>
+              <td> <a href="https://en.wikipedia.org/wiki/ACID"> ACID</a>, <a href="https://en.wikipedia.org/wiki/Eventual_consistency"> BASE</a> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> ACID   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> ACID   </a> </td>
+              <td>  <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> No </a> </td>
+              <td> <a href="https://jena.apache.org/documentation/txn/"> ACID </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">                        ACID  </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/GraphDB">                        ACID  </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">                       ACID  </a> </td>              
+              <td> <a href="http://franz.com/agraph/allegrograph/ag_commercial_edition.lhtml">  ACID  </a> </td>
+              <td> FedX is not a database, individual endpoints can be chosen at will </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">                          ACID </a> </td>
+              <td> Interface is read-only </td>
+
+            </tr>            
+
+    
+
+            <tr>
+              <td class="category"> Database</td>
+              <td class="feature">  Full-text Search</td>
+              <td> <a href="https://en.wikipedia.org/wiki/Full-text_search"> Full-text-search</a></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="http://docs.openlinksw.com/virtuoso/rdfsparqlrulefulltext/"> yes, proprietary (bif:contains) </a> </td>
+              <td> <a href="http://docs.openlinksw.com/virtuoso/rdfsparqlrulefulltext/"> yes, proprietary (bif:contains) </a> </td>
+              <td> <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> no, only SPARQL regex</a> </td>
+              <td> <a href="https://jena.apache.org/documentation/query/text-query.html"> Lucene/SOLR integration </a> </td>
+              <td> <a href="https://docs.marklogic.com/guide/concepts/search"> yes, built-in </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/standard/full-text-search.html"> Lucene</a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/FullTextSearch">Both internal as  SOLR</a> </td>
+              <td> <a href="http://franz.com/agraph/allegrograph/ag_commercial_edition.lhtml"> SOLR integration  </a> </td>
+              <td> <a href="http://localhost:50080/resource/Help:Search"> Help:Search:</a> yes (Lucene) </td>
+              <td> <a href="https://docs.stardog.com/#_full_text_search"> Built-in based on Lucene </a> </td>
+              <td> <a href="http://linkeddatafragments.org/publications/iswc2015-substring.pdf"> Research effort </a> </td>
+
+            </tr>      
+
+            <tr>
+              <td> Database</td>
+              <td> Storage layout </td>
+              <td> </td>
+              <td> </td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSRDFWP"> Quad Table </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSRDFWP"> Quad Table </a> </td>
+              <td> ? </td>
+              <td> <a href="http://www.rdfhdt.org/what-is-hdt/"> Compressed triple file </a> </td>
+              <td> <a href="https://en.wikipedia.org/wiki/MarkLogic"> Multi-model: natively stores XML, JSON and RDF triples </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/free/storage.html"> Not specified, changes between versions </a> </td>
+              <td>Not specified </td>
+              <td> <a href="http://tinman.cs.gsu.edu/~raj/8711/sp11/presentations/allegroGraphPresentation.pdf"> Table (5 columns) </a> </td>
+              <td> FedX is not a database, individual endpoints can be chosen at will </td>
+              <td>Not specified </td>
+              <td> Individual endpoints can be chosen at will, currently mainly HDT </td>
+
+
+            </tr>      
+
+            <tr>
+              <td class="category"> Database</td>
+              <td class="feature"> Versioning</td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/OdsBriefcaseVC"> yes, optional </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/OdsBriefcaseVC"> yes, optional </a> </td>
+              <td> <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> No </a> </td>
+              <td> <a href="https://github.com/rdfhdt/hdt-cpp/issues/7"> No </a> </td>
+              <td> <a href="http://docs.marklogic.com/guide/rest-dev/documents#id_52874"> yes, optional </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/standard/release-notes.html"> No? </a> </td>
+              <td>No? </td>
+              <td> No? </td>
+              <td> FedX is not a database, individual endpoints can be chosen at will </td>
+              <td> <a href="https://docs.stardog.com/2.2.4/#_versioning"> yes,optional </a>" </td>
+              <td> under development (OSTRICH) </td>
+
+            </tr>      
+
+            <tr>
+              <td class="category"> RDF Store </td>
+              <td class="feature"> Provenance </td>
+              <td> <a href="http://stackoverflow.com/questions/1312741/simple-example-of-reification-in-rdf">Reification</a>, <a href="https://en.wikipedia.org/wiki/Named_graph">Named Graphs</a> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://www.openlinksw.com/weblog/oerling/?id=1572"> Graph URI </a> </td>
+              <td> <a href="https://www.openlinksw.com/weblog/oerling/?id=1572"> Graph URI </a> </td>
+              <td> <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> Graph URI </a> </td>
+              <td> <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> Graph URI </a>, <a href="https://github.com/rdfhdt/hdt-java/blob/master/hdt-fuseki/fuseki_example.ttl"howto</a> </td>
+              <td> <a href="http://www.marklogic.com/what-is-marklogic/marklogic-semantics/triple-store/"> Reification </a> </td>
+              <td> <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> Graph URI </a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/Reification_Done_Right"> Reification and Graph URI </td>
+              <td> <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> Graph URI </a> </td>
+              <td> FedX is not a database, individual endpoints can be chosen at will </td>
+              <td> <a href="http://complexible.slides.com/kendallclark/provenance#/"> Graph URI </a> </td>
+              <td>No </td>
+
+            </tr>      
+
+            <tr>
+              <td class="category"> RDF Store </td>
+              <td class="feature"> Inference </td>
+              <td> Support for reasoning</td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="http://docs.openlinksw.com/virtuoso/rdfsparqlruleintro/"> RDFS & OWL</a> </td>
+              <td> <a href="http://docs.openlinksw.com/virtuoso/rdfsparqlruleintro/"> RDFS & OWL</a> </td>
+              <td> <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> No </a> </td>
+              <td> <a href="https://jena.apache.org/documentation/inference/"> RDFS & OWL </a> </td>
+              <td> <a href="https://docs.marklogic.com/guide/semantics/inferencing"> RDFS & OWL </a> </td>
+              <td> <a href="http://bulgariana.eu/display/GraphDB63/GraphDB-SE+Reasoner"> RDFS & OWL</a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/InferenceAndTruthMaintenance"> RFDS & OWL </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/reasoner-tutorial.html"> subset of RDFS & OWL </a> </td>
+              <td> <a href="http://localhost:50080/resource/Help:SPARQLEndpoint"> Inferencing flag </a> </td>
+              <td> <a href="https://docs.stardog.com/#_owl_rule_reasoning"> RDFS & OWL </a>  </td>
+              <td>No </td>
+
+            </tr>      
+
+
+            <tr>
+              <td class="category"> Usability </td>
+              <td class="feature"> (Open) Licensing</td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     Open Source, GPLv2                                 </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     Commercial license for cluster edition   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/4store">  Open Source GPLv3 </a> </td>              
+              <td> <a href="https://github.com/apache/jena/blob/master/LICENSE"> Jena:Apache v2 </a>, <a href="https://github.com/rdfhdt/hdt-java/blob/master/hdt-jena/LICENSE"> HDT: GNU v3 </a>  </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    commercial with limited developer edition (1 B triples, single node)            </a> </td>
+              <td> <a href="http://ontotext.com/products/graphdb/editions/"> commercial with limited developer edition (max 2 concurrent clients) </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">  Open Source (+ extended commercial license) </a> </td>
+              <td> <a href="http://franz.com/agraph/allegrograph/ag_commercial_edition.lhtml"> commercial, limited developer edition (50 M triples)  </a> </td>
+              <td> <a href="http://www.fluidops.com/en/company/training/open_source"> FedX is Open Source: AGPL </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">     commercial, limited community edition (25 M triples)  </a> </td>
+              <td> <a href="https://github.com/LinkedDataFragments/Client.js/blob/master/LICENSE.txt"> MIT license </a> </td>
+
+            </tr>      
+
+
+            <tr>
+              <td class="category"> Performance</td>
+              <td class="feature"> Clustering </td>
+              <td> <a href="https://www.techopedia.com/definition/17/clustering-databases">Techopedia - Clustering</a></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/features-comparison-matrix/#cluster"> no </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/features-comparison-matrix/#cluster"> yes </a> </td>
+              <td> <a href="https://pdfs.semanticscholar.org/cd2d/25fcb3bae41b10070562be27d549bc711192.pdf"> yes </a> </td>
+              <td> <a href="https://jena.apache.org/documentation/hadoop/"> No (Elephas project is beta) </a> </td>
+              <td> <a href="http://docs.marklogic.com/guide/concepts/clustering#id_27265">  yes </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/enterprise/ee/cluster-topologies.html"> yes </a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/ClusterGuide"> yes </a> </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/agraph-introduction.html#intro-federation"> Allegrograph Federation Mechanism </a> </td>
+              <td> FedX = Federation </td>
+              <td> <a href="https://docs.stardog.com/#_high_availability_cluster"> yes</a> </td>
+              <td> <a href="http://bit.ly/swedish-nobel-harvard"> Supports Federated Querying</a> </td>
+
+            </tr>  
+
+            <tr>
+              <td> Usability </td>
+              <td> Development Ongoing </td>
+              <td> </td>
+              <td> </td>
+
+              <td> <a href="https://github.com/openlink/virtuoso-opensource"> yes </a> </td>
+              <td> <a href="https://github.com/openlink/virtuoso-opensource"> yes </a> </td>
+              <td> <a href="https://github.com/garlik/4store/issues/137"> Website went offline  </a>  </td>
+              <td> <a href="https://github.com/rdfhdt/hdt-java/graphs/contributors?from=2012-06-17&to=2016-12-15&type=c"> no </a> </td>
+              <td> <a href="http://docs.marklogic.com/guide/relnotes"> yes </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/standard/release-notes.html#graphdb-8-0-5"> yes </a> </td>
+              <td> <a href="https://github.com/blazegraph/database/releases"> Release notes </a> </td>
+              <td> <a href="http://franz.com/ps/newsletter-swt.lhtml#article1"> Recently added functionality => yes </a> </td>
+              <td> <a href="https://appcenter.fluidops.com/resource/?uri=http%3A%2F%2Fwww.fluidops.com%2Fapplication%2FFedX"> yes</a> </td>
+              <td> <a href="http://stardog.com/"> Release 2017 </a> </td>
+              <td> <a href="https://github.com/LinkedDataFragments/Client.js/releases"> recent releases </a> </td>
+
+            </tr>    
+
+	    <tr>
+              <td class="category"> Usability </td>
+              <td class="feature"> Web UI (GUI) </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/features-comparison-matrix/#iiuicond"> Conductor Web UI </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/features-comparison-matrix/#iiuicond"> Conductor Web UI </a> </td>
+              <td> yes </td>
+              <td> <a href="https://jena.apache.org/documentation/serving_data/"> Limited GUI </a> </td>
+              <td> <a href="https://docs.marklogic.com/guide/admin/admin_inter#id_49127"> Admin UI </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/free/workbench.html"> GraphDB Workbench</a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/Quick_Start"> Blazegraph Workbench</a> </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/agwebview.html"> AGWebView </a> </td>
+              <td> <a href="http://www.fluidops.com/en/products/information_workbench/"> fluidOps Information Workbench </a> </td>
+              <td> <a href="https://docs.stardog.com/#_browsing"> Stardog Web Console </td>
+              <td> <a href="http://client.linkeddatafragments.org/"> ldf-client browser </a> </td>
+
+            </tr> 
+
+	   <tr>
+              <td class="category"> Usability </td>
+              <td class="feature"> Command Line interface (CLI)</td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/features-comparison-matrix/#iiisql"> yes, isql </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/features-comparison-matrix/#iiisql"> yes, isql </a> </td>
+              <td> limited set of routines </td>
+              <td> <a href="https://jena.apache.org/documentation/serving_data/"> limited set of routines </a> </td>
+              <td> <a href="http://docs.marklogic.com/guide/qconsole/intro"> yes, query console </a> </td>
+              <td>No </td>
+              <td> No </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/agquery.html"> yes, agquery </a> </td>
+              <td> <a href="https://appcenter.fluidops.com/resource/?uri=http%3A%2F%2Fwww.fluidops.com%2Fapplication%2FFedX"> FedX CLI</a> </td>
+              <td> <a href="https://docs.stardog.com/#_command_line_interface"> yes, stardog & stardog admin</a> </td>
+              <td> limited set of routines </td>
+
+            </tr>  
+
+            <tr>
+              <td class="category"> Usability </td>
+              <td class="feature"> Release Stable (Commercial) </td>
+              <td></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> yes </td>
+              <td> yes </td>
+              <td> <a href="https://github.com/garlik/4store/issues/137"> Offline </a>  </td>
+              <td> <a href="http://www.rdfhdt.org/"> No, research </a> </td>
+              <td> yes </td>
+              <td>yes </td>
+              <td>yes </td>
+              <td> yes </td>
+              <td> <a href="http://www.fluidops.com/en/products/information_workbench/"> yes </a> </td>
+              <td>yes </td>
+              <td> no, research </td>
+
+            </tr> 
+
+            <tr>
+              <td class="category"> Usability </td>
+              <td class="feature"> Enterprise Support </td>
+              <td></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="http://wikis.openlinksw.com/SupportWeb/SupportServicesFAQ"> Not Included, support forums </a> </td>
+              <td> <a href="http://wikis.openlinksw.com/SupportWeb/SupportServicesFAQ"> Web-based (free), Support contract  </a> </td>
+              <td> No </td>
+              <td> <a href="http://www.rdfhdt.org/"> No </a> </td>
+              <td> <a href="https://help.marklogic.com/marklogic/AccountRequest"> Support Contract </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/support/"> Email support </a> </td>
+              <td> <a href="https://www.blazegraph.com/product/support/">Mailing list, issue tracker </a> </td>
+              <td> <a href="http://franz.com/purchase.lhtml"> Paid Technical Support </a> </td>
+              <td> <a href="http://www.fluidops.com/en/support"> Free mailinglist, Support Contract </a> </td>
+              <td><a href="https://docs.stardog.com/#_enterprise_premium_support"> Enterprise edition: phone, mail, community not</a> </td>
+              <td> No </td>
+
+            </tr> 
+
+            <tr>
+              <td class="category"> Usability</td>
+              <td> REST API </td>
+              <td></td>
+              <td> </td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes   </a> </td>
+              <td>  No </td>
+              <td> <a href="http://www.rdfhdt.org/manual-of-hdt-integration-with-jena/"> yes (Fuseki) </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB"> yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   yes </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  yes </a> </td>
+              <td> <a href="http://localhost:50080/resource/Help:RestApi"> Help:RestAPI => yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      yes </a> </td>
+              <td> <a href="https://github.com/LinkedDataFragments/Client.js/blob/master/bin/ldf-client-http"> HTTP-client </a> </td>
+
+            </tr> 
+
+
+            <tr>
+              <td class="category"> Performance </td>
+              <td class="feature"> Bulk Loader </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtBulkRDFLoader"> Virtuoso Bulk RDF Loader </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VirtBulkRDFLoader"> Virtuoso Bulk RDF Loader </a> </td>
+              <td> <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> File ingest </a> </td>
+              <td> <a href="https://hub.docker.com/r/rfdhdt/hdt-cpp/">  HDT tools docker </a> </td>
+              <td> <a href="http://docs.marklogic.com/guide/ingestion/content-pump"> Marklogic content pump </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/standard/loading-data-using-the-workbench.html#what-s-in-this-document"> via workbench => local file ingest from server </a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/Bulk_Data_Load"> Bulk Data Loader</a> </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/agload.html"> Allegrograph Bulk Loader (agload) </a> </td>
+              <td> FedX is not a database, individual endpoints can be chosen at will </td>
+              <td> <a href="https://docs.stardog.com/#_optimizing_bulk_data_loading"> yes </a> </td>
+              <td> <a href="https://hub.docker.com/r/rfdhdt/hdt-cpp/">  HDT tools docker </a> </td>
+
+            </tr> 
+
+
+
+            <tr>
+              <td> Information </td>
+              <td> Getting Started </td>
+              <td> </td>
+              <td> </td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSStart"> Getting Started </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSStart"> Getting Started </a> </td>
+              <td> <a href="https://4store.danielknoell.de/"> Website went offline -> backup</a>  </td>
+              <td> <a href="http://www.rdfhdt.org/manual-of-hdt-integration-with-jena/"> HDT integration with Jena </a> </td>
+              <td> <a href="https://docs.marklogic.com/guide/getting-started/intro"> Getting Started with Marklogic </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/free/quick-start-guide.html"> Quick-start </a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/Quick_Start"> Quick-start </a> </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/agraph-quick-start.html"> Quick-start </a> </td>
+              <td> <a href="http://localhost:50080/resource/Help:GettingStarted"> Help:GettingStarted </a> </td>
+              <td> <a href="https://docs.stardog.com/#_quick_start_guide"> Quick start guide </a> </td>
+              <td> <a href="http://linkeddatafragments.org/software/"> LDF software overview </a> </td>
+
+            </tr>
+
+            <tr>
+              <td> Information </td>
+              <td> Source Code </td>
+              <td> </td>
+              <td> </td>
+
+              <td> <a href="https://github.com/openlink/virtuoso-opensource"> Github </a> </td>
+              <td> closed source </td>
+              <td> <a href="https://github.com/garlik/4store">Garlik/4store</a> </td>
+              <td> <a href="https://github.com/rdfhdt/hdt-java/tree/master/hdt-fuseki"> HDT-fuseki source </a> </td>
+              <td> closed source </td>
+              <td> closed source </td>
+              <td> <a href="https://github.com/blazegraph/database"> Blazegraph Github</a> </td>
+              <td> closed source </td>
+              <td> <a href="http://www.fluidops.com/en/company/training/open_source">  Not available </a> </td>
+              <td> closed source </td>
+              <td> <a href="https://github.com/LinkedDataFragments"> Github source code </a> </td>
+
+            </tr>
+
+
+            </tr>  
+
+
+            <tr>
+              <td> Information </td>
+              <td> Largest Reported Benchmark </td>
+              <td>  </td>
+              <td> </td>
+
+
+              <td> <a href="https://www.w3.org/wiki/LargeTripleStores#OpenLink_Virtuoso_v6.1_-_15.4B.2B_explicit.3B_uncounted_virtual.2Finferred"> 15.4B </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSArticle150BillionTripleDatasetLOD2StoreCluster"> 150B (8 nodes, 256GB RAM) </a> </td>
+              <td> <a href="http://semanticweb.org/wiki/4store"> Garlik internal usage: 15 BT </a> </td>
+              <td> <a href="http://www.rdfhdt.org/datasets/"> HDT datasets - Freebase (2.06 BT)</a>, <a href="http://www.rdfhdt.org/manual-of-hdt-integration-with-jena/"><b>Note:</b> multiple hdt graphs per store possible! </a> </td>
+              <td> ? </td>
+              <td> <a href="http://ontotext.com/products/graphdb/benchmark-results/"> UNIPROT : - close to 13 billion triples</a> </td>
+              <td> <a href="https://www.w3.org/wiki/LargeTripleStores"> results for BigData: 12.7B</a> </td>
+              <td> <a href="https://www.w3.org/wiki/LargeTripleStores#AllegroGraph_.281.2BTrillion.29"> > 1000B </a> </td>
+              <td> <a href="https://github.com/AKSW/LargeRDFBench"> LargeRDFBench: > 1B </a> </td>
+              <td> <a href="https://www.w3.org/wiki/LargeTripleStores"> 50B</a> </td>
+              <td> >1B (this work) </td>
+
+            </tr>
+
+            <tr>
+              <td> Information </td>
+              <td> Technical Documentation </td>
+              <td></td>
+              <td> </td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/"> Documentation </a> </td>
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/"> Documentation </a> </td>
+              <td>  <a href="https://github.com/garlik/4store"> Github </a> </td>              
+              <td> <a href="https://github.com/rdfhdt/hdt-java"> hdt-fuseki </a> </td>
+              <td>  <a href="http://docs.marklogic.com/">  Product Documentation   </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/standard/">GraphDB documentation</a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/Main_Page"> Wiki </a> </td>
+              <td>  <a href="http://franz.com/agraph/support/documentation/current/agraph-introduction.html"> Documentation </a> </td>
+              <td> <a href="http://localhost:50080/resource/Help:Help"> IWB User's guide </a> </td>
+              <td> <a href="http://docs.stardog.com/#_quick_start_guide"> Quick Start Guide</a> </td>
+              <td> <a href="https://github.com/LinkedDataFragments/Client.js/blob/master/README.md">TPF client README </a> </td>
+
+            </tr>
+
+            <tr>
+              <td> Information </td>
+              <td> Cluster Installation Guide </td>
+              <td></td>
+              <td> </td>
+
+              <td> No </td>
+              <td> <a href="http://docs.openlinksw.com/virtuoso/clusterstcnf/"> Cluster Installation </a> </td>
+              <td> <a href="https://4store.danielknoell.de/"> Website went offline - copy </a>  </td>
+              <td> No </td>
+              <td> <a href="https://docs.marklogic.com/guide/cluster/config_cluster"> Cluster configuration </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/enterprise/ee/setting-up-a-cluster-with-one-master.html"> Single-Master setup guide</a> </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/ClusterGuide"> Cluster Guide</a> </td>
+              <td> <a href="http://franz.com/agraph/support/documentation/current/replication.html"> Replication </a> </td>
+              <td> <a href="http://localhost:50080/resource/Help:FedX"> Help:FedX </a> </td>
+              <td> <a href="https://docs.stardog.com/#_installation"> HA Cluster Installation</a> </td>
+              <td>LDF </td>
+
+            </tr>
+
+            <tr>
+              <td class="category"> Usability </td>
+              <td class="feature"> Public Docker instance </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://hub.docker.com/r/tenforce/virtuoso/"> tenforce/virtuoso </a> </td>
+              <td> No </td>
+              <td> <a href="https://hub.docker.com/r/inutano/4store/"> inutano/4store </a> </td>
+              <td> <a href="https://hub.docker.com/r/stain/jena-fuseki/">Jena Fuseki</a> but not HDT, <a href="https://hub.docker.com/r/rfdhdt/hdt-cpp/">  HDT tools docker </a> </td>
+              <td><a href="http://developer.marklogic.com/blog/building-a-marklogic-docker-container"> Marklogic Documentation</a> </td>
+              <td> No (commercial) </td>
+              <td> Not latest version </td>
+              <td> <a href="https://hub.docker.com/r/franzinc/agraph/"> franzinc/agraph </a> </td>
+              <td> No </td>
+              <td> <a href="https://hub.docker.com/r/bluepeppers/stardog/"> bluepeppers </a> (license key needed!) </td>
+              <td> <a href="https://hub.docker.com/r/linkeddatafragments/server.js/"> server.js </a> and <a href="https://hub.docker.com/r/linkeddatafragments/client.js/"> client.js </a> </td>
+
+            </tr>
+
+            <tr>
+              <td> Information </td>
+              <td> Download Link </td>
+              <td> </td>
+              <td> </td>
+
+              <td> <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSDownload">VOS Downloads</a> </td>
+              <td> No </td>
+              <td> <a href="https://4store.danielknoell.de/"> Website went offline - copy </a>  </td>
+              <td> <a href="https://github.com/rdfhdt/hdt-java/tree/master/hdt-fuseki"> Maven build </a> </td>
+              <td> <a href="https://developer.marklogic.com/free-developer"> Developer version</a> </td>
+              <td> <a href="http://ontotext.com/products/graphdb/"> GraphDB Free</a> </td>
+              <td> <a href="https://www.blazegraph.com/download/"> Sourceforge link </a> </td>
+              <td> <a href="http://franz.com/agraph/downloads/"> Download page </a> </td>
+              <td> <a href="https://appcenter.fluidops.com/login/login.jsp?j_referrer=%2Fresource%2FDownload"> IWB download page </a> </td>
+              <td> <a href="http://stardog.com/"> Request download link</a> </td>
+              <td> <a href="http://linkeddatafragments.org/software/"> clients and server implementations</a> </td>
+
+            </tr>
+
+            <tr>
+              <td> Database </td>
+              <td> Database Model </td>
+              <td>  <a href="http://db-engines.com/en/article/Graph+DBMS"> Graph DBMS </a>, 
+                <a href="http://db-engines.com/en/article/RDF+Stores"> RDF Store </a>,
+                <a href="http://db-engines.com/en/article/Document+Stores"> Document Store</a>,
+                <a href="http://db-engines.com/en/article/Search+Engines"> Search Engine </a>,
+                <a href="http://db-engines.com/en/article/Native+XML+DBMS"> XML DB</a>
+
+              </td>
+              <td> </td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     Document Store, RDF Store, XML DB, Relational DB </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     Document Store, RDF Store, XML DB, Relational DB </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/4store">       RDF store             </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Jena">         RDF store          </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    Document Store, RDF Store, Search engine, XML DB </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/GraphDB">      GraphDB               </a> </td> 
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   Graph DBMS, RDF Store </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/AllegroGraph"> Graph DBMS, RDF Store </a> </td>
+              <td> FedX is not a database, individual endpoints can be chosen at will </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      Graph DBMS, RDF Store </a> </td>
+              <td> RDF Store  </td>
+
+            </tr>
+
+            <tr>
+              <td> Information </td>
+              <td> Initial Release </td>
+              <td> </td>
+              <td> </td>
+
+              <td> <a href="https://github.com/openlink/virtuoso-opensource/commit/0c6def9e86bb3eea0ee26b09bca6496347af1ee3"> 2006 </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">    1998   </a> </td>
+              <td> <a href="https://pdfs.semanticscholar.org/cd2d/25fcb3bae41b10070562be27d549bc711192.pdf"> 2009 </a> </td>
+              <td> <a href="https://github.com/rdfhdt/hdt-java/graphs/contributors"> HDT (2013) </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">   2001 </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/GraphDB">   2000 </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">  2016 </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph"> 2004 </a> </td>
+              <td> <a href="https://www.fluidops.com/downloads/documents/pubeswc2011fedx.pdf"> FedX paper: 2011 </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">     2010 </a> </td>
+              <td>  <a href="https://github.com/LinkedDataFragments/Server.js/releases?after=v0.4.1"> 2014 </a> </td>
+
+            </tr>
+
+            <tr>
+              <td> Information </td>
+              <td> Latest Version </td>
+              <td> </td>
+              <td> </td>
+
+              <td>  <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/#2016-04-24:%20Virtuoso%207.2.4%20Released,%20Open%20Source%20and%20Commercial%20Editions">    2016 </a> </td>
+              <td>  <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/#2016-04-24:%20Virtuoso%207.2.4%20Released,%20Open%20Source%20and%20Commercial%20Editions">    2016 </a> </td>
+              <td> <a href="http://semanticweb.org/wiki/4store">2011</a> </td>
+              <td> <a href="https://github.com/rdfhdt/hdt-java/releases/tag/v2.0"> 2016  </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">   2015 </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB"> June 2016</a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">  2016 </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph"> 2015 </a> </td>
+              <td> <a href="https://appcenter.fluidops.com/resource/?uri=http%3A%2F%2Fwww.fluidops.com%2Fapplication%2FFedX"> FedX 3.1 2016</a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">     2016 </a> </td>
+              <td> <a href="https://github.com/LinkedDataFragments/Server.js/releases"> 2016 </a> </td>
+
+            </tr>
+
+            <tr>
+              <td> Information </td>
+              <td> Implementation Language </td>
+              <td></td>
+              <td> </td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     C   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     C   </a> </td>
+              <td> <a href="http://semanticweb.org/wiki/4store"> C </a> </td>
+              <td> <a href="https://github.com/rdfhdt"> hdt-cpp (C++), hdt-java, jena (java) </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    C++             </a> </td>
+              <td><a href="http://db-engines.com/en/system/GraphDB">  Java          </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   Java            </a> </td>
+              <td> <a href="https://en.wikipedia.org/wiki/AllegroGraph"> Common Lisp </a> </td>
+              <td> FedX.jar => Java </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">     Java </a> </td>
+              <td> <a href="https://github.com/LinkedDataFragments"> Java, javascript</a> </td>
+
+            </tr>
+
+            <tr>
+              <td> Usability </td>
+              <td> Server Operating Systems </td>
+              <td></td>
+              <td> </td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">    AIX, FreeBSD, HP-UX, Linux, OS X, Solaris Windows </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">    AIX, FreeBSD, HP-UX, Linux, OS X, Solaris Windows </a> </td>
+              <td> Linux, OS X, ? </td>
+              <td> <a href="http://www.rdfhdt.org/"> Linux, OS X, Windows </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">   Linux, OS X, Solaris, Windows </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB">  Linux, OS X, Windows          </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">  Linux, OS X, Windows          </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph"> Linux, OS X, Windows </a> 
+              <td> All OS with JVM  </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">     All OS with JVM </a> </td>
+              <td> <a href="https://github.com/LinkedDataFragments"> All OS with JVM </a> </td>
+
+            </tr>
+
+            <tr>
+              <td> Database </td>
+              <td> Data Scheme </td>
+              <td> </td>
+              <td> </td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes (Column store)   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes (Column store)   </a> </td>
+              <td>  schema-free (native triple store) </td>
+              <td> <a href="http://www.rdfhdt.org/"> RDF (schema-free) </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    schema-free             </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB">   schema-free            </a>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   schema-free            </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph"> RDF </a> 
+              <td> FedX is not a database, individual endpoints can be chosen at will </td> 
+              <td>  <a href="http://db-engines.com/en/system/Stardog">     schema-free </a> </td>
+              <td> LDF is an RDF query interface => RDF (schema-free) </td>
+
+            </tr>
+
+            <tr>
+              <td class="category"> Database </td>
+              <td class="feature"> Typing </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes   </a> </td>
+              <td>  ? </td>
+              <td> <a href="https://jena.apache.org/documentation/notes/typed-literals.html"> yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB"> yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   yes </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  yes </a> </td>
+              <td> yes  </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      yes </a> </td>
+              <td> no, xsd supported but every URI treated as a string </td>
+
+            </tr>
+
+            <tr>
+              <td class="category"> Database </td>
+              <td class="feature"> XML Support </td>
+              <td> XML processing, XPath, SQuery, XSLT </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="https://virtuoso.openlinksw.com/xml-database/">     yes   </a> </td>
+              <td>  <a href="https://virtuoso.openlinksw.com/xml-database/">     yes   </a> </td>
+              <td>  No </td>
+              <td> <a href="https://jena.apache.org/documentation/io/rdfxml_howto.html"> only (RDF/XML) </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes             </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB"> no </a> </td>
+              <td> <a href="http://db-engines.com/en/system/Blazegraph"> no </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph"> no </a> 
+              <td> <a href="http://localhost:50080/resource/Help:TreeDataSources"> Help:TreeDataSources: XML and JSON</a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">     no </a> </td>
+              <td> only (RDF/XML) </td>
+
+            </tr>
+
+            <tr>
+              <td class="category"> Database  </td>
+              <td class="feature"> Secondary Indexes </td>
+              <td> <a href="http://stackoverflow.com/questions/20824686/what-is-difference-between-primary-index-and-secondary-index-exactly">Primary vs Secondary </a></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes   </a> </td>
+              <td>  ? </td>
+              <td> No (only hdt index) </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB">   yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   yes </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  yes </a> </td>
+              <td> FedX is not a database, individual endpoints can be chosen at will </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      yes </a> </td>
+              <td> No (only hdt index) </td>
+
+            </tr>
+
+            <tr>
+              <td class="category"> Database </td>
+              <td class="feature"> SQL </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso">     yes   </a> </td>
+              <td>  no </td>
+              <td>  no </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">   SQL92  </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB">   no     </a> </td>
+              <td> <a href="http://db-engines.com/en/system/Blazegraph">   no     </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph"> no     </a> </td>
+              <td> <a href="http://localhost:50080/resource/Help:PolyglotWidgets"> Help:PolyglotWidgets</a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">     no     </a> </td>
+              <td> no </td>
+
+            </tr>
+
+           <tr>
+              <td> Usability </td>
+              <td> Programming Languages </td>
+              <td> </td>
+              <td> </td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> .Net, C, C#, C++, Java, Javascript, Perl, PHP, Python, Ruby, Visual Basic   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> .Net, C, C#, C++, Java, Javascript, Perl, PHP, Python, Ruby, Visual Basic   </a> </td>              		      <td>  <a href="www.europeanaconnect.eu/documents/europeana_ts_report.pdf"> PHP, Ruby, Python, Java </a> </td>
+              <td>  <a href="https://jena.apache.org/"> Jena = Java framework</a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    C, C#, C++, Java, Javascript, Perl, PHP, Python, Ruby </a></td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB"> .Net, C#, Clojure, Java, JavaScript (Node.js), PHP, Python, Ruby, Scala</a> </td>
+              <td> <a href="http://db-engines.com/en/system/Blazegraph">    .Net, C, C++, Java, JavaScript, PHP, Python, Ruby     </a></td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  C#, Clojure, Java, Lisp, Perl, Python, Ruby, Scala    </a></td> 
+              <td> Java </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      .Net, Clojure, Groovy, Java, JavaScript, Python, Ruby </a></td>
+              <td> <a href="http://linkeddatafragments.org/software/"> Clients: JavaScript, Perl, Java, Python, Sever: +Netkernel and PHP </a> </td>
+
+            </tr>
+
+
+
+
+
+
+           <tr>
+              <td class="category"> Usability </td>
+              <td class="feature"> Server-side scriptings </td>
+              <td> <a href="https://en.wikipedia.org/wiki/Stored_procedure"> Stored Procedures </a></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> yes   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> yes   </a> </td>
+              <td>  No? </td>
+              <td> No </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes (javascript, Xquery)  </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB">    yes (Java server plugin) </a></td>
+              <td> <a href="http://db-engines.com/en/system/Blazegraph">    yes                       </a></td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  yes                       </a></td> 
+              <td> <a href="http://localhost:50080/resource//Help:QueryStoredProcedures"> /Help:QueryStoredProcedures: yes</a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      no                        </a> </td>
+              <td> No </td>
+
+            </tr>
+
+
+           <tr>
+              <td class="category"> Database </td>
+              <td class="feature"> Triggers </td>
+              <td> <a href="https://en.wikipedia.org/wiki/Database_trigger"> Database Triggers</a></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> yes   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> yes   </a> </td>
+              <td>  No? </td>
+              <td>  No </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes             </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/GraphDB">   no            </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   no            </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph"> yes </a></td> 
+              <td> <a href="http://localhost:50080/resource/Help:SPARQLTriggerProvider"> Help:SPARQLTriggerProvider: yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog"> yes </a> </td>
+              <td> No </td>
+
+            </tr>
+
+           <tr>
+              <td class="category"> Performance </td>
+              <td class="feature"> Partitioning Methods </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="https://virtuoso.openlinksw.com/features-comparison-matrix/#datarepl"> Only single-node </a> </td>
+              <td>  <a href="https://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/VOSArticleWebScaleRDF#Partitioning%20vs%20Cache%20Fusion"> Sharding   </a> </td>
+              <td> Sharding </td>
+              <td> Only single-node </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    Sharding  </a></td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/enterprise/ee/cluster-topologies.html"> no </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   Sharding  </a></td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  no        </a></td> 
+              <td> FedX = manual partitioning </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      no        </a></td>
+              <td> <a href="https://ruben.verborgh.org/blog/2015/06/09/federated-sparql-queries-in-your-browser/">Manual partitioning (federation)</a> </td>
+
+            </tr>
+
+           <tr>
+              <td class="category"> Performance </td>
+              <td class="feature"> Replication Methods </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> Single-node   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> Master-master replication and Master-slave   </a> </td>
+              <td> <a href="https://pdfs.semanticscholar.org/cd2d/25fcb3bae41b10070562be27d549bc711192.pdf"> Replicated segments </a> </td>
+              <td> No </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes                       </a> </td>
+              <td> <a href="http://graphdb.ontotext.com/documentation/enterprise/ee/cluster-topologies.html"> yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   yes                       </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  Master-slave replication  </a></td> 
+              <td> No </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      Master-master replication </a> </td>
+              <td> No replication </td>
+
+            </tr>            
+
+           <tr>
+              <td class="category"> Database </td>
+              <td class="feature"> MapReduce </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> no   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> no   </a> </td>
+              <td>  No </td>
+              <td> <a href="https://jena.apache.org/documentation/hadoop/"> No (Elephas project is beta) </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes             </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/GraphDB">   no            </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   no            </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  no </a></td> 
+              <td> No </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">   no            </a> </td>
+              <td> No </td>
+
+            </tr> 
+
+           <tr>
+              <td class="category"> Database </td>
+              <td class="feature"> Consistency Type </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> Immediate   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> Immediate   </a> </td>
+              <td>  ? </td>
+              <td> Immediate </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">   Immediate                       </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB"> Immediate Consistency, Eventual consistency  </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">  Immediate and Eventual possible </a> </td>
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph"> Immediate and Eventual possible </a></td> 
+              <td> FedX is not a database, individual endpoints can be chosen at will </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog"> Immediate </a> </td>
+              <td> No consistency (HDT) </td>
+
+            </tr> 
+
+           <tr>
+              <td class="category"> Performance </td>
+              <td class="feature"> Concurrency </td>
+              <td> <a href="https://en.wikipedia.org/wiki/Concurrency_control"> Concurrency control</a></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> yes   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> yes   </a> </td>
+              <td>  <a href="https://groups.google.com/forum/#!topic/4store-support/4_O-4JJEgaE"> No </a> </td>
+              <td> <a href="http://db-engines.com/en/system/Jena"> yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes </a> </td>
+              <td> <a href="http://db-engines.com/en/system/GraphDB"> yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   yes </a> </td>              
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  yes </a></td> 
+              <td> <a href="http://localhost:50080/resource/"> yes</a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      yes </a> </td>              
+              <td> yes </td>
+
+            </tr> 
+
+           <tr>
+              <td class="category"> Database </td>
+              <td class="feature"> Durability </td>
+              <td> <a href="https://en.wikipedia.org/wiki/Durability_(database_systems)"> Durability </a></td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> yes   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> yes   </a> </td>
+              <td>  yes </td>
+              <td>  yes (HDT = on disk) </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/GraphDB">    yes </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   yes </a> </td>             
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph">  yes </a></td> 
+              <td> yes </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      yes </a> </td>              
+              <td>  yes (HDT = on disk) </td>
+
+            </tr> 
+
+           <tr>
+              <td > Database </td>
+              <td > Access Control </td>
+              <td></td>
+              <td> </td>
+
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> fine grained access rights according to SQL-standard   </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Virtuoso"> fine grained access rights according to SQL-standard   </a> </td>
+              <td>  ? </td>
+              <td> <a href="http://db-engines.com/en/system/Jena"> Access control via Jena Security </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/MarkLogic">    Role-based access control at the document level </a> </td>
+              <td><a href="http://graphdb.ontotext.com/documentation/6.6/standard/access-rights-and-security.html">    Role-based access to repositories </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Blazegraph">   Security and Authentication via Web Application Container (Tomcat, Jetty)  </a> </td>              
+              <td> <a href="http://db-engines.com/en/system/AllegroGraph"> Users with fine-grained authorization concept, user roles and pluggable authentication </a></td> 
+              <td> <a href="http://localhost:50080/resource/Help:AccessControl"> Help:AccessControl => ACLs (role-based) </a> </td>
+              <td>  <a href="http://db-engines.com/en/system/Stardog">      Access rights for users and roles               </a> </td>              
+              <td> No </td>
+
+            </tr> 
+
+           <tr>
+              <td class="category"> Usability </td>
+              <td class="feature"> Cloud Image </td>
+              <td> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="https://aws.amazon.com/marketplace/pp/B00TQ43PS0?qid=1481279662885&sr=0-1&ref_=srh_res_product_title">  
+                Digital Cube Reseller </a> </td>
+              <td> <a href="https://aws.amazon.com/marketplace/pp/B00TQ43PS0?qid=1481279662885&sr=0-1&ref_=srh_res_product_title">
+                Virtuoso PAGO ami</a>   </td>
+              <td> No </td>
+              <td> No </td>
+              <td> <a href="https://aws.amazon.com/marketplace/pp/B00U36DTL8?qid=1481279548606&sr=0-1&ref_=srh_res_product_title">  
+                  Marklogic PAGO ami</a>  </td>
+              <td> <a href="https://aws.amazon.com/marketplace/pp/B00OM7VXGW"> Ontotext PAGO ami </a> </td>
+              <td> No </td>
+              <td> <a href="http://franz.com/agraph/ec2/">Allegrograph Community ami</a> </td>
+              <td> No </td>
+              <td> <a href="https://github.com/stardog-union/stardog-graviton"> Graviton to build Stardog image (requires license) </td>
+              <td> No </td>
+
+            </tr> 
+
+            <tr>
+              <td class="category"> RDF Store </td>
+              <td class="feature"> TPF Interface </td>
+              <td> <a href="http://linkeddatafragments.org/in-depth/">LDF in depth</a> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> No </td>
+              <td> No </td>
+              <td> No</td>
+              <td> No </td>
+              <td> No </td>
+              <td> No </td>
+              <td> <a href="https://github.com/hartig/BlazegraphBasedTPFServer"> Collaboration with Olaf Hartig </a> </td>
+              <td> No </td>
+              <td> No </td>
+              <td> No </td>
+              <td> Yes, native </td>
+
+            </tr> 
+
+            <tr>
+              <td class="category"> Database </td>
+              <td class="feature"> Graph Traversal functionality  </td>
+              <td> <a href="https://en.wikipedia.org/wiki/Graph_traversal"> Graph Traversal </a> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td> <a href="http://dl.acm.org/citation.cfm?id=2764954&CFID=876037615&CFTOKEN=11073449"> Limited: SQL extension for transitive traversal </a> </td>
+              <td> <a href="http://dl.acm.org/citation.cfm?id=2764954&CFID=876037615&CFTOKEN=11073449"> Limited: SQL extension for transitive traversal </a> </td>
+              <td> No </td>
+              <td> No </td>
+              <td> No </td>
+              <td> No </td>
+              <td> <a href="https://wiki.blazegraph.com/wiki/index.php/RDF_GAS_API"> GAS API</a> and <a href="https://github.com/blazegraph/tinkerpop3/#blazegraph-tinkerpop3-implementation-blazegraph-gremlin"> Tinkerpop3 (Gremlin)</a> </td>
+              <td> <a href="http://franz.com/agraph/allegrograph/"> Javascript-based interface for graph traversal </a> </td>
+              <td> No </td>
+              <td> Tinkerpop3 (Gremlin) </td>
+              <td> No </td>
+
+            </tr> 
+
+            <tr>
+              <td class="category"> Database </td>
+              <td class="feature"> DBE Ranking  </td>
+              <td> <a href="http://db-engines.com/en/ranking"> Ranking </a> </td>
+              <td> <input type="text" id="" name="" value="0" class="resizedTextbox"></td>
+
+              <td>  <a href="http://db-engines.com/en/ranking/rdf+store">     2  </a> </td>
+              <td>  <a href="http://db-engines.com/en/ranking/rdf+store">     2  </a> </td>
+              <td>  <a href="http://db-engines.com/en/ranking/rdf+store">     9  </a> </td>
+
+              <td>  <a href="http://db-engines.com/en/ranking/rdf+store">     3  </a> </td>
+              <td>  <a href="http://db-engines.com/en/ranking/rdf+store">     1  </a> </td>
+              <td>  <a href="http://db-engines.com/en/ranking/rdf+store">     6  </a> </td>
+              <td>  <a href="http://db-engines.com/en/ranking/rdf+store">     11  </a> </td>
+              <td>  <a href="http://db-engines.com/en/ranking/rdf+store">     5  </a> </td>
+              <td> No </td>
+              <td>  <a href="http://db-engines.com/en/ranking/rdf+store">     7  </a> </td>
+              <td> No </td>
+
+            </tr> 
+
+
+          </tbody>
+        </table>
+
+
+	<button type="submit">
+          Calculate RDF Feature Score!
+        </button>
+
+	<p> <b> NOTE: </b> Dereferencing URIs for FluidOps won't work, since they are for localhost:50080 and require installing FluidOps workbench </p>
+
+
+
+          <h2> Scores per RDF Storage Solution </h2>
+	<table id="scoretable" class="display">
+	     	<thead>
+			<th> Store </th>
+			<th>  Points Database </th>
+			<th>  Points Performance </th>
+			<th>  Points RDF Store </th>
+			<th>  Points Usability </th>
+			<th>  Total Score </th>
+		</thead>	
+	
+		<tr>
+			<td> VOS </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+
+		<tr>
+			<td> Virtuoso Enterprise </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+
+<tr>
+			<td> 4store </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+
+<tr>
+			<td> Jena Fuseki HDT </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+
+<tr>
+			<td> Marklogic </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+
+<tr>
+			<td> GraphDB </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+
+<tr>
+			<td> Blazegraph </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+
+<tr>
+			<td> Allegrograph </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+
+<tr>
+			<td> fluidOps </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+
+<tr>
+			<td> Stardog </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+<tr>
+			<td> LDF </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+			<td> 0 </td>
+		</tr>
+		<tbody>
+
+		</tbody>	
+	</table>
+        
+        <!--
+        <div class="alert alert-block">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <h4>Disclaimer!</h4>
+          The results are preliminary and are subject of change. Please do not share the link to this page and to the results in any way until the results are finalized.
+        </div>
+        -->
+
+
+        
+
+  
+      
+  
+
+        
+
+        
+      <div id="push"></div>
+
+
+
+    </div>  
+    
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">  <!--Copyright 2015 - 2016 -->  <a href="http://imec.be">imec</a> - <a href="http://ugent.be">Ghent University</a>.</p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js">
+    </script>
+
+    <script type="text/javascript">
+      $(document).ready( function () {
+      
+        var tableScores = $('#scoretable').DataTable({
+			"searching": false,
+			"paging": false
+	});
+        //alert('hello there!')
+        var table = $('#featurematrix').DataTable(
+          { "columnDefs": [
+            
+              {
+                  "targets": [ 0 ],
+                  "visible": true,
+                  "searchable": false
+              },
+              {
+                  "targets": [ 4,5,6,7,8,9,10,11,12,13,14],
+                  "visible": false
+              }
+            ]
+          }
+        );
+
+	
+
+
+	
+
+
+        $('.toggle_category').on("click", function (e) {
+          e.preventDefault();
+ 
+          // Get the column API object
+          var column = table.column( $(this).attr('data-column') );
+ 
+          // Toggle the visibility
+          column.visible( ! column.visible() );
+
+          $(this).toggleClass('clicked');
+
+        } );
+
+
+
+
+	
+
+	d3.json('./featurescores.json', function(data){
+
+
+		var scores = data['triplestores'];
+
+		$('button').click( function() {
+
+		  var weights = table.$('input'); //.serialize(); 
+		  var categories = table.$('.category');
+		  var features = table.$('.feature');
+
+		  //console.log(weights.length);
+		  //console.log(categories.length);
+		  //console.log(features.length);
+		  //console.log(scores);
+
+		
+		  aggregated_scores = {}
+		  for (var j=0; j<scores.length; j++){
+
+			store = scores[j]['store'];
+			console.log(store);
+			aggregated_scores[store] = {};
+			aggregated_scores[store] = {'test': 'test'};
+			
+
+		  	for (var i=0; i<weights.length; i++){
+
+				feature = $(features[i]).html().trim();
+				category =  $(categories[i]).html().trim();
+				w = parseInt(weights[i].value);            
+
+				//console.log(feature);
+				//console.log(category);
+				//console.log(w);
+		
+				if (w > 0){
+					aggregated_scores[store][category] = parseInt(aggregated_scores[store][category] || 0) + w * scores[j][feature];
+			
+				}
+		    	}
+
+			
+		  }
+		  console.log(aggregated_scores);
+
+	     
+		  //console.log(data);
+		  var numRows = tableScores.rows()[0].length;
+
+		  //COLS: Store	Points Database	Points Performance	Points RDF Store	Points Usability	Total Score
+		  var cats = ['Store', 'Database', 'Performance', 'RDF Store', 'Usability'];
+		  for (var j=0; j<numRows; j++){
+			arr = tableScores.row(j).data();
+			var store = arr[0];
+			console.log(store);
+			var sum = 0;
+			for (var i=1; i<arr.length-1; i++){
+				var category = cats[i];
+				console.log(category);
+				console.log(aggregated_scores[store]);
+				console.log(aggregated_scores[store][category]);
+
+				score = aggregated_scores[store][category] || 0;
+
+				arr[i] = score;		
+				//arr[i] = parseInt(arr[i]) + j;
+				sum+=arr[i];
+			}
+			arr[arr.length-1] = sum;
+
+
+			tableScores.row(j).data(arr).draw();
+		  }
+
+			  
+			
+	    
+		  return false;
+		} );
+
+		
+
+	});
+
+        
+
+    
+    } );
+    </script>
+    
+    
+  </body>
+
+</html>

@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+     <!-- Le styles -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+
+
+    <style type="text/css">
+
+      /* Sticky footer styles
+      -------------------------------------------------- */
+
+      html,
+      body {
+        height: 100%;
+        /* The html and body elements cannot have any padding or margin. */
+      }
+
+      /* Wrapper for page content to push down footer */
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        /* Negative indent footer by it's height */
+        margin: 0 auto -60px;
+      }
+
+      /* Set the fixed height of the footer here */
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #f5f5f5;
+      }
+
+      /* Lastly, apply responsive CSS fixes as necessary */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: -20px;
+          margin-right: -20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+
+
+
+
+      /* Custom page CSS
+      -------------------------------------------------- */
+      /* Not required for template or sticky footer method. */
+
+      #wrap > .container {
+        padding-top: 60px;
+      }
+      .container .credit {
+        margin: 20px 0;
+      }
+
+      code {
+        font-size: 80%;
+      }
+
+      .resizedTextbox {width: 20px; height: 20px}
+
+      .clicked {
+        background-color: grey;
+      }
+
+      .fitWindow {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      td {
+    	  margin: 4px 2px 4px 2px;
+ 	  padding: 4px 2px 4px 2px;
+	  border: 1px black;	
+	  border-style: dotted;
+      }
+      table {
+          border-collapse: separate;
+          border-spacing: 10px;
+          border-collapse: expression('separate', cellSpacing = '10px');
+      }
+
+      p.ex {
+    	color: rgb(255,0,0);
+      }
+
+    </style>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+    
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"> </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.4.0/d3.js"></script>
+  </head>
+
+
+  
+  <body>
+
+    
+    
+    <div id="wrap">
+      <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          
+          <ul class="nav">
+            <li>
+                <a href="./index.html">Project</a>
+            </li>
+            <li>
+                <a href="./featurematrix.html">Feature Matrix</a>
+            </li>
+            <li>
+                <a href="./deployment.html">Deployment</a>
+            </li>
+            <li>
+                <a href="./resultscsv.html">Benchmark Logs</a>
+            </li>
+            <li>
+                <a href="./postprocessing.html">Postprocessing</a>
+            </li>
+            <li>
+                <a href="http://www.ugent.be/ea/idlab/en">IDLab </a>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        
+        <h1>
+          Postprocessing: Jupyter notebooks
+        </h1>
+
+        
+  
+    
+	
+	<p> In all analyses we paid special attention to excluding any queries which incorrect/incomplete results. </p>
+
+	<table>
+		<tr>
+			<td> <b>Notebook</b> </td>
+			<td> <b>Description</b> </td>
+			<td> <b>Input</b> </td>
+			<td> <b>Output</b> </td>
+
+		</tr>
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/01_LogsToCSV.ipynb"> 01_LogsToCSV </td>
+			<td> Parses benchmarker output logs to generate queryevents.csv files </td>
+			<td> Log files (see tab Benchmarker Logs) </td>
+			<td> *_queryevents.csv, files can be found <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv"> here </a> </td>
+
+		</tr>
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/02_QueryCorrectness_Interthread.ipynb"> 02_QueryCorrectness_Interthread </a> </td>
+			<td> For every RDF system we verify if a query always return the same result in every thread </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv"> *_queryevents.csv </a> </td>
+			<td> None</td>
+
+		</tr>
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/03_QueryCorrectness_CountQueries.ipynb"> 03_QueryCorrectness_CountQueries </a> </td>
+			<td> Count queries always have #results = 1 => verify if the count queries have the same actual result (queries identified via hash) </td>
+			<td> Dump of full results of benchmarks, files too large for Github </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/queryhashanalysis/CountQueryConsistency.csv">CountQueryConsistency.csv</a> has the first result per query </td>
+
+		</tr>
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/04_ResultsPerQueryDF.ipynb"> 04_ResultsPerQueryDF </td>
+			<td> No inconsistencies between threads so per query engine the number of results per query can be unambigously calculated here  </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv"> *_queryevents.csv </a> </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/resultsperquery_csv"> resultsperquery_csv </a> </td>
+
+		</tr>
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/05_QueryCorrectness_Intersim_Watdiv.ipynb"> 05_QueryCorrectness_Intersim_Watdiv </a> </td>
+			<td> Calculate the number of results per query by consensus (WatDiv) </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/resultsperquery_csv"> resultsperquery_csv </a> </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/inconsistent_queryresults">  Consensus per benchmark </a>, <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv_correct"> csv_correct/* </a>  </td>
+		</tr>
+
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/05_QueryCorrectness_Intersim_Watdiv.ipynb"> 06_QueryCorrectness_Intersim_Ontoforce </td>
+			<td> Calculate the number of results per query by consensus (Ontoforce) </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/resultsperquery_csv"> resultsperquery_csv </a> </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/inconsistent_queryresults">  Consensus per benchmark </a>, <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv_correct"> csv_correct/* </a>  </td>
+		</tr>		
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/07_ErrorAnalysis_Ontoforce.ipynb"> 07_ErrorAnalysis_Ontoforce </a> </td>
+			<td> Give an overview of all Vendor benchmarks on the Ontoforce benchmark. Overview shows a status for each query execution which can result in success, error, incorrect, timeout or unknown (engine crashed).</td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv_correct"> csv_correct/* </a> </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/imgs/Fig09_FailuresOntoforceBM.svg"> Fig 09</a> </td>
+		</tr>
+
+
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/08_FeaturesOfFailedQueries_Ontoforce.ipynb"> 08_FeaturesOfFailedQueries_Ontoforce </a> </td>
+			<td> First attempt at visualizing properties of failed Ontoforce Queries u sing parallel coordinates </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv_correct"> csv_correct/* </a>, <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/OntoforceQueryAnalysis/ontoforce_query_features.tsv"> ontoforce_query_features <a> </td>
+			<td> None </td>
+		</tr>
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/09_FeaturesOfFailedQueries_Ontoforce_2_FeatureCorrelations.ipynb"> 09_FeaturesOfFailedQueries_Ontoforce_2_FeatureCorrelations <a/> </td>
+			<td> Query Feature Analysis: Which query features are correlated? </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/OntoforceQueryAnalysis/ontoforce_query_features.tsv"> ontoforce_query_features <a> </td>
+			<td> None </td>
+		</tr>
+
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/10_DTreesPerBenchmark.ipynb"> 10_DTreesPerBenchmark  </a></td>
+			<td> First Attempt at Decision Tree Analysis: which features determine outcome of a query? </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv_correct"> csv_correct/* </a>, <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/OntoforceQueryAnalysis/ontoforce_query_features.tsv"> ontoforce_query_features <a> </td>
+			<td> None </td>
+		</tr>
+
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/11_DTreesForAllSims.ipynb"> 11_DTreesForAllSims </a></td>
+			<td> Generating Decision Trees for all simulations as one, query engine is a feature! </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv_correct"> csv_correct/* </a>, <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/OntoforceQueryAnalysis/ontoforce_query_features.tsv"> ontoforce_query_features <a> </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/img/TreesAllSims"> Trees All Sims </a> </td>
+
+		</tr>
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/12_DTreesAllsSims2.ipynb"> 12_DTreesForAllSims2 </a></td>
+			<td> Generating Decision Trees for all simulations as one, query engine is a feature! </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv_correct"> csv_correct/* </a>, <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/OntoforceQueryAnalysis/ontoforce_query_features.tsv"> ontoforce_query_features <a> </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/img/TreesAllSims"> Trees All Sims </a> </td>
+
+		</tr>
+
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/13_CachingAnalytics.ipynb"> 13_CachingAnalytics </a> </td>
+			<td> Studying the effect of caching by comparing the fastest to the slowest run of a query </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv_correct"> csv_correct/* </a> </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/query_events_sorted"> query_events_sorted </a> </td>
+
+		</tr>
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/14_CachingAnalytics_2.ipynb"> 14_CachingAnalytics_2 </a> </td>
+			<td> Studying the effect of caching by comparing the fastest to the slowest run of a query </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/query_events_sorted"> query_events_sorted </a> </td>
+			<td> Caching Fig. </td>
+
+		</tr>
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/15_BenchmarkSurvival.ipynb"> 15_BenchmarkSurvival </a> </td>
+			<td> Calculating the benchmark survival interval </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv"> *_queryevents.csv </a> </td>
+			<td> Figure BM Survival </td>
+
+		</tr>
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/16_QueriesThatCrashSimulations.ipynb"> 16_QueriesThatCrashSimulations </a> </td>
+			<td> What type of query is the first one to fail, or the first one to crash a query engine? </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/query_events_sorted"> query_events_sorted </a> </td>
+			<td> None </td>
+
+		</tr>
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/17_SingleMultiClientRuntimes.ipynb"> 17_SingleMultiClientRuntimes </a> </td>
+			<td> Query runtimes during warmup (single-threaded) vs stress test (5 threads) </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/query_events_sorted"> query_events_sorted </a> </td>
+			<td> Figure Server Load </td>
+
+		</tr>
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/18_RuntimeAnalysisCSV_DiscardIncorrectQueries.ipynb"> 18_RuntimeAnalysisCSV_DiscardIncorrectQueries </a> </td>
+			<td> Query Runtime Analysis (discarding incorrect queries!) </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/csv_correct"> csv_correct/* </a> </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/runtime_csv_correct"> runtime_csv_correct </a> </td>
+
+		</tr>
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/19_RuntimeVisualAnalysisBoxplots_DiscardIncorrectQueries.ipynb"> 19_RuntimeVisualAnalysisBoxplots_DiscardIncorrectQueries </a> </td>
+			<td> Boxplots Query Runtimes </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/runtime_csv_correct"> runtime_csv_correct </a> </td>
+			<td> Figures ResultsI </td>
+
+		</tr>
+
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/20_QueryTemplateAnalysisWatdiv_DiscardIncorrectQueries.ipynb"> 20_QueryTemplateAnalysisWatdiv_DiscardIncorrectQueries </a> </td>
+			<td> Query Runtimes Per Query Template (WatDiv) </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/runtime_csv_correct"> runtime_csv_correct </a> </td>
+			<td> Figures ResultsII </td>
+
+		</tr>
+
+		<tr>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/21_BenchmarkCostVisualizations_ExcludeIncorrectQueries.ipynb"> 21_BenchmarkCostVisualizations_ExcludeIncorrectQueries </a> </td>
+			<td> Comparing all simulations in terms of runtime cost, taking into account cloud / licensing / runtimes </td>
+			<td> <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/runtime_csv_correct"> runtime_csv_correct </a>, <a href="https://github.com/drdwitte/benchmarking_biom_semantics/blob/master/results/sim_cost.csv"> sim_cost</a>, <a href="https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/results/loadtimes"> loadtimes </a> </td>
+			<td> Figure ResultsIII </td>
+
+		</tr>
+
+
+
+	</table>
+
+      
+
+
+
+        
+
+        
+
+        
+      <div id="push"></div>
+
+
+
+    </div>  
+    
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">  <!--Copyright 2015 - 2016 -->  <a href="http://imec.be">imec</a> - <a href="http://ugent.be">Ghent University</a>.</p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js">
+    </script>
+
+    
+    
+  </body>
+
+</html>
