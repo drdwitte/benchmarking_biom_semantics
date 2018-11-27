@@ -684,7 +684,7 @@ The criteria for selection of the \emph{Vendor} systems are the following:
 SPARQL 1.1 compliance, systems with a machine or maintained Docker image, no restrictions on the number of triples that can be ingested, and support for multi-node deployment.
 % allegrograph en stardog vallen hierdoor  af
 This led to 4 \emph{Vendor} systems: Blazegraph, GraphDB, ES and Virtuoso.
-Additionally, we added 3 additional research \emph{Prototypes} with unique approaches to handling RDF data: HDT~\cite{DBLP:journals/ws/FernandezMGPA13}, which is a queryable read-only binary compression format, FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11} often included in benchmarks for federated querying, and Triple Pattern Fragments~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} as a first implementation of the Linked Data Fragments concept.
+Additionally, we added 3 research \emph{Prototypes} with unique approaches to handling RDF data: HDT~\cite{DBLP:journals/ws/FernandezMGPA13}, which is a queryable read-only binary compression format, FedX~\cite{DBLP:conf/semweb/SchwarteHHSS11} often included in benchmarks for federated querying, and Triple Pattern Fragments~\cite{DBLP:conf/semweb/VerborghHMHVSCCMW14} as a first implementation of the Linked Data Fragments concept.
 
 %The comparison with these \emph{Prototypes} was an essential part of the research collaboration with Ontoforce as their initial goal was to build their DISQOVER search interface on top of a federated querying system.
 %The advantage of the latter is that their interface would then provide a live view on a continuously updating Life Sciences Linked Data cloud, removing the need for an ETL~\cite{ETL} process. The HDT-format is an interesting approach to provide their customers with a low-cost approach for hosting their own data.
@@ -1328,7 +1328,7 @@ Fig.~\ref{fig:Fig04_WatdivHorizontalScaling} shows pairwise comparisons of the t
 %LdF_N1_64_W1000_Def    300.0 		219.935204
 %LdF_N3_64_W1000_Def    300.0		216.525390
 
-In a discussion with OpenLink it was clarified that Virtuoso Cluster acts as a \emph{distributed memory solution}. This implies that adding nodes does not lead to a speedup in the query runtimes, but the total of memory pool in the system increases, allowing it to handle larger datasets. Since the single node benchmark did not exhaust the memory, there is no advantage to be expected from a multi-node setup. As an indication, according to support a 32GB machine should be able to manage up to 3 billion triples (10GB per 1B triples). 
+In a discussion with OpenLink it was clarified that Virtuoso Cluster acts as a \emph{distributed memory solution}. This implies that adding nodes does not lead to a speedup in the query runtimes, but the total memory pool in the system increases, allowing it to handle larger datasets. Since the single node benchmark did not exhaust the memory, there is no advantage to be expected from a multi-node setup. As an indication, according to support a 32GB machine should be able to manage up to 3 billion triples (10GB per 1B triples). 
 This observation, together with the lack of feedback on the issues with \textbf{ES3\_32\_Def} and the high timeout percentage for \textbf{TPF3\_64\_Def} motivated our decision to not run any further multi-node benchmarks..
 
 Systems translating SPARQL queries to distributed platforms such as Hadoop~\cite{cure2015evaluation, graux2016multi} are an alternative approach we did not test. Although these approaches are usually not recommended in a context with low-latency requirements, they are specifically designed to operate in an ETL-setting. 
@@ -1435,7 +1435,7 @@ Fig.~\ref{fig:Fig05_WatdivTemplates} shows the average runtime per template for 
 %	\item \textbf{Engine specialties:} For Blazegraph the \textbf{C}, \textbf{F}, and \textbf{S}-templates result in similar runtimes. GraphDB has a small preference for \textbf{S}-templates. Virtuoso is much better than the competition for \textbf{L}- and \textbf{S}-queries. For the \textbf{F}-template all three engines perform similarly.
 %\end{itemize}
 
-In Fig.~\ref{fig:Fig06_TemplatesVSHardware} we demonstrate the impact of different hardware and engine configurations on the runtimes of the different query templates. The improvement in average query runtime is rather homogeneous across the different query categories for all stores. The results in the \emph{RFI-Optimized} setting are worse for Virtuoso as the this configuration was more conservative compared to the \emph{Documented} configuration.
+In Fig.~\ref{fig:Fig06_TemplatesVSHardware} we demonstrate the impact of different hardware and engine configurations on the runtimes of the different query templates. The improvement in average query runtime is rather homogeneous across the different query categories for all stores. The results in the \emph{RFI-Optimized} setting are worse for Virtuoso as this configuration was more conservative compared to the \emph{Documented} configuration.
 
 
 \subsection{Single versus Multi-client stress testing}
