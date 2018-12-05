@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{80}
+\begin{thebibliography}{81}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -1051,6 +1051,15 @@ Laurensdv/docker-blazegraph.
 \endbibitem
 
 %%% 72
+\bibitem{hdtfusekidocker}
+\begin{botherref}
+Docker Image Created for Fuseki Hdt Installation.
+(Accessed August 31, 2018).
+\url{https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/setup/endpoints/FusekiHDT}
+\end{botherref}
+\endbibitem
+
+%%% 73
 \bibitem{saleem2016fine}
 \begin{barticle}
 \bauthor{\bsnm{Saleem}, \binits{M.}},
@@ -1066,16 +1075,17 @@ Laurensdv/docker-blazegraph.
 \end{barticle}
 \endbibitem
 
-%%% 73
+%%% 74
 \bibitem{sparqlquerybm}
 \begin{botherref}
+\oauthor{\bsnm{Vesse}, \binits{R.}}:
 SPARQL Query Benchmarker - Sourceforge.
 (Accessed August 31, 2018).
 \url{https://sourceforge.net/projects/sparql-query-bm/}
 \end{botherref}
 \endbibitem
 
-%%% 74
+%%% 75
 \bibitem{jupyter}
 \begin{botherref}
 Project Jupyter.
@@ -1084,7 +1094,7 @@ Project Jupyter.
 \end{botherref}
 \endbibitem
 
-%%% 75
+%%% 76
 \bibitem{cure2015evaluation}
 \begin{botherref}
 \oauthor{\bsnm{Cur{\'e}}, \binits{O.}},
@@ -1097,7 +1107,7 @@ On the evaluation of {RDF} distribution algorithms implemented over apache
 \end{botherref}
 \endbibitem
 
-%%% 76
+%%% 77
 \bibitem{nginx}
 \begin{botherref}
 NGINX - High Performance Load Balancer, Web Server and Reverse Proxy.
@@ -1106,7 +1116,7 @@ NGINX - High Performance Load Balancer, Web Server and Reverse Proxy.
 \end{botherref}
 \endbibitem
 
-%%% 77
+%%% 78
 \bibitem{sklearndtree}
 \begin{botherref}
 Decision Trees - Scikit-Learn.
@@ -1115,7 +1125,7 @@ Decision Trees - Scikit-Learn.
 \end{botherref}
 \endbibitem
 
-%%% 78
+%%% 79
 \bibitem{fmatrix}
 \begin{botherref}
 Feature Matrix.
@@ -1124,7 +1134,7 @@ Feature Matrix.
 \end{botherref}
 \endbibitem
 
-%%% 79
+%%% 80
 \bibitem{deploy}
 \begin{botherref}
 Deployment Info.
@@ -1133,7 +1143,7 @@ Deployment Info.
 \end{botherref}
 \endbibitem
 
-%%% 80
+%%% 81
 \bibitem{bmpostprocessing}
 \begin{botherref}
 Postprocessing: Jupyter Notebooks.
@@ -2115,6 +2125,12 @@ Postprocessing: Jupyter Notebooks.
 </bibl>
 
 <bibl id="B72">
+  <title><p>Docker image created for fuseki hdt installation</p></title>
+  <pubdate>Accessed August 31, 2018</pubdate>
+  <url>https://github.com/drdwitte/benchmarking_biom_semantics/tree/master/setup/endpoints/FusekiHDT</url>
+</bibl>
+
+<bibl id="B73">
   <title><p>A fine-grained evaluation of {SPARQL} endpoint federation
   systems</p></title>
   <aug>
@@ -2133,19 +2149,22 @@ Postprocessing: Jupyter Notebooks.
   <lpage>-518</lpage>
 </bibl>
 
-<bibl id="B73">
+<bibl id="B74">
   <title><p>SPARQL Query Benchmarker - Sourceforge</p></title>
+  <aug>
+    <au><snm>Vesse</snm><fnm>R</fnm></au>
+  </aug>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://sourceforge.net/projects/sparql-query-bm/</url>
 </bibl>
 
-<bibl id="B74">
+<bibl id="B75">
   <title><p>Project Jupyter</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>http://jupyter.org/</url>
 </bibl>
 
-<bibl id="B75">
+<bibl id="B76">
   <title><p>On the Evaluation of {RDF} Distribution Algorithms Implemented over
   Apache Spark</p></title>
   <aug>
@@ -2158,32 +2177,32 @@ Postprocessing: Jupyter Notebooks.
   <pubdate>2015</pubdate>
 </bibl>
 
-<bibl id="B76">
+<bibl id="B77">
   <title><p>NGINX - High Performance Load Balancer, Web Server and Reverse
   Proxy</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://www.nginx.com/</url>
 </bibl>
 
-<bibl id="B77">
+<bibl id="B78">
   <title><p>Decision Trees - Scikit-Learn</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>http://scikit-learn.org/stable/modules/tree.html</url>
 </bibl>
 
-<bibl id="B78">
+<bibl id="B79">
   <title><p>Feature Matrix</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://users.elis.ugent.be/drdwitte/featurematrix.html</url>
 </bibl>
 
-<bibl id="B79">
+<bibl id="B80">
   <title><p>Deployment Info</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>https://users.elis.ugent.be/drdwitte/deployment.html</url>
 </bibl>
 
-<bibl id="B80">
+<bibl id="B81">
   <title><p>Postprocessing: Jupyter notebooks</p></title>
   <pubdate>Accessed August 31, 2018</pubdate>
   <url>http://users.elis.ugent.be/drdwitte/postprocessing.html</url>

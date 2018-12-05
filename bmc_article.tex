@@ -350,7 +350,7 @@ future benchmarking efforts.
 
 
 
-\section{Introduction}
+\section{Background}
 %\input{introduction.tex}
 
 %put back Ruben's first version
@@ -406,19 +406,22 @@ This work also offers a methodology to make benchmarks more reproducible and the
 
 The work presented here is structured around 3 research questions (\textbf{RQs}):
 
+%Results I: \label{sec:tradeoffs}
+%Results II: \label{sec:runtimefactors}
+%Results III: \label{sec:realworld}
+
 \begin{enumerate}
 	%Methods hardware, configs, wrapper, hardware, amis,... query completeness diagnostics
 	\item \textit{How to run a query performance benchmark in a reproducible and reliable way?}
-	This will be mostly addressed in the section `Benchmark Approach'. Reliability is the focus of result sections `Query Result Completeness' and `Benchmark Error Analysis', 
-	which deal with errors and query completeness. 
+	This will be mostly addressed in the methods section. Reliability is the focus of result sections `Query Result Completeness' and `Benchmark Error Analysis', which deal with errors and query completeness. 
 	
 	%Options: Horizontal, vertical, compression, federation big data approaches, multithreading
 	\item \textit{What are the different options and the associated trade-offs when choosing a Linked Data infrastructure setup in the context of Big Linked Data? How can different setups be compared? }
-	In the section `Results~I' we will demonstrate that the choice of engine depends on the size of the dataset. In `Results~II' we will investigate which engine works best for certain query types. How completely different solutions can be compared is the subject of the section `Benchmark Cost' in `Results III'. There we also compare the results on artificial data with a real-world dataset.
+	In section~\ref{sec:tradeoffs} we will demonstrate that the choice of engine depends on the size of the dataset. In section~\ref{sec:runtimefactors} we will investigate which engine works best for certain query types. How completely different solutions can be compared is the subject of the subsection `Benchmark Cost' of section~\ref{sec:realworld} . There we also compare the results on artificial data with a real-world dataset.
 	
 	%context=caching and server load, query completeness
 	\item \textit{What is the relative influence on the measured performance of contextual factors for the different RDF solutions? Is the impact similar for all solutions?}
-	In the section `Results II' we will demonstrate that query runtime results cannot be interpreted without taking into account the \emph{query context}: server load, availability, caching effects, etc. all have an impact on the individual runtimes.
+	In the section~\ref{sec:runtimefactors} we will demonstrate that query runtime results cannot be interpreted without taking into account the \emph{query context}: server load, availability, caching effects, etc. all have an impact on the individual runtimes.
 	
 	%query types, real world vs Watdiv, Watdiv sizes, Decisiontree = unbiased
 	%\item \textit{How do the RDF systems behave in a real-world setting?}
@@ -443,7 +446,7 @@ The work presented here is structured around 3 research questions (\textbf{RQs})
 \end{itemize}
 
 
-\section{Related Work}
+\subsection{Related Work}
 %\input{relatedwork.tex}
 
 %interessant om tabel te maken: https://www.w3.org/wiki/RdfStoreBenchmarking en om bibliografie aan te vullen?
@@ -600,7 +603,7 @@ In the current work all seven systems are evaluated on both WatDiv and the Ontof
 %https://neo4j.com/
 %https://www.postgresql.org/
 
-\section{Benchmark approach}
+\section{Methods}
 %\input{methods.tex}
 
 %\todo{Deze intro moet gereduceerd worden tot 1 lijn}
@@ -856,7 +859,7 @@ The following AMIs and Docker images were selected:
 \begin{itemize}
 	\item PAGO AMIs: Virtuoso~\cite{Virtuoso}, GraphDB~\cite{graphdb}, ES
 	\item Docker Hub: TPF server~\cite{dockerhubldfserver}, HDT-tools~\cite{hdtcpp}, \\ Virtuoso Open Source~\cite{virtuosoos} 
-	\item Self-provided Docker images: Blazegraph~\cite{dockerblazegraph}, \\ HDT-Fuseki~\cite{hdtfuseki} 
+	\item Self-provided Docker images: Blazegraph~\cite{dockerblazegraph}, \\ HDT-Fuseki~\cite{hdtfusekidocker} 
 	\item Manual installation: FedX~\cite{saleem2016fine} 3.1.2 was installed manually with the Virtuoso Adapter plugin. %(required since \mbox{Virtuoso} no longer supports \url{ASK} queries)
 \end{itemize}
 
@@ -970,8 +973,8 @@ Finally, also part of the conclusions drawn from the data are automated by using
 
 %\subsection{Benchmark Cost}
 %\input{benchmarkcost.tex}
-
-\section{Results I: Approaches to Linked Data at Scale}
+\section{Results \& Discussion}
+\subsection{Approaches to Linked Data at Scale}
 \label{sec:tradeoffs}
 %\input{resultsI.tex}
 
@@ -1012,7 +1015,7 @@ When aggregating runtimes over \emph{different queries}, for example when aggreg
 
 
 
-\subsection{Runtime Performance for Different Dataset Scales}
+\subsubsection{Runtime Performance for Different Dataset Scales}
 \label{subsec:bigdata}
 %\input{results_datasetsize.tex}
 
@@ -1064,7 +1067,7 @@ Figure~\ref{fig:Fig01_WatdivNoSQLDataScaling} shows query runtime distributions 
 
 
 
-\subsection{Vertical Scaling}
+\subsubsection{Vertical Scaling}
 \label{subsec:vscaling}
 %\input{results_verticalscaling.tex}
 
@@ -1118,7 +1121,7 @@ The two leftmost panels of Fig.~\ref{fig:Fig02_WatdivVerticalScaling} study the 
 %\end{figure*}
 
 
-\subsection{RFI-Optimized Configuration}
+\subsubsection{RFI-Optimized Configuration}
 \label{subsec:rfi}
 %\input{results_optimized.tex}
 
@@ -1161,7 +1164,7 @@ In Fig.~\ref{fig:Fig02_WatdivVerticalScaling}, the rightmost panel corresponds t
 
 
 
-\subsection{Research Prototypes}
+\subsubsection{Research Prototypes}
 \label{subsec:semweb}
 %\input{results_semweb.tex}
 
@@ -1224,7 +1227,7 @@ Given the high degree of failures we do not show the query runtime results.
 
 
 
-\subsection{Horizontal scaling}
+\subsubsection{Horizontal scaling}
 \label{subsec:hscaling}
 %\input{results_horizontalscaling.tex}
 
@@ -1335,7 +1338,7 @@ Systems translating SPARQL queries to distributed platforms such as Hadoop~\cite
 Results for S2RDF~\cite{Schatzle:2016:SRQ:2977797.2977806}, which uses Apache Spark on Watdiv1000M indicate that a 10-node setup can be close to 10 times faster than a single-node Virtuoso server. Since these SPARQL-on-Hadoop solutions are not sufficiently mature and for example cannot be tested using a SPARQL endpoint, definite conclusions currently can not be drawn. 
 %One observation to motivate this caution is the fact that Virtuoso is hardly affected when running multiple benchmark clients at once, as will be shown in section~\ref{subsec:load}. The operational cost for these Hadoop setups can also not immediately be deduced.
 
-\subsection{Query Response Times}
+\subsubsection{Query Response Times}
 %response times
 Query response times correspond to the lag between sending a query and receiving the first server response. Some of the stores provide query results in a streaming fashion, 
 therefore response times can be different from query runtimes.
@@ -1351,7 +1354,7 @@ For GraphDB and Blazegraph the response times are respectively 27\% and 21\% low
 
 
 
-\section{Results II: Query Runtime Analysis in Depth}
+\subsection{Query Runtime Analysis in Depth}
 \label{sec:runtimefactors}
 %\input{resultsII.tex}
 
@@ -1377,7 +1380,7 @@ In this part we take our analysis one step further by studying query runtimes fo
 %We conclude by studying an often unreported effect: result completeness can have a big impact on the query runtimes and should always be verified.
 %%as we will discuss in section~\ref{subsec:completeness}.
 
-\subsection{Query runtimes for different template types}
+\subsubsection{Query runtimes for different template types}
 \label{subsec:templates}
 %\input{results_templates.tex}
 
@@ -1438,7 +1441,7 @@ Fig.~\ref{fig:Fig05_WatdivTemplates} shows the average runtime per template for 
 In Fig.~\ref{fig:Fig06_TemplatesVSHardware} we demonstrate the impact of different hardware and engine configurations on the runtimes of the different query templates. The improvement in average query runtime is rather homogeneous across the different query categories for all stores. The results in the \emph{RFI-Optimized} setting are worse for Virtuoso as this configuration was more conservative compared to the \emph{Documented} configuration.
 
 
-\subsection{Single versus Multi-client stress testing}
+\subsubsection{Single versus Multi-client stress testing}
 \label{subsec:load}
 %\input{results_threads.tex}
 
@@ -1471,7 +1474,7 @@ All results so far focused on the multi-threaded benchmark run, in which 5 bench
 \end{itemize}
 
 
-\subsection{The Role of Caching in Query Runtime Results}
+\subsubsection{The Role of Caching in Query Runtime Results}
 \label{subsec:caching}
 %\input{results_caching.tex}
 
@@ -1503,7 +1506,7 @@ In Figure~\ref{fig:Fig08_Watdiv_caching} however, the speedup with respect to th
 
 
 
-\subsection{Query Result Completeness}
+\subsubsection{Query Result Completeness}
 \label{subsec:completeness}
 %\input{results_completeness.tex}
 
@@ -1517,7 +1520,7 @@ As was mentioned in the introduction of section~\ref{sec:tradeoffs}, none of the
 
 
 
-\section{Results III: Real-world Life Sciences Benchmark Results}
+\subsection{Real-world Life Sciences Benchmark Results}
 \label{sec:realworld}
 %\input{resultsIII.tex}
 
@@ -1568,7 +1571,7 @@ In the final section we compare the results of all benchmarks in this research u
 %GraphDB crashed
 %23258.549703492	23261.613780134						=> coincide
 
-\subsection{Benchmark Error Analysis}
+\subsubsection{Benchmark Error Analysis}
 \label{subsec:erroranalysis}
 %\input{results_realworld.tex}
 
@@ -1624,7 +1627,7 @@ The Figure also shows that only Virtuoso simulations had a sufficiently wide ben
 	\item \textbf{ES1\_64\_Doc:} ES was definitely the least successful on the WatDiv benchmarks, but is the only store, apart from Virtuoso, for which the benchmark survival interval spans the entire benchmark. 58\% of the queries were executed successfully. The remainder consists of 25\% HTTP errors and 17\% timeouts. 
 	%%Vir_N1_64_Ont_Opt 	7069	120			60			41		48		ALL 		
 	\item \textbf{Vir1\_*\_RFI:} Virtuoso is both consistent and successful on this benchmark with only 1\% of queries consistently failing, overall the success rate is 98\%. These failures correspond mainly to queries which contain \emph{property paths}. None of the other stores could handle these queries. 
-	It should be noted that during the creation of the DISQOVER product, Virtuoso was frequently used as a back-end system, which partially implies a certain favorable bias in the Ontoforce results.The \textbf{Vir1\_32\_RFI} in the SWAT4LS~\cite{dewitte_swat4ls_2016} paper had 41\% incomplete queries. This re-run however, achieves the same figures as the 64GB run.
+	It should be noted that during the creation of the DISQOVER product, Virtuoso was frequently used as a back-end system, which partially implies a certain favorable bias in the Ontoforce results. The \textbf{Vir1\_32\_RFI} in the SWAT4LS~\cite{dewitte_swat4ls_2016} paper had 41\% incomplete queries. This re-run however, achieves the same figures as the 64GB run.
 	
 	\item \textbf{Vir3\_64\_RFI\_*:} The  \textbf{Vir3\_64\_RFI} setup was re-run multiple times, the different runs are identified with an additional sequence number 0-2.
 	Although the success rate of \textbf{Vir3\_64\_RFI\_0} is only 55\%, 92\% of the queries are successfully executed at least once, which makes it possible to make runtime comparisons. \textbf{Vir3\_64\_RFI\_2} has far less reported errors. Post-processing revealed issues with query completeness (orange) for 37\% of the queries.
@@ -1655,7 +1658,7 @@ Consequently, we studied the number of results per query:
 
 
 
-\subsection{Decision Tree Analysis of Query Features}
+\subsubsection{Decision Tree Analysis of Query Features}
 \label{subsec:dtrees}
 %\input{results_features.tex}
 
@@ -1713,7 +1716,7 @@ Finally we also investigated if the incorrect queries in the \textbf{Vir3} bench
 
 
 
-\subsection{Benchmark Cost}
+\subsubsection{Benchmark Cost}
 \label{sec:bmcost}
 %\input{results_setups.tex}
 
@@ -1778,7 +1781,7 @@ Additionally, before running a benchmark the data has to be ingested in the syst
 
 
 
-\section{Conclusion}
+\section{Conclusions}
 %\input{conclusion.tex}
 
 %Restate the research question that the study set out to answer
